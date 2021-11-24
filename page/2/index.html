@@ -88,86 +88,6 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
-    <article id="post-creating-a-gpg-key" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/04/15/creating-a-gpg-key/" class="article-date">
-  <time datetime="2020-04-14T22:15:55.000Z" itemprop="datePublished">2020-04-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-<div class="article-gallery">
-  <div class="article-gallery-photos">
-    
-      <a class="article-gallery-img fancybox" href="/css/images/gnupg-partone.png" rel="gallery_ckvsjboij0006m8oh70074f4t">
-        <img src="/css/images/gnupg-partone.png" itemprop="image">
-      </a>
-    
-  </div>
-</div>
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/15/creating-a-gpg-key/">Getting started with GnuPG (Part 0)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry"  itemprop="articleBody" style="text-align: justify; ">
-      
-        <p>GnuPG is a complete and free implementation of the OpenPGP standard and this is just <strong>part 0</strong> of who knows how many series where I will explain my basic understanding of GPG and how useful is on my daily basis. If you wish to understand more in detail how GPG work please refer to the RFC or <a href="https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/" target="_blank" rel="noopener">here</a> is a great post that captures the essence of it quite deeply.</p>
-<h3 id="My-use-case"><a href="#My-use-case" class="headerlink" title="My use case"></a>My use case</h3><p>No. I don’t have <a href="https://gpg.lucascontre.site" target="_blank" rel="noopener">my public key</a> on any keyserver and no I don’t use it to send encrypted messages, not mostly at least. I use GnuPG to encrypt any kind of data/files I want to keep safe, for encrypting/decrypting day-to-day info I need to grab quickly within systems I use but don’t fully trust, to login into some of my servers with ssh and gpg agents and last but not least to <a href="https://www.passwordstore.org/" target="_blank" rel="noopener">retrieve all of my passwords securely from any device</a>.</p>
-<p>Me and my stack of devices getting used to using gpg was a long journey I’m not sure it’s over yet. But it started here, by creating my first GPG key pair and that’s what this post is about.</p>
-<h3 id="Generating-a-new-GPG-key-pair"><a href="#Generating-a-new-GPG-key-pair" class="headerlink" title="Generating a new GPG key pair"></a>Generating a new GPG key pair</h3><p>By default <strong>GnuPG</strong> generates one primary (also called master) key with the ability (also called flag) of signing and certifying <strong>[SC]</strong>.</p>
-<p><strong>Certification vs. signing</strong> - <em>Signing</em> is an action against arbitrary data (As I understand it testifying that the encrypted data is sent by who it’s supposed to be sent). <em>Certification</em> is the signing of another key. Ironically, the act of certifying a key is universally called “key signing”.(As I understand it saying “<em>Hey this is my public key</em> or <em>Hey,  I trust this key is from who It says it is</em>). Just embrace the contradiction.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gpg --full-generate-key</span><br><span class="line">Please select what kind of key you want:</span><br><span class="line">   (1) RSA and RSA (default)</span><br><span class="line">   (2) DSA and Elgamal</span><br><span class="line">   (3) DSA (sign only)</span><br><span class="line">   (4) RSA (sign only)</span><br></pre></td></tr></table></figure>
-
-<p>Let’s go with the default option with indicates we are going to use the RSA algorithm and we are going to generate one primary key for <em>Signing</em> and <em>Certifying</em>  <strong>[SC]</strong> and other sub-key for <em>Encrypting</em> <strong>[E]</strong>. We will also specify a key size of <strong><em>4096</em></strong> bits and set the expiration date to 1 year from now. We will then be prompt with  interface and be asked for a passphrase.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Your selection? 1</span><br><span class="line">RSA keys may be between 1024 and 4096 bits long.</span><br><span class="line">What keysize <span class="keyword">do</span> you want? (3072) 4096</span><br><span class="line">Requested keysize is 4096 bits</span><br><span class="line">Please specify how long the key should be valid.</span><br><span class="line">         0 = key does not expire</span><br><span class="line">      &lt;n&gt;  = key expires <span class="keyword">in</span> n days</span><br><span class="line">      &lt;n&gt;w = key expires <span class="keyword">in</span> n weeks</span><br><span class="line">      &lt;n&gt;m = key expires <span class="keyword">in</span> n months</span><br><span class="line">      &lt;n&gt;y = key expires <span class="keyword">in</span> n years</span><br><span class="line">Key is valid <span class="keyword">for</span>? (0) 1y</span><br><span class="line">Key expires at Mon Apr 12 17:43:02 2021 UTC</span><br><span class="line">Is this correct? (y/N) y</span><br></pre></td></tr></table></figure>
-
-<p>Once we specified this we will be asked some info to identify our User ID (UID). Which is basically the name and email of the user and it is stored in one or more UID entries under the Primary key.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">GnuPG needs to construct a user ID to identify your key.</span><br><span class="line"></span><br><span class="line">Real name: Fulanito Detal</span><br><span class="line">Email address: fula@fuladetal.xyz</span><br><span class="line">Comment: Fulanito&apos;s keypair</span><br><span class="line">You selected this USER-ID:</span><br><span class="line">    &quot;Fulanito Detal (Fulanito&apos;s keypair) &lt;fula@fuladetal.xyz&gt;&quot;</span><br><span class="line"></span><br><span class="line">Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O</span><br></pre></td></tr></table></figure>
-
-<p>After we’ve entered the info needed GnuPG will create a new key pair for us.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">We need to generate a lot of random bytes. It is a good idea to perform</span><br><span class="line">some other action (type on the keyboard, move the mouse, utilize the</span><br><span class="line">disks) during the prime generation; this gives the random number</span><br><span class="line">generator a better chance to gain enough entropy.</span><br><span class="line">gpg: key 363690E797C0E0A7 marked as ultimately trusted</span><br><span class="line">gpg: revocation certificate stored as &apos;/root/.gnupg/openpgp-revocs.d/1D537C302A599F7BFC55C260363690E797C0E0A7.rev&apos;</span><br><span class="line">public and secret key created and signed.</span><br></pre></td></tr></table></figure>
-
-<p>After it’s created we would an output of this kind. We can also access this info with <code>gpg -k</code> which lists our public keys or <code>gpg -K</code> to list our private keys.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pub   rsa4096 2020-04-12 [SC] [expires: 2021-04-12]</span><br><span class="line">      1D537C302A599F7BFC55C260363690E797C0E0A7</span><br><span class="line">uid                      Fulanito Detal (Fulanito&apos;s keypair) &lt;fula@fuladetal.xyz&gt;</span><br><span class="line">sub   rsa4096 2020-04-12 [E] [expires: 2021-04-12]</span><br></pre></td></tr></table></figure>
-
-<p>Notice that a <strong>revocation certificate</strong>  has been created under <code>/root/.gnupg/openpgp-revocs.d/02A59{BlaBlaBla}60BH36.rev&#39;</code> . If your GPG private key becomes compromised, you need to revoke it to warn others not to trust future signatures or encrypt data to your public key. However, by the time a key compromise happens, you might not have your GPG key available, such as if it resided on hardware stolen from you, or the attacker removed it after accessing it. A revocation certificate consists of a signed message, stating in machine-readable form that a key no longer has validity for future cryptographic operations. Anyone with this certificate can revoke your private key. I recommend printing it out and storing it in a secure location.</p>
-<p>Finally, now that you managed to create your own key pair you can start sharing you public key, decrypt and sign messages. In order to get use the <code>gpg</code> cli tool I suggest checking the following cheat sheet until you get used to it. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl cheat.sh/gpg</span><br></pre></td></tr></table></figure>
-
-<h3 id="Bibliography-and-technology-used-in-this-project"><a href="#Bibliography-and-technology-used-in-this-project" class="headerlink" title="Bibliography and technology used in this project"></a>Bibliography and technology used in this project</h3><ul>
-<li><a href="https://tools.ietf.org/html/rfc4880" target="_blank" rel="noopener">RFC 4880</a></li>
-<li><a href="https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/" target="_blank" rel="noopener">This awesome post</a></li>
-<li><a href="https://davesteele.github.io/gpg/2015/08/01/intermediate-gpg/" target="_blank" rel="noopener">This other awesome post</a></li>
-</ul>
-<hr>
-<p><strong>Author:</strong> Lucas Contreras</p>
-<p><strong>Leave a comment:</strong> <a href="https://www.reddit.com/r/notanothertechyblog/" target="_blank" rel="noopener">Join the Reddit discussion</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2020/04/15/creating-a-gpg-key/" data-id="ckvsjboij0006m8oh70074f4t" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GnuPG/">GnuPG</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PasswordManager/">PasswordManager</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unix/">Unix</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-how-i-organize-my-terraform-files" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/06/how-i-organize-my-terraform-files/" class="article-date">
@@ -180,7 +100,7 @@ ga('send', 'pageview');
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/terraform-file-structure.jpg" rel="gallery_ckvsjboik0007m8oh2jyumj0p">
+      <a class="article-gallery-img fancybox" href="/css/images/terraform-file-structure.jpg" rel="gallery_ckwe2v1wv0004smoh601393sa">
         <img src="/css/images/terraform-file-structure.jpg" itemprop="image">
       </a>
     
@@ -228,7 +148,7 @@ Don’t worry it sounds harder than what it is </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2020/04/06/how-i-organize-my-terraform-files/" data-id="ckvsjboik0007m8oh2jyumj0p" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2020/04/06/how-i-organize-my-terraform-files/" data-id="ckwe2v1wv0004smoh601393sa" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Terraform/">Terraform</a></li></ul>
@@ -253,7 +173,7 @@ Don’t worry it sounds harder than what it is </p>
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/postmortem-sitemetrics.png" rel="gallery_ckvsjboiw000im8ohl0ohfo3x">
+      <a class="article-gallery-img fancybox" href="/css/images/postmortem-sitemetrics.png" rel="gallery_ckwe2v1yd0027smoh1l5anzqg">
         <img src="/css/images/postmortem-sitemetrics.png" itemprop="image">
       </a>
     
@@ -296,7 +216,7 @@ Don’t worry it sounds harder than what it is </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2019/09/17/postmortem-sitemetrics/" data-id="ckvsjboiw000im8ohl0ohfo3x" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2019/09/17/postmortem-sitemetrics/" data-id="ckwe2v1yd0027smoh1l5anzqg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AdonisJS/">AdonisJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Splunk/">Splunk</a></li></ul>
@@ -321,7 +241,7 @@ Don’t worry it sounds harder than what it is </p>
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/a-solution-im-almost-proud-of.png" rel="gallery_ckvsjboi40000m8oh1nnpsi8c">
+      <a class="article-gallery-img fancybox" href="/css/images/a-solution-im-almost-proud-of.png" rel="gallery_ckwe2v1wp0001smoh2evyt68w">
         <img src="/css/images/a-solution-im-almost-proud-of.png" itemprop="image">
       </a>
     
@@ -369,7 +289,7 @@ Don’t worry it sounds harder than what it is </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2019/08/13/a-solution-Im-almost-proud-of/" data-id="ckvsjboi40000m8oh1nnpsi8c" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2019/08/13/a-solution-Im-almost-proud-of/" data-id="ckwe2v1wp0001smoh2evyt68w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -392,7 +312,7 @@ Don’t worry it sounds harder than what it is </p>
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/shhlack-bot.jpg" rel="gallery_ckvsjboix000km8ohs6yfmz9j">
+      <a class="article-gallery-img fancybox" href="/css/images/shhlack-bot.jpg" rel="gallery_ckwe2v1xa000ismoh79k183s7">
         <img src="/css/images/shhlack-bot.jpg" itemprop="image">
       </a>
     
@@ -435,7 +355,7 @@ Don’t worry it sounds harder than what it is </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2019/06/28/the-shhlack-bot/" data-id="ckvsjboix000km8ohs6yfmz9j" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2019/06/28/the-shhlack-bot/" data-id="ckwe2v1xa000ismoh79k183s7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/APIs/">APIs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ESP8266/">ESP8266</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeMCU/">NodeMCU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Slack/">Slack</a></li></ul>
@@ -460,7 +380,7 @@ Don’t worry it sounds harder than what it is </p>
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/my-experience-with-the-microservices-approach.jpg" rel="gallery_ckvsjboit000em8ohy8zjsx6c">
+      <a class="article-gallery-img fancybox" href="/css/images/my-experience-with-the-microservices-approach.jpg" rel="gallery_ckwe2v1x9000fsmohzytyms3o">
         <img src="/css/images/my-experience-with-the-microservices-approach.jpg" itemprop="image">
       </a>
     
@@ -506,7 +426,7 @@ Don’t worry it sounds harder than what it is </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2019/06/23/my-experience-with-the-microservices-approach/" data-id="ckvsjboit000em8ohy8zjsx6c" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2019/06/23/my-experience-with-the-microservices-approach/" data-id="ckwe2v1x9000fsmohzytyms3o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/APIs/">APIs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS/">AWS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Serverless/">Serverless</a></li></ul>
@@ -541,10 +461,6 @@ Don’t worry it sounds harder than what it is </p>
           </li>
         
           <li>
-            <a href="/2021/11/09/quick-ddd2/">Notes DDD Quickly (Part 2)</a>
-          </li>
-        
-          <li>
             <a href="/2021/07/07/quick-ddd/">Notes DDD Quickly (Part 1)</a>
           </li>
         
@@ -554,6 +470,10 @@ Don’t worry it sounds harder than what it is </p>
         
           <li>
             <a href="/2021/03/14/intro_to_go_language4/">Maps &amp; Interfaces - Go Intro (III)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/08/intro_to_go_language3/">Receivers &amp; Pointers - Go Intro (II)</a>
           </li>
         
       </ul>
@@ -578,7 +498,7 @@ Don’t worry it sounds harder than what it is </p>
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/101/" style="font-size: 20px;">101</a> <a href="/tags/APIs/" style="font-size: 12.5px;">APIs</a> <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AdonisJS/" style="font-size: 10px;">AdonisJS</a> <a href="/tags/DDD/" style="font-size: 12.5px;">DDD</a> <a href="/tags/ESP8266/" style="font-size: 10px;">ESP8266</a> <a href="/tags/GnuPG/" style="font-size: 15px;">GnuPG</a> <a href="/tags/Go/" style="font-size: 17.5px;">Go</a> <a href="/tags/Golang/" style="font-size: 17.5px;">Golang</a> <a href="/tags/NodeMCU/" style="font-size: 10px;">NodeMCU</a> <a href="/tags/Password-Manager/" style="font-size: 10px;">Password Manager</a> <a href="/tags/PasswordManager/" style="font-size: 10px;">PasswordManager</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/Serverless/" style="font-size: 10px;">Serverless</a> <a href="/tags/Slack/" style="font-size: 10px;">Slack</a> <a href="/tags/Software-Architecture/" style="font-size: 12.5px;">Software Architecture</a> <a href="/tags/Splunk/" style="font-size: 10px;">Splunk</a> <a href="/tags/Terraform/" style="font-size: 10px;">Terraform</a> <a href="/tags/Typescript/" style="font-size: 10px;">Typescript</a> <a href="/tags/Unix/" style="font-size: 12.5px;">Unix</a>
+      <a href="/tags/101/" style="font-size: 20px;">101</a> <a href="/tags/APIs/" style="font-size: 12.5px;">APIs</a> <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AdonisJS/" style="font-size: 10px;">AdonisJS</a> <a href="/tags/DDD/" style="font-size: 10px;">DDD</a> <a href="/tags/ESP8266/" style="font-size: 10px;">ESP8266</a> <a href="/tags/GnuPG/" style="font-size: 15px;">GnuPG</a> <a href="/tags/Go/" style="font-size: 17.5px;">Go</a> <a href="/tags/Golang/" style="font-size: 17.5px;">Golang</a> <a href="/tags/NodeMCU/" style="font-size: 10px;">NodeMCU</a> <a href="/tags/Password-Manager/" style="font-size: 10px;">Password Manager</a> <a href="/tags/PasswordManager/" style="font-size: 10px;">PasswordManager</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/Serverless/" style="font-size: 10px;">Serverless</a> <a href="/tags/Slack/" style="font-size: 10px;">Slack</a> <a href="/tags/Software-Architecture/" style="font-size: 10px;">Software Architecture</a> <a href="/tags/Splunk/" style="font-size: 10px;">Splunk</a> <a href="/tags/Terraform/" style="font-size: 10px;">Terraform</a> <a href="/tags/Typescript/" style="font-size: 10px;">Typescript</a> <a href="/tags/Unix/" style="font-size: 12.5px;">Unix</a>
     </div>
   </div>
 
@@ -588,7 +508,7 @@ Don’t worry it sounds harder than what it is </p>
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 

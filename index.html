@@ -100,7 +100,7 @@ ga('send', 'pageview');
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/TS1.jpg" rel="gallery_ckwe0xdsa0000jeohy9ld3vjw">
+      <a class="article-gallery-img fancybox" href="/css/images/TS1.jpg" rel="gallery_ckwe2v1x2000asmoh8bqr1rjp">
         <img src="/css/images/TS1.jpg" itemprop="image">
       </a>
     
@@ -136,84 +136,10 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2021/11/24/intro_to_typescript_language/" data-id="ckwe0xdsa0000jeohy9ld3vjw" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2021/11/24/intro_to_typescript_language/" data-id="ckwe2v1x2000asmoh8bqr1rjp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/101/">101</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Typescript/">Typescript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-quick-ddd2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/11/09/quick-ddd2/" class="article-date">
-  <time datetime="2021-11-09T10:29:32.000Z" itemprop="datePublished">2021-11-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-<div class="article-gallery">
-  <div class="article-gallery-photos">
-    
-      <a class="article-gallery-img fancybox" href="/css/images/ddd2.jpg" rel="gallery_ckvsje2ho0000koohg1489b3x">
-        <img src="/css/images/ddd2.jpg" itemprop="image">
-      </a>
-    
-  </div>
-</div>
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/09/quick-ddd2/">Notes DDD Quickly (Part 2)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry"  itemprop="articleBody" style="text-align: justify; ">
-      
-        <h1 id="Quick-DDD-Notes-part-ii"><a href="#Quick-DDD-Notes-part-ii" class="headerlink" title="Quick DDD Notes (part ii)"></a>Quick DDD Notes (part ii)</h1><p>This notes have been taken from the free <a href="https://www.goodreads.com/book/show/2558105" target="_blank" rel="noopener">Domain Driven Design Quickly</a>. I highly recommend reading the book. I have found it to be a concise summary of the <a href="https://www.goodreads.com/en/book/show/179133" target="_blank" rel="noopener">original book</a>. In this summary I will be just mentioning/listing the best ideas of the all the concepts mentioned in the book. </p>
-<p><strong>Disclaimer:</strong> <em>There is no strict narrative to this post, just useful ideas written in a sentence or two to Ctrl+F whenever you hesitate before making a design decision.</em> </p>
-<h2 id="Agreggates"><a href="#Agreggates" class="headerlink" title="Agreggates"></a>Agreggates</h2><p>The last three patterns in this chapter will deal with a different modeling challenge, one related to the life cycle of domain objects. Domain objects go through a set of states during their life time. They are created, placed in memory and used in computations, and they are destroyed. In some cases they are saved in permanent locations, like a database, where they can be retrieved from some time later, or they can be archived.</p>
-<p>The last three patterns in this chapter will deal with a different modeling challenge, one related to the life cycle of domain objects. Domain objects go through a set of states during their life time. They are created, placed in memory and used in computations, and they are destroyed. In some cases they are saved in permanent locations, like a database, where they can be retrieved from some time later, or they can be archived.</p>
-<p>The last three patterns in this chapter will deal with a different modeling challenge, one related to the life cycle of domain objects. Domain objects go through a set of states during their life time. They are created, placed in memory and used in computations, and they are destroyed. In some cases they are saved in permanent locations, like a database, where they can be retrieved from some time later, or they can be archived.</p>
-<p>Most of the time it pays of to eliminate or simplify relations from the model. That is, unless they embed deep understanding of the domain.</p>
-<p>A one-to-many association is more complex because it involves many objects which become related. This relationship can be simplified by transforming it into an association between one object and a collection of other objects, although it is not always possible. </p>
-<p>There are many-to-many associations and a large number of them are bidirectional. This increases complexity a lot, making the life cycle management of such objects quite difficult. The number of associations should be reduced as much as possible. </p>
-<ol>
-<li><p>Firstly, associations which are not essential for the model should be removed. They may exist in the domain, but they are not necessary in our model, so take them out. </p>
-</li>
-<li><p>Secondly, multiplicity can be reduced by adding a constraint. If many objects satisfy a relationship, it is possible that only one will do it if the right constraint is imposed on the relationship. Thirdly, many times  </p>
-</li>
-<li><p>Thirdly, many times bidirectional associations can be transformed in unidirectional ones. Each car has an engine, and every engine has a car where it runs. The relationship is bidirectional, but it can be easily simplified considering that the car has an engine, and not the other way around. </p>
-</li>
-</ol>
-<p>Sometimes data integrity is left to be addressed at a database level. Transactions are used to enforce data integrity and while they play a vital role in such operations, it is desirable to solve some of the problems related to data integrity directly in the model.</p>
-<p>It is also necessary to be able to enforce the invariants. The invariants are those rules which which have to be maintained whenever data changes. This is difficult to realize when many objects hold references to changing data objects.</p>
-<p>Therefore, use Aggregates. An Aggregate is a group of associated objects which are considered as one unit with regard to data changes. The Aggregate is demarcated by a boundary which separates the objects inside from those outside. Each Aggregate has one root. The root is an Entity, and it is the only object accessible from outside. The root can hold references to any of the aggregate objects, and the other objects can hold references to each other, but an outside object can hold references only to the root object. If there are other Entities inside the boundary, the identity of those entities is local, making sense only inside the aggregate.  </p>
-<p>How is the Aggregate ensuring data integrity and enforcing the invariants? Since other objects can hold references only to the root, it means that they cannot directly change the other objects in the aggregate. All they can do is to change the root, or ask the root to perform some actions. And the root will be able to change the other objects, but that is an operation contained inside the aggregate, and it is controllable. If the root is deleted and removed from memory, all the other objects from the aggregate will be deleted too, because there is no other object holding reference to any of them. The root is in charge of enforcing the invariants to their aggregates.</p>
-<p>It is possible for the root to pass transient references of internal objects to external ones, with the condition that the external objects do not hold the reference after the operation is finished. One simple way to do that is to pass copies of the Value Objects to external objects. It does not really matter what happens to those objects, because it won’t affect the integrity of the aggregate in any way.</p>
-<p>If objects of an Aggregate are stored in a database, only the root should be obtainable through queries. The other objects should be obtained through traversal associations. Objects inside an Aggregate should be allowed to hold references to roots of other Aggregates. </p>
-<p>The root Entity has global identity, and is responsible for maintaining the invariants. Internal Entities have local identity. </p>
-<hr>
-<p><strong>Author:</strong> Lucas Contreras</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2021/11/09/quick-ddd2/" data-id="ckvsje2ho0000koohg1489b3x" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DDD/">DDD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Software-Architecture/">Software Architecture</a></li></ul>
 
     </footer>
   </div>
@@ -235,7 +161,7 @@ ga('send', 'pageview');
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/ddd.jpg" rel="gallery_ckvsjboiy000lm8ohilo6c3kp">
+      <a class="article-gallery-img fancybox" href="/css/images/ddd.jpg" rel="gallery_ckwe2v1yc0026smohtre5d78m">
         <img src="/css/images/ddd.jpg" itemprop="image">
       </a>
     
@@ -325,7 +251,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2021/07/07/quick-ddd/" data-id="ckvsjboiy000lm8ohilo6c3kp" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2021/07/07/quick-ddd/" data-id="ckwe2v1yc0026smohtre5d78m" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DDD/">DDD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Software-Architecture/">Software Architecture</a></li></ul>
@@ -350,7 +276,7 @@ ga('send', 'pageview');
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/go-intro5.jpg" rel="gallery_ckvsjboim0009m8oh6gx6k0ms">
+      <a class="article-gallery-img fancybox" href="/css/images/go-intro5.jpg" rel="gallery_ckwe2v1x7000dsmoh3sow4inj">
         <img src="/css/images/go-intro5.jpg" itemprop="image">
       </a>
     
@@ -408,7 +334,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2021/03/20/intro_to_go_language5/" data-id="ckvsjboim0009m8oh6gx6k0ms" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2021/03/20/intro_to_go_language5/" data-id="ckwe2v1x7000dsmoh3sow4inj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/101/">101</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Go/">Go</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Golang/">Golang</a></li></ul>
@@ -433,7 +359,7 @@ ga('send', 'pageview');
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/go-intro4.jpg" rel="gallery_ckvsjboiq000cm8oh8fwhg3hz">
+      <a class="article-gallery-img fancybox" href="/css/images/go-intro4.jpg" rel="gallery_ckwe2v1x00008smohn3v6krlb">
         <img src="/css/images/go-intro4.jpg" itemprop="image">
       </a>
     
@@ -559,7 +485,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2021/03/14/intro_to_go_language4/" data-id="ckvsjboiq000cm8oh8fwhg3hz" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2021/03/14/intro_to_go_language4/" data-id="ckwe2v1x00008smohn3v6krlb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/101/">101</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Go/">Go</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Golang/">Golang</a></li></ul>
@@ -584,7 +510,7 @@ ga('send', 'pageview');
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/go-intro3.jpg" rel="gallery_ckvsjboiu000hm8ohxgv0t7ir">
+      <a class="article-gallery-img fancybox" href="/css/images/go-intro3.jpg" rel="gallery_ckwe2v1x4000bsmoh8s4sldpb">
         <img src="/css/images/go-intro3.jpg" itemprop="image">
       </a>
     
@@ -678,7 +604,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2021/03/08/intro_to_go_language3/" data-id="ckvsjboiu000hm8ohxgv0t7ir" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2021/03/08/intro_to_go_language3/" data-id="ckwe2v1x4000bsmoh8s4sldpb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/101/">101</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Go/">Go</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Golang/">Golang</a></li></ul>
@@ -703,7 +629,7 @@ ga('send', 'pageview');
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/go-intro2.jpg" rel="gallery_ckvsjboid0003m8ohkdtxtdx9">
+      <a class="article-gallery-img fancybox" href="/css/images/go-intro2.jpg" rel="gallery_ckwe2v1wz0007smohd7jzhpwe">
         <img src="/css/images/go-intro2.jpg" itemprop="image">
       </a>
     
@@ -760,7 +686,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2021/03/03/intro_to_go_language2/" data-id="ckvsjboid0003m8ohkdtxtdx9" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2021/03/03/intro_to_go_language2/" data-id="ckwe2v1wz0007smohd7jzhpwe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/101/">101</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Go/">Go</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Golang/">Golang</a></li></ul>
@@ -785,7 +711,7 @@ ga('send', 'pageview');
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/go-intro.jpg" rel="gallery_ckvsjboih0005m8oh8hxo0bpg">
+      <a class="article-gallery-img fancybox" href="/css/images/go-intro.jpg" rel="gallery_ckwe2v1wt0003smoh8xhmkore">
         <img src="/css/images/go-intro.jpg" itemprop="image">
       </a>
     
@@ -864,7 +790,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2021/03/01/intro_to_go_language/" data-id="ckvsjboih0005m8oh8hxo0bpg" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2021/03/01/intro_to_go_language/" data-id="ckwe2v1wt0003smoh8xhmkore" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/101/">101</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Go/">Go</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Golang/">Golang</a></li></ul>
@@ -889,7 +815,7 @@ ga('send', 'pageview');
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/gpg-plus-ssh.jpg" rel="gallery_ckvsjboin000am8ohbd138079">
+      <a class="article-gallery-img fancybox" href="/css/images/gpg-plus-ssh.jpg" rel="gallery_ckwe2v1xc000ksmohihm27eul">
         <img src="/css/images/gpg-plus-ssh.jpg" itemprop="image">
       </a>
     
@@ -950,7 +876,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2020/06/29/ssh-gpg-supprt/" data-id="ckvsjboin000am8ohbd138079" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2020/06/29/ssh-gpg-supprt/" data-id="ckwe2v1xc000ksmohihm27eul" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GnuPG/">GnuPG</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Password-Manager/">Password Manager</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH/">SSH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unix/">Unix</a></li></ul>
@@ -975,7 +901,7 @@ ga('send', 'pageview');
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/css/images/gnupg-parttwo.png" rel="gallery_ckvsjboib0002m8ohbmyn4c8y">
+      <a class="article-gallery-img fancybox" href="/css/images/gnupg-parttwo.png" rel="gallery_ckwe2v1wx0005smohduqctk01">
         <img src="/css/images/gnupg-parttwo.png" itemprop="image">
       </a>
     
@@ -1041,10 +967,90 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.lucascontre.site/2020/04/25/exporting-gpg-key/" data-id="ckvsjboib0002m8ohbmyn4c8y" class="article-share-link">Share</a>
+      <a data-url="https://blog.lucascontre.site/2020/04/25/exporting-gpg-key/" data-id="ckwe2v1wx0005smohduqctk01" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GnuPG/">GnuPG</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-creating-a-gpg-key" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/15/creating-a-gpg-key/" class="article-date">
+  <time datetime="2020-04-14T22:15:55.000Z" itemprop="datePublished">2020-04-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="/css/images/gnupg-partone.png" rel="gallery_ckwe2v1wk0000smohn67h677n">
+        <img src="/css/images/gnupg-partone.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/15/creating-a-gpg-key/">Getting started with GnuPG (Part 0)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry"  itemprop="articleBody" style="text-align: justify; ">
+      
+        <p>GnuPG is a complete and free implementation of the OpenPGP standard and this is just <strong>part 0</strong> of who knows how many series where I will explain my basic understanding of GPG and how useful is on my daily basis. If you wish to understand more in detail how GPG work please refer to the RFC or <a href="https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/" target="_blank" rel="noopener">here</a> is a great post that captures the essence of it quite deeply.</p>
+<h3 id="My-use-case"><a href="#My-use-case" class="headerlink" title="My use case"></a>My use case</h3><p>No. I don’t have <a href="https://gpg.lucascontre.site" target="_blank" rel="noopener">my public key</a> on any keyserver and no I don’t use it to send encrypted messages, not mostly at least. I use GnuPG to encrypt any kind of data/files I want to keep safe, for encrypting/decrypting day-to-day info I need to grab quickly within systems I use but don’t fully trust, to login into some of my servers with ssh and gpg agents and last but not least to <a href="https://www.passwordstore.org/" target="_blank" rel="noopener">retrieve all of my passwords securely from any device</a>.</p>
+<p>Me and my stack of devices getting used to using gpg was a long journey I’m not sure it’s over yet. But it started here, by creating my first GPG key pair and that’s what this post is about.</p>
+<h3 id="Generating-a-new-GPG-key-pair"><a href="#Generating-a-new-GPG-key-pair" class="headerlink" title="Generating a new GPG key pair"></a>Generating a new GPG key pair</h3><p>By default <strong>GnuPG</strong> generates one primary (also called master) key with the ability (also called flag) of signing and certifying <strong>[SC]</strong>.</p>
+<p><strong>Certification vs. signing</strong> - <em>Signing</em> is an action against arbitrary data (As I understand it testifying that the encrypted data is sent by who it’s supposed to be sent). <em>Certification</em> is the signing of another key. Ironically, the act of certifying a key is universally called “key signing”.(As I understand it saying “<em>Hey this is my public key</em> or <em>Hey,  I trust this key is from who It says it is</em>). Just embrace the contradiction.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gpg --full-generate-key</span><br><span class="line">Please select what kind of key you want:</span><br><span class="line">   (1) RSA and RSA (default)</span><br><span class="line">   (2) DSA and Elgamal</span><br><span class="line">   (3) DSA (sign only)</span><br><span class="line">   (4) RSA (sign only)</span><br></pre></td></tr></table></figure>
+
+<p>Let’s go with the default option with indicates we are going to use the RSA algorithm and we are going to generate one primary key for <em>Signing</em> and <em>Certifying</em>  <strong>[SC]</strong> and other sub-key for <em>Encrypting</em> <strong>[E]</strong>. We will also specify a key size of <strong><em>4096</em></strong> bits and set the expiration date to 1 year from now. We will then be prompt with  interface and be asked for a passphrase.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Your selection? 1</span><br><span class="line">RSA keys may be between 1024 and 4096 bits long.</span><br><span class="line">What keysize <span class="keyword">do</span> you want? (3072) 4096</span><br><span class="line">Requested keysize is 4096 bits</span><br><span class="line">Please specify how long the key should be valid.</span><br><span class="line">         0 = key does not expire</span><br><span class="line">      &lt;n&gt;  = key expires <span class="keyword">in</span> n days</span><br><span class="line">      &lt;n&gt;w = key expires <span class="keyword">in</span> n weeks</span><br><span class="line">      &lt;n&gt;m = key expires <span class="keyword">in</span> n months</span><br><span class="line">      &lt;n&gt;y = key expires <span class="keyword">in</span> n years</span><br><span class="line">Key is valid <span class="keyword">for</span>? (0) 1y</span><br><span class="line">Key expires at Mon Apr 12 17:43:02 2021 UTC</span><br><span class="line">Is this correct? (y/N) y</span><br></pre></td></tr></table></figure>
+
+<p>Once we specified this we will be asked some info to identify our User ID (UID). Which is basically the name and email of the user and it is stored in one or more UID entries under the Primary key.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">GnuPG needs to construct a user ID to identify your key.</span><br><span class="line"></span><br><span class="line">Real name: Fulanito Detal</span><br><span class="line">Email address: fula@fuladetal.xyz</span><br><span class="line">Comment: Fulanito&apos;s keypair</span><br><span class="line">You selected this USER-ID:</span><br><span class="line">    &quot;Fulanito Detal (Fulanito&apos;s keypair) &lt;fula@fuladetal.xyz&gt;&quot;</span><br><span class="line"></span><br><span class="line">Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O</span><br></pre></td></tr></table></figure>
+
+<p>After we’ve entered the info needed GnuPG will create a new key pair for us.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">We need to generate a lot of random bytes. It is a good idea to perform</span><br><span class="line">some other action (type on the keyboard, move the mouse, utilize the</span><br><span class="line">disks) during the prime generation; this gives the random number</span><br><span class="line">generator a better chance to gain enough entropy.</span><br><span class="line">gpg: key 363690E797C0E0A7 marked as ultimately trusted</span><br><span class="line">gpg: revocation certificate stored as &apos;/root/.gnupg/openpgp-revocs.d/1D537C302A599F7BFC55C260363690E797C0E0A7.rev&apos;</span><br><span class="line">public and secret key created and signed.</span><br></pre></td></tr></table></figure>
+
+<p>After it’s created we would an output of this kind. We can also access this info with <code>gpg -k</code> which lists our public keys or <code>gpg -K</code> to list our private keys.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pub   rsa4096 2020-04-12 [SC] [expires: 2021-04-12]</span><br><span class="line">      1D537C302A599F7BFC55C260363690E797C0E0A7</span><br><span class="line">uid                      Fulanito Detal (Fulanito&apos;s keypair) &lt;fula@fuladetal.xyz&gt;</span><br><span class="line">sub   rsa4096 2020-04-12 [E] [expires: 2021-04-12]</span><br></pre></td></tr></table></figure>
+
+<p>Notice that a <strong>revocation certificate</strong>  has been created under <code>/root/.gnupg/openpgp-revocs.d/02A59{BlaBlaBla}60BH36.rev&#39;</code> . If your GPG private key becomes compromised, you need to revoke it to warn others not to trust future signatures or encrypt data to your public key. However, by the time a key compromise happens, you might not have your GPG key available, such as if it resided on hardware stolen from you, or the attacker removed it after accessing it. A revocation certificate consists of a signed message, stating in machine-readable form that a key no longer has validity for future cryptographic operations. Anyone with this certificate can revoke your private key. I recommend printing it out and storing it in a secure location.</p>
+<p>Finally, now that you managed to create your own key pair you can start sharing you public key, decrypt and sign messages. In order to get use the <code>gpg</code> cli tool I suggest checking the following cheat sheet until you get used to it. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl cheat.sh/gpg</span><br></pre></td></tr></table></figure>
+
+<h3 id="Bibliography-and-technology-used-in-this-project"><a href="#Bibliography-and-technology-used-in-this-project" class="headerlink" title="Bibliography and technology used in this project"></a>Bibliography and technology used in this project</h3><ul>
+<li><a href="https://tools.ietf.org/html/rfc4880" target="_blank" rel="noopener">RFC 4880</a></li>
+<li><a href="https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/" target="_blank" rel="noopener">This awesome post</a></li>
+<li><a href="https://davesteele.github.io/gpg/2015/08/01/intermediate-gpg/" target="_blank" rel="noopener">This other awesome post</a></li>
+</ul>
+<hr>
+<p><strong>Author:</strong> Lucas Contreras</p>
+<p><strong>Leave a comment:</strong> <a href="https://www.reddit.com/r/notanothertechyblog/" target="_blank" rel="noopener">Join the Reddit discussion</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.lucascontre.site/2020/04/15/creating-a-gpg-key/" data-id="ckwe2v1wk0000smohn67h677n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GnuPG/">GnuPG</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PasswordManager/">PasswordManager</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unix/">Unix</a></li></ul>
 
     </footer>
   </div>
@@ -1076,10 +1082,6 @@ ga('send', 'pageview');
           </li>
         
           <li>
-            <a href="/2021/11/09/quick-ddd2/">Notes DDD Quickly (Part 2)</a>
-          </li>
-        
-          <li>
             <a href="/2021/07/07/quick-ddd/">Notes DDD Quickly (Part 1)</a>
           </li>
         
@@ -1089,6 +1091,10 @@ ga('send', 'pageview');
         
           <li>
             <a href="/2021/03/14/intro_to_go_language4/">Maps &amp; Interfaces - Go Intro (III)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/08/intro_to_go_language3/">Receivers &amp; Pointers - Go Intro (II)</a>
           </li>
         
       </ul>
@@ -1113,7 +1119,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/101/" style="font-size: 20px;">101</a> <a href="/tags/APIs/" style="font-size: 12.5px;">APIs</a> <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AdonisJS/" style="font-size: 10px;">AdonisJS</a> <a href="/tags/DDD/" style="font-size: 12.5px;">DDD</a> <a href="/tags/ESP8266/" style="font-size: 10px;">ESP8266</a> <a href="/tags/GnuPG/" style="font-size: 15px;">GnuPG</a> <a href="/tags/Go/" style="font-size: 17.5px;">Go</a> <a href="/tags/Golang/" style="font-size: 17.5px;">Golang</a> <a href="/tags/NodeMCU/" style="font-size: 10px;">NodeMCU</a> <a href="/tags/Password-Manager/" style="font-size: 10px;">Password Manager</a> <a href="/tags/PasswordManager/" style="font-size: 10px;">PasswordManager</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/Serverless/" style="font-size: 10px;">Serverless</a> <a href="/tags/Slack/" style="font-size: 10px;">Slack</a> <a href="/tags/Software-Architecture/" style="font-size: 12.5px;">Software Architecture</a> <a href="/tags/Splunk/" style="font-size: 10px;">Splunk</a> <a href="/tags/Terraform/" style="font-size: 10px;">Terraform</a> <a href="/tags/Typescript/" style="font-size: 10px;">Typescript</a> <a href="/tags/Unix/" style="font-size: 12.5px;">Unix</a>
+      <a href="/tags/101/" style="font-size: 20px;">101</a> <a href="/tags/APIs/" style="font-size: 12.5px;">APIs</a> <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AdonisJS/" style="font-size: 10px;">AdonisJS</a> <a href="/tags/DDD/" style="font-size: 10px;">DDD</a> <a href="/tags/ESP8266/" style="font-size: 10px;">ESP8266</a> <a href="/tags/GnuPG/" style="font-size: 15px;">GnuPG</a> <a href="/tags/Go/" style="font-size: 17.5px;">Go</a> <a href="/tags/Golang/" style="font-size: 17.5px;">Golang</a> <a href="/tags/NodeMCU/" style="font-size: 10px;">NodeMCU</a> <a href="/tags/Password-Manager/" style="font-size: 10px;">Password Manager</a> <a href="/tags/PasswordManager/" style="font-size: 10px;">PasswordManager</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/Serverless/" style="font-size: 10px;">Serverless</a> <a href="/tags/Slack/" style="font-size: 10px;">Slack</a> <a href="/tags/Software-Architecture/" style="font-size: 10px;">Software Architecture</a> <a href="/tags/Splunk/" style="font-size: 10px;">Splunk</a> <a href="/tags/Terraform/" style="font-size: 10px;">Terraform</a> <a href="/tags/Typescript/" style="font-size: 10px;">Typescript</a> <a href="/tags/Unix/" style="font-size: 12.5px;">Unix</a>
     </div>
   </div>
 
@@ -1123,7 +1129,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
