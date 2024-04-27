@@ -6,8 +6,15 @@
     <description>Recent content on Contre</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jun 2020 13:15:55 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2024 20:25:20 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac setup</title>
+      <link>http://localhost:1313/posts/mac_setup/</link>
+      <pubDate>Sat, 27 Apr 2024 20:25:20 +0200</pubDate>
+      <guid>http://localhost:1313/posts/mac_setup/</guid>
+      <description>Coming from the Linux world of personal computers, and having used tiling windows managers for a while now, I always struggle with using Mac OS for work. I don&amp;rsquo;t like it a single bit.&#xA;I hate inability of solving problems, the lack of customization and control you have over the OS. But if there&amp;rsquo;s one thing that I hate the most is the fact that you as an user must forfeit to Apples concept of what a good UX is and not the other way around.</description>
+    </item>
     <item>
       <title>GPG &#43; SSH ?</title>
       <link>http://localhost:1313/posts/gpg_1/</link>
