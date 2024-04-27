@@ -9,7 +9,7 @@
   />
   
     
-      <title>Mac setup | Contre</title>
+      <title>Mac setup (Part 0) | Contre</title>
     
   
   <link rel="stylesheet" href="/css/reset.css"/>
@@ -60,7 +60,7 @@
       
   <main>
     <article>
-      <h1>Mac setup</h1>
+      <h1>Mac setup (Part 0)</h1>
       <div class="post-meta">
   <strong>
     <span>Posted on</span>
@@ -68,26 +68,47 @@
     
     
   </strong>
-  <span> • 356 words</span>
-  <span> • 2 minute read</span>
+  <span> • 758 words</span>
+  <span> • 4 minute read</span>
   
   
 </div>
 
-      <div><p>Coming from the Linux world of personal computers, and having used <a href="https://en.wikipedia.org/wiki/Tiling_window_manager">tiling windows managers</a> for a while now, I always struggle with using Mac OS for work. I don&rsquo;t like it a single bit.</p>
-<p>I hate inability of solving problems, the lack of customization and control you have over the OS. But if there&rsquo;s one thing that I hate the most is the fact that you as an user must forfeit to Apples concept of what a good UX is and not the other way around. Having the change to bring the UX closer to the individual, while maintaining a usable software for the herd, is something they just don&rsquo;t care and I don&rsquo;t blame them. Nevertheless, there are some things I have done to try to fix this</p>
-<h2 id="cycling-workspaces-or-desktops">Cycling workspaces (or Desktops)</h2>
-<h2 id="text-keybinds">Text keybinds</h2>
-<p>Skipping through words is something i do a lot both for <strong>moving the cursor</strong> around or <strong>selecting chunks of sentences</strong>. I use <code>Ctrl + Left/Right</code> but on OS X it&rsquo;s default is <code>Option + Left/Right</code>. Other things such as selecting all text <code>Ctrl + A</code>. For these things I have found that they are mapped to a set of escape characters. Luckily I have a <a href="https://en.wikipedia.org/wiki/QMK">qmk</a> compatible <a href="https://github.com/foostan/crkbd">keyboard</a> that lets me set up these escape characters for a key combination, resulting in a seamless experiences regardless of the OS you are using, since the escape characters are always the same what changes is the key combination that sends them.</p>
-<h2 id="the-command-control-inferno">The Command Control inferno</h2>
+      <div><p>I&rsquo;ve dodged using the Mac for nearly eight years, but now I have to give in.</p>
+<p>Coming from the Linux world of personal computers and having used <a href="https://en.wikipedia.org/wiki/Tiling_window_manager">tiling windows managers</a> for a while now, I always struggle with using Mac OS at work. I don&rsquo;t like it a single bit. I hate inability of solving problems, the lack of customization and control you have over the OS. But if there&rsquo;s one thing that I hate the most is the fact that you as an user must forfeit to Apples concept of what a good UX is and not the other way around. Having the change to bring the UX closer to the individual, while maintaining a usable software for the herd, is something they just don&rsquo;t care and I don&rsquo;t blame them. Nevertheless, there are some things I have done to try to make my experience better.</p>
+<h2 id="the-windows">The windows</h2>
+<p>Even if not really tiling, windows can be arranged side by side using only your keyboard using a third party app. There are a bunch of applications. <a href="https://github.com/koekeishiya/yabai">Yabai</a>, <a href="https://www.raycast.com/">Raycast</a>, <a href="https://rectangleapp.com/">Rectangle</a>, etc. I&rsquo;m currently using Rectangle since it only does windows arrangements using native floating windows. You can also set up key combinations to achieve this.</p>
+<p>Moving through desktops can be both configured in under the Mission Control settings <code>Settings &gt; Keyboard &gt; Keybaord Shortcuts &gt; Missions Control</code> but it&rsquo;s limited to 4 Desktops. Cycling through Desktops (workspaces) keybind can also be changed from here.</p>
+<p>Changing focus is somethings that I have resign to do with the keyboard. I have to pick the mouse, and <strong>CLICK</strong> the window since putting the cursor over it won&rsquo;t focus it (something that I have also resign to set up). What sometimes do, is to switch focus within the active and last active windows, a shortcut for this can be set up on <code>Settings &gt; Keyboard &gt; Keybaord Shortcuts &gt; Keyboard</code>.</p>
+<h2 id="the-cmdctrl-inferno">The Cmd/Ctrl inferno</h2>
 <p>The thing that affects the most here is the <strong>Copy/Paste/Cut</strong> that we are used to do with <code>Ctrl + C</code>,  <code>Ctrl + V</code> and  <code>Ctrl + X</code>. In Mac one would have to switch the <code>Ctrl</code> key for the <code>Cmd</code> key. For this, I have found that OS X let&rsquo;s you override, what they&rsquo;ve called, &ldquo;<em>keyboard shortcuts</em>&rdquo;. This setting is useful to override more than one keyboard shortcut that is done with the <strong>Command</strong> key rather than the <strong>Control</strong> key.</p>
-<p>Here&rsquo;s a list of the keyboard shortcuts I have set up.</p>
+<p>To access, navigate to <code>Settings &gt; Keyboard &gt; Keybaord Shortcuts &gt; App Shortcuts</code></p>
+<p><img src="/images/posts/mac_setup0.jpg" alt="ShortcutsSettings"></p>
+<p>Shortcuts can be override for All Applications or for custom applications.</p>
+<p>The &ldquo;Menu Title&rdquo; refers to Mac&rsquo;s menu name display at the top bar for each windows.</p>
+<p>Here, &ldquo;Paste&rdquo; would be the name of our Menu Title and the <code>^V</code> means that I have remapped this to <code>Ctrl + V</code>.</p>
 <table>
 <thead>
 <tr>
-<th>Menu Title</th>
-<th>Combination</th>
-<th>App</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="/images/posts/mac_setup1.jpg" alt="MenuTitle"></td>
+<td><img src="/images/posts/mac_setup2.jpg" alt="MenuTitle2"></td>
+</tr>
+</tbody>
+</table>
+<p>Bare in mind that these Menu Titles might change with updates from each application and you should always.</p>
+<p>Here&rsquo;s a list of some keyboard shortcuts I have set up:</p>
+<table>
+<thead>
+<tr>
+<th>Menu Title            </th>
+<th>Combination            </th>
+<th>Application            </th>
 <th>Description</th>
 </tr>
 </thead>
@@ -95,8 +116,20 @@
 <tr>
 <td>Paste</td>
 <td>Ctrl+V</td>
-<td>*</td>
-<td></td>
+<td>All Applicationws</td>
+<td>Paste</td>
+</tr>
+<tr>
+<td>Cut</td>
+<td>Ctrl+X</td>
+<td>All Applications</td>
+<td>Cut</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Ctrl+C</td>
+<td>All Applications</td>
+<td>Copy</td>
 </tr>
 <tr>
 <td>New Tab</td>
@@ -104,9 +137,53 @@
 <td>Chrome</td>
 <td>Opens a new Tab</td>
 </tr>
+<tr>
+<td>Close Tab</td>
+<td>Ctrl+W</td>
+<td>Chrome</td>
+<td>Closes a new Tab</td>
+</tr>
+<tr>
+<td>Reload This Page</td>
+<td>Ctrl+W</td>
+<td>Chrome</td>
+<td>Reloads Page</td>
+</tr>
+<tr>
+<td>Find&hellip;</td>
+<td>Ctrl+F</td>
+<td>Chrome</td>
+<td>Reloads Page</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Ctrl+Shift+V</td>
+<td>iTerm</td>
+<td>Paste on terminal</td>
+</tr>
+<tr>
+<td>Open Location&hellip;</td>
+<td>Ctrl+L</td>
+<td>Chrome</td>
+<td>Cursor to the URL bar</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
 </tbody>
 </table>
+<p>Additionally, changing things like <em>Taking screenshots</em> and Spotlight can be achieve in the same settings: <code>Settings &gt; Keyboard &gt; Keybaord Shortcuts &gt; ...</code></p>
 <h2 id="brew">Brew</h2>
+<p>There are some <a href="https://news.ycombinator.com/item?id=26036834">discussions</a> on weather Brew is good or bad. In my case, I had better experiences with other package managers but I never really get to learn it properly. But for many things <a href="https://ports.macports.org/">Mac Ports</a> has given me less issues.</p>
+<h2 id="navigating-through-text-soon">Navigating through text (soon..)</h2>
+<p>This is something I haven&rsquo;t solve quite yet but as soon as I do I will update the post, but I have an idea on how to do it</p>
+<p>Skipping through words is something i do a lot both for <strong>moving the cursor</strong> around or <strong>selecting chunks of sentences</strong>. I use <code>Ctrl + Left/Right</code> but on OS X it&rsquo;s default is <code>Option + Left/Right</code>. Other things such as selecting all text <code>Ctrl + A</code>. For these things I have found that they are mapped to a set of escape characters. Luckily I have a <a href="https://en.wikipedia.org/wiki/QMK">qmk</a> compatible <a href="https://github.com/foostan/crkbd">keyboard</a> that lets me send escape characters for a determine key combination, I&rsquo;m trying to achieve a seamless experiences regardless of the OS you are using, but I&rsquo;m not there yet.</p>
+<!-- raw HTML omitted -->
+<h2 id="terminal-and-neovim">Terminal and Neovim</h2>
+<p>Soon..</p>
 </div>
     </article>
   </main>
