@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://blog.contre.io/</loc>
     <lastmod>2024-04-27T20:25:20+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/mac_setup/</loc>
+    <loc>https://blog.contre.io/posts/mac_setup/</loc>
     <lastmod>2024-04-27T20:25:20+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://blog.contre.io/posts/</loc>
     <lastmod>2024-04-27T20:25:20+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/english/</loc>
+    <loc>https://blog.contre.io/tags/english/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gnupg/</loc>
+    <loc>https://blog.contre.io/tags/gnupg/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/gpg_1/</loc>
+    <loc>https://blog.contre.io/posts/gpg_1/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/password-manager/</loc>
+    <loc>https://blog.contre.io/tags/password-manager/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssh/</loc>
+    <loc>https://blog.contre.io/tags/ssh/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://blog.contre.io/tags/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/unix/</loc>
+    <loc>https://blog.contre.io/tags/unix/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/gpg_2/</loc>
+    <loc>https://blog.contre.io/posts/gpg_2/</loc>
     <lastmod>2020-04-25T00:15:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/security/</loc>
+    <loc>https://blog.contre.io/tags/security/</loc>
     <lastmod>2020-04-25T00:15:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/gpg_0/</loc>
+    <loc>https://blog.contre.io/posts/gpg_0/</loc>
     <lastmod>2020-04-15T00:15:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://blog.contre.io/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://blog.contre.io/categories/</loc>
   </url>
 </urlset>
