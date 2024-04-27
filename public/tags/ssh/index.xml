@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSH on Contre</title>
+    <link>http://localhost:1313/tags/ssh/</link>
+    <description>Recent content in SSH on Contre</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Jun 2020 13:15:55 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPG &#43; SSH ? (Part I)</title>
+      <link>http://localhost:1313/posts/gpg_1/</link>
+      <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
+      <guid>http://localhost:1313/posts/gpg_1/</guid>
+      <description>This will be a small walk through on how to generate an authentication subkey on GPG and integrated with ssh. First of all bare in mind that will need a GPG key first in order to generate this subkey, if have not generated on yet refer to part 0 of these series.&#xA;Authentication Key In order to generate an authentication key, as I mentioned before, you will need to have a key generated.</description>
+    </item>
+  </channel>
+</rss>
