@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contre</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Contre</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hi, I&#39;m alive</title>
+      <link>http://localhost:1313/posts/im_alive/</link>
+      <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/im_alive/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>An undeniable cumulus of personalities or a single one represented in manies ? A lurker writer, non-verbose with more ideas than things to say. Living in the same place as you are, around the corner of this vast everlasting universe. With nothing that the omnipresent uncertainty that encourage the individual to try and say something new.</description>
+    </item>
+  </channel>
+</rss>
