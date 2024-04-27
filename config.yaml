@@ -1,0 +1,40 @@
+# exampleSite/config.yaml
+baseURL: https://blog.contre.io
+languageCode: en-us
+theme: smigle
+themesDir: themes
+title: Contre
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 2
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 3
+    # - identifier: categories
+    #   name: Categories
+    #   url: /categories/
+    #   weight: 4
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags/
+    #   weight: 5
+params:
+  abbrDateFmt: "Jan 2"
+  author: "Blog Author"
+  brandIconFile: "images/img.svg"
+  dateFmt: "2006-01-02"
+#  customStylesheets: # Use to override theme styles, like logo size
+#    - "css/custom.css"
+  social:
+    - name: Here
+      url: https://blog.contre.io
+  subtitle: "|||||||||||"
+  # subtitle: "___________"
