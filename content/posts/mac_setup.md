@@ -27,12 +27,12 @@ To access, navigate to `Settings > Keyboard > Keybaord Shortcuts > App Shortcuts
 
 ![ShortcutsSettings](/images/posts/mac_setup0.jpg)
 
-Shortcuts can be override for All Applications or for custom applications.
+Shortcuts can be override for *All Applications* or for custom applications.
 
 
-The "Menu Title" refers to Mac's menu name display at the top bar for each windows.
+The "Menu Title" refers to Mac's menu name displayed at the top bar for each windows.
 
-Here, "Paste" would be the name of our Menu Title and the `^V` means that I have remapped this to `Ctrl + V`.
+For instance, "Paste" would be the name of our Menu Title and the `^V` means that I have remapped this to `Ctrl + V`.
 
 | | |
 | ------------- | -------------- |
@@ -59,13 +59,13 @@ Additionally, changing things like *Taking screenshots* and Spotlight can be ach
 
 ## Brew
 
-There are some [discussions](https://news.ycombinator.com/item?id=26036834) on weather Brew is good or bad. In my case, I had better experiences with other package managers but I never really get to learn it properly. But for many things [Mac Ports](https://ports.macports.org/) has given me less issues.
+There are some [discussions](https://news.ycombinator.com/item?id=26036834) on weather Brew is good or bad. In my case, I had better experiences with other package managers but I've never really had the motivation to learn it properly. However, for many tasks, [Mac Ports](https://ports.macports.org/) has caused me less issues.
 
 ## Navigating through text (soon..)
 
-This is something I haven't solve quite yet but as soon as I do I will update the post, but I have an idea on how to do it
+I haven't quite solved this yet, but once I do, I'll write a second part of this post. However, I do have an idea on how to tackle it.
 
-Skipping through words is something i do a lot both for **moving the cursor** around or **selecting chunks of sentences**. I use `Ctrl + Left/Right` but on OS X it's default is `Option + Left/Right`. Other things such as selecting all text `Ctrl + A`. For these things I have found that they are mapped to a set of escape characters. Luckily I have a [qmk](https://en.wikipedia.org/wiki/QMK) compatible [keyboard](https://github.com/foostan/crkbd) that lets me send escape characters for a determine key combination, I'm trying to achieve a seamless experiences regardless of the OS you are using, but I'm not there yet.
+Skipping through words is something i do a lot both for **moving the cursor** around or **selecting chunks of sentences**. I use `Ctrl + Left/Right` but on OS X it's default is `Option + Left/Right`.This shortcut can be overridden in iTerm, for example, but not system-wide. Unfortunately, other key combinations such as `Ctrl + A` for selecting all text under the cursor, are also done using the `Option` key. I have found that functions as such are mapped to send escape characters like `^[[1;5D`. Luckily I have a [qmk](https://en.wikipedia.org/wiki/QMK) compatible [keyboard](https://github.com/foostan/crkbd) that lets me send escape characters for a determine key combination, I'm trying to achieve a seamless experiences regardless of the OS you are using, but I'm not there yet.
 <!-- Skipping through words is something i do a lot both for **moving the cursor** around or **selecting chunks of sentences**. I use `Ctrl + Left/Right` but on OS X it's default is `Option + Left/Right`. Other things such as selecting all text `Ctrl + A`. For these things I have found that they are mapped to a set of escape characters. Luckily I have a [qmk](https://en.wikipedia.org/wiki/QMK) compatible [keyboard](https://github.com/foostan/crkbd) that lets me set up these escape characters for a key combination, resulting in a seamless experiences regardless of the OS you are using, since the escape characters are always the same what changes is the key combination that sends them. -->
 
 ## Terminal and Neovim
