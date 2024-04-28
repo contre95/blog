@@ -18,10 +18,10 @@ menu:
       name: Posts
       url: /posts/
       weight: 3
-    # - identifier: categories
-    #   name: Categories
-    #   url: /categories/
-    #   weight: 4
+    - identifier: rss
+      name: RSS
+      url: /poosts/index.xml
+      weight: 4
     # - identifier: tags
     #   name: Tags
     #   url: /tags/

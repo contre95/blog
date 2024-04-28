@@ -9,7 +9,7 @@ VPNs, SSH reverse tunnels, ~~Syngergy~~ -> ~~Barrier~~ -> Input Leap, KVMs. I've
 ```yml
 WARNING: This post might seem obvious to many macOS users.
 ```
-Coming from the Linux world of personal computers and having used [tiling windows managers](https://en.wikipedia.org/wiki/Tiling_window_manager) for a while now, I always struggle with using Mac OS at work. I don't like it a single bit. I hate inability of solving problems, the lack of customization and control you have over the OS. But if there's one thing that I hate the most is the fact that you as an user must forfeit to Apples concept of what a good UX is and not the other way around. Having the change to bring the UX closer to the individual, while maintaining a usable software for the herd, is something they just don't care and I don't blame them. Nevertheless, there are some things I have done to try to make my experience better.
+Coming from the Linux world of personal computers and having used [tiling windows managers](https://en.wikipedia.org/wiki/Tiling_window_manager) for a while now, I always struggle with using Mac OS at work. I don't like it a single bit. I hate inability of solving problems, the lack of customization and control you have over the OS. But if there's one thing that I hate the most is the fact that you as an user must forfeit to Apples concept of what a good UX is and not the other way around. Having the chance to bring the UX closer to the individual, while maintaining a usable software for the herd, is something they just don't care and I don't blame them. Nevertheless, there are some things I have done to try to make my experience better.
 
 ## The windows
 
