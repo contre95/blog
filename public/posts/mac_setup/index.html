@@ -51,6 +51,9 @@
          | 
         <a href="/posts/"><b>Posts</b></a>
       
+         | 
+        <a href="/poosts/index.xml"><b>RSS</b></a>
+      
     
   </nav>
   <hr />
@@ -68,7 +71,7 @@
     
     
   </strong>
-  <span> • 779 words</span>
+  <span> • 817 words</span>
   <span> • 4 minute read</span>
   
   
@@ -76,13 +79,13 @@
 
       <div><p>VPNs, SSH reverse tunnels, <del>Syngergy</del> -&gt; <del>Barrier</del> -&gt; Input Leap, KVMs. I&rsquo;ve dodged using the Mac for nearly eight years, but now I have to give in.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">WARNING</span>: <span style="color:#ae81ff">This post might seem obvious to many macOS users.</span>
-</span></span></code></pre></div><p>Coming from the Linux world of personal computers and having used <a href="https://en.wikipedia.org/wiki/Tiling_window_manager">tiling windows managers</a> for a while now, I always struggle with using Mac OS at work. I don&rsquo;t like it a single bit. I hate inability of solving problems, the lack of customization and control you have over the OS. But if there&rsquo;s one thing that I hate the most is the fact that you as an user must forfeit to Apples concept of what a good UX is and not the other way around. Having the change to bring the UX closer to the individual, while maintaining a usable software for the herd, is something they just don&rsquo;t care and I don&rsquo;t blame them. Nevertheless, there are some things I have done to try to make my experience better.</p>
+</span></span></code></pre></div><p>Coming from the Linux world of personal computers and having used <a href="https://en.wikipedia.org/wiki/Tiling_window_manager">tiling windows managers</a> for a while now, I always struggle with using Mac OS at work. I don&rsquo;t like it a single bit. I hate inability of solving problems, the lack of customization and control you have over the OS. But if there&rsquo;s one thing that I hate the most is the fact that, as an user, one must forfeit to Apple&rsquo;s concept of what a good UX is and not the other way around. Having the chance to bring the UX closer to the individual, while maintaining a usable software for the herd, is something they just don&rsquo;t care and I don&rsquo;t blame them. Nevertheless, there are some things I have done to try to make my experience better.</p>
 <h2 id="the-windows">The windows</h2>
-<p>Even if not really tiling, windows can be arranged side by side using only your keyboard using a third party app. There are a bunch of applications. <a href="https://github.com/koekeishiya/yabai">Yabai</a>, <a href="https://www.raycast.com/">Raycast</a>, <a href="https://rectangleapp.com/">Rectangle</a>, etc. I&rsquo;m currently using Rectangle since it only does windows arrangements using native floating windows. You can also set up key combinations to achieve this.</p>
-<p>Moving through desktops can be both configured in under the Mission Control settings <code>Settings &gt; Keyboard &gt; Keybaord Shortcuts &gt; Missions Control</code> but it&rsquo;s limited to 4 Desktops. Cycling through Desktops (workspaces) keybind can also be changed from here.</p>
-<p>Changing focus is somethings that I have resign to do with the keyboard. I have to pick the mouse, and <strong>CLICK</strong> the window since putting the cursor over it won&rsquo;t focus it (something that I have also resign to set up). What sometimes do, is to switch focus within the active and last active windows, a shortcut for this can be set up on <code>Settings &gt; Keyboard &gt; Keybaord Shortcuts &gt; Keyboard</code>.</p>
+<p>Even if not really tiling, windows can be arranged side by side using only your keyboard with a third party app. There are a bunch of applications: <a href="https://github.com/koekeishiya/yabai">Yabai</a>, <a href="https://www.raycast.com/">Raycast</a>, <a href="https://rectangleapp.com/">Rectangle</a>, etc. I&rsquo;m currently using Rectangle since it just does windows arrangements using native floating windows and you can also set up key combinations to achieve this.</p>
+<p>Moving through desktops can be both configured under the Mission Control settings (<code>Settings &gt; Keyboard &gt; Keybaord Shortcuts &gt; Missions Control</code>), but it&rsquo;s limited to 4 Desktops. Cycling through Desktops (workspaces) keybindings can also be changed from here.</p>
+<p>Changing focus is somethings that I have gave up to do with the keyboard. There are some commands and binaries you can install to achieve a somewhat decent experience, but as Žižek says, <em>I would prefer not to</em>. I just pick up the mouse and <strong>CLICK</strong> the window, since putting the cursor over won&rsquo;t focus on it (something that I have also resign to set up). I&rsquo;m okay with switching focus within the active and last-active window, a shortcut for this can be set up on <code>Settings &gt; Keyboard &gt; Keybaord Shortcuts &gt; Keyboard</code>.</p>
 <h2 id="the-cmdctrl-inferno">The Cmd/Ctrl inferno</h2>
-<p>The thing that affects the most here is the <strong>Copy/Paste/Cut</strong> that we are used to do with <code>Ctrl + C</code>,  <code>Ctrl + V</code> and  <code>Ctrl + X</code>. In Mac one would have to switch the <code>Ctrl</code> key for the <code>Cmd</code> key. For this, I have found that OS X let&rsquo;s you override, what they&rsquo;ve called, &ldquo;<em>keyboard shortcuts</em>&rdquo;. This setting is useful to override more than one keyboard shortcut that is done with the <strong>Command</strong> key rather than the <strong>Control</strong> key.</p>
+<p>Among all the lack of standards and custom keys the Mac OS has, the thing that bothers me the most here is the <strong>Copy/Paste/Cut</strong> that I&rsquo;m used to do with <code>Ctrl + C</code>,  <code>Ctrl + V</code> and  <code>Ctrl + X</code>. In Mac one would have to switch the <code>Ctrl</code> key for the <code>Cmd</code> key for many things, <strong>BUT NOT FOR EVERYTHING</strong>. For this, I have found that OS X let&rsquo;s you override <em>keyboard shortcuts</em>. This also works to override more than one keyboard shortcut that is set to the <strong>Command</strong> key rather than the <strong>Control</strong> key.</p>
 <p>To access, navigate to <code>Settings &gt; Keyboard &gt; Keybaord Shortcuts &gt; App Shortcuts</code></p>
 <p><img src="/images/posts/mac_setup0.jpg" alt="ShortcutsSettings"></p>
 <p>Shortcuts can be override for All Applications or for custom applications.</p>
