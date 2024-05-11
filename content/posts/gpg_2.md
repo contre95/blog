@@ -6,7 +6,7 @@ tags:
     - Security
     - English
 ---
-
+![Intro](/images/posts/gpg_2_banner.jpg)
 
 Now that you've managed to create your own GPG key it's time to understand a bit more about how GnuPG works.
 

@@ -6,6 +6,7 @@ tags:
     - Password Manager
     - English
 ---
+![Intro](/images/posts/gpg_0_banner.jpg)
 
 GnuPG is a complete and free implementation of the OpenPGP standard and this is just **part 0** of who knows how many series where I will explain my basic understanding of GPG and how useful is on my daily basis. If you wish to understand more in detail how GPG work please refer to the RFC or [here](https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/) is a great post that captures the essence of it quite deeply.
 

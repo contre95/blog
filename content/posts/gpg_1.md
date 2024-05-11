@@ -8,6 +8,7 @@ tags:
     - Unix
     - English
 ---
+![Intro](/images/posts/gpg_1_banner.jpg)
 
 This will be a small walk through on how to generate an authentication subkey on GPG and integrated with ssh. First of all bare in mind that will need a GPG key first in order to generate this subkey, if have not generated on yet refer to part 0 of these series.
 
