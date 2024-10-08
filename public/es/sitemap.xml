@@ -2,94 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/es/</loc>
+    <loc>https://blog.contre.io/es/</loc>
     <lastmod>2024-10-08T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://blog.contre.io/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="http://localhost:1313/es/"
+                href="https://blog.contre.io/es/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/tags/pictures/</loc>
+    <loc>https://blog.contre.io/es/tags/pictures/</loc>
     <lastmod>2024-10-08T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/pictures/"
+                href="https://blog.contre.io/en/tags/pictures/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="http://localhost:1313/es/tags/pictures/"
+                href="https://blog.contre.io/es/tags/pictures/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/posts/</loc>
+    <loc>https://blog.contre.io/es/posts/</loc>
     <lastmod>2024-10-08T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/"
+                href="https://blog.contre.io/en/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="http://localhost:1313/es/posts/"
+                href="https://blog.contre.io/es/posts/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/posts/germnay_trip/</loc>
+    <loc>https://blog.contre.io/es/posts/germnay_trip/</loc>
     <lastmod>2024-10-08T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/germnay_trip/"
+                href="https://blog.contre.io/en/posts/germnay_trip/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="http://localhost:1313/es/posts/germnay_trip/"
+                href="https://blog.contre.io/es/posts/germnay_trip/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/tags/</loc>
+    <loc>https://blog.contre.io/es/tags/</loc>
     <lastmod>2024-10-08T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://blog.contre.io/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="http://localhost:1313/es/tags/"
+                href="https://blog.contre.io/es/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/tags/trip/</loc>
+    <loc>https://blog.contre.io/es/tags/trip/</loc>
     <lastmod>2024-10-08T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/trip/"
+                href="https://blog.contre.io/en/tags/trip/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="http://localhost:1313/es/tags/trip/"
+                href="https://blog.contre.io/es/tags/trip/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/categories/</loc>
+    <loc>https://blog.contre.io/es/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="https://blog.contre.io/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="http://localhost:1313/es/categories/"
+                href="https://blog.contre.io/es/categories/"
                 />
   </url>
 </urlset>
