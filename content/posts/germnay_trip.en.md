@@ -11,6 +11,8 @@ What initially were supposed to be 370 km on the bike ended up being less than h
 
 The best part of the trip was the physical exercise we had to do, a good kind of tiredness. It had been a while since I subjected myself to such physical effort. It’s interesting to feel the limits of the body and how it deals with stress. Throughout the trip, we had to be mindful of what to eat, when to rest, and plan our next movements accordingly. To all this, we had to add variables like the weather, distances, available modes of transportation, accommodations, and terrain.
 
+![Fungi](/images/posts/mono.jpg)
+
 It wasn’t our first trip together; having shared similar experiences helped us a lot in making decisions. Additionally, the German infrastructure contributed to making the trip safer. It was inevitable to constantly compare it with our previous adventures in the Andes or southern Argentina, where one felt more 'alone' and, why not, freer.
 
 To my surprise, this trip slightly changed my perspective on Germany and its people. I found people who were friendly and outgoing, willing to strike up conversations. The trains were always a bit late, and both the people and services were quite flexible. It led me to reflect that stereotypes are as important as it is to not pay attention to them.
