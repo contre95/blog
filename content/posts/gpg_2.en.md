@@ -4,7 +4,6 @@ date: 2020-04-25  00:15:55
 tags:
     - GnuPG
     - Security
-    - English
 ---
 ![Intro](/images/posts/gpg_2_banner.jpg)
 

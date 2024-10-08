@@ -4,7 +4,6 @@ date: 2024-10-08  00:18:54
 tags:
     - Trip
     - Pictures
-    - Spanish
 ---
 ![Fungi](/images/posts/fungi.jpg)
 
