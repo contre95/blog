@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Contre</title>
-    <link>http://localhost:1313/en/posts/</link>
+    <link>https://blog.contre.io/en/posts/</link>
     <description>Recent content in Posts on Contre</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 08 Oct 2024 00:18:54 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.contre.io/en/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Schwarzwald</title>
-      <link>http://localhost:1313/en/posts/germnay_trip/</link>
+      <link>https://blog.contre.io/en/posts/germnay_trip/</link>
       <pubDate>Tue, 08 Oct 2024 00:18:54 +0000</pubDate>
-      <guid>http://localhost:1313/en/posts/germnay_trip/</guid>
+      <guid>https://blog.contre.io/en/posts/germnay_trip/</guid>
       <description>What initially were supposed to be 370 km on the bike ended up being less than half. However, it wasn’t easy and was even somewhat dangerous. We were accompanied by two sturdy bikes, a Giant and a Trek, both loaded on either side with clothes, food, and a tent, and they managed to handle dirt, mountains, and roads. The trains in Germany were a great help, both to avoid descents rated as &amp;ldquo;expert&amp;rdquo; on Komoot and to dodge 12 mm of rain one night.</description>
     </item>
     <item>
       <title>Mac setup (Part 0)</title>
-      <link>http://localhost:1313/en/posts/mac_setup/</link>
+      <link>https://blog.contre.io/en/posts/mac_setup/</link>
       <pubDate>Sat, 27 Apr 2024 20:25:20 +0200</pubDate>
-      <guid>http://localhost:1313/en/posts/mac_setup/</guid>
+      <guid>https://blog.contre.io/en/posts/mac_setup/</guid>
       <description>VPNs, SSH reverse tunnels, Syngergy -&amp;gt; Barrier -&amp;gt; Input Leap, KVMs. I&amp;rsquo;ve dodged using the Mac for nearly eight years, but now I have to give in.&#xA;WARNING: This post might seem obvious to many macOS users. Coming from the Linux world of personal computers and having used tiling windows managers for a while now, I always struggle with using Mac OS at work. I don&amp;rsquo;t like it a single bit.</description>
     </item>
     <item>
       <title>Dealing with your private key</title>
-      <link>http://localhost:1313/en/posts/gpg_2/</link>
+      <link>https://blog.contre.io/en/posts/gpg_2/</link>
       <pubDate>Sat, 25 Apr 2020 00:15:55 +0000</pubDate>
-      <guid>http://localhost:1313/en/posts/gpg_2/</guid>
+      <guid>https://blog.contre.io/en/posts/gpg_2/</guid>
       <description>Now that you&amp;rsquo;ve managed to create your own GPG key it&amp;rsquo;s time to understand a bit more about how GnuPG works.&#xA;The first question we need to ask is where are our keys stored. The answer depends on which version of GnuPG you are running. From version 2.1 onwards the method of storing your keys has change. On previous versions our keys were stored in two separate keyring under the ~/.</description>
     </item>
     <item>
       <title>Getting started with GnuPG</title>
-      <link>http://localhost:1313/en/posts/gpg_0/</link>
+      <link>https://blog.contre.io/en/posts/gpg_0/</link>
       <pubDate>Wed, 15 Apr 2020 00:15:55 +0000</pubDate>
-      <guid>http://localhost:1313/en/posts/gpg_0/</guid>
+      <guid>https://blog.contre.io/en/posts/gpg_0/</guid>
       <description>GnuPG is a complete and free implementation of the OpenPGP standard and this is just part 0 of who knows how many series where I will explain my basic understanding of GPG and how useful is on my daily basis. If you wish to understand more in detail how GPG work please refer to the RFC or here is a great post that captures the essence of it quite deeply.</description>
     </item>
     <item>
       <title>Getting started with GnuPG</title>
-      <link>http://localhost:1313/en/posts/gpg_1/</link>
+      <link>https://blog.contre.io/en/posts/gpg_1/</link>
       <pubDate>Wed, 15 Apr 2020 00:15:55 +0000</pubDate>
-      <guid>http://localhost:1313/en/posts/gpg_1/</guid>
+      <guid>https://blog.contre.io/en/posts/gpg_1/</guid>
       <description></description>
     </item>
   </channel>
