@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spanish on Contre</title>
-    <link>https://blog.contre.io/es/tags/spanish/</link>
+    <link>http://localhost:1313/es/tags/spanish/</link>
     <description>Recent content in Spanish on Contre</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Tue, 08 Oct 2024 00:18:54 +0000</lastBuildDate>
-    <atom:link href="https://blog.contre.io/es/tags/spanish/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/es/tags/spanish/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Schwarzwald</title>
-      <link>https://blog.contre.io/es/posts/germnay_trip/</link>
+      <link>http://localhost:1313/es/posts/germnay_trip/</link>
       <pubDate>Tue, 08 Oct 2024 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/es/posts/germnay_trip/</guid>
+      <guid>http://localhost:1313/es/posts/germnay_trip/</guid>
       <description>Lo que en principio iban a ser 370km en bici, terminaron siendo menos de la mitad. Sin embargo no fue fácil y hasta un tanto peligroso. Nos acompañaban dos todo terreno Giant y Trek. Bien cargadas en ambos costados con ropa, comida y una carpa, supieron andar por tierra, montaña y ruta. Los trenes en Alemania fueron de gran ayuda, tanto para evitar bajadas catalogadas como &amp;ldquo;expert&amp;rdquo; en Komoot como para evadir 12mm de lluvia una noche.</description>
     </item>
   </channel>
