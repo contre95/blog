@@ -12,6 +12,8 @@ What initially were supposed to be 370 km on the bike ended up being less than h
 The best part of the trip was the physical exercise we had to do, a good kind of tiredness. It had been a while since I subjected myself to such physical effort. It’s interesting to feel the limits of the body and how it deals with stress. Throughout the trip, we had to be mindful of what to eat, when to rest, and plan our next movements accordingly. To all this, we had to add variables like the weather, distances, available modes of transportation, accommodations, and terrain.
 
 ![Fungi](/images/posts/mono.jpg)
+|:--:| 
+| *Triberg waterfalls - [Google Maps](https://maps.app.goo.gl/kA5vW3h9r2CcuchC7)* |
 
 It wasn’t our first trip together; having shared similar experiences helped us a lot in making decisions. Additionally, the German infrastructure contributed to making the trip safer. It was inevitable to constantly compare it with our previous adventures in the Andes or southern Argentina, where one felt more 'alone' and, why not, freer.
 
@@ -19,7 +21,7 @@ To my surprise, this trip slightly changed my perspective on Germany and its peo
 
 |![Lake](/images/posts/lake.jpg) |
 |:--:| 
-| *Lake Titisee - [Google Maps](https://maps.app.goo.gl/wzwSDvtHGsXYsRzX6)* |
+| *Titisee Lake- [Google Maps](https://maps.app.goo.gl/wzwSDvtHGsXYsRzX6)* |
 
 We visited forests, lakes, castles, and thermal baths. For the most part, we slept in a tent but also in bungalows and some hostels. The coldest night we spent was at 1°C, where I put to the test sleeping with a blanket instead of a sleeping bag.
 
@@ -44,7 +46,7 @@ For the bikes, we had a [Trek - Dual Sport 3 Gen 5](https://www.trekbikes.com/us
 | ![Komoot](/images/posts/kamoot3.png)|![Komoot](/images/posts/kamoot4.png)|
 | [Komoot 3](https://www.komoot.com/tour/1884092227) | [Komoot 4](https://www.komoot.com/tour/1883087267) |
 
-These are some of the routes we took. We must have covered a total of 200 km by bike and just as many walking through forests and mountains. The most dangerous part was the biking on roads, where the curves were sharp and the descents steep. The rain and cold didn’t help; at times visibility was low, and sound was muffled. The same applied to cars: most showed quite a bit of respect, but many passed very close, probably because they didn’t see us. This forced us to significantly reduce our speed and make more stops than planned. Additionally, the route often became narrow and two-way, forcing us to maneuver quickly and stay alert.
+These are some of the routes we took. We must have covered a total of 200 km by bike and a fraction of that walking through forests and mountains. The most dangerous part was the biking on roads, where the curves were sharp and the descents steep. The rain and cold didn’t help; at times visibility was low, and sound was muffled. The same applied to cars: most showed quite a bit of respect, but many passed very close, probably because they didn’t see us. This forced us to significantly reduce our speed and make more stops than planned. Additionally, the route often became narrow and two-way, forcing us to maneuver quickly and stay alert.
 
 The trip lasted a total of 9 days and filled with moments that transcended the journey, leaving us with the feeling of wanting to repeat the experience.
 

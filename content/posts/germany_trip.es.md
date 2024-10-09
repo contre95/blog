@@ -14,6 +14,8 @@ Lo que en principio iban a ser 370km en bici, terminaron siendo menos de la mita
 Lo más gratificante del viaje fue el ejercicio físico y el buen cansancio que nos dejó. Hacía tiempo que no sometía a mi cuerpo a un esfuerzo físico así. Es interesante sentir en carne propia los límites del cuerpo y cómo este lidia con el estrés. Durante todo el viaje, teníamos que ser conscientes de qué comer, cuándo descansar, y planificar los siguientes movimientos en base a eso. A todo esto había que sumarle variables como el tiempo, las distancias, los medios de transporte disponibles, los hospedajes y el terreno. 
 
 ![Mono](/images/posts/mono.jpg)
+|:--:| 
+| *Catarates en Triberg - [Google Maps](https://maps.app.goo.gl/kA5vW3h9r2CcuchC7)* |
 
 No era nuestro primer viaje juntos; haber compartido experiencias similares nos ayudó mucho a tomar decisiones. Además, la infraestructura alemana contribuyó a que el viaje fuera más seguro. Era inevitable comparar constantemente con nuestras aventuras anteriores por la cordillera de los Andes o el sur de Argentina, donde uno se sentía más 'solo' y, por qué no, más libre
 
