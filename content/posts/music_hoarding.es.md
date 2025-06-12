@@ -91,7 +91,7 @@ systemd.services."ipod" = {
   # Mount unit for the iPod
   systemd.mounts = [
     {
-      what = "/dev/disk/by-uuid/8734-1678"; for /dev/sdf1
+      what = "/dev/disk/by-uuid/8734-1678";
       where = "/mnt/ipod";
       type = "vfat";
       options = "nofail,x-systemd.automount,uid=1000,gid=100";
