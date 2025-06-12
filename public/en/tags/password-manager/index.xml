@@ -13,14 +13,7 @@
       <link>https://blog.contre.io/en/posts/gpg_0/</link>
       <pubDate>Wed, 15 Apr 2020 00:15:55 +0000</pubDate>
       <guid>https://blog.contre.io/en/posts/gpg_0/</guid>
-      <description>GnuPG is a complete and free implementation of the OpenPGP standard and this is just part 0 of who knows how many series where I will explain my basic understanding of GPG and how useful is on my daily basis. If you wish to understand more in detail how GPG work please refer to the RFC or here is a great post that captures the essence of it quite deeply.</description>
-    </item>
-    <item>
-      <title>Getting started with GnuPG</title>
-      <link>https://blog.contre.io/en/posts/gpg_1/</link>
-      <pubDate>Wed, 15 Apr 2020 00:15:55 +0000</pubDate>
-      <guid>https://blog.contre.io/en/posts/gpg_1/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/gpg_0_banner.jpg&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;GnuPG is a complete and free implementation of the OpenPGP standard and this is just &lt;strong&gt;part 0&lt;/strong&gt; of who knows how many series where I will explain my basic understanding of GPG and how useful is on my daily basis. If you wish to understand more in detail how GPG work please refer to the RFC or &lt;a href=&#34;https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/&#34;&gt;here&lt;/a&gt; is a great post that captures the essence of it quite deeply.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
