@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>English on Contre</title>
-    <link>https://blog.contre.io/en/tags/english/</link>
-    <description>Recent content in English on Contre</description>
+    <title>Unix on Contre</title>
+    <link>https://blog.contre.io/en/tags/unix/</link>
+    <description>Recent content in Unix on Contre</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 29 Jun 2020 13:15:55 +0000</lastBuildDate>
-    <atom:link href="https://blog.contre.io/en/tags/english/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.contre.io/en/tags/unix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GPG &#43; SSH ?</title>
       <link>https://blog.contre.io/en/posts/gpg_1/</link>

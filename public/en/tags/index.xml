@@ -23,10 +23,38 @@
       <description></description>
     </item>
     <item>
+      <title>English</title>
+      <link>https://blog.contre.io/en/tags/english/</link>
+      <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
+      <guid>https://blog.contre.io/en/tags/english/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>GnuPG</title>
       <link>https://blog.contre.io/en/tags/gnupg/</link>
-      <pubDate>Sat, 25 Apr 2020 00:15:55 +0000</pubDate>
+      <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
       <guid>https://blog.contre.io/en/tags/gnupg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Password Manager</title>
+      <link>https://blog.contre.io/en/tags/password-manager/</link>
+      <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
+      <guid>https://blog.contre.io/en/tags/password-manager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSH</title>
+      <link>https://blog.contre.io/en/tags/ssh/</link>
+      <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
+      <guid>https://blog.contre.io/en/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unix</title>
+      <link>https://blog.contre.io/en/tags/unix/</link>
+      <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
+      <guid>https://blog.contre.io/en/tags/unix/</guid>
       <description></description>
     </item>
     <item>
@@ -34,13 +62,6 @@
       <link>https://blog.contre.io/en/tags/security/</link>
       <pubDate>Sat, 25 Apr 2020 00:15:55 +0000</pubDate>
       <guid>https://blog.contre.io/en/tags/security/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Password Manager</title>
-      <link>https://blog.contre.io/en/tags/password-manager/</link>
-      <pubDate>Wed, 15 Apr 2020 00:15:55 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/password-manager/</guid>
       <description></description>
     </item>
   </channel>
