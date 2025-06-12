@@ -17,7 +17,7 @@ Desde ese entonces, al día de hoy, esa misma carpeta fue sufriendo varias itera
 
 ## El Pipeline
 
-Hoy en día, con cosas como Spotify nada de eso tiene sentido, pero el alma presente del gordo archivero sigue vigente. La carpeta sigue estando y mi idea es contar un poco como hago para organizarla, stremearla y consumirla. A partir de ahora, el post se trata de explicar un poco la imágen de abajo.
+Hoy día, con servicios como Spotify, nada de eso tiene sentido, pero el alma presente del gordo archivero sigue vigente. La carpeta sigue estando y mi idea es contar un poco como hago para organizarla, stremearla y consumirla. A partir de ahora, el post se trata de explicar un poco la imágen de abajo.
 
 ![](/images/posts/music_pipeline.png)
 
@@ -31,9 +31,9 @@ Ademas de Deemix, también uso [Lidarr](https://lidarr.audio/) para cuando quier
 
 Para evitar la eterna busqueda en Google de nuestro querido tema `Day by Day` escrito por `Affair`, hoy en día, nos podemos apoyar en la base de datos abierta de [Music Brainz](https://musicbrainz.org/) . Y esto es lo que hacen [Beets](https://beets.io/?trk=public_post-text) y [Picard](https://picard.musicbrainz.org/), q son algo así como un Shazam + MP3Tag. Ambos sirven para organizar y reconocer canciones pero son fundamentalmente distintos. Ambos etiquetan la metadata de tus archivos de música basandose en diversos parámetros para identifidcarla. El método qué más me funciona es el [Accoustic ID](https://acoustid.org/) que basicamente es un identificador único (fingerprint) basado en la data del archivo. La manera en la que se calcula este id es inquietante. No es el objetivo de este post, pero basicamente es un conjunto de distintos algoritmos que tienen en cuenta desde los cambios en las frecuencias, principalmente entre los 12 semitonos existentes sin contar las distintas octavas (i.e C, C#, D, D#, E, F, F#, G, G#, A, A#, B) hasta el cálculo de [Mel-Frequency Cepstral Coefficients](https://www.youtube.com/watch?v=4_SH2nfbQZ8), que si te gustó Cálculo III probablemente lo encuentres interesante. Tanto en Picard como Beets, podés confugurar como querés organizar tu música. 
 
-### Organización
+### Y dónde va Miranda ft. Tchaikovski EP? 
 
-Por un lado, Beets mantiene una bliblioteca de tu musica en una base de datos y puede correr como daemon importando tu música a medida que la vas agregando. En mi opinión, tiene más hype del que se merece y usarlo para categorizar una biblioteca grande desde zero, puede ser tedioso. Está un poco flojo de documentación por lo que recomiendo directamente mirar este repo https://github.com/florib779/beets-config/blob/master/config.yaml para configurarlo. Picard, en cabmio es una app de escritorio con su propia UI. La encuentro útil para una primera pasada si no tenés tu música catgorizada. Ambas pueden mover archivos en la estructura que quieras. En mi caso uso el default de Picard, que también lo tengo seteado en Deemix. Que simplificado es `%albumartist%/ %album%/ %tracknumber%. %title%` pero puede ponerse más complejo, por ejemplo: 
+Por un lado, Beets mantiene una bliblioteca de tu musica en una base de datos y puede correr como daemon importando tu música a medida que la vas agregando. En mi opinión, tiene más hype del que se merece y usarlo para categorizar una biblioteca grande desde zero, puede ser tedioso. Está un poco flojo de documentación por lo que recomiendo directamente mirar (este repo) [https://github.com/florib779/beets-config/blob/master/config.yaml] para configurarlo. Picard, en cabmio es una app de escritorio con su propia UI. La encuentro útil para una primera pasada si no tenés tu música catgorizada. Ambas pueden mover archivos en la estructura que quieras. En mi caso uso el default de Picard, que también lo tengo seteado en Deemix. Que simplificado es `%albumartist%/ %album%/ %tracknumber%. %title%` pero puede ponerse más complejo, por ejemplo: 
 
 ```
 $if2(%albumartist%,%artist%)/
