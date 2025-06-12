@@ -77,24 +77,24 @@ Si estás penando comprar un DAP, dejame decirte que existen muchas mejores opci
 Para sobrellevar lo poco prático que resulta tener que cargarle música, armé una suerte de automatizaciones que paso a compartirles. Basicamente, la solución consta de dos `Unit Files` que se accionan consecutivamente después de conectar el iPod al servidor dónde tengo almacenada la música. Automaticamente, se monta el dispositivo y corre un script que sincorniza tanto la música, como las playlist.
 
 ```nix
-  systemd.services."ipod" = {
+systemd.services."ipod" = {
     description = "Sync files from iPod when mounted";
-    wantedBy = [ "mnt-ipod.mount" ]; # Trigger after the mount is ready
+    wantedBy = [ "mnt-ipod.mount" ]; 
     after = [ "mnt-ipod.mount" ];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = ''/home/canus/scripts/nixos/sync-ipod.sh'';
-      User = "contre"; # Ensure this user has access
+      User = "contre";
     };
   };
 
   # Mount unit for the iPod
   systemd.mounts = [
     {
-      what = "/dev/disk/by-uuid/8722-166E"; # UUID for /dev/sdf1
-      where = "/mnt/ipod"; # Mount point
-      type = "vfat"; # Filesystem type
-      options = "nofail,x-systemd.automount,uid=1000,gid=100"; # Optional: adjust UID/GID
+      what = "/dev/disk/by-uuid/8734-1678"; for /dev/sdf1
+      where = "/mnt/ipod";
+      type = "vfat";
+      options = "nofail,x-systemd.automount,uid=1000,gid=100";
     }
   ];
 ```
