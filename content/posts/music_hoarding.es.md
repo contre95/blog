@@ -3,7 +3,8 @@ title: Jardín de Música
 date: 2025-06-12  00:18:54
 tags:
     - Music
-    - Pictures
+    - Tech
+    - Self-Hosted
 ---
 
 ![Intro](/images/posts/music_banner.png)
