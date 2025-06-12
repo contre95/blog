@@ -17,9 +17,29 @@
   </url><url>
     <loc>https://blog.contre.io/es/posts/music_hoarding/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/posts/music_hoarding/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/posts/music_hoarding/"
+                />
   </url><url>
     <loc>https://blog.contre.io/es/tags/music/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/music/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/music/"
+                />
   </url><url>
     <loc>https://blog.contre.io/es/posts/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
@@ -36,6 +56,16 @@
   </url><url>
     <loc>https://blog.contre.io/es/tags/self-hosted/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/self-hosted/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/self-hosted/"
+                />
   </url><url>
     <loc>https://blog.contre.io/es/tags/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
@@ -52,6 +82,16 @@
   </url><url>
     <loc>https://blog.contre.io/es/tags/tech/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/tech/"
+                />
   </url><url>
     <loc>https://blog.contre.io/es/tags/pictures/</loc>
     <lastmod>2024-10-08T00:18:54+00:00</lastmod>
