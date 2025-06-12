@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pictures on Contre</title>
-    <link>https://blog.contre.io/en/tags/pictures/</link>
+    <link>http://localhost:1313/en/tags/pictures/</link>
     <description>Recent content in Pictures on Contre</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 08 Oct 2024 00:18:54 +0000</lastBuildDate>
-    <atom:link href="https://blog.contre.io/en/tags/pictures/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/tags/pictures/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Schwarzwald</title>
-      <link>https://blog.contre.io/en/posts/germany_trip/</link>
+      <link>http://localhost:1313/en/posts/germany_trip/</link>
       <pubDate>Tue, 08 Oct 2024 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/en/posts/germany_trip/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/fungi.jpg&#34; alt=&#34;Fungi&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;What initially were supposed to be 370 km on the bike ended up being less than half. However, it wasn’t easy and was even somewhat dangerous. We were accompanied by two sturdy bikes, a Giant and a Trek, both loaded on either side with clothes, food, and a tent, and they managed to handle dirt, mountains, and roads. The trains in Germany were a great help, both to avoid descents rated as &amp;ldquo;expert&amp;rdquo; on Komoot and to dodge 12 mm of rain one night.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/en/posts/germany_trip/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/fungi.jpg&#34; alt=&#34;Fungi&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;What initially were supposed to be 370 km on the bike ended up being less than half. However, it wasn’t easy and was even somewhat dangerous. We were accompanied by two sturdy bikes, a Giant and a Trek, both loaded on either side with clothes, food, and a tent, and they managed to handle dirt, mountains, and roads. The trains in Germany were a great help, both to avoid descents rated as &amp;ldquo;expert&amp;rdquo; on Komoot and to dodge 12 mm of rain one night.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

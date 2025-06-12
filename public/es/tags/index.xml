@@ -2,24 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Contre</title>
-    <link>https://blog.contre.io/es/tags/</link>
+    <link>http://localhost:1313/es/tags/</link>
     <description>Recent content in Tags on Contre</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
-    <lastBuildDate>Tue, 08 Oct 2024 00:18:54 +0000</lastBuildDate>
-    <atom:link href="https://blog.contre.io/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Jun 2025 00:18:54 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Music</title>
+      <link>http://localhost:1313/es/tags/music/</link>
+      <pubDate>Thu, 12 Jun 2025 00:18:54 +0000</pubDate>
+      <guid>http://localhost:1313/es/tags/music/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Pictures</title>
-      <link>https://blog.contre.io/es/tags/pictures/</link>
-      <pubDate>Tue, 08 Oct 2024 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/es/tags/pictures/</guid>
+      <link>http://localhost:1313/es/tags/pictures/</link>
+      <pubDate>Thu, 12 Jun 2025 00:18:54 +0000</pubDate>
+      <guid>http://localhost:1313/es/tags/pictures/</guid>
       <description></description>
     </item>
     <item>
       <title>Trip</title>
-      <link>https://blog.contre.io/es/tags/trip/</link>
+      <link>http://localhost:1313/es/tags/trip/</link>
       <pubDate>Tue, 08 Oct 2024 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/es/tags/trip/</guid>
+      <guid>http://localhost:1313/es/tags/trip/</guid>
       <description></description>
     </item>
   </channel>
