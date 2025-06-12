@@ -9,7 +9,7 @@ tags:
 
 ![Intro](/images/posts/music_banner.png)
 
-Habrá sido en 2009 cuando le pregunté a mi prima más grande qué música escuchaba. Fue la primera vez que asocié de manera concreta la idea de _banda_ con _canción_. Hasta entonces, mi vínculo con la música venía más por ósmosis que por elección propia. Más tarde iba entrar en razón que lo que escuchaba hasta entonces era mucho rock anglosajón, algo de blues y algo de jazz, todo bastante internacional y descontextualizado. Principalmente esuchaba Aspen, una radio que mezclaba (y sigue mezclando) clásicos del soft rock con algunas baladas en inglés y algo de pop. Mi viejo era quien manejaba el dial, y eso definía buena parte de lo que entraba a casa, mucho Genesis, Phil Collins, Pink Floyd, Eric Clapton entre otras bandas mas de buto como Nora Jones, Bosa Nova y demás, que hoy en día me cuesta más escuchar. Lo argentino llegaba más por Sumo, algo de La Bersuit y Serú Girán. Pero el rock nacional más contemporáneo me lo presentaron mis amigos, bandas como Árbol, Airbag y Ataque 77, sonaban alternando con cosas como la cumbia y el reggaeton del momento como Daddy Yankee, Wisin y Yandel y demás música puertorriqueña.
+Habrá sido en 2009 cuando le pregunté a mi prima más grande qué música escuchaba. Fue la primera vez que asocié de manera concreta la idea de _banda_ con _canción_. Hasta entonces, mi vínculo con la música venía más por ósmosis que por elección propia. Más tarde iba entrar en razón que lo que escuchaba hasta entonces era mucho rock anglosajón, algo de blues y algo de jazz, todo bastante internacional y descontextualizado. Principalmente escuchaba Aspen, una radio que mezclaba (y sigue mezclando) clásicos del soft rock con algunas baladas en inglés y algo de pop. Mi viejo era quien manejaba el dial, y eso definía buena parte de lo que entraba a casa, mucho Genesis, Phil Collins, Pink Floyd, Eric Clapton entre otras bandas mas de buto como Nora Jones, Bosa Nova y demás, que hoy en día me cuesta más escuchar. Lo argentino llegaba más por Sumo, algo de La Bersuit y Serú Girán. Pero el rock nacional más contemporáneo me lo presentaron mis amigos, bandas como Árbol, Airbag y Ataque 77, sonaban alternando con cosas como la cumbia y el reggaeton del momento como Daddy Yankee, Wisin y Yandel y demás música puertorriqueña.
 
 Fue cuando tuve mi primera computadora que empecé a elegir un poco qué escuchar. Mi carpeta de música fue mi primer gran archivo: era algo curado, donde no había espacio para albumes completos ni canciones que no me gustasen. La primera oleada de música nació como fruto de mi memoria y de [Ares Galaxy](https://es.wikipedia.org/wiki/Ares_Galaxy). Ahí entraron bandas como las que mencioné arriba. Las que más tardaron en llegar fueron las que escuchaba por la radio; de esas no tenía el nombre. Muchas regresaban sin nombre, escondidas en los pendrives que compartíamos con mis amigos. Solo al reproducirlas descubría si me eran familiares. Más adelante, aplicaciones como [Sound Hound](https://play.google.com/store/apps/details?id=com.melodis.midomiMusicIdentifier.freemium&hl=en-US&pli=1) o [Shazam](https://www.shazam.com/) me iban a auxiliar con la categorización.
 
@@ -17,7 +17,7 @@ Desde ese entonces, al día de hoy, esa misma carpeta fue sufriendo varias itera
 
 ## El Pipeline
 
-Hoy en día, con cosas como Spotify nada de eso tiene sentido, pero el alma presente del gordo archivero sigue vigente. La carpeta sigue estando y mi idea es contar un poco como hago para organizarla, stremearla y consumirla. Apartir de ahora, el post se trata de explicar un poco la imágen de abajo.
+Hoy en día, con cosas como Spotify nada de eso tiene sentido, pero el alma presente del gordo archivero sigue vigente. La carpeta sigue estando y mi idea es contar un poco como hago para organizarla, stremearla y consumirla. A partir de ahora, el post se trata de explicar un poco la imágen de abajo.
 
 ![](/images/posts/music_pipeline.png)
 
@@ -33,7 +33,7 @@ Para evitar la eterna busqueda en Google de nuestro querido tema `Day by Day` es
 
 ### Organización
 
-Por un lado, Beets mantiene una librería de tu musica en una base de datos y puede correr como daemon importando tu música a medida que la vas agregando. En mi opinión, tiene más hype del que se merece y usarlo para categorizar una librería grande desde zero, puede ser tedioso. Está un poco flojo de documentación por lo que recomiendo directamente mirar este repo https://github.com/florib779/beets-config/blob/master/config.yaml para configurarlo. Picard, en cabmio es una app de escritorio con su propia UI. La encuentro útil para una primera pasada si no tenés tu música catgorizada. Ambas pueden mover archivos en la estructura que quieras. En mi caso uso el default de Picard, que también lo tengo seteado en Deemix. Que simplificado es `%albumartist%/ %album%/ %tracknumber%. %title%` pero puede ponerse más complejo, por ejemplo: 
+Por un lado, Beets mantiene una bliblioteca de tu musica en una base de datos y puede correr como daemon importando tu música a medida que la vas agregando. En mi opinión, tiene más hype del que se merece y usarlo para categorizar una biblioteca grande desde zero, puede ser tedioso. Está un poco flojo de documentación por lo que recomiendo directamente mirar este repo https://github.com/florib779/beets-config/blob/master/config.yaml para configurarlo. Picard, en cabmio es una app de escritorio con su propia UI. La encuentro útil para una primera pasada si no tenés tu música catgorizada. Ambas pueden mover archivos en la estructura que quieras. En mi caso uso el default de Picard, que también lo tengo seteado en Deemix. Que simplificado es `%albumartist%/ %album%/ %tracknumber%. %title%` pero puede ponerse más complejo, por ejemplo: 
 
 ```
 $if2(%albumartist%,%artist%)/
@@ -117,6 +117,8 @@ RSYNC=$(
 ```
 
 En cuanto termina de syncronizar, me notifica. No suele tardar más de 5 segundos depende que tanta música haya descargado. Para las playlist, las armó en Symfonium y las syncronizo con Emby. De esa forma, cuando el script corre toma las playlist de ahí. Así, tengo syncronizado playslists y música en Emby (Web y TV), IPod (Offline), y Celular (Symfonium). El formato común que usan es `.m3u` , que consta simplemente de una lista de los _paths_ dónde viven esos archivos.
+
+Si bien todo esto puede sonar anacrónico, no intento que se lea como un acto de rebeldía contra el consumo mainstream de música. Creo, sinceramente, que hay valor en coleccionar, clasificar y cuidar. Son actos inherentes a la soberanía personal, de los cuales uno no puede desligarse tan fácilmente si pretende conservarla. Sea en el campo que sea, es una práctica necesaria e inevitable: una lucha que, gracias al trabajo de muchos, hoy se puede elegir pelear.. o relegar.
 
 ## Que sigue ?
 
