@@ -52,8 +52,5 @@ The trip lasted a total of 9 days and filled with moments that transcended the j
 
 Note: Funny thing, I have feed this blog post into Notebook LM (Google's AI) and it made this [totally exaggerated podcast version](/audio/podcast.wav) of the post. Also, I have used ChatGPT to translate the original post which was written in [Spanish](/es/posts/germnay_trip/).
 
-
-
-
-
+---
 

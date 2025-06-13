@@ -50,3 +50,6 @@ En cuanto al equipamiento, estábamos bien preparados. Investigamos bastante en 
 Para las bicicletas, teníamos una [Trek - Dual Sport 3 Gen 5](https://www.trekbikes.com/us/en_US/bikes/hybrid-bikes/dual-sport-bikes/dual-sport/dual-sport-3-gen-5/p/36826/) y alquilamos otra [Giant - XTC SLR 29 2](https://www.giant-bicycles.com/us/xtc-slr-29-2-2021) en [Zweiradperle](zweiradperle.hamburg), una tienda que recomiendo. Los bolsos laterales, resistentes al agua, cumplieron su función incluso bajo lluvias torrenciales; si mal no recuerdo, las marcas eran [Forclaz](https://www.decathlon.com/collections/forclaz) y [Thule](https://www.thule.com/en-us/bike-packs-bags-and-racks/panniers-and-bike-bags/thule-shield-pannier-25l-_-3204209). También llevamos ropa impermeable, y nuestra carpa, una [Trek900](https://www.decathlon.es/es/p/tienda-de-campana-domo-2-personas-de-trekking-forclaz-trek900/_/R-p-301558), fue una excelente elección, fácil de armar y desarmar y pesaba solo 2Kg.
 
 El viaje duró un total de 9 días y entre bosques y montañas, se llenó de momentos que trascendieron el camino, ya queda la sensación de querer repetir la experiencia.
+
+---
+

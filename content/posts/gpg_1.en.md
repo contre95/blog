@@ -100,3 +100,5 @@ Now you're done! In order to share your public ssh keys just run `ssh-add -L` to
 **Email:** lucascontre95@gmail.com
 **GPG:** [gpg.contre.io](https://gpg.contre.io)
 
+---
+

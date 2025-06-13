@@ -72,3 +72,6 @@ Skipping through words is something i do a lot both for **moving the cursor** ar
 ## Terminal and Neovim
 
 Soon..
+
+---
+
