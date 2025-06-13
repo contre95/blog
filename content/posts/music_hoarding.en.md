@@ -7,7 +7,7 @@ tags:
     - Self-Hosted
 ---
 
-![Intro](/images/posts/music_banner.png)
+![Intro](/images/posts/music_banner.en.jpg)
 
 It must have been around 2009 when I asked my older cousin what kind of music she listened to. That was the first time I clearly associated the idea of a "band" with "song". Up until then, my relationship with music was more through osmosis than personal choice. Later on, I’d come to realize that what I had been listening to was mostly Anglo rock, some blues and some jazz —basically international stuff, kind of disconnected from any local context. I mostly listened to Aspen, a radio station that played (and still plays) soft rock classics from the 80s and 90s, along with a few English ballads and some pop. My dad was the one in charge of the dial, and that shaped a big part of what came into the house: lots of Genesis, Phil Collins, Pink Floyd, Eric Clapton, and other slightly soft-boy bands like Norah Jones, Bossa Nova, and so on, stuff I actually struggle to listen to nowadays. Argentine music came in more through Sumo, some La Bersuit, Soda Sterel and Serú Girán. But it was my friends who introduced me to more contemporary national rock—bands like Árbol, Airbag, and Ataque 77, which played alongside the cumbia and reggaeton hits of the time, like Daddy Yankee, Wisin & Yandel, and other Puerto Rican music.
 

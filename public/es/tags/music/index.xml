@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Music on Contre</title>
-    <link>https://blog.contre.io/es/tags/music/</link>
+    <link>http://localhost:1313/es/tags/music/</link>
     <description>Recent content in Music on Contre</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Thu, 12 Jun 2025 00:18:54 +0000</lastBuildDate>
-    <atom:link href="https://blog.contre.io/es/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/es/tags/music/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jardín de Música</title>
-      <link>https://blog.contre.io/es/posts/music_hoarding/</link>
+      <link>http://localhost:1313/es/posts/music_hoarding/</link>
       <pubDate>Thu, 12 Jun 2025 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/es/posts/music_hoarding/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/music_banner.png&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Habrá sido en 2009 cuando le pregunté a mi prima más grande qué música escuchaba. Fue la primera vez que asocié de manera concreta la idea de &lt;em&gt;banda&lt;/em&gt; con &lt;em&gt;canción&lt;/em&gt;. Hasta entonces, mi vínculo con la música venía más por ósmosis que por elección propia. Más tarde iba entrar en razón que lo que escuchaba hasta entonces era mucho rock anglosajón, algo de blues y algo de jazz, todo bastante internacional y descontextualizado. Principalmente escuchaba Aspen, una radio que mezclaba (y sigue mezclando) clásicos del soft rock con algunas baladas en inglés y algo de pop. Mi viejo era quien manejaba el dial, y eso definía buena parte de lo que entraba a casa, mucho Genesis, Phil Collins, Pink Floyd, Eric Clapton entre otras bandas mas de buto como Nora Jones, Bosa Nova y demás, que hoy en día me cuesta más escuchar. Lo argentino llegaba más por Sumo, algo de La Bersuit y Serú Girán. Pero el rock nacional más contemporáneo me lo presentaron mis amigos, bandas como Árbol, Airbag y Ataque 77, sonaban alternando con cosas como la cumbia y el reggaeton del momento como Daddy Yankee, Wisin y Yandel y demás música puertorriqueña.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/es/posts/music_hoarding/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/music_banner.png&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Habrá sido en 2009 cuando le pregunté a mi prima más grande qué música escuchaba. Fue la primera vez que asocié de manera concreta la idea de &lt;em&gt;banda&lt;/em&gt; con &lt;em&gt;canción&lt;/em&gt;. Hasta entonces, mi vínculo con la música venía más por ósmosis que por elección propia. Más tarde iba entrar en razón que lo que escuchaba hasta entonces era mucho rock anglosajón, algo de blues y algo de jazz, todo bastante internacional y descontextualizado. Principalmente escuchaba Aspen, una radio que mezclaba (y sigue mezclando) clásicos del soft rock con algunas baladas en inglés y algo de pop. Mi viejo era quien manejaba el dial, y eso definía buena parte de lo que entraba a casa, mucho Genesis, Phil Collins, Pink Floyd, Eric Clapton entre otras bandas mas de buto como Nora Jones, Bosa Nova y demás, que hoy en día me cuesta más escuchar. Lo argentino llegaba más por Sumo, algo de La Bersuit y Serú Girán. Pero el rock nacional más contemporáneo me lo presentaron mis amigos, bandas como Árbol, Airbag y Ataque 77, sonaban alternando con cosas como la cumbia y el reggaeton del momento como Daddy Yankee, Wisin y Yandel y demás música puertorriqueña.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
