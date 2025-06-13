@@ -68,7 +68,7 @@ Tngencial al hecho de almacernar y hostear mi música (`r/musichoarder`), está 
 > 
 > _(_[_ref. to the comment_](https://www.reddit.com/r/audiophile/comments/1l4vdnl/comment/mwc1duf/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)_)_
 
-Después de investigar, mayormente por Reddit y otros antros, opté comprar un iPod Classic modeado. No voy a entrar en detalle de que se necesita para modear un iPod pero en caso de que alguno quiera hacerlo, les dejo un link dónde pueden comrpar lo necesario para armar un iPod que cumpla los estandares esperados de un DAP en 2025. El principal motivo por el cual opté por un iPod, fue [RockBox](http://rockbox.org), un remplazo del OS que trae de stock, que te permite reproducir `.flac`, correr scripts en lua y customizarlo con una oferta [gigante de temas.](https://themes.rockbox.org/index.php?target=ipod6g)
+Después de investigar, mayormente por Reddit y otros antros, opté comprar un iPod Classic modeado. No voy a entrar en detalle de que se necesita para modear un iPod pero en caso de que alguno quiera hacerlo, les dejo un [link](https://moonlit.market/) dónde pueden comrpar lo necesario para armar un iPod que cumpla los estandares esperados de un DAP en 2025. El principal motivo por el cual opté por un iPod, fue [RockBox](http://rockbox.org), un remplazo del OS que trae de stock, que te permite reproducir `.flac`, correr scripts en lua y customizarlo con una oferta [gigante de temas.](https://themes.rockbox.org/index.php?target=ipod6g)
 
 Si estás penando comprar un DAP, dejame decirte que existen muchas mejores opciones, que reproducen en mejor calidad y más baratos, pero en su mayoría todas traen Android o un mod del mismo.
 
@@ -136,6 +136,7 @@ Hay un montón de cosas que encontré y descubrí que no da la vida para refleja
 - https://dee-mix.one/en/download/
 - https://github.com/acoustid/chromaprint/
 - https://beets.io
+- https://player-mods.com/
 - https://fanart.tv/
 - https://github.com/florib779/beets-config/blob/master/config.yaml
 - https://www.reddit.com/r/DigitalAudioPlayer/
