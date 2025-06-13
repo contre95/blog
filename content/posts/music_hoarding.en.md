@@ -72,7 +72,7 @@ Tangent to the whole music storing and self-hosting thing ([r/musichoarder](http
 > 
 > _(_[_ref. to the comment_](https://www.reddit.com/r/audiophile/comments/1l4vdnl/comment/mwc1duf/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)_)_
 
-After doing some research —mostly through Reddit and other shady corners of the internet— I ended up buying a modded iPod Classic. I’m not going to go into detail about what you need to mod an iPod, but in case anyone wants to give it a shot, here’s a link where you can get everything you need to build an iPod that meets the standards expected of a DAP in 2025. The main reason I went with an iPod was [RockBox](http://rockbox.org), a replacement for the stock OS that lets you play `.flac` files, run Lua scripts, and customize it with a [huge selection of themes](https://themes.rockbox.org/index.php?target=ipod6g). And yes, it also runs Doom. 
+After doing some research —mostly through Reddit and other shady corners of the internet— I ended up buying a modded iPod Classic. I’m not going to go into detail about what you need to mod an iPod, but in case anyone wants to give it a shot, here’s a [link](https://moonlit.market/) where you can get everything you need to build an iPod that meets the standards expected of a DAP in 2025. The main reason I went with an iPod was [RockBox](http://rockbox.org), a replacement for the stock OS that lets you play `.flac` files, run Lua scripts, and customize it with a [huge selection of themes](https://themes.rockbox.org/index.php?target=ipod6g). And yes, it also runs Doom. 
 
 If you’re thinking about buying a DAP, let me just say there are way better options out there, with better sound quality and at lower prices. But most of them run Android, or some modded version of it.
 
@@ -143,6 +143,7 @@ There’s a ton of stuff I’ve found and explored that didn’t fit into this b
 - https://github.com/acoustid/chromaprint/
 - https://beets.io
 - https://fanart.tv/
+- https://player-mods.com/
 - https://github.com/florib779/beets-config/blob/master/config.yaml
 - https://www.reddit.com/r/DigitalAudioPlayer/
 - https://www.reddit.com/r/musichoarder/
