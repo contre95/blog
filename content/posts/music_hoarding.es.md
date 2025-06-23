@@ -122,7 +122,7 @@ Si bien todo esto puede sonar anacrónico, no intento que se lea como un acto de
 
 ## Que sigue ?
 
-Hace ya unos meses vengo usando este flujo y no puedo quejarme. Funciona bastante bien. Mi proximo objetivo sería meterme a RED pero la entrevista me [parece bastante tediosa](https://interviewfor.red/en/index.html). Quisiera saber si realmente vale la pena. Estoy conociendo mucha música que no se consigue en buena calidad y no está en los medios populares de streaming como Spotify o Deezer, todo indica que hay mucho en Vinilo. También quisiera configurar [Pinchflat](https://github.com/kieraneglin/pinchflat), para descargar música de Youtube. El problema es catalogar los enganchados en un solo video, y al no poder desacargar música losless, tampoco siento que valga tanto la pena. También me gustaría implementar algo como [Sonic Analysis](https://support.plex.tv/articles/sonic-analysis-music/) para crear playlist. Por ahora, lo único que vi que lo soporta es Plex y no encontré alternativa. Symfonium tiene una feature que se integra muy bien, pero necesitás Plex como backend indefectiblemente. Por último, me gustaría algo que me recomiende canciones para agregar a una _Playlist_ existente.
+Hace ya unos meses vengo usando este flujo y no puedo quejarme. Funciona bastante bien. Mi proximo objetivo sería meterme a [RED](https://interviewfor.red/en/formats.html) pero la entrevista me [parece bastante tediosa](https://interviewfor.red/en/index.html). Quisiera saber si realmente vale la pena. Estoy conociendo mucha música que no se consigue en buena calidad y no está en los medios populares de streaming como Spotify o Deezer, todo indica que hay mucho en Vinilo. También quisiera configurar [Pinchflat](https://github.com/kieraneglin/pinchflat), para descargar música de Youtube. El problema es catalogar los enganchados en un solo video, y al no poder desacargar música losless, tampoco siento que valga tanto la pena. También me gustaría implementar algo como [Sonic Analysis](https://support.plex.tv/articles/sonic-analysis-music/) para crear playlist. Por ahora, lo único que vi que lo soporta es Plex y no encontré alternativa. Symfonium tiene una feature que se integra muy bien, pero necesitás Plex como backend indefectiblemente. Por último, me gustaría algo que me recomiende canciones para agregar a una _Playlist_ existente.
 
 Hay un montón de cosas que encontré y descubrí que no da la vida para reflejar en este blog post. Pero te dejo algunos links, que si estás en estas, te pueden llegar a servir.
 
@@ -133,6 +133,7 @@ Hay un montón de cosas que encontré y descubrí que no da la vida para refleja
 - https://github.com/krateng/maloja
 - https://www.last.fm/
 - [https://www.deezer.com/](https://www.deezer.com/us/offers)
+- https://interviewfor.red/en/formats.html
 - https://dee-mix.one/en/download/
 - https://github.com/acoustid/chromaprint/
 - https://beets.io
