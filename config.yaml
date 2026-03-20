@@ -15,22 +15,26 @@ languages:
     weight: 1
     menus:
       main:
-      - identifier: home
-        name: Inicio
-        url: /es
-        weight: 1
-      - identifier: posts
-        name: Publicaciones
-        url: /es/posts/
-        weight: 3
-      - identifier: rss
-        name: RSS
-        url: /es/posts/index.xml
-        weight: 4
-      - identifier: EN
-        name: English
-        url: /en
-        weight: 5
+        - identifier: home
+          name: Inicio
+          url: /es
+          weight: 1
+        - identifier: posts
+          name: Publicaciones
+          url: /es/posts/
+          weight: 3
+        - identifier: rss
+          name: RSS
+          url: /es/posts/index.xml
+          weight: 4
+        - identifier: memos
+          name: Memos
+          url: https://memos.contre.io/explore
+          weight: 5
+        - identifier: EN
+          name: English
+          url: /en
+          weight: 6
   en:
     disabled: false
     languageCode: en
@@ -42,26 +46,30 @@ languages:
     weight: 0
     menus:
       main:
-      - identifier: home
-        name: Home
-        url: /en
-        weight: 1
-      # - identifier: about
-      #   name: About
-      #   url: /about/
+        - identifier: home
+          name: Home
+          url: /en
+          weight: 1
+        # - identifier: about
+        #   name: About
+        #   url: /about/
         # weight: 2
-      - identifier: posts
-        name: Posts
-        url: /en/posts/
-        weight: 3
-      - identifier: rss
-        name: RSS
-        url: /en/posts/index.xml
-        weight: 4
-      - identifier: ES
-        name: Spanish
-        url: /es
-        weight: 5
+        - identifier: posts
+          name: Posts
+          url: /en/posts/
+          weight: 3
+        - identifier: rss
+          name: RSS
+          url: /en/posts/index.xml
+          weight: 4
+        - identifier: memos
+          name: Memos
+          url: https://memos.contre.io/explore
+          weight: 5
+        - identifier: ES
+          name: Spanish
+          url: /es
+          weight: 6
 theme: smigle
 themesDir: themes
 title: Contre
@@ -83,10 +91,10 @@ menu:
       name: RSS
       url: /posts/index.xml
       weight: 4
-    # - identifier: tags
-    #   name: Tags
-    #   url: /tags/
-    #   weight: 5
+    - identifier: memos
+      name: Memos
+      url: https://memos.contre.io/explore
+      weight: 5
 translationKey: about
 params:
   abbrDateFmt: "Jan 2"
@@ -94,8 +102,8 @@ params:
   brandIconFile: "images/img.svg"
   dateFmt: "2006-01-02"
   subtitle: "|||||||||||"
- # customStylesheets: # Use to override theme styles, like logo size
- #   - "css/custom.css"
-  # social:
-  #   - name: Here
-  #     url: https://blog.contre.io
+# customStylesheets: # Use to override theme styles, like logo size
+#   - "css/custom.css"
+# social:
+#   - name: Here
+#     url: https://blog.contre.io
