@@ -31,6 +31,8 @@ languages:
           name: Memos
           url: https://memos.contre.io/explore
           weight: 5
+          params:
+            target: _blank
         - identifier: EN
           name: English
           url: /en
@@ -66,6 +68,8 @@ languages:
           name: Memos
           url: https://memos.contre.io/explore
           weight: 5
+          params:
+            target: _blank
         - identifier: ES
           name: Spanish
           url: /es
@@ -95,6 +99,8 @@ menu:
       name: Memos
       url: https://memos.contre.io/explore
       weight: 5
+      params:
+        target: _blank
 translationKey: about
 params:
   abbrDateFmt: "Jan 2"

@@ -12,12 +12,12 @@
     </div>
   </div>
   <nav>
-    {{ with .Site.Menus.main }}
-      {{ range $index, $value := . }}
-        {{ if $index }} | {{ end }}
-        <a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>
+      {{ with .Site.Menus.main }}
+        {{ range $index, $value := . }}
+          {{ if $index }} | {{ end }}
+          <a href="{{ .URL | relURL }}"{{ with .Params.target }} target="{{ . }}" rel="noopener noreferrer"{{ end }}><b>{{ .Name }}</b></a>
+        {{ end }}
       {{ end }}
-    {{ end }}
   </nav>
   <hr />
 </header>
