@@ -40,11 +40,7 @@ As for the equipment, we were well prepared. We researched quite a bit on [/r/bi
 For the bikes, we had a [Trek - Dual Sport 3 Gen 5](https://www.trekbikes.com/us/en_US/bikes/hybrid-bikes/dual-sport-bikes/dual-sport/dual-sport-3-gen-5/p/36826/) and rented another [Giant - XTC SLR 29 2](https://www.giant-bicycles.com/us/xtc-slr-29-2-2021) at [Zweiradperle](https://zweiradperle.hamburg), a store I recommend. The side bags, which were waterproof, did their job even in torrential rain; if I remember correctly, the brands were [Forclaz](https://www.decathlon.com/collections/forclaz) and [Thule](https://www.thule.com/en-us/bike-packs-bags-and-racks/panniers-and-bike-bags/thule-shield-pannier-25l-_-3204209). We also took waterproof clothing, and our tent, a [Trek900](https://www.decathlon.es/es/p/tienda-de-campana-domo-2-personas-de-trekking-forclaz-trek900/_/R-p-301558), was one of the best purchases, easy to set up and take down, weighing only 2 kg.
 
 
-| ![Komoot](/images/posts/kamoot1.png) | ![Komoot](/images/posts/kamoot2.png)|
-|:--:|:--:|
-| [Komoot 1](https://www.komoot.com/tour/1885819816) | [Komoot 2](https://www.komoot.com/tour/1882999499) |
-| ![Komoot](/images/posts/kamoot3.png)|![Komoot](/images/posts/kamoot4.png)|
-| [Komoot 3](https://www.komoot.com/tour/1884092227) | [Komoot 4](https://www.komoot.com/tour/1883087267) |
+{{< carousel "/images/posts/kamoot1.png" "Komoot Route 1" "https://www.komoot.com/tour/1885819816" "Komoot 1" "/images/posts/kamoot2.png" "Komoot Route 2" "https://www.komoot.com/tour/1882999499" "Komoot 2" "/images/posts/kamoot3.png" "Komoot Route 3" "https://www.komoot.com/tour/1884092227" "Komoot 3" "/images/posts/kamoot4.png" "Komoot Route 4" "https://www.komoot.com/tour/1883087267" "Komoot 4" >}}
 
 These are some of the routes we took. We must have covered a total of 200 km by bike and a fraction of that walking through forests and mountains. The most dangerous part was the biking on roads, where the curves were sharp and the descents steep. The rain and cold didn’t help; at times visibility was low, and sound was muffled. The same applied to cars: most showed quite a bit of respect, but many passed very close, probably because they didn’t see us. This forced us to significantly reduce our speed and make more stops than planned. Additionally, the route often became narrow and two-way, forcing us to maneuver quickly and stay alert.
 

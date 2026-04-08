@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Contre</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
-    <lastBuildDate>Thu, 12 Jun 2025 00:18:54 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2026 16:09:26 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pictures</title>
+      <link>http://localhost:1313/es/tags/pictures/</link>
+      <pubDate>Tue, 07 Apr 2026 16:09:26 +0200</pubDate>
+      <guid>http://localhost:1313/es/tags/pictures/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trip</title>
+      <link>http://localhost:1313/es/tags/trip/</link>
+      <pubDate>Tue, 07 Apr 2026 16:09:26 +0200</pubDate>
+      <guid>http://localhost:1313/es/tags/trip/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Music</title>
       <link>http://localhost:1313/es/tags/music/</link>
@@ -27,20 +41,6 @@
       <link>http://localhost:1313/es/tags/tech/</link>
       <pubDate>Thu, 12 Jun 2025 00:18:54 +0000</pubDate>
       <guid>http://localhost:1313/es/tags/tech/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pictures</title>
-      <link>http://localhost:1313/es/tags/pictures/</link>
-      <pubDate>Tue, 08 Oct 2024 00:18:54 +0000</pubDate>
-      <guid>http://localhost:1313/es/tags/pictures/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Trip</title>
-      <link>http://localhost:1313/es/tags/trip/</link>
-      <pubDate>Tue, 08 Oct 2024 00:18:54 +0000</pubDate>
-      <guid>http://localhost:1313/es/tags/trip/</guid>
       <description></description>
     </item>
   </channel>
