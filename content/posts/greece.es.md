@@ -71,4 +71,4 @@ Por último, la gastronomía: rica, novedosa, pero repetitiva. Tal vez cometimos
 | [![](/images/posts/food5_greece.jpg)](/images/posts/food5_greece.jpg) | [![](/images/posts/food6_greece.jpg)](/images/posts/food6_greece.jpg) |  [![](/images/posts/food4_greece.jpg)](/images/posts/food4_greece.jpg) |  |
 
 
-Si llegaste hasta acá te habrás dado cuenta que este post fue más que nada informativo pensado más que nada para familia y amigos. Si tuviera que cerrar este post, diría que Grecia fue menos un destino y más una excusa para salir de la rutina, dejar la *compu* por un rato y tocar pasto.
+Si llegaste hasta acá te habrás dado cuenta que este post fue más que nada informativo pensado para familia y amigos pero si tengo que darle un cirre, diría que Grecia fue menos un destino y más una excusa para salir de la rutina, dejar la *compu* por un rato y tocar pasto.
