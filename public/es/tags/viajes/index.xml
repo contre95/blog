@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fotos on Contre</title>
-    <link>http://localhost:1313/es/tags/fotos/</link>
-    <description>Recent content in Fotos on Contre</description>
+    <title>Viajes on Contre</title>
+    <link>http://localhost:1313/es/tags/viajes/</link>
+    <description>Recent content in Viajes on Contre</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Tue, 07 Apr 2026 16:09:26 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/es/tags/fotos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/es/tags/viajes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Grecia</title>
       <link>http://localhost:1313/es/posts/greece/</link>
