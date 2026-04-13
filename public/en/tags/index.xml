@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Contre</title>
-    <link>https://blog.contre.io/en/tags/</link>
+    <link>http://localhost:1313/en/tags/</link>
     <description>Recent content in Tags on Contre</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 12 Jun 2025 00:18:54 +0000</lastBuildDate>
-    <atom:link href="https://blog.contre.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Music</title>
-      <link>https://blog.contre.io/en/tags/music/</link>
+      <link>http://localhost:1313/en/tags/music/</link>
       <pubDate>Thu, 12 Jun 2025 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/music/</guid>
+      <guid>http://localhost:1313/en/tags/music/</guid>
       <description></description>
     </item>
     <item>
       <title>Self-Hosted</title>
-      <link>https://blog.contre.io/en/tags/self-hosted/</link>
+      <link>http://localhost:1313/en/tags/self-hosted/</link>
       <pubDate>Thu, 12 Jun 2025 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/self-hosted/</guid>
+      <guid>http://localhost:1313/en/tags/self-hosted/</guid>
       <description></description>
     </item>
     <item>
       <title>Tech</title>
-      <link>https://blog.contre.io/en/tags/tech/</link>
+      <link>http://localhost:1313/en/tags/tech/</link>
       <pubDate>Thu, 12 Jun 2025 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/tech/</guid>
+      <guid>http://localhost:1313/en/tags/tech/</guid>
       <description></description>
     </item>
     <item>
       <title>Pictures</title>
-      <link>https://blog.contre.io/en/tags/pictures/</link>
+      <link>http://localhost:1313/en/tags/pictures/</link>
       <pubDate>Tue, 08 Oct 2024 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/pictures/</guid>
+      <guid>http://localhost:1313/en/tags/pictures/</guid>
       <description></description>
     </item>
     <item>
       <title>Trip</title>
-      <link>https://blog.contre.io/en/tags/trip/</link>
+      <link>http://localhost:1313/en/tags/trip/</link>
       <pubDate>Tue, 08 Oct 2024 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/trip/</guid>
+      <guid>http://localhost:1313/en/tags/trip/</guid>
       <description></description>
     </item>
     <item>
       <title>English</title>
-      <link>https://blog.contre.io/en/tags/english/</link>
+      <link>http://localhost:1313/en/tags/english/</link>
       <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/english/</guid>
+      <guid>http://localhost:1313/en/tags/english/</guid>
       <description></description>
     </item>
     <item>
       <title>GnuPG</title>
-      <link>https://blog.contre.io/en/tags/gnupg/</link>
+      <link>http://localhost:1313/en/tags/gnupg/</link>
       <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/gnupg/</guid>
+      <guid>http://localhost:1313/en/tags/gnupg/</guid>
       <description></description>
     </item>
     <item>
       <title>Password Manager</title>
-      <link>https://blog.contre.io/en/tags/password-manager/</link>
+      <link>http://localhost:1313/en/tags/password-manager/</link>
       <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/password-manager/</guid>
+      <guid>http://localhost:1313/en/tags/password-manager/</guid>
       <description></description>
     </item>
     <item>
       <title>SSH</title>
-      <link>https://blog.contre.io/en/tags/ssh/</link>
+      <link>http://localhost:1313/en/tags/ssh/</link>
       <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/ssh/</guid>
+      <guid>http://localhost:1313/en/tags/ssh/</guid>
       <description></description>
     </item>
     <item>
       <title>Unix</title>
-      <link>https://blog.contre.io/en/tags/unix/</link>
+      <link>http://localhost:1313/en/tags/unix/</link>
       <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/unix/</guid>
+      <guid>http://localhost:1313/en/tags/unix/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>https://blog.contre.io/en/tags/security/</link>
+      <link>http://localhost:1313/en/tags/security/</link>
       <pubDate>Sat, 25 Apr 2020 00:15:55 +0000</pubDate>
-      <guid>https://blog.contre.io/en/tags/security/</guid>
+      <guid>http://localhost:1313/en/tags/security/</guid>
       <description></description>
     </item>
   </channel>
