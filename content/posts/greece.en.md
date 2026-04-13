@@ -5,6 +5,7 @@ tags:
     - Travel
     - Photos
 ---
+
 ![Acropolis](/images/posts/acro_greece.jpeg)
 
 Not long ago I traveled through Greece and I'm sharing it with you. The trip was initially framed as a "Mythological" journey, where we'd visit iconic landmarks from Greek mythology. While it was a trip packed with history, religion, and philosophy, there was no shortage of landscapes or food either.
@@ -64,3 +65,11 @@ As for me, Demeter and Persephone found me reading [Entangled Life: How Fungi Ma
 
 
 If you made it this far, you've probably noticed this post was mostly informational, written with family and friends in mind. If I had to close it out, I'd say Greece was less a destination and more an excuse to break from the routine, step away from the computer for a while, and touch grass.
+
+---
+
+*Note on Translation: This post was originally written in highly colloquial Argentine Spanish—a dialect known for its unique slang, cultural nuances, and rhythm. It has been translated into English using AI,so some of the original tone and cultural nuances may have been lost in translation.*
+
+
+
+
