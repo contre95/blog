@@ -73,5 +73,5 @@ Finally, the food: good, unfamiliar, but repetitive. We probably made the mistak
 
 If you made it this far, you've probably noticed this post was mostly informational, written with family and friends in mind. If I had to close it out, I'd say Greece was less a destination and more an excuse to break from the routine, step away from the computer for a while, and touch grass.
 
-*Note on Translation: This post was originally written in highly colloquial Argentine Spanish—a dialect known for its unique slang, cultural nuances, and rhythm. It has been translated into English using AI, so the tone might not be the proper one.*
-
+----
+*Note on Translation: This post was originally written in highly colloquial Argentine Spanish, known for its unique slang, cultural nuances, and rhythm. It has been translated into English heavily using AI, so some of the original tone and cultural nuances may have been lost in translation.*
