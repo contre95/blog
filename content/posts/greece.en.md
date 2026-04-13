@@ -64,6 +64,13 @@ As for me, Demeter and Persephone found me reading [Entangled Life: How Fungi Ma
 | [![](/images/posts/hongos5_greecia.jpg)](/images/posts/hongos5_greecia.jpg) | [![](/images/posts/hongos6_greecia.jpg)](/images/posts/hongos6_greecia.jpg) | [![](/images/posts/hongos7_greecia.jpg)](/images/posts/hongos7_greecia.jpg) | [![](/images/posts/hongos8_greecia.jpg)](/images/posts/hongos8_greecia.jpg) |
 
 
+Finally, the food: good, novel, but repetitive. We probably made the mistake of always going to traditional Greek tavernas, and while we didn't find better Gyros than at [The Quick Greek](https://maps.app.goo.gl/QPfJAUyTYfGp9kyv7) (Barcelona), the food was cheap and quality. They'd bring water and dessert by default, and the service was excellent. The soda quality: superlative ([soda1](/images/posts/soda1_greece.jpeg), [soda2](/images/posts/soda2_greece.jpeg) and [soda3](/images/posts/soda3_greece.jpeg)). I don't think there was a single place where we didn't order [Saganaki](https://en.wikipedia.org/wiki/Saganaki) as a starter — by the third restaurant it was clear there was no escaping it. Only [Souvlaki](https://wikipedia.org/wiki/Souvlaki) and [Moussaka](https://wikipedia.org/wiki/Moussaka) came close to matching Saganaki (aka *Feta Cheese*), but there was also fish, red meat, and of course, an enormous amount of coffee.
+
+|  |  |  |  |
+|--|--|--|--|
+| [![](/images/posts/food1_greece.jpg)](/images/posts/food1_greece.jpg) | [![](/images/posts/food2_greece.jpg)](/images/posts/food2_greece.jpg) | [![](/images/posts/food3_greece.jpg)](/images/posts/food3_greece.jpg) |  |
+| [![](/images/posts/food5_greece.jpg)](/images/posts/food5_greece.jpg) | [![](/images/posts/food6_greece.jpg)](/images/posts/food6_greece.jpg) |  [![](/images/posts/food4_greece.jpg)](/images/posts/food4_greece.jpg) |  |
+
 If you made it this far, you've probably noticed this post was mostly informational, written with family and friends in mind. If I had to close it out, I'd say Greece was less a destination and more an excuse to break from the routine, step away from the computer for a while, and touch grass.
 
 *Note on Translation: This post was originally written in highly colloquial Argentine Spanish—a dialect known for its unique slang, cultural nuances, and rhythm. It has been translated into English using AI, so the tone might not be the proper one.*

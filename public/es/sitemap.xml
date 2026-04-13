@@ -15,6 +15,22 @@
                 href="https://blog.contre.io/es/"
                 />
   </url><url>
+    <loc>https://blog.contre.io/es/tags/fotos/</loc>
+    <lastmod>2026-04-07T16:09:26+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.contre.io/es/posts/greece/</loc>
+    <lastmod>2026-04-07T16:09:26+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/posts/greece/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/posts/greece/"
+                />
+  </url><url>
     <loc>https://blog.contre.io/es/posts/</loc>
     <lastmod>2026-04-07T16:09:26+02:00</lastmod>
     <xhtml:link
@@ -27,6 +43,22 @@
                 hreflang="es-ES"
                 href="https://blog.contre.io/es/posts/"
                 />
+  </url><url>
+    <loc>https://blog.contre.io/es/tags/</loc>
+    <lastmod>2026-04-07T16:09:26+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/"
+                />
+  </url><url>
+    <loc>https://blog.contre.io/es/tags/viajes/</loc>
+    <lastmod>2026-04-07T16:09:26+02:00</lastmod>
   </url><url>
     <loc>https://blog.contre.io/es/posts/music_hoarding/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
@@ -65,19 +97,6 @@
                 rel="alternate"
                 hreflang="es-ES"
                 href="https://blog.contre.io/es/tags/self-hosted/"
-                />
-  </url><url>
-    <loc>https://blog.contre.io/es/tags/</loc>
-    <lastmod>2025-06-12T00:18:54+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.contre.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/"
                 />
   </url><url>
     <loc>https://blog.contre.io/es/tags/tech/</loc>

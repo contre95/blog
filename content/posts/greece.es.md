@@ -1,7 +1,6 @@
 ---
 title: "Grecia"
 date: 2026-04-07T16:09:26+02:00
-draft: true
 tags:
     - Viajes
     - Fotos
@@ -62,6 +61,14 @@ En mi caso, Deméter y Perséfone me encontraron leyendo [Entangled Life: How Fu
 |  |  |  |  |
 |--|--|--|--|
 | [![](/images/posts/hongos5_greecia.jpg)](/images/posts/hongos5_greecia.jpg) | [![](/images/posts/hongos6_greecia.jpg)](/images/posts/hongos6_greecia.jpg) | [![](/images/posts/hongos7_greecia.jpg)](/images/posts/hongos7_greecia.jpg) | [![](/images/posts/hongos8_greecia.jpg)](/images/posts/hongos8_greecia.jpg) |
+
+Por último, la gastronomía: rica, novedosa, pero repetitiva. Tal vez cometimos el error de siempre ir a tavernas de comida típica griega y si bien no probamos mejor Gyros que en [The Quick Greek](https://maps.app.goo.gl/QPfJAUyTYfGp9kyv7) (Barcelona), la comida era barata y de calidad. Te traían agua y postre por default y la atención fue excelente. La calidad de la soda: superlativa ([soda1](/images/posts/soda1_greece.jpeg), [soda2](/images/posts/soda2_greece.jpeg) y [soda3](/images/posts/soda3_greece.jpeg)). Creo que no hubo lugar en el que no hayamos pedido [Saganaki](https://en.wikipedia.org/wiki/Saganaki) de entrada, ya después del tercer restauran se supo que no iba a haber escapatoria. Solo al Saganaki (aka *Feta Cheese*) le siguieron el [Souvlaki](https://wikipedia.org/wiki/Souvlaki) y la [Moussaka](https://wikipedia.org/wiki/Moussaka) pero también hubo pescado, carenes rojas y, por supuesto, muchísimos cafés. 
+
+
+|  |  |  |  |
+|--|--|--|--|
+| [![](/images/posts/food1_greece.jpg)](/images/posts/food1_greece.jpg) | [![](/images/posts/food2_greece.jpg)](/images/posts/food2_greece.jpg) | [![](/images/posts/food3_greece.jpg)](/images/posts/food3_greece.jpg) |  |
+| [![](/images/posts/food5_greece.jpg)](/images/posts/food5_greece.jpg) | [![](/images/posts/food6_greece.jpg)](/images/posts/food6_greece.jpg) |  [![](/images/posts/food4_greece.jpg)](/images/posts/food4_greece.jpg) |  |
 
 
 Si llegaste hasta acá te habrás dado cuenta que este post fue más que nada informativo pensado más que nada para familia y amigos. Si tuviera que cerrar este post, diría que Grecia fue menos un destino y más una excusa para salir de la rutina, dejar la *compu* por un rato y tocar pasto.
