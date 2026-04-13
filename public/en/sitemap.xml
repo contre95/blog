@@ -2,176 +2,176 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.contre.io/en/</loc>
+    <loc>http://localhost:1313/en/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://blog.contre.io/es/"
+                href="http://localhost:1313/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.contre.io/en/"
+                href="http://localhost:1313/en/"
                 />
   </url><url>
-    <loc>https://blog.contre.io/en/tags/music/</loc>
+    <loc>http://localhost:1313/en/tags/music/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/music/"
+                href="http://localhost:1313/es/tags/music/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.contre.io/en/tags/music/"
+                href="http://localhost:1313/en/tags/music/"
                 />
   </url><url>
-    <loc>https://blog.contre.io/en/posts/music_hoarding/</loc>
+    <loc>http://localhost:1313/en/posts/music_hoarding/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://blog.contre.io/es/posts/music_hoarding/"
+                href="http://localhost:1313/es/posts/music_hoarding/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.contre.io/en/posts/music_hoarding/"
+                href="http://localhost:1313/en/posts/music_hoarding/"
                 />
   </url><url>
-    <loc>https://blog.contre.io/en/posts/</loc>
+    <loc>http://localhost:1313/en/posts/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://blog.contre.io/es/posts/"
+                href="http://localhost:1313/es/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.contre.io/en/posts/"
+                href="http://localhost:1313/en/posts/"
                 />
   </url><url>
-    <loc>https://blog.contre.io/en/tags/self-hosted/</loc>
+    <loc>http://localhost:1313/en/tags/self-hosted/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/self-hosted/"
+                href="http://localhost:1313/es/tags/self-hosted/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.contre.io/en/tags/self-hosted/"
+                href="http://localhost:1313/en/tags/self-hosted/"
                 />
   </url><url>
-    <loc>https://blog.contre.io/en/tags/</loc>
+    <loc>http://localhost:1313/en/tags/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/"
+                href="http://localhost:1313/es/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.contre.io/en/tags/"
+                href="http://localhost:1313/en/tags/"
                 />
   </url><url>
-    <loc>https://blog.contre.io/en/tags/tech/</loc>
+    <loc>http://localhost:1313/en/tags/tech/</loc>
     <lastmod>2025-06-12T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/tech/"
+                href="http://localhost:1313/es/tags/tech/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.contre.io/en/tags/tech/"
+                href="http://localhost:1313/en/tags/tech/"
                 />
   </url><url>
-    <loc>https://blog.contre.io/en/tags/pictures/</loc>
+    <loc>http://localhost:1313/en/tags/pictures/</loc>
     <lastmod>2024-10-08T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/pictures/"
+                href="http://localhost:1313/es/tags/pictures/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.contre.io/en/tags/pictures/"
+                href="http://localhost:1313/en/tags/pictures/"
                 />
   </url><url>
-    <loc>https://blog.contre.io/en/posts/germany_trip/</loc>
+    <loc>http://localhost:1313/en/posts/germany_trip/</loc>
     <lastmod>2024-10-08T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://blog.contre.io/es/posts/germany_trip/"
+                href="http://localhost:1313/es/posts/germany_trip/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.contre.io/en/posts/germany_trip/"
+                href="http://localhost:1313/en/posts/germany_trip/"
                 />
   </url><url>
-    <loc>https://blog.contre.io/en/tags/trip/</loc>
+    <loc>http://localhost:1313/en/tags/trip/</loc>
     <lastmod>2024-10-08T00:18:54+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/trip/"
+                href="http://localhost:1313/es/tags/trip/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.contre.io/en/tags/trip/"
+                href="http://localhost:1313/en/tags/trip/"
                 />
   </url><url>
-    <loc>https://blog.contre.io/en/posts/mac_setup/</loc>
+    <loc>http://localhost:1313/en/posts/mac_setup/</loc>
     <lastmod>2024-04-27T20:25:20+02:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/tags/english/</loc>
+    <loc>http://localhost:1313/en/tags/english/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/tags/gnupg/</loc>
+    <loc>http://localhost:1313/en/tags/gnupg/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/posts/gpg_1/</loc>
+    <loc>http://localhost:1313/en/posts/gpg_1/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/tags/password-manager/</loc>
+    <loc>http://localhost:1313/en/tags/password-manager/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/tags/ssh/</loc>
+    <loc>http://localhost:1313/en/tags/ssh/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/tags/unix/</loc>
+    <loc>http://localhost:1313/en/tags/unix/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/posts/gpg_2/</loc>
+    <loc>http://localhost:1313/en/posts/gpg_2/</loc>
     <lastmod>2020-04-25T00:15:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/tags/security/</loc>
+    <loc>http://localhost:1313/en/tags/security/</loc>
     <lastmod>2020-04-25T00:15:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/posts/gpg_0/</loc>
+    <loc>http://localhost:1313/en/posts/gpg_0/</loc>
     <lastmod>2020-04-15T00:15:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/categories/</loc>
+    <loc>http://localhost:1313/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://blog.contre.io/es/categories/"
+                href="http://localhost:1313/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.contre.io/en/categories/"
+                href="http://localhost:1313/en/categories/"
                 />
   </url>
 </urlset>
