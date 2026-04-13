@@ -1,7 +1,6 @@
 ---
 title: "Greece"
 date: 2026-04-07T16:09:26+02:00
-draft: true
 tags:
     - Travel
     - Photos
