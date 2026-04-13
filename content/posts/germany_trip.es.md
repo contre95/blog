@@ -31,7 +31,11 @@ Si bien la gente de la zona está acostumbrada a los ciclistas, muchos se sorpre
 
 Bici + tren es una gran combinación, te da un muy buen ratio tiempo vs lugares a visitar, dónde el camino y los trayectos son parte del destino y no aburridas horas de viaje. La bici te permite visitar lugares aledaños (~10-30km) de la ciudad principal donde está la estación y recorrer de un pueblo a otro cuando hay tiempo (~100km). Ambos concluimos que cuando en bici, uno está más en contacto con el camino, aprecia y siente el camino de otra manera. También, al hacer constante ejercicio, la cabeza trabaja distinto. 
 
-{{< carousel "/images/posts/kamoot1.png" "Komoot Ruta 1" "https://www.komoot.com/tour/1885819816" "Komoot 1" "/images/posts/kamoot2.png" "Komoot Ruta 2" "https://www.komoot.com/tour/1882999499" "Komoot 2" "/images/posts/kamoot3.png" "Komoot Ruta 3" "https://www.komoot.com/tour/1884092227" "Komoot 3" "/images/posts/kamoot4.png" "Komoot Ruta 4" "https://www.komoot.com/tour/1883087267" "Komoot 4" >}}
+| ![Komoot](/images/posts/kamoot1.png) | ![Komoot](/images/posts/kamoot2.png)|
+|:--:|:--:|
+| [Komoot 1](https://www.komoot.com/tour/1885819816) | [Komoot 2](https://www.komoot.com/tour/1882999499) |
+| ![Komoot](/images/posts/kamoot3.png)|![Komoot](/images/posts/kamoot4.png)|
+| [Komoot 3](https://www.komoot.com/tour/1884092227) | [Komoot 4](https://www.komoot.com/tour/1883087267) |
 
 Esas son algunas de las rutas que hicimos. Habremos recorrido un total de 200km en bici y otro tantos caminando por bosques y montaña. Lo más riesgoso fueron los trayectos de bici en ruta, donde las curvas eran cerradas y las bajadas muy pronunciadas. La lluvia y el frío no ayudaban; a veces se veía poco y se escuchaba menos. Con los autos sucedía lo mismo: la mayoría respetaba bastante, pero algunos pasaban muy cerca, probablemente sin habernos visto. Esto nos obligó a reducir considerablemente la velocidad y a hacer más paradas de lo previsto. Además, la ruta se volvía angosta y de doble mano en varios tramos, lo que nos forzaba a maniobrar rápido y mantenernos siempre alerta.
 
