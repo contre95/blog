@@ -2,7 +2,7 @@
 title: "Arreglando el iPod"
 date: 2026-04-24T20:00:47+02:00
 tags:
-  - Dump & Rant
+  - Rant&Dump
   - Tech
   - Music
 ---
