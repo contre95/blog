@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
@@ -32,14 +32,14 @@
   <body>
     <header>
   <div id="brand">
-    <a class="icon-link" href="https://blog.contre.io/">
+    <a class="icon-link" href="http://localhost:1313/">
       <img
         class="icon"
         src="/images/img.svg"
       />
     </a>
     <div class="text">
-      <a href="https://blog.contre.io/"><h1>Contre</h1></a>
+      <a href="http://localhost:1313/"><h1>Contre</h1></a>
       <h3>|||||||||||</h3>
     </div>
   </div>
@@ -141,7 +141,7 @@
 </table>
 <p>Otra cosa que casi rompo es el conector de la batería, el que está marcado con un círculo en la tercer foto. El socket de plástico blanco tiene 3 pines soldados a la PCB que lo mantienen rígido, mientras que la traba negra desliza de abajo hacia arriba para bloquear o desbloquear el cable flex que le da corriente al circuito. Saqué ese flex tantas veces que el plástico blanco se despegó de la PCB (los pines no, por suerte). Ahora, abrir el iPod es un trabajo de 3 hombres: uno sostiene el plástico blanco, mientras que el otro levanta la traba negra y saca el flex.</p>
 <hr>
-<h2 id="tablas-de-particiones-apm-mbr-y-por-qué-importa">Tablas de particiones: APM, MBR y por qué importa</h2>
+<h2 id="tablas-de-particiones-apm-mbr-y-por-qué-importan">Tablas de particiones: APM, MBR y por qué importan</h2>
 <p>Cuando una Mac restaura un iPod via iTunes/Finder escribe un <strong>Apple Partition Map (APM)</strong> — el formato de tabla de particiones legacy de Apple, anterior al MBR (usado en la mayoría de las PCs) y al GPT (usado en las Macs modernas). Restaurarlo e instalar el OS de stock fue muy fácil, lo conectás a una Mac, una Macbook Air de las nuevas en mi caso, y listo. Todos los iPod classic restaurados de esta forma vuelven a tener su APM. Y ahora vuelta a 0: a instalar el bootloader de Rockbox.</p>
 <p>Me vi tentado a instalar Rockbox en la Mac pero decidí volver a la linuxera, el problema en Linux es que el kernel no expone automáticamente las sub-particiones APM como dispositivos de bloque. Después de la restauración en Mac, el iPod aparecía como <code>/dev/sda</code> (954.8G) <strong>sin nodos de dispositivo de partición</strong> — sin <code>sda1</code>, <code>sda2</code>, etc. Herramientas como <code>parted</code> pueden ver las particiones, pero no se pueden montar directamente.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo parted /dev/sda print

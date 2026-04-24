@@ -33,7 +33,7 @@ Otra cosa que casi rompo es el conector de la batería, el que está marcado con
 
 ---
 
-## Tablas de particiones: APM, MBR y por qué importa
+## Tablas de particiones: APM, MBR y por qué importan
 
 Cuando una Mac restaura un iPod via iTunes/Finder escribe un **Apple Partition Map (APM)** — el formato de tabla de particiones legacy de Apple, anterior al MBR (usado en la mayoría de las PCs) y al GPT (usado en las Macs modernas). Restaurarlo e instalar el OS de stock fue muy fácil, lo conectás a una Mac, una Macbook Air de las nuevas en mi caso, y listo. Todos los iPod classic restaurados de esta forma vuelven a tener su APM. Y ahora vuelta a 0: a instalar el bootloader de Rockbox.
 
