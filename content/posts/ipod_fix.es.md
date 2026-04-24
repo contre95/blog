@@ -7,9 +7,6 @@ tags:
 ---
 ![iPodFix](/images/posts/ipod_fix_banner.jpg)
 
-**Aviso:** Antes de comprar o cambiar tarjetas SD, verificá la compatibilidad con la placa iFlash Solo en la lista oficial:
-[https://www.iflash.xyz/store/iflash-compatibility/](https://www.iflash.xyz/store/iflash-compatibility/)
-
 De alguna manera logré romper mi iPod con `dd`. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo `No Partition found`. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y finalmente arreglaba el iPod.
 
 ## Especificaciones del dispositivo
@@ -86,7 +83,11 @@ nix-shell -p hfsprogs --run "sudo fsck.hfsplus -J /dev/mapper/sda2"
 
 ## El layout de iFlash Solo
 
-Parentesis: ¿Cómo traduzco este título en criollo? ¿ "El esquema del iFlash Solo" ?  Como escribo en castellano, si le hablo a Claudio en inglés y tuve que copiar el "¿" de internet porque no sé hacerlo en el teclado ? Anyway (En fin)
+
+**Parentesis**: *¿Cómo traduzco este título en criollo? ¿ "El esquema del iFlash Solo" ?  Como escribo en castellano, si le hablo a Claudio en inglés y tuve que copiar el "¿" de internet porque no sé hacerlo en el teclado ? Anyway (En fin)*
+
+> **👀 ->** Antes de comprar o cambiar tarjetas SD, verificá la compatibilidad con la placa iFlash Solo en la página oficial:
+[https://www.iflash.xyz/store/iflash-compatibility/](https://www.iflash.xyz/store/iflash-compatibility/)
 
 Para Linux, el [iFlash Solo](https://www.iflash.xyz/store/iflash-solo/) se ve como un único disco. Internamente, sin embargo, tiene su propia área de almacenamiento reservada para firmware, separada de la tarjeta SD. Esto es lo que representa la partición `sdc2` (192 MB) después de que corre Rockbox Utility, el **bootloader** de Rockbox vive ahí, no en la SD en sí. Esto fue una gran fuente de confusión al principio. Imaginate mi sorpresa cuando saqué la SD, la formaté a 0, la volví a meter al iPod y volví a ver la pantalla del bootloader. Casi salgo corriendo.
 

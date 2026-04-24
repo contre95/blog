@@ -7,9 +7,6 @@ tags:
 ---
 ![iPodFix](/images/posts/ipod_fix_banner.jpg)
 
-**Notice:** Before purchasing or swapping SD cards, verify compatibility with the iFlash Solo board at the official compatibility list:
-[https://www.iflash.xyz/store/iflash-compatibility/](https://www.iflash.xyz/store/iflash-compatibility/)
-
 I somehow managed to mess up my iPod with `dd`. It would boot into USB/Disk mode with the Rockbox bootloader saying `No Partition found`. To recover it I had to restore it via iTunes/Finder on a Mac, which wiped the drive entirely and wrote a fresh Apple Partition Map (APM) partition table with the stock Apple firmware. Then I had to put Rockbox back on it — which turned out to be more involved than expected because of the iFlash Solo board. This post covers the concepts that matter when doing this, not just the commands. I will just dump and rant 
 concepts that where good to know at the moment of debugging and finally fixing the iPod.
 ## Device Specs
@@ -79,6 +76,10 @@ nix-shell -p hfsprogs --run "sudo fsck.hfsplus -J /dev/mapper/sda2"
 ---
 
 ## The iFlash Solo's Storage Layout
+
+> **Notice:** Before purchasing or swapping SD cards, verify compatibility with the iFlash Solo board at the official compatibility list:
+[https://www.iflash.xyz/store/iflash-compatibility/](https://www.iflash.xyz/store/iflash-compatibility/)
+
 
 The iFlash Solo presents itself to the OS as a single disk. Internally though it has its own reserved firmware storage area separate from the SD card's user storage. This is what the `sdc2` (192 MB, type `0x3f`) partition is after Rockbox Utility runs — the Rockbox **bootloader** lives there, not on the SD card itself.
 
