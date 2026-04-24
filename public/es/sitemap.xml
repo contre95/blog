@@ -2,6 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.contre.io/es/posts/ipod_fix/</loc>
+    <lastmod>2026-04-24T20:00:47+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/posts/ipod_fix/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/posts/ipod_fix/"
+                />
+  </url><url>
     <loc>https://blog.contre.io/es/</loc>
     <lastmod>2026-04-24T20:00:47+02:00</lastmod>
     <xhtml:link
@@ -26,19 +39,6 @@
                 rel="alternate"
                 hreflang="es-ES"
                 href="https://blog.contre.io/es/tags/dump--rant/"
-                />
-  </url><url>
-    <loc>https://blog.contre.io/es/posts/ipod_fix/</loc>
-    <lastmod>2026-04-24T20:00:47+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.contre.io/en/posts/ipod_fix/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://blog.contre.io/es/posts/ipod_fix/"
                 />
   </url><url>
     <loc>https://blog.contre.io/es/tags/music/</loc>
@@ -78,6 +78,19 @@
                 rel="alternate"
                 hreflang="es-ES"
                 href="https://blog.contre.io/es/tags/"
+                />
+  </url><url>
+    <loc>https://blog.contre.io/es/tags/tech/</loc>
+    <lastmod>2026-04-24T20:00:47+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/tech/"
                 />
   </url><url>
     <loc>https://blog.contre.io/es/tags/fotos/</loc>
@@ -123,19 +136,6 @@
                 rel="alternate"
                 hreflang="es-ES"
                 href="https://blog.contre.io/es/tags/self-hosted/"
-                />
-  </url><url>
-    <loc>https://blog.contre.io/es/tags/tech/</loc>
-    <lastmod>2025-06-12T00:18:54+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.contre.io/en/tags/tech/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/tech/"
                 />
   </url><url>
     <loc>https://blog.contre.io/es/posts/germany_trip/</loc>

@@ -1,8 +1,9 @@
 ---
-title: "Info dump de un iPod fix"
+title: "Arreglando el iPod"
 date: 2026-04-24T20:00:47+02:00
 tags:
   - Dump & Rant
+  - Tech
   - Music
 ---
 ![iPodFix](/images/posts/ipod_fix_banner.jpg)
