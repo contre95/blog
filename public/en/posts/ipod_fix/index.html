@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content=""
+  />
+  
+    
+      <title>Fixing Moded iPod | Contre</title>
+    
+  
+  <link rel="stylesheet" href="/css/reset.css"/>
+  <link rel="stylesheet" href="/css/font.css"/>
+  <link rel="stylesheet" href="/css/smigle.css"/>
+  
+    <link rel="stylesheet" href="/css/custom.css"/>
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script defer src="https://umami.contre.io/script.js" data-website-id="fcb27a7a-d935-4321-b1ae-c8e057389847"></script>
+  <script defer src="https://umami.contre.io/recorder.js" data-website-id="fcb27a7a-d935-4321-b1ae-c8e057389847" data-sample-rate="0.15" data-mask-level="moderate" data-max-duration="300000"></script>
+</head>
+
+  <body>
+    <header>
+  <div id="brand">
+    <a class="icon-link" href="https://blog.contre.io/">
+      <img
+        class="icon"
+        src="/images/img.svg"
+      />
+    </a>
+    <div class="text">
+      <a href="https://blog.contre.io/"><h1>Contre</h1></a>
+      <h3>|||||||||||</h3>
+    </div>
+  </div>
+  <nav>
+      
+        
+          
+          <a href="/en"><b>Home</b></a>
+        
+           | 
+          <a href="/en/posts/"><b>Posts</b></a>
+        
+           | 
+          <a href="/en/posts/index.xml"><b>RSS</b></a>
+        
+           | 
+          <a href="https://memos.contre.io/explore" target="_blank" rel="noopener noreferrer"><b>Memos</b></a>
+        
+           | 
+          <a href="/es"><b>Spanish</b></a>
+        
+      
+  </nav>
+  <hr />
+</header>
+
+    <div id="content">
+      
+<main>
+  <article>
+    <h1>Fixing Moded iPod</h1>
+    <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2026-04-24</time>
+    
+    
+  </strong>
+  <span> • 1068 words</span>
+  <span> • 6 minute read</span>
+  
+  
+    <div>
+      <span>Tags:</span>
+      
+        <a href="/en/tags/dump-rant">Dump &amp; Rant</a>, 
+        <a href="/en/tags/music">Music</a>
+    </div>
+  
+</div>
+
+    <div><p><img src="/images/posts/ipod_fix_banner.jpg" alt="iPodFix"></p>
+<p><strong>Notice:</strong> Before purchasing or swapping SD cards, verify compatibility with the iFlash Solo board at the official compatibility list:
+<a href="https://www.iflash.xyz/store/iflash-compatibility/">https://www.iflash.xyz/store/iflash-compatibility/</a></p>
+<p>I somehow managed to mess up my iPod with <code>dd</code>. It would boot into USB/Disk mode with the Rockbox bootloader saying <code>No Partition found</code>. To recover it I had to restore it via iTunes/Finder on a Mac, which wiped the drive entirely and wrote a fresh Apple Partition Map (APM) partition table with the stock Apple firmware. Then I had to put Rockbox back on it — which turned out to be more involved than expected because of the iFlash Solo board. This post covers the concepts that matter when doing this, not just the commands. I will just dump and rant
+concepts that where good to know at the moment of debugging and finally fixing the iPod.</p>
+<h2 id="device-specs">Device Specs</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Property</th>
+          <th>Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Model</td>
+          <td>iPod Classic 7th Gen</td>
+      </tr>
+      <tr>
+          <td>Storage mod</td>
+          <td>iFlash Solo board</td>
+      </tr>
+      <tr>
+          <td>SD card size</td>
+          <td>~955 GiB (~1 TB)</td>
+      </tr>
+      <tr>
+          <td>Logical/physical sector size</td>
+          <td>4096 bytes / 4096 bytes (native, due to iFlash)</td>
+      </tr>
+      <tr>
+          <td>Partition table after Mac restore</td>
+          <td>Apple Partition Map (APM)</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="the-hardware">The Hardware</h2>
+<p>6th &amp; 7th Generation iPod Classics (2007–2009) are the toughest to open — tight metal clips all around the seam. I broke two of them deliberately to make it easier to open next time. See <a href="https://www.youtube.com/watch?v=_QdiSpw98Xw">this video</a> for guidance.</p>
+<table>
+  <thead>
+      <tr>
+          <th><a href="/images/posts/ipod_1.jpg"><img src="/images/posts/ipod_1.jpg" alt=""></a></th>
+          <th><a href="/images/posts/ipod_2.jpg"><img src="/images/posts/ipod_2.jpg" alt=""></a></th>
+          <th><a href="/images/posts/ipod_4.jpg"><img src="/images/posts/ipod_4.jpg" alt=""></a></th>
+      </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<p>The third picture shows the battery connector to the PCB. The white plastic socket has 3 pins soldered to the PCB — they hold it in place — while the black clamp slides to lock/unlock the flex cable. I pulled that flex so many times that the white plastic detached from the PCB (not the pins, luckily). It&rsquo;s now a 3-hands job: one holds the white plastic down, one lifts the black clamp, and the third pulls the flex.</p>
+<hr>
+<h2 id="partition-tables-apm-mbr-and-why-it-matters">Partition Tables: APM, MBR, and Why It Matters</h2>
+<p>When a Mac restores an iPod via iTunes/Finder it writes an <strong>Apple Partition Map (APM)</strong> — Apple&rsquo;s legacy partition table format, predating MBR (used on most PCs) and GPT (used on modern Macs). All classic iPods restored this way come back with APM.</p>
+<p>The problem on Linux is that the kernel does not automatically expose APM sub-partitions as block devices. After the Mac restore, the iPod showed up as <code>/dev/sda</code> (954.8G) with <strong>no partition device nodes</strong> — no <code>sda1</code>, <code>sda2</code>, etc. Tools like <code>parted</code> can see the partitions, but you can&rsquo;t mount them directly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo parted /dev/sda print
+</span></span></code></pre></div><p>Output showed:</p>
+<ul>
+<li>Partition table type: <code>mac</code></li>
+<li>Partition 1: 254 KB — partition map metadata</li>
+<li>Partition 2: ~955 GiB — main data partition (HFS+, filesystem not auto-detected by Linux without kpartx)</li>
+</ul>
+<p>To expose them as mountable block devices, <code>kpartx</code> creates device mappings manually:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo kpartx -av /dev/sda
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># creates /dev/mapper/sda1 and /dev/mapper/sda2</span>
+</span></span></code></pre></div><p>Later, <code>ipodpatcher</code> (run internally by Rockbox Utility) converts the partition table from <strong>APM → MBR</strong>, which is why after the bootloader install the device re-enumerates and normal partition nodes (<code>sdc1</code>, <code>sdc2</code>) appear without needing <code>kpartx</code>. Thankfully I was able to use rockbox-utility, because <code>ipodpatcher</code> was not available on NixOS.</p>
+<hr>
+<h2 id="hfs-and-the-journal">HFS+ and the Journal</h2>
+<p>The Mac restore formats the data partition as <strong>HFS+ Journaled</strong>. The journal is a write-ahead log that helps recover from crashes — but it also causes Linux to mount the partition <strong>read-only</strong> by default, because it can&rsquo;t safely write to a journaled HFS+ filesystem without risking corruption.</p>
+<p>To get write access, you just force-mount it and fuck the journal, who needs logs anyways:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo mkdir -p /mnt/ipod
+</span></span><span style="display:flex;"><span>sudo mount -t hfsplus -o force,rw /dev/mapper/sda2 /mnt/ipod
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nix-shell -p hfsprogs --run <span style="color:#e6db74">&#34;sudo fsck.hfsplus -J /dev/mapper/sda2&#34;</span>
+</span></span></code></pre></div><p><code>fsck.hfsplus -J</code> replays the journal and marks it as disabled. After this the partition mounts read-write normally. This step is only needed if you want to inspect or modify the HFS+ partition — Rockbox Utility replaces the entire partition table anyway.</p>
+<hr>
+<h2 id="the-iflash-solos-storage-layout">The iFlash Solo&rsquo;s Storage Layout</h2>
+<p>The iFlash Solo presents itself to the OS as a single disk. Internally though it has its own reserved firmware storage area separate from the SD card&rsquo;s user storage. This is what the <code>sdc2</code> (192 MB, type <code>0x3f</code>) partition is after Rockbox Utility runs — the Rockbox <strong>bootloader</strong> lives there, not on the SD card itself.</p>
+<pre tabindex="0"><code>Device     Boot Start       End   Sectors   Size Id Type
+/dev/sdc1  *    49278 250347518 250298241 954.8G  c W95 FAT32 (LBA)   ← music + Rockbox firmware
+/dev/sdc2          63     49214     49152   192M 3f unknown            ← Rockbox bootloader
+</code></pre><blockquote>
+<p>&ldquo;Partition table entries are not in disk order&rdquo; is normal for iPod layout.</p>
+</blockquote>
+<p>This distinction matters because <strong>Bootloader</strong> and <strong>Firmware</strong> are installed separately:</p>
+<ul>
+<li><strong>Bootloader</strong> (<code>sdc2</code>): installed once via Rockbox Utility&rsquo;s <em>Bootloader installation</em> — patches the iFlash&rsquo;s reserved area, converts APM → MBR</li>
+<li><strong>Firmware</strong> (<code>sdc1</code>): the <code>.rockbox/</code> directory (codecs, themes, <code>rockbox.ipod</code>) copied onto the FAT32 data partition</li>
+</ul>
+<hr>
+<h2 id="fat32-and-the-4096-byte-sector-constraint">FAT32 and the 4096-byte Sector Constraint</h2>
+<p>The iFlash Solo reports a <strong>native physical sector size of 4096 bytes</strong> (instead of the standard 512 bytes). This propagates up to FAT32 formatting — <code>mkfs.vfat</code> will override any attempt to set smaller logical sectors:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo mkfs.vfat -F <span style="color:#ae81ff">32</span> -S <span style="color:#ae81ff">512</span> -s <span style="color:#ae81ff">8</span> /dev/sdc1
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Warning: sector size was set to 4096 (minimal for this device)</span>
+</span></span></code></pre></div><p>This is not a bug, it&rsquo;s a hardware constraint. The consequence is that some Rockbox builds may fail to read the filesystem because their FAT driver assumes 512-byte sectors. If Rockbox boots but shows <code>No partition found</code> after you&rsquo;ve formatted and installed the firmware, this is the likely cause.</p>
+<p>Mount the formatted partition:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo mount -t vfat -o uid<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>id -u<span style="color:#66d9ef">)</span>,gid<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>id -g<span style="color:#66d9ef">)</span>,umask<span style="color:#f92672">=</span><span style="color:#ae81ff">022</span> /dev/sdc1 /mnt/ipod
+</span></span></code></pre></div><hr>
+<h2 id="devnix--nix-shell-environment">dev.nix — Nix Shell Environment</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>{ pkgs <span style="color:#f92672">?</span> <span style="color:#f92672">import</span> <span style="color:#e6db74">&lt;nixpkgs&gt;</span> {} }:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pkgs<span style="color:#f92672">.</span>mkShell {
+</span></span><span style="display:flex;"><span>  packages <span style="color:#f92672">=</span> <span style="color:#66d9ef">with</span> pkgs; [
+</span></span><span style="display:flex;"><span>    sg3_utils       <span style="color:#75715e"># SCSI/ATA device utilities</span>
+</span></span><span style="display:flex;"><span>    xxd             <span style="color:#75715e"># hex dump</span>
+</span></span><span style="display:flex;"><span>    hdparm          <span style="color:#75715e"># ATA drive parameters</span>
+</span></span><span style="display:flex;"><span>    hfsprogs        <span style="color:#75715e"># fsck.hfsplus for HFS+ journal manipulation</span>
+</span></span><span style="display:flex;"><span>    parted          <span style="color:#75715e"># partition table inspection</span>
+</span></span><span style="display:flex;"><span>    multipath-tools <span style="color:#75715e"># kpartx for APM partition mapping</span>
+</span></span><span style="display:flex;"><span>  ];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="quick-reference">Quick Reference</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># Inspect partition table</span>
+</span></span><span style="display:flex;"><span>sudo fdisk -l /dev/sdX
+</span></span><span style="display:flex;"><span>sudo parted /dev/sdX print
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Expose APM partitions as block devices</span>
+</span></span><span style="display:flex;"><span>sudo kpartx -av /dev/sdX
+</span></span><span style="display:flex;"><span>sudo kpartx -dv /dev/sdX   <span style="color:#75715e"># remove mappings</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mount HFS+ (force rw, bypass journal)</span>
+</span></span><span style="display:flex;"><span>sudo mount -t hfsplus -o force,rw /dev/mapper/sdX2 /mnt/ipod
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Disable HFS+ journal</span>
+</span></span><span style="display:flex;"><span>sudo fsck.hfsplus -J /dev/mapper/sdX2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Format FAT32 (iFlash will override to 4096-byte sectors regardless)</span>
+</span></span><span style="display:flex;"><span>sudo mkfs.vfat -F <span style="color:#ae81ff">32</span> /dev/sdX1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mount FAT32 with user permissions</span>
+</span></span><span style="display:flex;"><span>sudo mount -t vfat -o uid<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>id -u<span style="color:#66d9ef">)</span>,gid<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>id -g<span style="color:#66d9ef">)</span>,umask<span style="color:#f92672">=</span><span style="color:#ae81ff">022</span> /dev/sdX1 /mnt/ipod
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Launch Rockbox Utility on NixOS</span>
+</span></span><span style="display:flex;"><span>nix-shell -p rockbox-utility --run <span style="color:#e6db74">&#34;RockboxUtility&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Safely unmount before disconnecting</span>
+</span></span><span style="display:flex;"><span>sudo umount /mnt/ipod
+</span></span></code></pre></div></div>
+  </article>
+</main>
+
+    </div>
+    <footer>
+  <hr />
+  
+</footer>
+
+  </body>
+</html>

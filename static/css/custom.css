@@ -1,0 +1,18 @@
+a.tag,
+a.tag:link,
+a.tag:visited {
+  background-color: #326F97;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.72em;
+  margin-left: 5px;
+  padding: 1px 5px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+a.tag:hover {
+  background-color: #245577;
+  color: #ffffff;
+  text-decoration: none;
+}

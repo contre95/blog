@@ -101,6 +101,10 @@ menu:
       weight: 5
       params:
         target: _blank
+taxonomies:
+  tag: tags
+  category: categories
+
 translationKey: about
 params:
   abbrDateFmt: "Jan 2"
@@ -108,8 +112,8 @@ params:
   brandIconFile: "images/img.svg"
   dateFmt: "2006-01-02"
   subtitle: "|||||||||||"
-# customStylesheets: # Use to override theme styles, like logo size
-#   - "css/custom.css"
+  customStylesheets:
+    - "css/custom.css"
 # social:
 #   - name: Here
 #     url: https://blog.contre.io

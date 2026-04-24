@@ -2,8 +2,8 @@
 title: Schwarzwald
 date: 2024-10-08  00:18:54
 tags:
-    - Trip
-    - Pictures
+    - Fotos
+    - Viajes
 ---
 
 ![Fungi](/images/posts/fungi.jpg)

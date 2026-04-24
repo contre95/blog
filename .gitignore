@@ -1,4 +1,5 @@
 .DS_Store
+.claude
 .hugo_build.lock
 nvm/
 Thumbs.db
