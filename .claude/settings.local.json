@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /home/canus/code/contre/blog/static/images/posts)",
+      "Bash(cp -r /home/canus/code/contre/blog/public/images/posts/. /home/canus/code/contre/blog/static/images/posts/)"
+    ]
+  }
+}
