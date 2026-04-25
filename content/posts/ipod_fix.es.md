@@ -8,7 +8,7 @@ tags:
 ---
 ![iPodFix](/images/posts/ipod_fix_banner.jpg)
 
-De alguna manera logré romper mi iPod con `dd`. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo `No Partition found`. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y finalmente arreglaba el iPod.
+De alguna manera logré romper mi iPod con `dd`. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo `No Partition found`. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y arreglaba el iPod.
 
 ## Especificaciones del dispositivo
 
