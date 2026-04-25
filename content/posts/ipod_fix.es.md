@@ -56,7 +56,7 @@ sudo kpartx -av /dev/sda
 # crea /dev/mapper/sda1 y /dev/mapper/sda2
 ```
 
-Lo hice con `kpartx` pq es lo que recomendó la IA,  si no era`ipodpatcher` que en mi caso fue ejecutado internamente por Rockbox Utility pq `ipodpatcher` no estaba en NixOS. Esto convierte la tabla de particiones de **APM → MBR**, e imagino yo que ahí es donde hace su magia para bootear al OS de stock o a Rockbox con MENU+SELECT o SELECT+PLAY/PAUSE. Luego de instalar el bootloader el dispositivo ya aparece con sus particiones normales (`sdc1`, `sdc2`) sin necesitar `kpartx`. Por suerte pude usar rockbox-utility, porque `ipodpatcher` no estaba disponible en NixOS.
+Lo hice con `kpartx` porque es lo que recomendó la IA,  si no era `ipodpatcher` que en mi caso fue ejecutado internamente por Rockbox Utility pq `ipodpatcher` no estaba en NixOS. Esto convierte la tabla de particiones de **APM → MBR**, e imagino yo que ahí es donde hace su magia para bootear al OS de stock o a Rockbox con MENU+SELECT o SELECT+PLAY/PAUSE. Luego de instalar el bootloader el dispositivo ya aparece con sus particiones normales (`sdc1`, `sdc2`) sin necesitar `kpartx`. Por suerte pude usar rockbox-utility, porque `ipodpatcher` no estaba disponible en NixOS.
 
 ---
 
