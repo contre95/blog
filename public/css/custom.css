@@ -4,6 +4,58 @@ header nav {
   align-items: center;
 }
 
+header nav {
+  flex-wrap: wrap;
+}
+
+.nav-left {
+  order: 1;
+}
+
+.nav-right {
+  order: 2;
+  margin-top: 0.5em;
+}
+
+#brand {
+  display: flex;
+}
+
+#brand .text {
+  margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-left {
+    order: 1;
+  }
+
+  .nav-right {
+    order: 2;
+    margin-top: 0.5em;
+  }
+
+  #brand {
+    flex-direction: row !important;
+    justify-content: center;
+    display: flex;
+  }
+
+  #brand .text {
+    margin-left: 10px;
+  }
+
+  #brand .icon {
+    width: 75px;
+  }
+}
+
 a.tag,
 a.tag:link,
 a.tag:visited {
