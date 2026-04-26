@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>English on Contre</title>
-    <link>https://blog.contre.io/en/tags/english/</link>
+    <link>http://localhost:1313/en/tags/english/</link>
     <description>Recent content in English on Contre</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 29 Jun 2020 13:15:55 +0000</lastBuildDate>
-    <atom:link href="https://blog.contre.io/en/tags/english/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/tags/english/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GPG &#43; SSH ?</title>
-      <link>https://blog.contre.io/en/posts/gpg_1/</link>
+      <link>http://localhost:1313/en/posts/gpg_1/</link>
       <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
-      <guid>https://blog.contre.io/en/posts/gpg_1/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/gpg_1_banner.jpg&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This will be a small walk through on how to generate an authentication subkey on GPG and integrated with ssh. First of all bare in mind that will need a GPG key first in order to generate this subkey, if have not generated on yet refer to part 0 of these series.&lt;/p&gt;&#xA;&lt;h3 id=&#34;authentication-key&#34;&gt;Authentication Key&lt;/h3&gt;&#xA;&lt;p&gt;In order to generate an authentication key, as I mentioned before, you will need to have a key generated. Let&amp;rsquo;s check that with&lt;/p&gt;</description>
+      <guid>http://localhost:1313/en/posts/gpg_1/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/gpg_1_banner.jpg&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This will be a small walk through on how to generate an authentication subkey on GPG and integrated with ssh. First of all bare in mind that will need a GPG key first in order to generate this subkey, if have not generated on yet refer to part 0 of these series.&lt;/p&gt;&#xA;&lt;h3 id=&#34;authentication-key&#34;&gt;Authentication Key&lt;/h3&gt;&#xA;&lt;p&gt;In order to generate an authentication key, as I mentioned before, you will need to have a key generated. Let&amp;rsquo;s check that with&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
