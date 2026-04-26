@@ -22,17 +22,21 @@ languages:
         - identifier: posts
           name: Publicaciones
           url: /es/posts/
-          weight: 3
-        - identifier: rss
-          name: RSS
-          url: /es/posts/index.xml
-          weight: 4
+          weight: 2
         - identifier: memos
           name: Memos
           url: https://memos.contre.io/explore
-          weight: 5
+          weight: 3
           params:
             target: _blank
+        - identifier: rss-posts
+          name: RSS Posts
+          url: /es/posts/index.xml
+          weight: 4
+        - identifier: rss-memos
+          name: RSS Memos
+          url: https://memos.contre.io/u/contre/rss.xml
+          weight: 5
         - identifier: EN
           name: English
           url: /en
@@ -59,17 +63,21 @@ languages:
         - identifier: posts
           name: Posts
           url: /en/posts/
-          weight: 3
-        - identifier: rss
-          name: RSS
-          url: /en/posts/index.xml
-          weight: 4
+          weight: 2
         - identifier: memos
           name: Memos
           url: https://memos.contre.io/explore
-          weight: 5
+          weight: 3
           params:
             target: _blank
+        - identifier: rss-posts
+          name: RSS Posts
+          url: /en/posts/index.xml
+          weight: 4
+        - identifier: rss-memos
+          name: RSS Memos
+          url: https://memos.contre.io/u/contre/rss.xml
+          weight: 5
         - identifier: ES
           name: Spanish
           url: /es
@@ -90,17 +98,21 @@ menu:
     - identifier: posts
       name: Posts
       url: /posts/
-      weight: 3
-    - identifier: rss
-      name: RSS
-      url: /posts/index.xml
-      weight: 4
+      weight: 2
     - identifier: memos
       name: Memos
       url: https://memos.contre.io/explore
-      weight: 5
+      weight: 3
       params:
         target: _blank
+    - identifier: rss-posts
+      name: RSS Posts
+      url: /posts/index.xml
+      weight: 4
+    - identifier: rss-memos
+      name: RSS Memos
+      url: https://memos.contre.io/u/contre/rss.xml
+      weight: 5
 taxonomies:
   tag: tags
   category: categories

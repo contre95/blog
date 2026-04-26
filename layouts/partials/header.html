@@ -1,0 +1,37 @@
+<header>
+  <div id="brand">
+    <a class="icon-link" href="{{ .Site.BaseURL }}">
+      <img
+        class="icon"
+        src="{{ default "images/brandIcon.svg" .Site.Params.brandIconFile | relURL }}"
+      />
+    </a>
+    <div class="text">
+      <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
+      <h3>{{ default "Description about Blog Author" .Site.Params.subtitle }}</h3>
+    </div>
+  </div>
+  <nav>
+    {{ $menu := .Site.Menus.main }}
+    <span class="nav-left">
+      {{ $idx := 0 }}
+      {{ range $menu }}
+        {{ if not (or (eq .Identifier "rss-posts") (eq .Identifier "rss-memos") (eq .Identifier "ES") (eq .Identifier "EN")) }}
+          {{ if gt $idx 0 }} | {{ end }}
+          <a href="{{ .URL | relURL }}"{{ with .Params.target }} target="{{ . }}" rel="noopener noreferrer"{{ end }}><b>{{ .Name }}</b></a>
+          {{ $idx = add $idx 1 }}
+        {{ end }}
+      {{ end }}
+    </span>
+    <span class="nav-right">
+      {{ $memosURL := "" }}
+      {{ range $menu }}{{ if eq .Identifier "rss-memos" }}{{ $memosURL = .URL }}{{ end }}{{ end }}
+      {{ range $menu }}{{ if eq .Identifier "rss-posts" }}
+        {{ $postsLabel := "Posts" }}{{ if eq $.Site.Language.Lang "es" }}{{ $postsLabel = "Publicaciones" }}{{ end }}
+        RSS (<a href="{{ .URL }}"><b>{{ $postsLabel }}</b></a>|<a href="{{ $memosURL }}"><b>Memos</b></a>)
+      {{ end }}{{ end }}
+      | <a href="/es"><b>ES</b></a> / <a href="/en"><b>EN</b></a>
+    </span>
+  </nav>
+  <hr />
+</header>
