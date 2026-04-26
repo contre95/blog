@@ -2,13 +2,13 @@
 title: "Arreglando el iPod"
 date: 2026-04-24T20:00:47+02:00
 tags:
-  - Dump & Rant
+  - Rant&Dump
   - Tech
   - Music
 ---
 ![iPodFix](/images/posts/ipod_fix_banner.jpg)
 
-De alguna manera logré romper mi iPod con `dd`. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo `No Partition found`. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y finalmente arreglaba el iPod.
+De alguna manera logré romper mi iPod con `dd`. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo `No Partition found`. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y arreglaba el iPod.
 
 ## Especificaciones del dispositivo
 
@@ -56,7 +56,7 @@ sudo kpartx -av /dev/sda
 # crea /dev/mapper/sda1 y /dev/mapper/sda2
 ```
 
-Lo hice con `kpartx` pq es lo que recomendó la IA,  si no era`ipodpatcher` que en mi caso fue ejecutado internamente por Rockbox Utility pq `ipodpatcher` no estaba en NixOS. Esto convierte la tabla de particiones de **APM → MBR**, e imagino yo que ahí es donde hace su magia para bootear al OS de stock o a Rockbox con MENU+SELECT o SELECT+PLAY/PAUSE. Luego de instalar el bootloader el dispositivo ya aparece con sus particiones normales (`sdc1`, `sdc2`) sin necesitar `kpartx`. Por suerte pude usar rockbox-utility, porque `ipodpatcher` no estaba disponible en NixOS.
+Lo hice con `kpartx` porque es lo que recomendó la IA,  si no era `ipodpatcher` que en mi caso fue ejecutado internamente por Rockbox Utility pq `ipodpatcher` no estaba en NixOS. Esto convierte la tabla de particiones de **APM → MBR**, e imagino yo que ahí es donde hace su magia para bootear al OS de stock o a Rockbox con MENU+SELECT o SELECT+PLAY/PAUSE. Luego de instalar el bootloader el dispositivo ya aparece con sus particiones normales (`sdc1`, `sdc2`) sin necesitar `kpartx`. Por suerte pude usar rockbox-utility, porque `ipodpatcher` no estaba disponible en NixOS.
 
 ---
 
