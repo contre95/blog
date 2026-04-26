@@ -105,7 +105,7 @@
     <div>
       <span>Tags:</span>
       
-        <a href="/es/tags/dump-rant">Dump &amp; Rant</a>, 
+        <a href="/es/tags/rantdump">Rant&amp;Dump</a>, 
         <a href="/es/tags/tech">Tech</a>, 
         <a href="/es/tags/music">Music</a>
     </div>
@@ -113,7 +113,7 @@
 </div>
 
     <div><p><img src="/images/posts/ipod_fix_banner.jpg" alt="iPodFix"></p>
-<p>De alguna manera logré romper mi iPod con <code>dd</code>. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo <code>No Partition found</code>. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y finalmente arreglaba el iPod.</p>
+<p>De alguna manera logré romper mi iPod con <code>dd</code>. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo <code>No Partition found</code>. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y arreglaba el iPod.</p>
 <h2 id="especificaciones-del-dispositivo">Especificaciones del dispositivo</h2>
 <table>
   <thead>
@@ -174,7 +174,7 @@
 <p>Para exponerlas como dispositivos de bloque, traté con <code>kpartx</code> que te crea los mapeos manualmente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo kpartx -av /dev/sda
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># crea /dev/mapper/sda1 y /dev/mapper/sda2</span>
-</span></span></code></pre></div><p>Lo hice con <code>kpartx</code> pq es lo que recomendó la IA,  si no era<code>ipodpatcher</code> que en mi caso fue ejecutado internamente por Rockbox Utility pq <code>ipodpatcher</code> no estaba en NixOS. Esto convierte la tabla de particiones de <strong>APM → MBR</strong>, e imagino yo que ahí es donde hace su magia para bootear al OS de stock o a Rockbox con MENU+SELECT o SELECT+PLAY/PAUSE. Luego de instalar el bootloader el dispositivo ya aparece con sus particiones normales (<code>sdc1</code>, <code>sdc2</code>) sin necesitar <code>kpartx</code>. Por suerte pude usar rockbox-utility, porque <code>ipodpatcher</code> no estaba disponible en NixOS.</p>
+</span></span></code></pre></div><p>Lo hice con <code>kpartx</code> porque es lo que recomendó la IA,  si no era <code>ipodpatcher</code> que en mi caso fue ejecutado internamente por Rockbox Utility pq <code>ipodpatcher</code> no estaba en NixOS. Esto convierte la tabla de particiones de <strong>APM → MBR</strong>, e imagino yo que ahí es donde hace su magia para bootear al OS de stock o a Rockbox con MENU+SELECT o SELECT+PLAY/PAUSE. Luego de instalar el bootloader el dispositivo ya aparece con sus particiones normales (<code>sdc1</code>, <code>sdc2</code>) sin necesitar <code>kpartx</code>. Por suerte pude usar rockbox-utility, porque <code>ipodpatcher</code> no estaba disponible en NixOS.</p>
 <hr>
 <h2 id="hfs-y-el-journal-y-por-qué-no-importa">HFS+ y el journal y por qué no importa</h2>
 <p>La restauración en Mac formatea la partición de datos como <strong>HFS+ con Journal</strong>. El journal es un log de escritura anticipada que ayuda a recuperar posibles crashes — pero también hace que Linux monte la partición <strong>en modo solo lectura</strong> por defecto, porque no puede escribir de forma segura en un sistema HFS+ con journal sin riesgo de corrupción.</p>
