@@ -5,7 +5,8 @@
       "Bash(cp -r /home/canus/code/contre/blog/public/images/posts/. /home/canus/code/contre/blog/static/images/posts/)",
       "Bash(hugo)",
       "Bash(hugo --verbose)",
-      "Bash(hugo --quiet)"
+      "Bash(hugo --quiet)",
+      "Bash(curl -sI https://memos.contre.io/explore)"
     ]
   }
 }

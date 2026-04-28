@@ -56,6 +56,10 @@ header nav {
   }
 }
 
+body {
+  max-width: 860px;
+}
+
 a.tag,
 a.tag:link,
 a.tag:visited {

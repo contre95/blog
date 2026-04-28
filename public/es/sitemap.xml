@@ -162,5 +162,17 @@
                 hreflang="es-ES"
                 href="https://blog.contre.io/es/categories/"
                 />
+  </url><url>
+    <loc>https://blog.contre.io/es/memos/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/memos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/memos/"
+                />
   </url>
 </urlset>

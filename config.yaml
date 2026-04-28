@@ -25,10 +25,8 @@ languages:
           weight: 2
         - identifier: memos
           name: Memos
-          url: https://memos.contre.io/explore
+          url: /es/memos/
           weight: 3
-          params:
-            target: _blank
         - identifier: rss-posts
           name: RSS Posts
           url: /es/posts/index.xml
@@ -66,10 +64,8 @@ languages:
           weight: 2
         - identifier: memos
           name: Memos
-          url: https://memos.contre.io/explore
+          url: /en/memos/
           weight: 3
-          params:
-            target: _blank
         - identifier: rss-posts
           name: RSS Posts
           url: /en/posts/index.xml
@@ -101,10 +97,8 @@ menu:
       weight: 2
     - identifier: memos
       name: Memos
-      url: https://memos.contre.io/explore
+      url: /memos/
       weight: 3
-      params:
-        target: _blank
     - identifier: rss-posts
       name: RSS Posts
       url: /posts/index.xml
