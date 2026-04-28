@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photos on Contre</title>
-    <link>http://localhost:1313/en/tags/photos/</link>
+    <link>https://blog.contre.io/en/tags/photos/</link>
     <description>Recent content in Photos on Contre</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 13 Apr 2026 22:50:26 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/en/tags/photos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.contre.io/en/tags/photos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Greece</title>
-      <link>http://localhost:1313/en/posts/greece/</link>
+      <link>https://blog.contre.io/en/posts/greece/</link>
       <pubDate>Mon, 13 Apr 2026 22:50:26 +0200</pubDate>
-      <guid>http://localhost:1313/en/posts/greece/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/acro_greece.jpeg&#34; alt=&#34;Acropolis&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Not long ago I traveled through Greece and I&amp;rsquo;m sharing it with you. The trip was initially framed as a &amp;ldquo;Mythological&amp;rdquo; journey, where we&amp;rsquo;d visit iconic landmarks from Greek mythology. While it was a trip packed with history, religion, and philosophy, there was no shortage of landscapes or food either.&lt;/p&gt;&#xA;&lt;p&gt;Just like what happened with &lt;a href=&#34;https://blog.contre.io/es/posts/germany_trip/&#34;&gt;Schwarzwald&lt;/a&gt;, this was one of those trips where I had very little idea of what we were going to do or where we were going. The planning was impeccable and entirely left in the hands of my travel companions.&lt;/p&gt;</description>
+      <guid>https://blog.contre.io/en/posts/greece/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/acro_greece.jpeg&#34; alt=&#34;Acropolis&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Not long ago I traveled through Greece and I&amp;rsquo;m sharing it with you. The trip was initially framed as a &amp;ldquo;Mythological&amp;rdquo; journey, where we&amp;rsquo;d visit iconic landmarks from Greek mythology. While it was a trip packed with history, religion, and philosophy, there was no shortage of landscapes or food either.&lt;/p&gt;&#xA;&lt;p&gt;Just like what happened with &lt;a href=&#34;https://blog.contre.io/es/posts/germany_trip/&#34;&gt;Schwarzwald&lt;/a&gt;, this was one of those trips where I had very little idea of what we were going to do or where we were going. The planning was impeccable and entirely left in the hands of my travel companions.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
