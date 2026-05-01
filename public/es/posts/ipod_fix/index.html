@@ -98,7 +98,7 @@
     
     
   </strong>
-  <span> • 1522 words</span>
+  <span> • 1523 words</span>
   <span> • 8 minute read</span>
   
   
@@ -178,6 +178,7 @@
 <hr>
 <h2 id="hfs-y-el-journal-y-por-qué-no-importa">HFS+ y el journal y por qué no importa</h2>
 <p>La restauración en Mac formatea la partición de datos como <strong>HFS+ con Journal</strong>. El journal es un log de escritura anticipada que ayuda a recuperar posibles crashes — pero también hace que Linux monte la partición <strong>en modo solo lectura</strong> por defecto, porque no puede escribir de forma segura en un sistema HFS+ con journal sin riesgo de corrupción.</p>
+<p><img src="/images/posts/ipod_fix_headset.jpeg" alt="Ipod 7th Classic"></p>
 <p>Te estarás preguntando por qué hay una partición HFS+ y qué es HFS+? Te pego lo que me dice la IA : HFS+ (Hierarchical File System Plus). Es una versión mejorada del antiguo HFS y se usó durante muchos años en Macs, iPods y otros productos de Apple antes de que fuera reemplazado por APFS.</p>
 <p>Para obtener acceso de escritura, simplemente la tenés montar forzada (la partición) y cagarte en el journal, a esta altura si explota algo, arrancamos de nuevo.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo mkdir -p /mnt/ipod
@@ -228,7 +229,7 @@
 </span></span><span style="display:flex;"><span>  ];
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><hr>
-<h2 id="algunos-comandos-full-dopaminérgicos">Algunos comandos full dopaminérgicos</h2>
+<h2 id="algunos-comandos-que-pueden-servir">Algunos comandos que pueden servir</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># Inspeccionar tabla de particiones</span>
 </span></span><span style="display:flex;"><span>sudo fdisk -l /dev/sdX
 </span></span><span style="display:flex;"><span>sudo parted /dev/sdX print

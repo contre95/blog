@@ -63,6 +63,8 @@ Later, `ipodpatcher` (run internally by Rockbox Utility, since `ipodpatcher` was
 
 The Mac restore formats the data partition as **HFS+ Journaled**. The journal is a write-ahead log that helps recover from crashes — but it also causes Linux to mount the partition **read-only** by default, because it can't safely write to a journaled HFS+ filesystem without risking corruption.
 
+![iPod 7th Classic](/images/posts/ipod_fix_headset.jpeg)
+
 You might be wondering why there's an HFS+ partition and what HFS+ even is. Here's what the AI told me: HFS+ (Hierarchical File System Plus) is an improved version of the old HFS, used for many years on Macs, iPods, and other Apple products before being replaced by APFS.
 
 To get write access, you just force-mount it and forget the journal — at this point if something blows up, we start over:

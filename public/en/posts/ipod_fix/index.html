@@ -178,6 +178,7 @@
 <hr>
 <h2 id="hfs-and-the-journal-and-why-it-doesnt-matter">HFS+ and the Journal and Why It Doesn&rsquo;t Matter</h2>
 <p>The Mac restore formats the data partition as <strong>HFS+ Journaled</strong>. The journal is a write-ahead log that helps recover from crashes — but it also causes Linux to mount the partition <strong>read-only</strong> by default, because it can&rsquo;t safely write to a journaled HFS+ filesystem without risking corruption.</p>
+<p><img src="/images/posts/ipod_fix_headset.jpeg" alt="iPod 7th Classic"></p>
 <p>You might be wondering why there&rsquo;s an HFS+ partition and what HFS+ even is. Here&rsquo;s what the AI told me: HFS+ (Hierarchical File System Plus) is an improved version of the old HFS, used for many years on Macs, iPods, and other Apple products before being replaced by APFS.</p>
 <p>To get write access, you just force-mount it and forget the journal — at this point if something blows up, we start over:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo mkdir -p /mnt/ipod

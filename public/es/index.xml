@@ -6,8 +6,15 @@
     <description>Recent content on Contre</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
-    <lastBuildDate>Fri, 24 Apr 2026 20:00:47 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 15:22:46 +0200</lastBuildDate>
     <atom:link href="https://blog.contre.io/es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>X4 Xteink</title>
+      <link>https://blog.contre.io/es/posts/x4xteink/</link>
+      <pubDate>Thu, 30 Apr 2026 15:22:46 +0200</pubDate>
+      <guid>https://blog.contre.io/es/posts/x4xteink/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/x4_banner.jpg&#34; alt=&#34;X4 Screen&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Este post va a ser parecido al del &lt;a href=&#34;https://blog.contre.io/es/posts/ipod_fix/&#34;&gt;iPod&lt;/a&gt; pero sobre el Xteink X4, un poco más de hardware y enfocado a quien quiera arreglar su pantalla. El X4 es un poco menos conocido así que dejame contarte de qué va primero. &lt;a href=&#34;https://www.xteink.com/products/xteink-x4&#34;&gt;Xteink X4&lt;/a&gt; es un mini lector de tinta, como una Kindle pero que destaca por su tamaño, es chiquito. Pero el tamaño no es su única bondad, además es extremadamente barato. Lo podés conseguir en AliExpress por $65 pesos. Parte de porqué es tan barato, es porque es chino, que si te quedaste en la pre-historia, te cuento que esto no es sinónimo de malo, todo lo contrario. El X4 está hecho de un hardware muy sencillo, lo componen una ESP32-C3 Series, una batería de litio (1200 mAh) que dura semanas, WiFi, Bluetooth y una pantalla de tinta de 4.2 pulgadas (400x300) bastante común que podés conseguir por $18 pesitos, también en AliExpress.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Arreglando el iPod</title>
       <link>https://blog.contre.io/es/posts/ipod_fix/</link>

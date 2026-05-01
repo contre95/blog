@@ -63,6 +63,9 @@ Lo hice con `kpartx` porque es lo que recomendó la IA,  si no era `ipodpatcher`
 ## HFS+ y el journal y por qué no importa
 
 La restauración en Mac formatea la partición de datos como **HFS+ con Journal**. El journal es un log de escritura anticipada que ayuda a recuperar posibles crashes — pero también hace que Linux monte la partición **en modo solo lectura** por defecto, porque no puede escribir de forma segura en un sistema HFS+ con journal sin riesgo de corrupción.
+
+![Ipod 7th Classic](/images/posts/ipod_fix_headset.jpeg)
+
  
 Te estarás preguntando por qué hay una partición HFS+ y qué es HFS+? Te pego lo que me dice la IA : HFS+ (Hierarchical File System Plus). Es una versión mejorada del antiguo HFS y se usó durante muchos años en Macs, iPods y otros productos de Apple antes de que fuera reemplazado por APFS.
 
@@ -80,12 +83,13 @@ nix-shell -p hfsprogs --run "sudo fsck.hfsplus -J /dev/mapper/sda2"
 
 ¿Por qué no importa? Porque esto solo lo necesitaba Rockbox Utility para detectar el device, y necesitaba poder escribir para instalar el bootloader en él porque ese es un check que tiene la GUI. Si no estás en NixOS, tal vez con el `ipodpatcher` no hacía falta. Si para este entonces ya tenés Rockbox, esta partición ya no la vas a ver.
 
+
 ---
 
 ## El layout de iFlash Solo
 
-
 **Parentesis**: *¿Cómo traduzco este título en criollo? ¿ "El esquema del iFlash Solo" ?  Como escribo en castellano, si le hablo a Claudio en inglés y tuve que copiar el "¿" de internet porque no sé hacerlo en el teclado ? Anyway (En fin)*
+
 
 > **👀 ->** Antes de comprar o cambiar tarjetas SD, verificá la compatibilidad con la placa iFlash Solo en la página oficial:
 [https://www.iflash.xyz/store/iflash-compatibility/](https://www.iflash.xyz/store/iflash-compatibility/)
@@ -141,10 +145,9 @@ pkgs.mkShell {
   ];
 }
 ```
-
 ---
 
-## Algunos comandos full dopaminérgicos
+## Algunos comandos que pueden servir
 
 ```sh
 # Inspeccionar tabla de particiones
