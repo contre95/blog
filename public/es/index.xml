@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contre</title>
-    <link>https://blog.contre.io/es/</link>
+    <link>http://localhost:1313/es/</link>
     <description>Recent content on Contre</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Thu, 30 Apr 2026 15:22:46 +0200</lastBuildDate>
-    <atom:link href="https://blog.contre.io/es/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/es/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>X4 Xteink</title>
-      <link>https://blog.contre.io/es/posts/x4xteink/</link>
+      <link>http://localhost:1313/es/posts/x4xteink/</link>
       <pubDate>Thu, 30 Apr 2026 15:22:46 +0200</pubDate>
-      <guid>https://blog.contre.io/es/posts/x4xteink/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/x4_banner.jpg&#34; alt=&#34;X4 Screen&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Este post va a ser parecido al del &lt;a href=&#34;https://blog.contre.io/es/posts/ipod_fix/&#34;&gt;iPod&lt;/a&gt; pero sobre el Xteink X4, un poco más de hardware y enfocado a quien quiera arreglar su pantalla. El X4 es un poco menos conocido así que dejame contarte de qué va primero. &lt;a href=&#34;https://www.xteink.com/products/xteink-x4&#34;&gt;Xteink X4&lt;/a&gt; es un mini lector de tinta, como una Kindle pero que destaca por su tamaño, es chiquito. Pero el tamaño no es su única bondad, además es extremadamente barato. Lo podés conseguir en AliExpress por $65 pesos. Parte de porqué es tan barato, es porque es chino, que si te quedaste en la pre-historia, te cuento que esto no es sinónimo de malo, todo lo contrario. El X4 está hecho de un hardware muy sencillo, lo componen una ESP32-C3 Series, una batería de litio (1200 mAh) que dura semanas, WiFi, Bluetooth y una pantalla de tinta de 4.2 pulgadas (400x300) bastante común que podés conseguir por $18 pesitos, también en AliExpress.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/es/posts/x4xteink/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/x4_banner.jpg&#34; alt=&#34;X4 Screen&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Este post va a ser parecido al del &lt;a href=&#34;http://localhost:1313/es/posts/ipod_fix/&#34;&gt;iPod&lt;/a&gt; pero sobre el Xteink X4, un poco más de hardware y enfocado a quien quiera arreglar su pantalla. El X4 es un poco menos conocido así que dejame contarte de qué va primero. &lt;a href=&#34;https://www.xteink.com/products/xteink-x4&#34;&gt;Xteink X4&lt;/a&gt; es un mini lector de tinta, como una Kindle pero que destaca por su tamaño, es chiquito. Pero el tamaño no es su única bondad, además es extremadamente barato. Lo podés conseguir en AliExpress por $65 pesos. Parte de porqué es tan barato, es porque es chino, que si te quedaste en la pre-historia, te cuento que esto no es sinónimo de malo, todo lo contrario. El X4 está hecho de un hardware muy sencillo, lo componen una ESP32-C3 Series, una batería de litio (1200 mAh) que dura semanas, WiFi, Bluetooth y una pantalla de tinta de 4.2 pulgadas (400x300) bastante común que podés conseguir por $18 pesitos, también en AliExpress.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Arreglando el iPod</title>
-      <link>https://blog.contre.io/es/posts/ipod_fix/</link>
+      <link>http://localhost:1313/es/posts/ipod_fix/</link>
       <pubDate>Fri, 24 Apr 2026 20:00:47 +0200</pubDate>
-      <guid>https://blog.contre.io/es/posts/ipod_fix/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/ipod_fix_banner.jpg&#34; alt=&#34;iPodFix&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;De alguna manera logré romper mi iPod con &lt;code&gt;dd&lt;/code&gt;. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo &lt;code&gt;No Partition found&lt;/code&gt;. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y arreglaba el iPod.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/es/posts/ipod_fix/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/ipod_fix_banner.jpg&#34; alt=&#34;iPodFix&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;De alguna manera logré romper mi iPod con &lt;code&gt;dd&lt;/code&gt;. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo &lt;code&gt;No Partition found&lt;/code&gt;. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y arreglaba el iPod.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Grecia</title>
-      <link>https://blog.contre.io/es/posts/greece/</link>
+      <link>http://localhost:1313/es/posts/greece/</link>
       <pubDate>Tue, 07 Apr 2026 16:09:26 +0200</pubDate>
-      <guid>https://blog.contre.io/es/posts/greece/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/acro_greece.jpeg&#34; alt=&#34;Acropolis&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Hace poco estuve viajando por Grecia y te lo comparto. El viaje fue inicialmente planteado como un viaje &amp;ldquo;Mitológico&amp;rdquo;, donde íbamos a recorrer distintos puntos icónicos de la mitología griega. Si bien fue un viaje cargado de historia, religión y filosofía, no faltaron los paisajes ni las comidas.&lt;/p&gt;&#xA;&lt;p&gt;Tal y como pasó con &lt;a href=&#34;https://blog.contre.io/es/posts/germany_trip/&#34;&gt;Schwarzwald&lt;/a&gt;, fue uno de esos viajes en los que no tenía mucha idea de qué se iba a hacer ni dónde se iba a ir. La organización fue impecable y totalmente dejada en manos de mis acompañantes.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/es/posts/greece/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/acro_greece.jpeg&#34; alt=&#34;Acropolis&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Hace poco estuve viajando por Grecia y te lo comparto. El viaje fue inicialmente planteado como un viaje &amp;ldquo;Mitológico&amp;rdquo;, donde íbamos a recorrer distintos puntos icónicos de la mitología griega. Si bien fue un viaje cargado de historia, religión y filosofía, no faltaron los paisajes ni las comidas.&lt;/p&gt;&#xA;&lt;p&gt;Tal y como pasó con &lt;a href=&#34;https://blog.contre.io/es/posts/germany_trip/&#34;&gt;Schwarzwald&lt;/a&gt;, fue uno de esos viajes en los que no tenía mucha idea de qué se iba a hacer ni dónde se iba a ir. La organización fue impecable y totalmente dejada en manos de mis acompañantes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Jardín de Música</title>
-      <link>https://blog.contre.io/es/posts/music_hoarding/</link>
+      <link>http://localhost:1313/es/posts/music_hoarding/</link>
       <pubDate>Thu, 12 Jun 2025 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/es/posts/music_hoarding/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/music_banner.png&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Habrá sido en 2009 cuando le pregunté a mi prima más grande qué música escuchaba. Fue la primera vez que asocié de manera concreta la idea de &lt;em&gt;banda&lt;/em&gt; con &lt;em&gt;canción&lt;/em&gt;. Hasta entonces, mi vínculo con la música venía más por ósmosis que por elección propia. Más tarde iba entrar en razón que lo que escuchaba hasta entonces era mucho rock anglosajón, algo de blues y algo de jazz, todo bastante internacional y descontextualizado. Principalmente escuchaba Aspen, una radio que mezclaba (y sigue mezclando) clásicos del soft rock con algunas baladas en inglés y algo de pop. Mi viejo era quien manejaba el dial, y eso definía buena parte de lo que entraba a casa, mucho Genesis, Phil Collins, Pink Floyd, Eric Clapton entre otras bandas mas de buto como Nora Jones, Bosa Nova y demás, que hoy en día me cuesta más escuchar. Lo argentino llegaba más por Sumo, algo de La Bersuit y Serú Girán. Pero el rock nacional más contemporáneo me lo presentaron mis amigos, bandas como Árbol, Airbag y Ataque 77, sonaban alternando con cosas como la cumbia y el reggaeton del momento como Daddy Yankee, Wisin y Yandel y demás música puertorriqueña.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/es/posts/music_hoarding/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/music_banner.png&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Habrá sido en 2009 cuando le pregunté a mi prima más grande qué música escuchaba. Fue la primera vez que asocié de manera concreta la idea de &lt;em&gt;banda&lt;/em&gt; con &lt;em&gt;canción&lt;/em&gt;. Hasta entonces, mi vínculo con la música venía más por ósmosis que por elección propia. Más tarde iba entrar en razón que lo que escuchaba hasta entonces era mucho rock anglosajón, algo de blues y algo de jazz, todo bastante internacional y descontextualizado. Principalmente escuchaba Aspen, una radio que mezclaba (y sigue mezclando) clásicos del soft rock con algunas baladas en inglés y algo de pop. Mi viejo era quien manejaba el dial, y eso definía buena parte de lo que entraba a casa, mucho Genesis, Phil Collins, Pink Floyd, Eric Clapton entre otras bandas mas de buto como Nora Jones, Bosa Nova y demás, que hoy en día me cuesta más escuchar. Lo argentino llegaba más por Sumo, algo de La Bersuit y Serú Girán. Pero el rock nacional más contemporáneo me lo presentaron mis amigos, bandas como Árbol, Airbag y Ataque 77, sonaban alternando con cosas como la cumbia y el reggaeton del momento como Daddy Yankee, Wisin y Yandel y demás música puertorriqueña.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Schwarzwald</title>
-      <link>https://blog.contre.io/es/posts/germany_trip/</link>
+      <link>http://localhost:1313/es/posts/germany_trip/</link>
       <pubDate>Tue, 08 Oct 2024 00:18:54 +0000</pubDate>
-      <guid>https://blog.contre.io/es/posts/germany_trip/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/fungi.jpg&#34; alt=&#34;Fungi&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Lo que en principio iban a ser 370km en bici, terminaron siendo menos de la mitad. Sin embargo no fue fácil y hasta un tanto peligroso. Nos acompañaban dos todo terreno Giant y Trek. Bien cargadas en ambos costados con ropa, comida y una carpa, supieron andar por tierra, montaña y ruta. Los trenes en Alemania fueron de gran ayuda, tanto para evitar bajadas catalogadas como &amp;ldquo;expert&amp;rdquo; en Komoot como para evadir 12mm de lluvia una noche.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/es/posts/germany_trip/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/fungi.jpg&#34; alt=&#34;Fungi&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Lo que en principio iban a ser 370km en bici, terminaron siendo menos de la mitad. Sin embargo no fue fácil y hasta un tanto peligroso. Nos acompañaban dos todo terreno Giant y Trek. Bien cargadas en ambos costados con ropa, comida y una carpa, supieron andar por tierra, montaña y ruta. Los trenes en Alemania fueron de gran ayuda, tanto para evitar bajadas catalogadas como &amp;ldquo;expert&amp;rdquo; en Komoot como para evadir 12mm de lluvia una noche.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Memos</title>
-      <link>https://blog.contre.io/es/memos/</link>
+      <link>http://localhost:1313/es/memos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://blog.contre.io/es/memos/</guid>
+      <guid>http://localhost:1313/es/memos/</guid>
       <description></description>
     </item>
   </channel>
