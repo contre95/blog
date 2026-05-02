@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rant&amp;Dump on Contre</title>
-    <link>http://localhost:1313/en/tags/rantdump/</link>
+    <link>https://blog.contre.io/en/tags/rantdump/</link>
     <description>Recent content in Rant&amp;Dump on Contre</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 24 Apr 2026 20:00:47 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/en/tags/rantdump/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.contre.io/en/tags/rantdump/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fixing Moded iPod</title>
-      <link>http://localhost:1313/en/posts/ipod_fix/</link>
+      <link>https://blog.contre.io/en/posts/ipod_fix/</link>
       <pubDate>Fri, 24 Apr 2026 20:00:47 +0200</pubDate>
-      <guid>http://localhost:1313/en/posts/ipod_fix/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/ipod_fix_banner.jpg&#34; alt=&#34;iPodFix&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I somehow managed to mess up my iPod with &lt;code&gt;dd&lt;/code&gt;. It would boot into USB/Disk mode with the Rockbox bootloader saying &lt;code&gt;No Partition found&lt;/code&gt;. To recover it I had to restore it via iTunes/Finder on a Mac, which wiped the drive entirely and wrote a fresh Apple Partition Map (APM) partition table with the stock Apple firmware. Then I had to put Rockbox back on it — which turned out to be harder than expected because of the iFlash Solo board. This post covers the concepts that matter when doing this, not just the commands. It&amp;rsquo;s basically a dump of the things that were worth understanding while debugging and fixing the iPod.&lt;/p&gt;</description>
+      <guid>https://blog.contre.io/en/posts/ipod_fix/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/ipod_fix_banner.jpg&#34; alt=&#34;iPodFix&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I somehow managed to mess up my iPod with &lt;code&gt;dd&lt;/code&gt;. It would boot into USB/Disk mode with the Rockbox bootloader saying &lt;code&gt;No Partition found&lt;/code&gt;. To recover it I had to restore it via iTunes/Finder on a Mac, which wiped the drive entirely and wrote a fresh Apple Partition Map (APM) partition table with the stock Apple firmware. Then I had to put Rockbox back on it — which turned out to be harder than expected because of the iFlash Solo board. This post covers the concepts that matter when doing this, not just the commands. It&amp;rsquo;s basically a dump of the things that were worth understanding while debugging and fixing the iPod.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,11 @@
+{{ define "main" }}
+<main>
+  <article>
+    <h1>{{ .Title }}</h1>
+    {{ partial "postMetaDetailed.html" . }}
+    <div>{{ .Content }}</div>
+  </article>
+  <script defer src="https://comentario.contre.io/comentario.js"></script>
+  <comentario-comments auto-non-interactive-sso="true" theme="dark" page-id="{{ .RelPermalink }}"></comentario-comments>
+</main>
+{{ end }}
