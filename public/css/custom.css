@@ -58,15 +58,16 @@ header nav {
 
 body {
   max-width: 860px;
+  line-height: 1.4;
+  font-size: 16px;
 }
 
 a.tag,
 a.tag:link,
 a.tag:visited {
-  background-color: #326F97;
+  background-color: #326f97;
   border-radius: 4px;
   color: #ffffff;
-  font-size: 0.72em;
   margin-left: 5px;
   padding: 1px 5px;
   text-decoration: none;
@@ -77,4 +78,41 @@ a.tag:hover {
   background-color: #245577;
   color: #ffffff;
   text-decoration: none;
+}
+
+a,
+a:visited {
+  color: #55bbff;
+}
+
+p>code {
+  background: #1a1a1a;
+  position: relative;
+  font-size: 14px;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  vertical-align: baseline;
+  background: #1a1a1a;
+  color: lightblue;
+}
+
+pre {
+  padding: 1px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #5bf, #a78bfa), #1a1a1a;
+}
+
+pre code {
+  display: block;
+  overflow-x: auto;
+  font-size: 10px;
+  padding: 15px;
+  color: lightgray;
+  border-radius: 8px;
+  background: #1e1e1e;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  /* max-width: 100%; */
+  /* min-width: 100px; */
 }

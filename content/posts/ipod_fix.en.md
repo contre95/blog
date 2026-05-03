@@ -171,3 +171,6 @@ nix-shell -p rockbox-utility --run "RockboxUtility"
 # Safely unmount before disconnecting
 sudo umount /mnt/ipod
 ```
+----
+***Note on Translation**: This post was originally written in highly colloquial Argentine Spanish, known for its unique slang, cultural nuances, and rhythm. It has been translated into English heavily using AI, so some of the original tone and cultural nuances may have been lost in translation.*
+
