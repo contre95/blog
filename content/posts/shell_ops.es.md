@@ -1,7 +1,6 @@
 ---
 title: "Shell Ops"
 date: 2026-05-03T13:48:32+02:00
-draft: true
 tags:
     - Tech
     - Self-hosted
@@ -31,12 +30,11 @@ Las métricas y los logs siguen la misma estrategia, se recolectan y calculan po
 
 ![Services](/images/posts/bash_metrics.jpg)
 
-
 # Mi estado es cluster y el cluster es mi estado
 
 Solo rindo tributo a `etcd` y pago mis impuestos con `kubectl apply`. Para organizar a mis funcionarios, `kustomize` me da una mano. Cada servicio lo tengo en su carpeta y vive en su propio `namespace`, no uso *Helm* para ningún servicio y le intento escapar cuando puedo, tampoco tengo ningún *custom generator* de kustomize y me limito simplemente a `k apply -k services/<service_folder>` cuando quiero cambiar algún que otro funcionario a dedo según se me da la gana.
 
-Cuando necesito hacer una reforma estatal, les doy franco a todos mis funcionarios con este comando:
+Si necesito hacer una reforma estatal, les doy franco a todos mis funcionarios con este comando:
 
 `ls -d services/*/ | xargs basename -a | xargs -I{} kubectl scale deployment --all -n {} --replicas=0` 
 
@@ -63,7 +61,7 @@ Que vuelvan a trabajar es un poco más complicado, porque muchos dependen del pe
 
 `ls -d services/*/ | xargs basename -a | grep -vE '^(REDACTED2|REDACTED1|homepage|cert-manager)$' | xargs -I{} kubectl scale deployment --all -n {} --replicas=0` 
 
-Esos días, la casa rosada se ve un poco así: 
+Cuando eso pasa, casa rosada se ve un poco así: 
 
 ```
 k get pods -A
@@ -88,12 +86,11 @@ REDACTED2      REDACTED2-7cd9cd7f56-sg57h                1/1     Running     0  
 REDACTED1      REDACTED1-6cccd8684f-rrvlc                1/1     Running     0               92m
 ```
 
-Para cuando quiero borrar un `namespace` completo y re-crear un servicio tengo un script `./deploy.sh` que usa `fzf`. Simplemente con `find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf` elijo el servicio que desplegar.
+Cuando quiero borrar un `namespace` completo y re-crear un servicio tengo un script `./deploy.sh` que usa `fzf`. Simplemente con `find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf` elijo el servicio que desplegar de zero. 
 
 ![Services](/images/posts/bash_deploy.gif)
 
-
-Para interactuar con los servicios lo hago mayormente de manera imperativa desde la terminal con un par de aliases y un uso exhaustivo de `fzf`. Porque como toda organización, también tengo un *directorio* con *ficheros* de sus empleados. Algunos de los aliases que uso más seguidos son:
+Como toda organización, tengo un *directorio* con *ficheros* de sus empleados y cualquier otra interacción con los funcionarios la hago mayormente de manera imperativa, desde la terminal los comandos y les pido información. Para facilitar la interacción tengo varios aliases y hago un uso exhaustivo de `fzf`. Algunos de los aliases que uso más seguidos son:
 
 Un `tail -f` de los logs de un servicio
 ```nix

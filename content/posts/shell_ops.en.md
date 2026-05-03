@@ -1,7 +1,6 @@
 ---
 title: "Shell Ops"
 date: 2026-05-03T13:48:32+02:00
-draft: true
 tags:
     - Tech
     - Self-hosted
@@ -9,7 +8,7 @@ tags:
 
 ![Dan Case v4.1](/images/posts/bash_banner.jpg)
 
-I've been hosting services at home since 2018. Started with Plex and a `docker-compose.yml`, migrated to Podman with `podman play kube`, and now I'm on Kubernetes with K3S. The server's evolution has always been driven by whatever I felt like playing with at the time. I always avoided fancy prepackaged solutions like Flux or Argo, never had a NAS (for now), and never ran more than one or two nodes. To me, the home server is a synonym for infinite entertainment, and I'm pretty sure [many](https://reddit.com/r/homelab) [others](https://www.reddit.com/r/selfhosted/) feel the same way. I could write for hours about my setup — NixOS, K3s, networking, the whole philosophy — but that's not today's topic. Today I want to share some *shell-flavored* tricks that make my day-to-day easier in a world that one has decided to over complicate it.
+I've been hosting services at home since 2018. Started with Plex and a `docker-compose.yml`, migrated to Podman with `podman play kube`, and now I'm on Kubernetes with K3S. The server's evolution has always been driven by whatever I felt like playing with at the time. I always avoided fancy prepackaged solutions like Flux or Argo, never had a NAS (for now), and never ran more than one or two nodes. To me, the home server is a synonym for infinite entertainment, and I'm pretty sure [many](https://reddit.com/r/homelab) [others](https://www.reddit.com/r/selfhosted/) feel the same way. I could write for hours about my setup, NixOS, K3s, networking, the whole philosophy, but that's not today's topic. Today I want to share some *shell-flavored* tricks that make my day-to-day easier; some of the small things we tend to underestimate.
 
 # Services
 
@@ -34,12 +33,11 @@ Metrics and logs follow the same strategy: collected and computed per *namespace
 
 ![Services](/images/posts/bash_metrics.jpg)
 
-
 # My state is the cluster and the cluster is my state
 
-I pay tribute only to `etcd` and pay my taxes with `kubectl apply`. To organize running services, `kustomize` gives me a hand. Each service lives in its own folder and its own `namespace`. I don't use *Helm* for any service and avoid it whenever I can. No custom kustomize generators either — I keep it simple with `k apply -k services/<service_folder>` whenever I feel like appointing some official by decree.
+I pay tribute only to `etcd` and pay my taxes with `kubectl apply`. To organize working officials, `kustomize` gives me a hand. Each official hast its own office (`namespace`). I don't use *Helm* for any service and avoid it whenever I can. No custom kustomize generators either, I keep it simple with `k apply -k services/<service_folder>` whenever I feel like appointing some official by decree.
 
-When I need to do some state restructuring, I give everyone the day off with this command:
+If I need to do some state restructuring, I give everyone the day off with this command:
 
 `ls -d services/*/ | xargs basename -a | xargs -I{} kubectl scale deployment --all -n {} --replicas=0`
 
@@ -61,9 +59,9 @@ kube-system   metrics-server-c8774f4f4-7c9qn            1/1     Running     5 (3
 kube-system   traefik-6b4c7c8d94-xbb55                  1/1     Running     4 (3d15h ago)   18d
 ```
 
-And every once in a while, if some official has an important project, I make them work anyway — like: `k apply -k services/booklore`.
+And every once in a while, if some official has an important project, I make them work anyway, like: `k apply -k services/booklore`.
 
-Getting everyone back to work is a bit more complicated, because many of them depend on the security staff to get into the building. On those days I give everyone the day off except security, and no, I don't pay them extra:
+Getting someone back to work is a bit more complicated when government is shutdown, many depend on the security staff to get into the building. On those days I give everyone the day off except security, and no, I don't pay them extra:
 
 `ls -d services/*/ | xargs basename -a | grep -vE '^(REDACTED2|REDACTED1|homepage|cert-manager)$' | xargs -I{} kubectl scale deployment --all -n {} --replicas=0`
 
@@ -92,12 +90,11 @@ REDACTED2      REDACTED2-7cd9cd7f56-sg57h                1/1     Running     0  
 REDACTED1      REDACTED1-6cccd8684f-rrvlc                1/1     Running     0               92m
 ```
 
-When I need to wipe a `namespace` completely and recreate a service, I have a `./deploy.sh` script that uses `fzf`. A simple `find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf` and I pick which service to deploy.
+When I need to wipe a `namespace` completely and recreate a service, I have a `./deploy.sh` script that uses `fzf`. A simple `find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf` and I pick which service to re-deploy from scratch.
 
 ![Services](/images/posts/bash_deploy.gif)
 
-
-I interact with services mostly imperatively from the terminal, using a handful of aliases and heavy `fzf` usage. Because like any organization, I also have a *directory* with *files* on each employee. Some of the aliases I use most:
+Like any organization, I also keep a *directory* with *files* on each employee, and any other interaction with the officials I handle mostly imperatively: from the terminal I give them commands and ask them for information. To make that easier, I have a bunch of aliases and make heavy use of `fzf`. Some of the ones I reach for most:
 
 A `tail -f` of a service's logs:
 ```nix
