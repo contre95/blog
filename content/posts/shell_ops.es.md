@@ -17,7 +17,7 @@ Los servicios van y vienen, creo que tengo más servicios instalados en el clust
 
 ![Services](/images/posts/bash_svc.jpg)
 
-Para que un servicio aparezca en el dashboard, cada `ingress.yaml` tiene un set de anotaciones que hace que aparezca en el dashboard cuando está desplegado el *Ingress*, para eso uso [Homepage](https://gethomepage.dev/). No sé si es el más lindo o el más avanzado, mi único requisito es que no tenga que agregarlos a mano y pueda manejarlo enteramente desde la definición de cada servicio (desde su *Manifest*), para ello se usan las siguientes anotaciones: 
+Para que un servicio aparezca en el dashboard, cada `ingress.yaml` tiene un set de anotaciones que hace que aparezca en el cuando está desplegado el *Ingress*, para eso uso [Homepage](https://gethomepage.dev/). No sé si es el más lindo o el más avanzado, mi único requisito es que no tenga que agregarlos a mano y pueda manejarlo enteramente desde la definición de cada servicio (desde su *Manifest*), para ello se usan las siguientes anotaciones: 
 ```yaml
 gethomepage.dev/enabled: "true"
 gethomepage.dev/name: <AppName>
