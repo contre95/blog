@@ -1,6 +1,7 @@
 ---
 title: "Shell Ops"
 date: 2026-05-03T13:48:32+02:00
+draft: true
 tags:
     - Tech
     - Self-hosted
@@ -8,7 +9,7 @@ tags:
 
 ![Dan Case v4.1](/images/posts/bash_banner.jpg)
 
-I've been hosting services at home since 2018. Started with Plex and a `docker-compose.yml`, migrated to Podman with `podman play kube`, and now I'm on Kubernetes with K3S. The server's evolution has always been driven by whatever I felt like playing with at the time. I always avoided fancy prepackaged solutions like Flux or Argo, never had a NAS (for now), and never ran more than one or two nodes. To me, the home server is a synonym for infinite entertainment, and I'm pretty sure [many](https://reddit.com/r/homelab) [others](https://www.reddit.com/r/selfhosted/) feel the same way. I could write for hours about my setup — NixOS, K3s, networking, the whole philosophy — but that's not today's topic. Today I want to share some *shell-flavored* tricks that make my day-to-day easier; some of the small things we tend to underestimate.
+I've been hosting services at home since 2018. Started with Plex and a `docker-compose.yml`, migrated to Podman with `podman play kube`, and now I'm on Kubernetes with K3S. The server's evolution has always been driven by whatever I felt like playing with at the time. I always avoided fancy prepackaged solutions like Flux or Argo, never had a NAS (for now), and never ran more than one or two nodes. To me, the home server is a synonym for infinite entertainment, and I'm pretty sure [many](https://reddit.com/r/homelab) [others](https://www.reddit.com/r/selfhosted/) feel the same way. I could write for hours about my setup — NixOS, K3s, networking, the whole philosophy — but that's not today's topic. Today I want to share some *shell-flavored* tricks that make my day-to-day easier in a world that one has decided to over complicate it.
 
 # Services
 

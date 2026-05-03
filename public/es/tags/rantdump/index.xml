@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rant&amp;Dump on Contre</title>
-    <link>http://10.0.0.5:1313/es/tags/rantdump/</link>
+    <link>https://blog.contre.io/es/tags/rantdump/</link>
     <description>Recent content in Rant&amp;Dump on Contre</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Fri, 24 Apr 2026 20:00:47 +0200</lastBuildDate>
-    <atom:link href="http://10.0.0.5:1313/es/tags/rantdump/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.contre.io/es/tags/rantdump/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Arreglando el iPod</title>
-      <link>http://10.0.0.5:1313/es/posts/ipod_fix/</link>
+      <link>https://blog.contre.io/es/posts/ipod_fix/</link>
       <pubDate>Fri, 24 Apr 2026 20:00:47 +0200</pubDate>
-      <guid>http://10.0.0.5:1313/es/posts/ipod_fix/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://10.0.0.5:1313/images/posts/ipod_fix_banner.jpg&#34; alt=&#34;iPodFix&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;De alguna manera logré romper mi iPod con &lt;code&gt;dd&lt;/code&gt;. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo &lt;code&gt;No Partition found&lt;/code&gt;. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y arreglaba el iPod.&lt;/p&gt;</description>
+      <guid>https://blog.contre.io/es/posts/ipod_fix/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/ipod_fix_banner.jpg&#34; alt=&#34;iPodFix&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;De alguna manera logré romper mi iPod con &lt;code&gt;dd&lt;/code&gt;. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo &lt;code&gt;No Partition found&lt;/code&gt;. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y arreglaba el iPod.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

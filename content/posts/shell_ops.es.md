@@ -1,6 +1,7 @@
 ---
 title: "Shell Ops"
 date: 2026-05-03T13:48:32+02:00
+draft: true
 tags:
     - Tech
     - Self-hosted
@@ -8,13 +9,11 @@ tags:
 
 ![Dan Case v4.1](/images/posts/bash_banner.jpg)
 
-Desde el 2018 que empecé a hostear servicios en casa. Empecé con Plex y un `docker-compose.yml`, migré a Podman con `podman play kube` y ahora kubernetes con K3S. La evolución del server estuvo siempre determinada por mi interés o mis ganas de jugar una u otra tecnología. Siempre le escapé a soluciones sofisticadas o enlatadas como Flux o Argo, nunca tuve un NAS (por ahora) y nunca tuve más de uno o dos nodos corriendo. A mis ojos, el server, es sinónimo de entretenimiento infinito, y estoy seguro que es el caso de [muchos](https://reddit.com/r/homelab) [otros](https://www.reddit.com/r/selfhosted/). Puedo escribir horas de lo que tengo montado, hablar de NixOS, K3s, redes y filosofar al respecto, pero hoy no va a ser el caso. Hoy te voy a contar un poco algunas soluciones *shellisticas* que me hacen el día a día más fácil, te voy a contar algunas bondades que subestimamos a diario.
+Desde el 2018 que empecé a hostear servicios en casa. Empecé con Plex y un `docker-compose.yml`, migré a Podman con `podman play kube` y ahora kubernetes con K3S. La evolución del server estuvo siempre determinada por mi interés o mis ganas de jugar con una u otra tecnología. Siempre le escapé a soluciones sofisticadas o enlatadas como Flux o Argo, nunca tuve un NAS (por ahora) y nunca tuve más de uno o dos nodos corriendo. A mis ojos, el server, es sinónimo de entretenimiento infinito, y estoy seguro que es el caso de [muchos](https://reddit.com/r/homelab) [otros](https://www.reddit.com/r/selfhosted/). Puedo escribir horas de lo que tengo montado, hablar de NixOS, K3s, redes y filosofar al respecto, pero hoy no va a ser el caso. Hoy te voy a contar un poco algunas soluciones *shellisticas* que me hacen el día a día más fácil, en un múndo que uno elije hacerse difícil.
 
 # Servicios
 
-Los servicios van y vienen, creo que tengo más servicios instalados en el cluster que app en el celular. Hoy en día tengo corriendo **67 servicios** (`ls -d1 services/* | wc -l`).
-
-Para crear nuevos servicios uso `opencode` el 100% de las veces, últimamente con **Big Pickle**, pero cualquiera de los modelos que ofrece gratis [opencode.ai](https://opencode.ai/docs/zen/) van bien. Tengo definido un Markdown que explica un poco cómo definir un nuevo servicio. Ahí se detallan cosas como: qué estructuras de carpetas seguir y cuáles no, algunos casos bordes y cómo solucionarlos, que **annotations** tienen que tener los servicios, cuándo y cómo crear secretos, qué volúmenes montar y en dónde, entre otras muchas cosas. Es fantástico.
+Los servicios van y vienen, creo que tengo más servicios instalados en el cluster que apps en el celular. Mientras escribo esto, tengo corriendo **67 servicios** (`ls -d1 services/* | wc -l`). Para crear nuevos servicios uso `opencode` el 100% de las veces, últimamente con **Big Pickle**, pero cualquiera de los modelos que ofrece gratis [opencode.ai](https://opencode.ai/docs/zen/) van bien. Tengo definido un Markdown que explica un poco cómo definir un nuevo servicio. Ahí se detallan cosas como: qué estructuras de carpetas seguir y cuáles no, algunos casos bordes y cómo solucionarlos, que **annotations** tienen que tener los servicios, cuándo y cómo crear secretos, qué volúmenes montar y en dónde, entre otras muchas cosas. Es fantástico.
 
 ![Services](/images/posts/bash_svc.jpg)
 
