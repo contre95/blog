@@ -24,7 +24,7 @@ For a service to show up on the dashboard, each `ingress.yaml` has a set of anno
 gethomepage.dev/enabled: "true"
 gethomepage.dev/name: <AppName>
 gethomepage.dev/description: <short description>
-gethomepage.dev/group: <group>        # e.g. Tools, Media, Social, Monitoring
+gethomepage.dev/group: <group> # e.g. Tools, Media, Social, Monitoring
 gethomepage.dev/icon: <app>.png
 gethomepage.dev/pod-selector: "app=<app-name>"
 ```

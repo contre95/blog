@@ -21,7 +21,7 @@ Para que un servicio aparezca en el dashboard, cada `ingress.yaml` tiene un set 
 gethomepage.dev/enabled: "true"
 gethomepage.dev/name: <AppName>
 gethomepage.dev/description: <short description>
-gethomepage.dev/group: <group>        # e.g. Tools, Media, Social, Monitoring
+gethomepage.dev/group: <group> # e.g. Tools, Media, Social, Monitoring
 gethomepage.dev/icon: <app>.png
 gethomepage.dev/pod-selector: "app=<app-name>"
 ```
