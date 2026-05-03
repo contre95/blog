@@ -34,7 +34,7 @@ Las métricas y los logs siguen la misma estrategia, se recolectan y calculan po
 
 # Mi estado es cluster y el cluster es mi estado
 
-Solo rindo tributo a `etcd` y pago mis impuestos con `kubectl apply`. Para organizar los servicios que tengo corriendo, `kustomize` me da una mano. Cada servicio lo tengo en su carpeta y vive en su propio `namespace`, no uso *Helm* para ningún servicio e intento escaparle cuando puedo, tampoco tengo ningún custom generator de kustomize y me limito simplemente a `k apply -k services/<service_folder>` cuando quiero cambiar algún que otro funcionario a dedo según se me da la gana.
+Solo rindo tributo a `etcd` y pago mis impuestos con `kubectl apply`. Para organizar a mis funcionarios, `kustomize` me da una mano. Cada servicio lo tengo en su carpeta y vive en su propio `namespace`, no uso *Helm* para ningún servicio y le intento escapar cuando puedo, tampoco tengo ningún *custom generator* de kustomize y me limito simplemente a `k apply -k services/<service_folder>` cuando quiero cambiar algún que otro funcionario a dedo según se me da la gana.
 
 Cuando necesito hacer una reforma estatal, les doy franco a todos mis funcionarios con este comando:
 
