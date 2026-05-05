@@ -69,7 +69,7 @@ La restauración en Mac formatea la partición de datos como **HFS+ con Journal*
  
 Te estarás preguntando por qué hay una partición HFS+ y qué es HFS+? Te pego lo que me dice la IA : HFS+ (Hierarchical File System Plus). Es una versión mejorada del antiguo HFS y se usó durante muchos años en Macs, iPods y otros productos de Apple antes de que fuera reemplazado por APFS.
 
-Para obtener acceso de escritura, simplemente la tenés montar forzada (la partición) y cagarte en el journal, a esta altura si explota algo, arrancamos de nuevo.  
+Para obtener acceso de escritura, simplemente la tenés que montar forzada (la partición) y cagarte en el journal, a esta altura si explota algo, arrancamos de nuevo.  
 
 
 ```sh
