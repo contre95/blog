@@ -110,4 +110,4 @@ Cuando usaba `podman`, `kogs` era `pogs` y `cogs` cuando usaba `docker`. Lo mism
 | ![](/images/posts/bash_meme.jpg)| ![](/images/posts/bash_meme2.jpg) |
 |---|---|
 
-A modo de cierre y si te estás preguntando para qué tlda esta locura, te repito lo que dije en [Jardín de Música](/es/posts/music_hoarding/): "Creo que hay valor en coleccionar, clasificar y cuidar". Esto es simplemente otra expresión de eso, pero, en vez de canciones o películas, con *scriptcitos* y *hacks* que terminan decorando tu entorno digital y, por sobre todo, haciéndolo más tuyo.
+A modo de cierre y si te estás preguntando para qué toda esta locura, te repito lo que dije en [Jardín de Música](/es/posts/music_hoarding/): "Creo que hay valor en coleccionar, clasificar y cuidar". Esto es simplemente otra expresión de eso, pero, en vez de canciones o películas, con *scriptcitos* y *hacks* que terminan decorando tu entorno digital y, por sobre todo, haciéndolo más tuyo.
