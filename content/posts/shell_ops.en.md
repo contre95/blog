@@ -8,13 +8,11 @@ tags:
 
 ![Dan Case v4.1](/images/posts/bash_banner.jpg)
 
-I've been hosting services at home since 2018. Started with Plex and a `docker-compose.yml`, migrated to Podman with `podman play kube`, and now I'm on Kubernetes with K3S. The server's evolution has always been driven by whatever I felt like playing with at the time. I always avoided fancy prepackaged solutions like Flux or Argo, never had a NAS (for now), and never ran more than one or two nodes. To me, the home server is a synonym for infinite entertainment, and I'm pretty sure [many](https://reddit.com/r/homelab) [others](https://www.reddit.com/r/selfhosted/) feel the same way. I could write for hours about my setup, NixOS, K3s, networking, the whole philosophy, but that's not today's topic. Today I want to share some *shell-flavored* tricks that make my day-to-day easier; some of the small things we tend to underestimate.
+I've been hosting services at home since 2018. Started with Plex and a `docker-compose.yml`, migrated to Podman with `podman play kube`, and now I'm on Kubernetes with K3S. The server's evolution has always been driven by whatever I felt like playing with at the time. I always avoided fancy prepackaged solutions like Flux or Argo, never had a NAS (for now), and never ran more than one or two nodes. To me, the home server is a synonym for infinite entertainment, and I'm pretty sure [many](https://reddit.com/r/homelab) [others](https://www.reddit.com/r/selfhosted/) feel the same way. I could write for hours about my setup, NixOS, K3s, networking, the whole philosophy, but that's not today's topic. Today I want to share some *shell-flavored* tricks that make my day-to-day easier, in a world you choose to make hard for yourself.
 
 # Services
 
-Services come and go; I think I have more services installed in the cluster than apps on my phone. Right now I'm running **67 services** (`ls -d1 services/* | wc -l`).
-
-For creating new services I use `opencode` 100% of the time, lately with **Big Pickle**, but any of the free models at [opencode.ai](https://opencode.ai/docs/zen/) work fine. I have a Markdown file that explains how to define a new service: folder structure to follow (and what to avoid), some edge cases and how to handle them, which **annotations** services need, when and how to create secrets, which volumes to mount and where, among many other things. It's fantastic.
+Services come and go; I think I have more services installed in the cluster than apps on my phone. As I write this, I'm running **67 services** (`ls -d1 services/* | wc -l`). The way I interact with the cluster has changed radically lately, like so many other things. Now I use `opencode` 100% of the time to create new services. The process is straightforward and predictable; lately **Big Pickle** is enough, or even `gemma4` or `qwen` running locally. Otherwise, any of the free models at [opencode.ai](https://opencode.ai/docs/zen/) work fine too. At the root of my repo I have a Markdown file that explains how to define a new service and gives the AI some context: folder structure to follow (and what to avoid), some edge cases and how to handle them, which **annotations** services need, when and how to create secrets, which volumes to mount and where, among many other things. It's fantastic. The output is simple `.yaml` files, highly auditable and easy to verify.
 
 ![Services](/images/posts/bash_svc.jpg)
 
@@ -96,11 +94,11 @@ When I need to wipe a `namespace` completely and recreate a service, I have a `.
 
 Like any organization, I also keep a *directory* with *files* on each employee, and any other interaction with the officials I handle mostly imperatively: from the terminal I give them commands and ask them for information. To make that easier, I have a bunch of aliases and make heavy use of `fzf`. Some of the ones I reach for most:
 
-A `tail -f` of a service's logs:
+Asking an official for a report on what they've been up to lately:
 ```nix
 kogs = "ns=$(kubectl get ns -o jsonpath='{.items[*].metadata.name}'|tr ' ' '\n'|fzf)&&pod=$(kubectl get pods -n \"$ns\" --field-selector=status.phase=Running -o jsonpath='{.items[*].metadata.name}'|tr ' ' '\n'|fzf)&&kubectl logs -n \"$ns\" \"$pod\" --all-containers=true -f";
 ```
-Restart all services:
+For lack of a better analogy, restart all services:
 ```nix
 krda = "kubectl get deployments --all-namespaces | tail +2 | awk '{ cmd=sprintf(\"kubectl rollout restart deployment -n %s %s\", $1, $2) ; system(cmd) }'";
 ```
@@ -109,12 +107,12 @@ Or a specific one:
 krd = "ns=$(kubectl get ns -o jsonpath='{.items[*].metadata.name}' | tr ' ' '\n' | fzf) && \ dep=$(kubectl get deployments -n \"$ns\" -o jsonpath='{.items[*].metadata.name}' | tr ' ' '\n' | fzf) && \ kubectl rollout restart deployment \"$dep\" -n \"$ns\"";
 ```
 
-When I was on `podman`, `kogs` was `pogs`, and `cogs` when I was on `docker`. Same logic applies to the rest of the aliases; that consistency lets me sleep at night. Whenever I catch myself doing something repeatedly, it ends up as an alias. The flexibility you get from having your solutions depend on folders and files is a *trade-off* I'm not willing to give up. And for me, the `cli` ends up being the ultimate interface, as Emperor Sh said: *["Do it in shell"](https://sanctum.geek.nz/etc/emperor-sh-and-the-traveller.txt)*.
+When I was on `podman`, `kogs` was `pogs`, and `cogs` when I was on `docker`. Same logic applies to the rest of the aliases; that consistency lets me sleep at night. Whenever I catch myself doing something repeatedly, it ends up as an alias. The flexibility Linux gives you when your solutions depend on folders and files is a *trade-off* I'm not willing to give up. And for me, the `cli` ends up being the ultimate interface, as Emperor Sh said: *["Do it in shell"](https://sanctum.geek.nz/etc/emperor-sh-and-the-traveller.txt)*.
 
 | ![](/images/posts/bash_meme.jpg)| ![](/images/posts/bash_meme2.jpg) |
 |---|---|
 
-As I said in [Music Garden](/en/posts/music_hoarding/), I think there's value in collecting, cataloguing, and caring for things. This is just another expression of that, except instead of songs, it's little scripts and hacks that end up decorating your environment and, above all, making it more yours.
+As a closing note, if you're wondering what's the point of all this madness, I'll repeat what I said in [Music Garden](/en/posts/music_hoarding/): *"I think there's value in collecting, cataloguing, and caring for things."* This is just another expression of that, except instead of songs or movies, it's little scripts and hacks that end up decorating your digital environment and, above all, making it more yours.
 
 ---
 ***Note on Translation**: This post was originally written in highly colloquial Argentine Spanish, known for its unique slang, cultural nuances, and rhythm. It has been translated into English heavily using AI, so some of the original tone and cultural nuances may have been lost in translation.*
