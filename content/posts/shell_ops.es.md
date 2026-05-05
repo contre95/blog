@@ -33,7 +33,7 @@ Las métricas y los logs siguen la misma estrategia, se recolectan y calculan po
 
 # Mi estado es el cluster y el cluster es mi estado
 
-Solo rindo tributo al `etcd` y pago mis impuestos con `kubectl apply`. Para organizar a mis funcionarios, `kustomize` me da una mano. Cada servicio lo tengo en su carpeta y vive en su propio `namespace`, no uso *Helm* para ningún servicio y le intento escapar cuando puedo, tampoco tengo ningún *custom generator* de kustomize y me limito simplemente a `k apply -k services/<service_folder>` cuando quiero cambiar algún que otro funcionario a dedo según se me da la gana.
+Sólo rindo tributo al `etcd` y pago mis impuestos con `kubectl apply`. Para organizar a mis funcionarios, `kustomize` me da una mano. Cada servicio lo tengo en su carpeta y vive en su propio `namespace`, no uso *Helm* para ningún servicio y le intento escapar cuando puedo, tampoco tengo ningún *custom generator* de kustomize y me limito simplemente a `k apply -k services/<service_folder>` cuando quiero cambiar algún que otro funcionario a dedo según se me da la gana.
 
 Si necesito hacer una reforma estatal, les doy franco a todos mis funcionarios con este comando:
 
@@ -58,11 +58,11 @@ kube-system   traefik-6b4c7c8d94-xbb55                  1/1     Running     4 (3
 ```
 Y muy cada tanto, si tengo algún que otro funcionario con un proyecto importante, lo hago trabajar igual, como por ejemplo: `k apply -k services/booklore`
 
-Que vuelvan a trabajar es un poco más complicado, porque muchos dependen del personal de seguridad para entrar a casa de gobierno. Esos días les doy franco a todos menos a ellos y no, no les pago extra:
+Que vuelvan a trabajar es un poco más complicado en estos  casos, muchos dependen del personal de seguridad para entrar a Casa de Gobierno. Esos días les doy franco a todos menos a ellos y no, no les pago extra:
 
-`ls -d services/*/ | xargs basename -a | grep -vE '^(REDACTED2|REDACTED1|homepage|cert-manager)$' | xargs -I{} kubectl scale deployment --all -n {} --replicas=0` 
+`ls -d services/*/ | xargs basename -a | grep -vE '^(REDACTED1|REDACTED2|homepage|cert-manager)$' | xargs -I{} kubectl scale deployment --all -n {} --replicas=0` 
 
-Cuando eso pasa, casa rosada se ve un poco así: 
+Días como esos, Casa Rosada se ve un poco así: 
 
 ```
 k get pods -A
@@ -87,27 +87,27 @@ REDACTED2      REDACTED2-7cd9cd7f56-sg57h                1/1     Running     0  
 REDACTED1      REDACTED1-6cccd8684f-rrvlc                1/1     Running     0               92m
 ```
 
-Cuando quiero borrar un `namespace` completo y re-crear un servicio tengo un script `./deploy.sh` que usa `fzf`. Simplemente con `find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf` elijo el servicio que desplegar de zero. 
+Cuando quiero borrar un `namespace` completo y re-crear un servicio, tengo un script `./deploy.sh` que usa `fzf`. Simplemente con `find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf` elijo el servicio que desplegar de zero. 
 
 ![Services](/images/posts/bash_deploy.gif)
 
-Como toda organización, tengo un *directorio* con *ficheros* de sus empleados y cualquier otra interacción con los funcionarios la hago mayormente de manera imperativa, desde la terminal los comandos y les pido información. Para facilitar la interacción tengo varios aliases y hago un uso exhaustivo de `fzf`. Algunos de los aliases que uso más seguidos son:
+Como toda entidad estatal, tengo un *directorio* con *ficheros* de  mis empleados y cualquier otra interacción con los funcionarios la hago mayormente de manera imperativa, desde la terminal, los comando les pido información. Para facilitar la interacción tengo varios aliases y hago un uso exhaustivo de `fzf`. Algunos de los aliases que uso más seguidos son:
 
-Un `tail -f` de los logs de un servicio
+Pedirle un reporte a funcionario sobre q fue lo último en lo que estuvo trabajando:
 ```nix
 kogs = "ns=$(kubectl get ns -o jsonpath='{.items[*].metadata.name}'|tr ' ' '\n'|fzf)&&pod=$(kubectl get pods -n \"$ns\" --field-selector=status.phase=Running -o jsonpath='{.items[*].metadata.name}'|tr ' ' '\n'|fzf)&&kubectl logs -n \"$ns\" \"$pod\" --all-containers=true -f";
 ```
-Resetear todos los servicios
+A falta de una buena analogía, resetear todos los servicios:
 ```nix
 krda = "kubectl get deployments --all-namespaces | tail +2 | awk '{ cmd=sprintf(\"kubectl rollout restart deployment -n %s %s\", $1, $2) ; system(cmd) }'";
 ```
-O un servicio en particular
+O un servicio en particular:
 ```nix
 krd = "ns=$(kubectl get ns -o jsonpath='{.items[*].metadata.name}' | tr ' ' '\n' | fzf) && \ dep=$(kubectl get deployments -n \"$ns\" -o jsonpath='{.items[*].metadata.name}' | tr ' ' '\n' | fzf) && \ kubectl rollout restart deployment \"$dep\" -n \"$ns\"";
 ```
-Cuando usaba `podman`, `kogs` era `pogs` y `cogs` cuando usaba `docker` y lo mismo aplica para el resto de los aliases, esa consistencia me deja dormir tranquilo. Siempre que me veo haciendo algo seguido, termina en un alias. La flexibilidad que te da que tus soluciones dependan de carpetas y archivos es un *trade-off* que no quiero resignar. Y para mí, la `cli` termina siendo la interfaz definitiva, como dijo Emperor Sh: *["Do it in shell"](https://sanctum.geek.nz/etc/emperor-sh-and-the-traveller.txt)*.
+Cuando usaba `podman`, `kogs` era `pogs` y `cogs` cuando usaba `docker`. Lo mismo aplica para el resto de los aliases, esa consistencia me deja dormir tranquilo. Siempre que me veo haciendo algo seguido, termina en un alias. La flexibilidad que te da Linux que tus soluciones dependan de carpetas y archivos es un *trade-off* que no quiero resignar. Y para mí, la `cli` termina siendo la interfaz definitiva, como dijo Emperor Sh: *["Do it in shell"](https://sanctum.geek.nz/etc/emperor-sh-and-the-traveller.txt)*.
 
 | ![](/images/posts/bash_meme.jpg)| ![](/images/posts/bash_meme2.jpg) |
 |---|---|
 
-Como dije en [Jardín de Música](/es/posts/music_hoarding/), creo que hay valor en coleccionar, clasificar y cuidar. Esto es simplemente otra expresión de eso, pero, en vez de canciones, con *scriptcitos* y *hacks* que terminan decorando tu entorno y, por sobre todo, haciéndolo más tuyo.
+A modo de cierre y si te estás preguntando para qué tlda esta locura, te repito lo que dije en [Jardín de Música](/es/posts/music_hoarding/): "Creo que hay valor en coleccionar, clasificar y cuidar". Esto es simplemente otra expresión de eso, pero, en vez de canciones o películas, con *scriptcitos* y *hacks* que terminan decorando tu entorno digital y, por sobre todo, haciéndolo más tuyo.
