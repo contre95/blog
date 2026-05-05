@@ -12,11 +12,12 @@ Desde el 2018 que empecé a hostear servicios en casa. Empecé con Plex y un `do
 
 # Servicios
 
-Los servicios van y vienen, creo que tengo más servicios instalados en el cluster que apps en el celular. Mientras escribo esto, tengo corriendo **67 servicios** (`ls -d1 services/* | wc -l`). Para crear nuevos servicios uso `opencode` el 100% de las veces, últimamente con **Big Pickle**, pero cualquiera de los modelos que ofrece gratis [opencode.ai](https://opencode.ai/docs/zen/) van bien. Tengo definido un Markdown que explica un poco cómo definir un nuevo servicio. Ahí se detallan cosas como: qué estructuras de carpetas seguir y cuáles no, algunos casos bordes y cómo solucionarlos, que **annotations** tienen que tener los servicios, cuándo y cómo crear secretos, qué volúmenes montar y en dónde, entre otras muchas cosas. Es fantástico.
+Los servicios van y vienen, creo que tengo más servicios instalados en el cluster que apps en el celular. Mientras escribo esto, tengo corriendo **67 servicios** (`ls -d1 services/* | wc -l`). Mi forma de ingeractuar con el cluster, como tantas otras cosas, cambió radicalmente en el último tiempo, ahora, para crear nuevos servicios uso `opencode` el 100% de las veces. La creación es bien sencilla y predecible predecible, últimamente alcanza con **Big Pickle**, o incluso `gemma4` o `qwen` corriendo local, si no, cualquiera de los modelos que ofrece gratis [opencode.ai](https://opencode.ai/docs/zen/) también van bien. En la raiz de mi repo tengo un Markdown que explica un poco cómo definir un nuevo servicio y le da contexto a la IA. Ahí se detallan cosas como: qué estructuras de carpetas seguir y cuáles no, algunos casos borde y cómo solucionarlos, qué **annotations** tienen que tener los servicios, cuándo y cómo crear secretos, qué volúmenes montar y  dónde, entre otras muchas cosas. Es fantástico. El output son simples `.yaml` altamente auditables y fáciles de verificar.
 
 ![Services](/images/posts/bash_svc.jpg)
 
-Para que un servicio aparezca en el dashboard, cada `ingress.yaml` tiene un set de anotaciones que hace que aparezca en el cuando está desplegado el *Ingress*, para eso uso [Homepage](https://gethomepage.dev/). No sé si es el más lindo o el más avanzado, mi único requisito es que no tenga que agregarlos a mano y pueda manejarlo enteramente desde la definición de cada servicio (desde su *Manifest*), para ello se usan las siguientes anotaciones: 
+Para que un servicio figure en el dashboard, cada `ingress.yaml` tiene un set de anotaciones que hace que aparezca en el mismo cuando está desplegado. Para eso uso [Homepage](https://gethomepage.dev/). No sé si es el más lindo o el más avanzado, mi único requisito es que no tenga que agregarlos a mano y pueda manejarlos enteramente desde la definición de cada servicio (desde su *Manifest*), para ello se usan las siguientes anotaciones:
+
 ```yaml
 gethomepage.dev/enabled: "true"
 gethomepage.dev/name: <AppName>
@@ -26,13 +27,13 @@ gethomepage.dev/icon: <app>.png
 gethomepage.dev/pod-selector: "app=<app-name>"
 ```
 
-Las métricas y los logs siguen la misma estrategia, se recolectan y calculan por *namespace* y así las puedo filtrar y distinguir en **Grafana**. Cada vez que se crea un nuevo *namespace*, automáticamente tengo métrics y logs en el mismo dashboard.
+Las métricas y los logs siguen la misma estrategia, se recolectan y calculan por *namespace* y así las puedo filtrar y distinguir en **Grafana**. Cada vez que se crea un nuevo *namespace*, automáticamente tengo métrics y logs en el mismo dashboard. 
 
 ![Services](/images/posts/bash_metrics.jpg)
 
-# Mi estado es cluster y el cluster es mi estado
+# Mi estado es el cluster y el cluster es mi estado
 
-Solo rindo tributo a `etcd` y pago mis impuestos con `kubectl apply`. Para organizar a mis funcionarios, `kustomize` me da una mano. Cada servicio lo tengo en su carpeta y vive en su propio `namespace`, no uso *Helm* para ningún servicio y le intento escapar cuando puedo, tampoco tengo ningún *custom generator* de kustomize y me limito simplemente a `k apply -k services/<service_folder>` cuando quiero cambiar algún que otro funcionario a dedo según se me da la gana.
+Solo rindo tributo al `etcd` y pago mis impuestos con `kubectl apply`. Para organizar a mis funcionarios, `kustomize` me da una mano. Cada servicio lo tengo en su carpeta y vive en su propio `namespace`, no uso *Helm* para ningún servicio y le intento escapar cuando puedo, tampoco tengo ningún *custom generator* de kustomize y me limito simplemente a `k apply -k services/<service_folder>` cuando quiero cambiar algún que otro funcionario a dedo según se me da la gana.
 
 Si necesito hacer una reforma estatal, les doy franco a todos mis funcionarios con este comando:
 
