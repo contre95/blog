@@ -35,7 +35,7 @@ Otra cosa que casi rompo es el conector de la batería, el que está marcado con
 
 ## Tablas de particiones: APM, MBR y por qué importan
 
-Cuando una Mac restaura un iPod via iTunes/Finder escribe un **Apple Partition Map (APM)** — el formato de tabla de particiones legacy de Apple, anterior al MBR (usado en la mayoría de las PCs) y al GPT (usado en las Macs modernas). Restaurarlo e instalar el OS de stock fue muy fácil, lo conectás a una Mac, una Macbook Air de las nuevas en mi caso, y listo. Todos los iPod classic restaurados de esta forma vuelven a tener su APM. Y ahora vuelta a 0: a instalar el bootloader de Rockbox.
+Cuando una Mac restaura un iPod via iTunes/Finder escribe un **Apple Partition Map (APM)** — el formato de tabla de particiones legacy de Apple, anterior al MBR (usado en la mayoría de las PCs) y al GPT (usado en las Macs modernas). Restaurarlo e instalar el OS de stock fue muy fácil, lo conectás a una Mac, una MacBook Air de las nuevas en mi caso, y listo. Todos los iPod classic restaurados de esta forma vuelven a tener su APM. Y ahora vuelta a 0: a instalar el bootloader de Rockbox.
 
 Me vi tentado a instalar Rockbox en la Mac pero decidí volver a la linuxera, el problema en Linux es que el kernel no expone automáticamente las sub-particiones APM como dispositivos de bloque. Después de la restauración en Mac, el iPod aparecía como `/dev/sda` (954.8G) **sin nodos de dispositivo de partición** — sin `sda1`, `sda2`, etc. Herramientas como `parted` pueden ver las particiones, pero no se pueden montar directamente.
 
@@ -56,7 +56,7 @@ sudo kpartx -av /dev/sda
 # crea /dev/mapper/sda1 y /dev/mapper/sda2
 ```
 
-Lo hice con `kpartx` porque es lo que recomendó la IA,  si no era `ipodpatcher` que en mi caso fue ejecutado internamente por Rockbox Utility pq `ipodpatcher` no estaba en NixOS. Esto convierte la tabla de particiones de **APM → MBR**, e imagino yo que ahí es donde hace su magia para bootear al OS de stock o a Rockbox con MENU+SELECT o SELECT+PLAY/PAUSE. Luego de instalar el bootloader el dispositivo ya aparece con sus particiones normales (`sdc1`, `sdc2`) sin necesitar `kpartx`. Por suerte pude usar rockbox-utility, porque `ipodpatcher` no estaba disponible en NixOS.
+Lo hice con `kpartx` porque es lo que recomendó la IA, si no era `ipodpatcher` que en mi caso fue ejecutado internamente por Rockbox Utility porque `ipodpatcher` no estaba en NixOS. Esto convierte la tabla de particiones de **APM → MBR**, e imagino yo que ahí es donde hace su magia para bootear al OS de stock o a Rockbox con MENU+SELECT o SELECT+PLAY/PAUSE. Luego de instalar el bootloader el dispositivo ya aparece con sus particiones normales (`sdc1`, `sdc2`) sin necesitar `kpartx`.
 
 ---
 
@@ -88,7 +88,7 @@ nix-shell -p hfsprogs --run "sudo fsck.hfsplus -J /dev/mapper/sda2"
 
 ## El layout de iFlash Solo
 
-**Parentesis**: *¿Cómo traduzco este título en criollo? ¿ "El esquema del iFlash Solo" ?  Como escribo en castellano, si le hablo a Claudio en inglés y tuve que copiar el "¿" de internet porque no sé hacerlo en el teclado ? Anyway (En fin)*
+**Paréntesis**: *¿Cómo traduzco este título en criollo? ¿ "El esquema del iFlash Solo" ?  Como escribo en castellano, si le hablo a Claudio en inglés y tuve que copiar el "¿" de internet porque no sé hacerlo en el teclado ? Anyway (En fin)*
 
 
 > **👀 ->** Antes de comprar o cambiar tarjetas SD, verificá la compatibilidad con la placa iFlash Solo en la página oficial:
@@ -119,7 +119,7 @@ sudo mkfs.vfat -F 32 -S 512 -s 8 /dev/sdc1
 # Warning: sector size was set to 4096 (minimal for this device)
 ```
 
-No es un bug, es una restricción de hardware. La consecuencia es que Rockbox  puede fallar al leer el sistema de archivos porque su driver FAT asume sectores de 512 bytes. Si Rockbox arranca pero muestra `No partition found` después de formatear e instalar el firmware, esta es la causa probable (acá la cagué).
+No es un bug, es una restricción de hardware. La consecuencia es que Rockbox puede fallar al leer el sistema de archivos porque su driver FAT asume sectores de 512 bytes. Si Rockbox arranca pero muestra `No partition found` después de formatear e instalar el firmware, esta es la causa probable (acá la cagué).
 
 Así monté la partición formateada con permisos de escritura:
 
