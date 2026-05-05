@@ -12,7 +12,7 @@ Desde 2018 que empecé a hostear servicios en casa. Empecé con Plex y un `docke
 
 # Servicios
 
-Los servicios van y vienen, creo que tengo más servicios instalados en el cluster que apps en el celular. Mientras escribo esto, tengo corriendo **67 servicios** (`ls -d1 services/* | wc -l`). Mi forma de interactuar con el cluster, como tantas otras cosas, cambió radicalmente en el último tiempo, ahora, para crear nuevos servicios uso `opencode` el 100% de las veces. La creación es bien sencilla y predecible, últimamente alcanza con **Big Pickle**, o incluso `gemma4` o `qwen` corriendo local, si no, cualquiera de los modelos que ofrece gratis [opencode.ai](https://opencode.ai/docs/zen/) también van bien. En la raiz de mi repo tengo un Markdown que explica un poco cómo definir un nuevo servicio y le da contexto a la IA. Ahí se detallan cosas como: qué estructuras de carpetas seguir y cuáles no, algunos casos borde y cómo solucionarlos, qué **annotations** tienen que tener los servicios, cuándo y cómo crear secretos, qué volúmenes montar y  dónde, entre otras muchas cosas. Es fantástico. El output son simples `.yaml` altamente auditables y fáciles de verificar.
+Los servicios van y vienen, creo que tengo más servicios instalados en el cluster que apps en el celular. Mientras escribo esto, tengo corriendo **67 servicios** (`ls -d1 services/* | wc -l`). Mi forma de interactuar con el cluster, como tantas otras cosas, cambió radicalmente en el último tiempo, ahora, para crear nuevos servicios uso `opencode` el 100% de las veces. La creación es bien sencilla y predecible, últimamente alcanza con **Big Pickle**, o incluso `gemma4` o `qwen` corriendo local, si no, cualquiera de los modelos que ofrece gratis [opencode.ai](https://opencode.ai/docs/zen/) también van bien. En la raíz de mi repo tengo un Markdown que explica un poco cómo definir un nuevo servicio y le da contexto a la IA. Ahí se detallan cosas como: qué estructuras de carpetas seguir y cuáles no, algunos casos borde y cómo solucionarlos, qué **annotations** tienen que tener los servicios, cuándo y cómo crear secretos, qué volúmenes montar y  dónde, entre otras muchas cosas. Es fantástico. El output son simples `.yaml` altamente auditables y fáciles de verificar.
 
 ![Services](/images/posts/bash_svc.jpg)
 
@@ -27,7 +27,7 @@ gethomepage.dev/icon: <app>.png
 gethomepage.dev/pod-selector: "app=<app-name>"
 ```
 
-Las métricas y los logs siguen la misma estrategia, se recolectan y calculan por *namespace* y así las puedo filtrar y distinguir en **Grafana**. Cada vez que se crea un nuevo *namespace*, automáticamente tengo métrics y logs en el mismo dashboard. 
+Las métricas y los logs siguen la misma estrategia, se recolectan y calculan por *namespace* y así las puedo filtrar y distinguir en **Grafana**. Cada vez que se crea un nuevo *namespace*, automáticamente tengo métricas y logs en el mismo dashboard. 
 
 ![Services](/images/posts/bash_metrics.jpg)
 
