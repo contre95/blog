@@ -1,6 +1,6 @@
 ---
 title: Schwarzwald
-date: 2024-10-08  00:18:54
+date: 2024-10-08 00:18:54
 tags:
     - Fotos
     - Viajes
@@ -15,7 +15,7 @@ Lo más gratificante del viaje fue el ejercicio físico y el buen cansancio que 
 
 ![Mono](/images/posts/mono.jpg)
 |:--:| 
-| *Catarates en Triberg - [Google Maps](https://maps.app.goo.gl/kA5vW3h9r2CcuchC7)* |
+| *Cataratas en Triberg - [Google Maps](https://maps.app.goo.gl/kA5vW3h9r2CcuchC7)* |
 
 No era nuestro primer viaje juntos; haber compartido experiencias similares nos ayudó mucho a tomar decisiones. Además, la infraestructura alemana contribuyó a que el viaje fuera más seguro. Era inevitable comparar constantemente con nuestras aventuras anteriores por la cordillera de los Andes o el sur de Argentina, donde uno se sentía más 'solo' y, por qué no, más libre
 
@@ -39,7 +39,7 @@ Bici + tren es una gran combinación, te da un muy buen ratio tiempo vs lugares 
 
 Esas son algunas de las rutas que hicimos. Habremos recorrido un total de 200km en bici y otro tantos caminando por bosques y montaña. Lo más riesgoso fueron los trayectos de bici en ruta, donde las curvas eran cerradas y las bajadas muy pronunciadas. La lluvia y el frío no ayudaban; a veces se veía poco y se escuchaba menos. Con los autos sucedía lo mismo: la mayoría respetaba bastante, pero algunos pasaban muy cerca, probablemente sin habernos visto. Esto nos obligó a reducir considerablemente la velocidad y a hacer más paradas de lo previsto. Además, la ruta se volvía angosta y de doble mano en varios tramos, lo que nos forzaba a maniobrar rápido y mantenernos siempre alerta.
 
-[Komoot](www.komoot.com) nos ayudó bastante para organizar el viaje. Nos daba métricas de todo tipo como, nivel de dificultad, tiempo estimado, clima durante el trayecto, elevación, perfil del camino (gravilla, ruta, bici-senda, ciudad, etc) y demás comentario de otra gente sobre caminos similares. Google maps nos ayudó para ver los horarios de los trenes. Durante el viaje usé también varios de los servicios que tengo hosteado en mi casa, incluyendo Vikunja con información del viaje, Emby para escuchar música, Simplex para comunicarme y OpenVPN.
+[Komoot](https://www.komoot.com) nos ayudó bastante para organizar el viaje. Nos daba métricas de todo tipo como, nivel de dificultad, tiempo estimado, clima durante el trayecto, elevación, perfil del camino (gravilla, ruta, bici-senda, ciudad, etc) y demás comentario de otra gente sobre caminos similares. Google maps nos ayudó para ver los horarios de los trenes. Durante el viaje usé también varios de los servicios que tengo hosteado en mi casa, incluyendo Vikunja con información del viaje, Emby para escuchar música, Simplex para comunicarme y OpenVPN.
 
 |![Tent](/images/posts/tent.jpg) |
 |:--:| 
@@ -47,7 +47,7 @@ Esas son algunas de las rutas que hicimos. Habremos recorrido un total de 200km 
 
 En cuanto al equipamiento, estábamos bien preparados. Investigamos bastante en [/r/bikepacking](https://www.reddit.com/r/bikepacking/) y aprovechamos nuestras experiencias anteriores. Compramos gran parte del equipo en Decathlon a un precio razonable, y también nos abastecimos de algunos artículos pensando en futuros viajes.
 
-Para las bicicletas, teníamos una [Trek - Dual Sport 3 Gen 5](https://www.trekbikes.com/us/en_US/bikes/hybrid-bikes/dual-sport-bikes/dual-sport/dual-sport-3-gen-5/p/36826/) y alquilamos otra [Giant - XTC SLR 29 2](https://www.giant-bicycles.com/us/xtc-slr-29-2-2021) en [Zweiradperle](zweiradperle.hamburg), una tienda que recomiendo. Los bolsos laterales, resistentes al agua, cumplieron su función incluso bajo lluvias torrenciales; si mal no recuerdo, las marcas eran [Forclaz](https://www.decathlon.com/collections/forclaz) y [Thule](https://www.thule.com/en-us/bike-packs-bags-and-racks/panniers-and-bike-bags/thule-shield-pannier-25l-_-3204209). También llevamos ropa impermeable, y nuestra carpa, una [Trek900](https://www.decathlon.es/es/p/tienda-de-campana-domo-2-personas-de-trekking-forclaz-trek900/_/R-p-301558), fue una excelente elección, fácil de armar y desarmar y pesaba solo 2Kg.
+Para las bicicletas, teníamos una [Trek - Dual Sport 3 Gen 5](https://www.trekbikes.com/us/en_US/bikes/hybrid-bikes/dual-sport-bikes/dual-sport/dual-sport-3-gen-5/p/36826/) y alquilamos otra [Giant - XTC SLR 29 2](https://www.giant-bicycles.com/us/xtc-slr-29-2-2021) en [Zweiradperle](https://zweiradperle.hamburg), una tienda que recomiendo. Los bolsos laterales, resistentes al agua, cumplieron su función incluso bajo lluvias torrenciales; si mal no recuerdo, las marcas eran [Forclaz](https://www.decathlon.com/collections/forclaz) y [Thule](https://www.thule.com/en-us/bike-packs-bags-and-racks/panniers-and-bike-bags/thule-shield-pannier-25l-_-3204209). También llevamos ropa impermeable, y nuestra carpa, una [Trek900](https://www.decathlon.es/es/p/tienda-de-campana-domo-2-personas-de-trekking-forclaz-trek900/_/R-p-301558), fue una excelente elección, fácil de armar y desarmar y pesaba solo 2Kg.
 
 El viaje duró un total de 9 días y entre bosques y montañas, se llenó de momentos que trascendieron el camino, ya queda la sensación de querer repetir la experiencia.
 

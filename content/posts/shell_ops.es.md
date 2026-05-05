@@ -58,7 +58,7 @@ kube-system   traefik-6b4c7c8d94-xbb55                  1/1     Running     4 (3
 ```
 Y muy cada tanto, si tengo algún que otro funcionario con un proyecto importante, lo hago trabajar igual, como por ejemplo: `k apply -k services/booklore`
 
-Que vuelvan a trabajar es un poco más complicado en estos  casos, muchos dependen del personal de seguridad para entrar a Casa de Gobierno. Esos días les doy franco a todos menos a ellos y no, no les pago extra:
+Que vuelvan a trabajar es un poco más complicado en estos casos, muchos dependen del personal de seguridad para entrar a Casa de Gobierno. Esos días les doy franco a todos menos a ellos y no, no les pago extra:
 
 `ls -d services/*/ | xargs basename -a | grep -vE '^(REDACTED1|REDACTED2|homepage|cert-manager)$' | xargs -I{} kubectl scale deployment --all -n {} --replicas=0` 
 
@@ -87,13 +87,13 @@ REDACTED2      REDACTED2-7cd9cd7f56-sg57h                1/1     Running     0  
 REDACTED1      REDACTED1-6cccd8684f-rrvlc                1/1     Running     0               92m
 ```
 
-Cuando quiero borrar un `namespace` completo y re-crear un servicio, tengo un script `./deploy.sh` que usa `fzf`. Simplemente con `find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf` elijo el servicio que desplegar de zero. 
+Cuando quiero borrar un `namespace` completo y re-crear un servicio, tengo un script `./deploy.sh` que usa `fzf`. Simplemente con `find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf` elijo el servicio que desplegar de cero. 
 
 ![Services](/images/posts/bash_deploy.gif)
 
 Como toda entidad estatal, tengo un *directorio* con *ficheros* de  mis empleados y cualquier otra interacción con los funcionarios la hago mayormente de manera imperativa, desde la terminal, los comando les pido información. Para facilitar la interacción tengo varios aliases y hago un uso exhaustivo de `fzf`. Algunos de los aliases que uso más seguidos son:
 
-Pedirle un reporte a funcionario sobre q fue lo último en lo que estuvo trabajando:
+Pedirle un reporte a funcionario sobre qué fue lo último en lo que estuvo trabajando:
 ```nix
 kogs = "ns=$(kubectl get ns -o jsonpath='{.items[*].metadata.name}'|tr ' ' '\n'|fzf)&&pod=$(kubectl get pods -n \"$ns\" --field-selector=status.phase=Running -o jsonpath='{.items[*].metadata.name}'|tr ' ' '\n'|fzf)&&kubectl logs -n \"$ns\" \"$pod\" --all-containers=true -f";
 ```
