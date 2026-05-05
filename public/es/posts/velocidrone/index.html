@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content=""
+  />
+  
+    
+      <title>GC-07 | Contre</title>
+    
+  
+  <link rel="stylesheet" href="/css/reset.css"/>
+  <link rel="stylesheet" href="/css/font.css"/>
+  <link rel="stylesheet" href="/css/smigle.css"/>
+  
+    <link rel="stylesheet" href="/css/custom.css"/>
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script defer src="https://umami.contre.io/script.js" data-website-id="fcb27a7a-d935-4321-b1ae-c8e057389847"></script>
+  <script defer src="https://umami.contre.io/recorder.js" data-website-id="fcb27a7a-d935-4321-b1ae-c8e057389847" data-sample-rate="0.15" data-mask-level="moderate" data-max-duration="300000"></script>
+</head>
+
+  <body>
+    <header>
+  <div id="brand">
+    <a class="icon-link" href="https://blog.contre.io/">
+      <img
+        class="icon"
+        src="/images/img.svg"
+      />
+    </a>
+    <div class="text">
+      <a href="https://blog.contre.io/"><h1>Contre</h1></a>
+      <h3>|||||||||||</h3>
+    </div>
+  </div>
+  <nav>
+    
+    <span class="nav-left">
+      
+      
+        
+          
+          <a href="/es"><b>Inicio</b></a>
+          
+        
+      
+        
+           | 
+          <a href="/es/posts/"><b>Publicaciones</b></a>
+          
+        
+      
+        
+           | 
+          <a href="/es/memos/"><b>Memos</b></a> <a href="https://memos.contre.io/explore" target="_blank" rel="noopener noreferrer" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;vertical-align:middle;"><path d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </span>
+    <span class="nav-right">
+      
+      
+      
+        
+        RSS<svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 30" fill="#E37417" style="vertical-align:middle;margin-right:2px"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>(<a href="/es/posts/index.xml" target="_blank"><b>Blog</b></a>|<a href="https://memos.contre.io/u/contre/rss.xml"><b>Memos</b></a>)
+      
+      | <a href="/es"><b>ES</b></a> / <a href="/en"><b>EN</b></a>
+    </span>
+  </nav>
+  <hr />
+</header>
+
+    <div id="content">
+      
+<main>
+  <article>
+    <h1>GC-07</h1>
+    <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2026-05-04</time>
+    
+    
+  </strong>
+  <span> • 624 words</span>
+  <span> • 3 minute read</span>
+  
+  
+</div>
+
+    <div><p>NixOS, a diferencia de otras distribuciones de Linux que se configuran con archivos dispersos por todo el sistema (<code>/etc</code>, <code>/usr</code>), se configura en archivos <code>.nix</code>. Por ejemplo: Para alterar el estado de tu Debian o Windows, correrías algo como <code>sudo apt-get install python</code> o harías varios <em>clicks</em> y <em>Siguiente;Siguiente;Siguiente</em>, eso crearía por detrás una serie de archivos y configuraciones en lugares que nunca te interesaron, alteraría variables de entorno que no te importan ni sabés cuales son , entre otras cosas que desconocés. Cuando borrás ese programa, rezá que deje tu sistema más o menos como lo encontró. En NixOS es distinto,si querés hacer lo mismo en Nix, en vez de hacerlo de manera imperativa con un comando, editás un archivos <code>.nix</code> dónde declarás tu paquete y porqué no sus configuraciones, y seguido de un <code>sudo nixos-rebuild switch</code> tenés tu programa instalado. Nix lee esa declaración, construye el nuevo sistema de forma determinista y lo activa de forma atómica. Atómica ? Sí, <a href="https://youtu.be/WIr23sXx1AI?t=9"><em>&ldquo;A-tó-mi-ca&rdquo;</em></a>, es una forma elegante de decir que el cambio o se aplica completamente, o no se aplica en absoluto, no hay grises. Ese archivo <code>.nix</code> es, literalmente, la fuente de verdad de tu sistema operativo, el estado de tu sistema operativo. La gran particularidad (y desventaja para muchos) es que para poder cumplir con ciertas garantías, NixOS usa un sistema de archivos muy particular, el Nix Store (<code>/nix/store</code>). En lugar de instalar los programas en las rutas tradicionales (<code>/usr/bin/</code>, <code>/bin/</code> o <code>C:\Archivos de programa</code>), Nix guarda cada programa (o más precisamente, para cada <em>output</em> de una <em>derivation</em>) en una carpeta con un <em>hash</em> único que representa su contenido exacto (e.g <code>realpath $(which nvim)</code> -&gt; <code>/nix/store/n1bm101nhgw33fv114ibkv10xvh8fgp1-neovim-0.11.7/bin/nvim</code>). Ese hash, no es siempre el mismo, si no que, como la mayoría de los <em>hashes</em>, se usa para denotar unicidad, individualidad, si algo cambia aunque sea mínimamente, el hash cambia y se genera una carpeta nueva. Estos hashes no están aislado, si no que entre ellos forman una suerte de Árbol de Merkle Acíclico. Básicamente una estructura donde:</p>
+<ol>
+<li>Las hojas son hashes de datos.</li>
+<li>Cada nodo interno es el hash de sus hijos.</li>
+<li>Cambiar cualquier hoja cambia todos los hashes hacia arriba, hasta la raíz.</li>
+</ol>
+<p>Ya te podés imaginar la relación con el Nix Store:</p>
+<ol>
+<li>Cada &ldquo;programa&rdquo; en el store es un nodo.</li>
+<li>Las dependencias de ese programa son referencias o <em>edges</em> (flechitas en criollo) hacia otros nodos (programas).</li>
+<li>El hash de un programa incluye los hashes de sus dependencias, por lo que cambiar cualquier dependencia, cambia todo el programa.</li>
+</ol>
+<p>Al instante de aprender esto, obviamente quise graficarlo: <code>nix-store -q --graph $(which openssl) | dot -Tpng &gt; graph.png</code> y te da algo <a href="/images/posts/nix_openssl.png">así</a> (si no tenés <code>dot</code> probá con <code>nix-shell -p graphviz</code>) y guarda con hacer esto con programas grandes porque podés estar una vida esperando. Lo más noble de este árbol, es que si dos paquetes comparten una dependencia, solo existe una copia en el store, pero si dos paquetes dependen de versiones distintas de un programa/librería, no pasa nada, porque estos están vive en carpetas distintas, con <em>hashes</em>, etc. En cualquier otro sistema, tendrías una sola versión de ese programa (e.g <code>/usr/lib/libfoo.so</code>) y de ahí los virtual envs como <code>nvm</code>, <code>virtualenvs</code>, <code>Flatpak</code>, <code>AppImage</code>, <code>LD_LIBRARY_PATH</code> y soluciones con las que tenés que lidear vos o el manejador de paquetes (<em>package manager</em>) de tu OS (<code>apt</code>, <code>apk</code>, <code>pacaman</code>, <code>yum</code>, etc.)</p>
+<h1 id="velocidrone">Velocidrone</h1>
+<p>No todo es ___________ en el mundo Nix. .. Hace aproximadamente un año, me levanté un domingo con, aparentemente, mucha paciencia y les levanté un ticket a la gente de &ldquo;Bat Cave Games&rdquo;. Ellos hacen un <del>juego</del> simulador muy bueno para drones de carrera, <a href="https://www.velocidrone.com/">VelociDrone</a>. Su simulador está hecho en Unity y soporta Windows, OSX (Intel, M1 y M2) y Linux (Redhat y Debian).</p>
+<p><img src="/images/posts/nix_gc07.jpg" alt="GC07"></p>
+</div>
+  </article>
+  <script defer src="https://comentario.contre.io/comentario.js"></script>
+  <comentario-comments auto-non-interactive-sso="true" theme="dark" page-id="/es/posts/velocidrone/"></comentario-comments>
+</main>
+
+    </div>
+    <footer>
+  <hr />
+  
+</footer>
+
+  </body>
+</html>

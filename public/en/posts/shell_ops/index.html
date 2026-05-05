@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
@@ -32,14 +32,14 @@
   <body>
     <header>
   <div id="brand">
-    <a class="icon-link" href="http://10.0.0.5:1313/">
+    <a class="icon-link" href="https://blog.contre.io/">
       <img
         class="icon"
         src="/images/img.svg"
       />
     </a>
     <div class="text">
-      <a href="http://10.0.0.5:1313/"><h1>Contre</h1></a>
+      <a href="https://blog.contre.io/"><h1>Contre</h1></a>
       <h3>|||||||||||</h3>
     </div>
   </div>
@@ -98,7 +98,7 @@
     
     
   </strong>
-  <span> • 1194 words</span>
+  <span> • 1210 words</span>
   <span> • 6 minute read</span>
   
   
@@ -112,7 +112,7 @@
 </div>
 
     <div><p><img src="/images/posts/bash_banner.jpg" alt="Dan Case v4.1"></p>
-<p>I&rsquo;ve been hosting services at home since 2018. Started with Plex and a <code>docker-compose.yml</code>, migrated to Podman with <code>podman play kube</code>, and now I&rsquo;m on Kubernetes with K3S. The server&rsquo;s evolution has always been driven by whatever I felt like playing with at the time. I always avoided fancy prepackaged solutions like Flux or Argo, never had a NAS (for now), and never ran more than one or two nodes. To me, the home server is a synonym for infinite entertainment, and I&rsquo;m pretty sure <a href="https://reddit.com/r/homelab">many</a> <a href="https://www.reddit.com/r/selfhosted/">others</a> feel the same way. I could write for hours about my setup — NixOS, K3s, networking, the whole philosophy — but that&rsquo;s not today&rsquo;s topic. Today I want to share some <em>shell-flavored</em> tricks that make my day-to-day easier; some of the small things we tend to underestimate.</p>
+<p>I&rsquo;ve been hosting services at home since 2018. Started with Plex and a <code>docker-compose.yml</code>, migrated to Podman with <code>podman play kube</code>, and now I&rsquo;m on Kubernetes with K3S. The server&rsquo;s evolution has always been driven by whatever I felt like playing with at the time. I always avoided fancy prepackaged solutions like Flux or Argo, never had a NAS (for now), and never ran more than one or two nodes. To me, the home server is a synonym for infinite entertainment, and I&rsquo;m pretty sure <a href="https://reddit.com/r/homelab">many</a> <a href="https://www.reddit.com/r/selfhosted/">others</a> feel the same way. I could write for hours about my setup, NixOS, K3s, networking, the whole philosophy, but that&rsquo;s not today&rsquo;s topic. Today I want to share some <em>shell-flavored</em> tricks that make my day-to-day easier; some of the small things we tend to underestimate.</p>
 <h1 id="services">Services</h1>
 <p>Services come and go; I think I have more services installed in the cluster than apps on my phone. Right now I&rsquo;m running <strong>67 services</strong> (<code>ls -d1 services/* | wc -l</code>).</p>
 <p>For creating new services I use <code>opencode</code> 100% of the time, lately with <strong>Big Pickle</strong>, but any of the free models at <a href="https://opencode.ai/docs/zen/">opencode.ai</a> work fine. I have a Markdown file that explains how to define a new service: folder structure to follow (and what to avoid), some edge cases and how to handle them, which <strong>annotations</strong> services need, when and how to create secrets, which volumes to mount and where, among many other things. It&rsquo;s fantastic.</p>
@@ -121,14 +121,14 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/enabled</span>: <span style="color:#e6db74">&#34;true&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/name</span>: <span style="color:#ae81ff">&lt;AppName&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/description</span>: <span style="color:#ae81ff">&lt;short description&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/group</span>: <span style="color:#ae81ff">&lt;group&gt;       </span> <span style="color:#75715e"># e.g. Tools, Media, Social, Monitoring</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/group</span>: <span style="color:#ae81ff">&lt;group&gt;</span> <span style="color:#75715e"># e.g. Tools, Media, Social, Monitoring</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/icon</span>: <span style="color:#ae81ff">&lt;app&gt;.png</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/pod-selector</span>: <span style="color:#e6db74">&#34;app=&lt;app-name&gt;&#34;</span>
 </span></span></code></pre></div><p>Metrics and logs follow the same strategy: collected and computed per <em>namespace</em>, so I can filter and distinguish them in <strong>Grafana</strong>. Every time a new <em>namespace</em> is created, I automatically get metrics and logs in the same dashboard.</p>
 <p><img src="/images/posts/bash_metrics.jpg" alt="Services"></p>
 <h1 id="my-state-is-the-cluster-and-the-cluster-is-my-state">My state is the cluster and the cluster is my state</h1>
-<p>I pay tribute only to <code>etcd</code> and pay my taxes with <code>kubectl apply</code>. To organize running services, <code>kustomize</code> gives me a hand. Each service lives in its own folder and its own <code>namespace</code>. I don&rsquo;t use <em>Helm</em> for any service and avoid it whenever I can. No custom kustomize generators either — I keep it simple with <code>k apply -k services/&lt;service_folder&gt;</code> whenever I feel like appointing some official by decree.</p>
-<p>When I need to do some state restructuring, I give everyone the day off with this command:</p>
+<p>I pay tribute only to <code>etcd</code> and pay my taxes with <code>kubectl apply</code>. To organize working officials, <code>kustomize</code> gives me a hand. Each official hast its own office (<code>namespace</code>). I don&rsquo;t use <em>Helm</em> for any service and avoid it whenever I can. No custom kustomize generators either, I keep it simple with <code>k apply -k services/&lt;service_folder&gt;</code> whenever I feel like appointing some official by decree.</p>
+<p>If I need to do some state restructuring, I give everyone the day off with this command:</p>
 <p><code>ls -d services/*/ | xargs basename -a | xargs -I{} kubectl scale deployment --all -n {} --replicas=0</code></p>
 <p>To make sure the government building is empty, with only the bare essentials still running, I just do <code>k get pods -A</code>:</p>
 <pre tabindex="0"><code>NAMESPACE     NAME                                      READY   STATUS      RESTARTS        AGE
@@ -144,8 +144,8 @@ kube-system   hubble-ui-ffdc7bfb5-9z9d9                 2/2     Running     8 (3
 kube-system   local-path-provisioner-546dfc6456-8v9wg   1/1     Running     4 (3d15h ago)   18d
 kube-system   metrics-server-c8774f4f4-7c9qn            1/1     Running     5 (3d15h ago)   18d
 kube-system   traefik-6b4c7c8d94-xbb55                  1/1     Running     4 (3d15h ago)   18d
-</code></pre><p>And every once in a while, if some official has an important project, I make them work anyway — like: <code>k apply -k services/booklore</code>.</p>
-<p>Getting everyone back to work is a bit more complicated, because many of them depend on the security staff to get into the building. On those days I give everyone the day off except security, and no, I don&rsquo;t pay them extra:</p>
+</code></pre><p>And every once in a while, if some official has an important project, I make them work anyway, like: <code>k apply -k services/booklore</code>.</p>
+<p>Getting someone back to work is a bit more complicated when government is shutdown, many depend on the security staff to get into the building. On those days I give everyone the day off except security, and no, I don&rsquo;t pay them extra:</p>
 <p><code>ls -d services/*/ | xargs basename -a | grep -vE '^(REDACTED2|REDACTED1|homepage|cert-manager)$' | xargs -I{} kubectl scale deployment --all -n {} --replicas=0</code></p>
 <p>On those days, the building looks something like this:</p>
 <pre tabindex="0"><code>k get pods -A
@@ -168,9 +168,9 @@ kube-system    metrics-server-c8774f4f4-7c9qn            1/1     Running     5 (
 kube-system    traefik-6b4c7c8d94-xbb55                  1/1     Running     4 (3d17h ago)   18d
 REDACTED2      REDACTED2-7cd9cd7f56-sg57h                1/1     Running     0               93m
 REDACTED1      REDACTED1-6cccd8684f-rrvlc                1/1     Running     0               92m
-</code></pre><p>When I need to wipe a <code>namespace</code> completely and recreate a service, I have a <code>./deploy.sh</code> script that uses <code>fzf</code>. A simple <code>find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf</code> and I pick which service to deploy.</p>
+</code></pre><p>When I need to wipe a <code>namespace</code> completely and recreate a service, I have a <code>./deploy.sh</code> script that uses <code>fzf</code>. A simple <code>find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf</code> and I pick which service to re-deploy from scratch.</p>
 <p><img src="/images/posts/bash_deploy.gif" alt="Services"></p>
-<p>I interact with services mostly imperatively from the terminal, using a handful of aliases and heavy <code>fzf</code> usage. Because like any organization, I also have a <em>directory</em> with <em>files</em> on each employee. Some of the aliases I use most:</p>
+<p>Like any organization, I also keep a <em>directory</em> with <em>files</em> on each employee, and any other interaction with the officials I handle mostly imperatively: from the terminal I give them commands and ask them for information. To make that easier, I have a bunch of aliases and make heavy use of <code>fzf</code>. Some of the ones I reach for most:</p>
 <p>A <code>tail -f</code> of a service&rsquo;s logs:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>kogs <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ns=$(kubectl get ns -o jsonpath=&#39;{.items[*].metadata.name}&#39;|tr &#39; &#39; &#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;|fzf)&amp;&amp;pod=$(kubectl get pods -n </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">$ns</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> --field-selector=status.phase=Running -o jsonpath=&#39;{.items[*].metadata.name}&#39;|tr &#39; &#39; &#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;|fzf)&amp;&amp;kubectl logs -n </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">$ns</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">$pod</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> --all-containers=true -f&#34;</span>;
 </span></span></code></pre></div><p>Restart all services:</p>

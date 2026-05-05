@@ -28,8 +28,34 @@
                 href="https://blog.contre.io/en/posts/"
                 />
   </url><url>
+    <loc>https://blog.contre.io/en/tags/self-hosted/</loc>
+    <lastmod>2026-05-03T13:48:32+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/self-hosted/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/self-hosted/"
+                />
+  </url><url>
+    <loc>https://blog.contre.io/en/posts/shell_ops/</loc>
+    <lastmod>2026-05-03T13:48:32+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/posts/shell_ops/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/posts/shell_ops/"
+                />
+  </url><url>
     <loc>https://blog.contre.io/en/tags/</loc>
-    <lastmod>2026-05-01T20:00:47+02:00</lastmod>
+    <lastmod>2026-05-03T13:48:32+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
@@ -42,7 +68,7 @@
                 />
   </url><url>
     <loc>https://blog.contre.io/en/tags/tech/</loc>
-    <lastmod>2026-05-01T20:00:47+02:00</lastmod>
+    <lastmod>2026-05-03T13:48:32+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
@@ -136,19 +162,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://blog.contre.io/en/posts/music_hoarding/"
-                />
-  </url><url>
-    <loc>https://blog.contre.io/en/tags/self-hosted/</loc>
-    <lastmod>2025-06-12T00:18:54+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/self-hosted/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.contre.io/en/tags/self-hosted/"
                 />
   </url><url>
     <loc>https://blog.contre.io/en/tags/pictures/</loc>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
@@ -32,14 +32,14 @@
   <body>
     <header>
   <div id="brand">
-    <a class="icon-link" href="http://10.0.0.5:1313/">
+    <a class="icon-link" href="https://blog.contre.io/">
       <img
         class="icon"
         src="/images/img.svg"
       />
     </a>
     <div class="text">
-      <a href="http://10.0.0.5:1313/"><h1>Contre</h1></a>
+      <a href="https://blog.contre.io/"><h1>Contre</h1></a>
       <h3>|||||||||||</h3>
     </div>
   </div>
@@ -98,7 +98,7 @@
     
     
   </strong>
-  <span> • 1175 words</span>
+  <span> • 1271 words</span>
   <span> • 6 minute read</span>
   
   
@@ -112,23 +112,22 @@
 </div>
 
     <div><p><img src="/images/posts/bash_banner.jpg" alt="Dan Case v4.1"></p>
-<p>Desde el 2018 que empecé a hostear servicios en casa. Empecé con Plex y un <code>docker-compose.yml</code>, migré a Podman con <code>podman play kube</code> y ahora kubernetes con K3S. La evolución del server estuvo siempre determinada por mi interés o mis ganas de jugar una u otra tecnología. Siempre le escapé a soluciones sofisticadas o enlatadas como Flux o Argo, nunca tuve un NAS (por ahora) y nunca tuve más de uno o dos nodos corriendo. A mis ojos, el server, es sinónimo de entretenimiento infinito, y estoy seguro que es el caso de <a href="https://reddit.com/r/homelab">muchos</a> <a href="https://www.reddit.com/r/selfhosted/">otros</a>. Puedo escribir horas de lo que tengo montado, hablar de NixOS, K3s, redes y filosofar al respecto, pero hoy no va a ser el caso. Hoy te voy a contar un poco algunas soluciones <em>shellisticas</em> que me hacen el día a día más fácil, te voy a contar algunas bondades que subestimamos a diario.</p>
+<p>Desde 2018 que empecé a hostear servicios en casa. Empecé con Plex y un <code>docker-compose.yml</code>, migré a Podman con <code>podman play kube</code> y ahora kubernetes con K3S. La evolución del server estuvo siempre determinada por mi interés o mis ganas de jugar con una u otra tecnología. Siempre le escapé a soluciones sofisticadas o enlatadas como Flux o Argo, nunca tuve un NAS (por ahora) y nunca tuve más de uno o dos nodos corriendo. A mis ojos, el server, es sinónimo de entretenimiento infinito, y estoy seguro que es el caso de <a href="https://reddit.com/r/homelab">muchos</a> <a href="https://www.reddit.com/r/selfhosted/">otros</a>. Puedo escribir horas de lo que tengo montado, hablar de NixOS, K3s, redes y filosofar al respecto, pero hoy no va a ser el caso. Hoy te voy a compartir un poco algunas soluciones <em>shellísticas</em> que me hacen el día a día más fácil, en un mundo que uno elige hacerse difícil.</p>
 <h1 id="servicios">Servicios</h1>
-<p>Los servicios van y vienen, creo que tengo más servicios instalados en el cluster que app en el celular. Hoy en día tengo corriendo <strong>67 servicios</strong> (<code>ls -d1 services/* | wc -l</code>).</p>
-<p>Para crear nuevos servicios uso <code>opencode</code> el 100% de las veces, últimamente con <strong>Big Pickle</strong>, pero cualquiera de los modelos que ofrece gratis <a href="https://opencode.ai/docs/zen/">opencode.ai</a> van bien. Tengo definido un Markdown que explica un poco cómo definir un nuevo servicio. Ahí se detallan cosas como: qué estructuras de carpetas seguir y cuáles no, algunos casos bordes y cómo solucionarlos, que <strong>annotations</strong> tienen que tener los servicios, cuándo y cómo crear secretos, qué volúmenes montar y en dónde, entre otras muchas cosas. Es fantástico.</p>
+<p>Los servicios van y vienen, creo que tengo más servicios instalados en el cluster que apps en el celular. Mientras escribo esto, tengo corriendo <strong>67 servicios</strong> (<code>ls -d1 services/* | wc -l</code>). Mi forma de interactuar con el cluster, como tantas otras cosas, cambió radicalmente en el último tiempo, ahora, para crear nuevos servicios uso <code>opencode</code> el 100% de las veces. La creación es bien sencilla y predecible, últimamente alcanza con <strong>Big Pickle</strong>, o incluso <code>gemma4</code> o <code>qwen</code> corriendo local, si no, cualquiera de los modelos que ofrece gratis <a href="https://opencode.ai/docs/zen/">opencode.ai</a> también van bien. En la raíz de mi repo tengo un Markdown que explica un poco cómo definir un nuevo servicio y le da contexto a la IA. Ahí se detallan cosas como: qué estructuras de carpetas seguir y cuáles no, algunos casos borde y cómo solucionarlos, qué <strong>annotations</strong> tienen que tener los servicios, cuándo y cómo crear secretos, qué volúmenes montar y  dónde, entre otras muchas cosas. Es fantástico. El output son simples <code>.yaml</code> altamente auditables y fáciles de verificar.</p>
 <p><img src="/images/posts/bash_svc.jpg" alt="Services"></p>
-<p>Para que un servicio aparezca en el dashboard, cada <code>ingress.yaml</code> tiene un set de anotaciones que hace que aparezca en el dashboard cuando está desplegado el <em>Ingress</em>, para eso uso <a href="https://gethomepage.dev/">Homepage</a>. No sé si es el más lindo o el más avanzado, mi único requisito es que no tenga que agregarlos a mano y pueda manejarlo enteramente desde la definición de cada servicio (desde su <em>Manifest</em>), para ello se usan las siguientes anotaciones:</p>
+<p>Para que un servicio figure en el dashboard, cada <code>ingress.yaml</code> tiene un conjunto de anotaciones que hace que aparezca en el mismo cuando está desplegado. Para eso uso <a href="https://gethomepage.dev/">Homepage</a>. No sé si es el más lindo o el más avanzado, mi único requisito es que no tenga que agregarlos a mano y pueda manejarlos enteramente desde la definición de cada servicio (desde su <em>Manifest</em>), para ello se usan las siguientes anotaciones:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/enabled</span>: <span style="color:#e6db74">&#34;true&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/name</span>: <span style="color:#ae81ff">&lt;AppName&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/description</span>: <span style="color:#ae81ff">&lt;short description&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/group</span>: <span style="color:#ae81ff">&lt;group&gt;       </span> <span style="color:#75715e"># e.g. Tools, Media, Social, Monitoring</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/group</span>: <span style="color:#ae81ff">&lt;group&gt;</span> <span style="color:#75715e"># e.g. Tools, Media, Social, Monitoring</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/icon</span>: <span style="color:#ae81ff">&lt;app&gt;.png</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">gethomepage.dev/pod-selector</span>: <span style="color:#e6db74">&#34;app=&lt;app-name&gt;&#34;</span>
-</span></span></code></pre></div><p>Las métricas y los logs siguen la misma estrategia, se recolectan y calculan por <em>namespace</em> y así las puedo filtrar y distinguir en <strong>Grafana</strong>. Cada vez que se crea un nuevo <em>namespace</em>, automáticamente tengo métrics y logs en el mismo dashboard.</p>
+</span></span></code></pre></div><p>Las métricas y los logs siguen la misma estrategia, se recolectan y calculan por <em>namespace</em> y así las puedo filtrar y distinguir en <strong>Grafana</strong>. Cada vez que se crea un nuevo <em>namespace</em>, automáticamente tengo métricas y logs en el mismo dashboard.</p>
 <p><img src="/images/posts/bash_metrics.jpg" alt="Services"></p>
-<h1 id="mi-estado-es-cluster-y-el-cluster-es-mi-estado">Mi estado es cluster y el cluster es mi estado</h1>
-<p>Solo rindo tributo a <code>etcd</code> y pago mis impuestos con <code>kubectl apply</code>. Para organizar los servicios que tengo corriendo, <code>kustomize</code> me da una mano. Cada servicio lo tengo en su carpeta y vive en su propio <code>namespace</code>, no uso <em>Helm</em> para ningún servicio e intento escaparle cuando puedo, tampoco tengo ningún custom generator de kustomize y me limito simplemente a <code>k apply -k services/&lt;service_folder&gt;</code> cuando quiero cambiar algún que otro funcionario a dedo según se me da la gana.</p>
-<p>Cuando necesito hacer una reforma estatal, les doy franco a todos mis funcionarios con este comando:</p>
+<h1 id="mi-estado-es-el-cluster-y-el-cluster-es-mi-estado">Mi estado es el cluster y el cluster es mi estado</h1>
+<p>Sólo rindo tributo al <code>etcd</code> y pago mis impuestos con <code>kubectl apply</code>. Para organizar a mis funcionarios, <code>kustomize</code> me da una mano. Cada servicio lo tengo en su carpeta y vive en su propio <code>namespace</code>, no uso <em>Helm</em> para ningún servicio y le intento escapar cuando puedo, tampoco tengo ningún <em>custom generator</em> de kustomize y me limito simplemente a <code>k apply -k services/&lt;service_folder&gt;</code> cuando quiero cambiar algún que otro funcionario a dedo según se me da la gana.</p>
+<p>Si necesito hacer una reforma estatal, les doy franco a todos mis funcionarios con este comando:</p>
 <p><code>ls -d services/*/ | xargs basename -a | xargs -I{} kubectl scale deployment --all -n {} --replicas=0</code></p>
 <p>Para asegurarme que la casa de gobierno esté vacía, y solo queden corriendo algunas funciones básicas, simplemente hago <code>k get pods -A</code>:</p>
 <pre tabindex="0"><code>NAMESPACE     NAME                                      READY   STATUS      RESTARTS        AGE
@@ -145,9 +144,9 @@ kube-system   local-path-provisioner-546dfc6456-8v9wg   1/1     Running     4 (3
 kube-system   metrics-server-c8774f4f4-7c9qn            1/1     Running     5 (3d15h ago)   18d
 kube-system   traefik-6b4c7c8d94-xbb55                  1/1     Running     4 (3d15h ago)   18d
 </code></pre><p>Y muy cada tanto, si tengo algún que otro funcionario con un proyecto importante, lo hago trabajar igual, como por ejemplo: <code>k apply -k services/booklore</code></p>
-<p>Que vuelvan a trabajar es un poco más complicado, porque muchos dependen del personal de seguridad para entrar a casa de gobierno. Esos días les doy franco a todos menos a ellos y no, no les pago extra:</p>
-<p><code>ls -d services/*/ | xargs basename -a | grep -vE '^(REDACTED2|REDACTED1|homepage|cert-manager)$' | xargs -I{} kubectl scale deployment --all -n {} --replicas=0</code></p>
-<p>Esos días, la casa rosada se ve un poco así:</p>
+<p>Que vuelvan a trabajar es un poco más complicado en estos  casos, muchos dependen del personal de seguridad para entrar a Casa de Gobierno. Esos días les doy franco a todos menos a ellos y no, no les pago extra:</p>
+<p><code>ls -d services/*/ | xargs basename -a | grep -vE '^(REDACTED1|REDACTED2|homepage|cert-manager)$' | xargs -I{} kubectl scale deployment --all -n {} --replicas=0</code></p>
+<p>Días como esos, Casa Rosada se ve un poco así:</p>
 <pre tabindex="0"><code>k get pods -A
 NAMESPACE      NAME                                      READY   STATUS      RESTARTS        AGE
 cert-manager   cert-manager-5f9ddb88b4-dm6nw             1/1     Running     0               4s
@@ -168,16 +167,16 @@ kube-system    metrics-server-c8774f4f4-7c9qn            1/1     Running     5 (
 kube-system    traefik-6b4c7c8d94-xbb55                  1/1     Running     4 (3d17h ago)   18d
 REDACTED2      REDACTED2-7cd9cd7f56-sg57h                1/1     Running     0               93m
 REDACTED1      REDACTED1-6cccd8684f-rrvlc                1/1     Running     0               92m
-</code></pre><p>Para cuando quiero borrar un <code>namespace</code> completo y re-crear un servicio tengo un script <code>./deploy.sh</code> que usa <code>fzf</code>. Simplemente con <code>find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf</code> elijo el servicio que desplegar.</p>
+</code></pre><p>Cuando quiero borrar un <code>namespace</code> completo y re-crear un servicio, tengo un script <code>./deploy.sh</code> que usa <code>fzf</code>. Simplemente con <code>find ./services -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | fzf</code> elijo el servicio que desplegar de zero.</p>
 <p><img src="/images/posts/bash_deploy.gif" alt="Services"></p>
-<p>Para interactuar con los servicios lo hago mayormente de manera imperativa desde la terminal con un par de aliases y un uso exhaustivo de <code>fzf</code>. Porque como toda organización, también tengo un <em>directorio</em> con <em>ficheros</em> de sus empleados. Algunos de los aliases que uso más seguidos son:</p>
-<p>Un <code>tail -f</code> de los logs de un servicio</p>
+<p>Como toda entidad estatal, tengo un <em>directorio</em> con <em>ficheros</em> de  mis empleados y cualquier otra interacción con los funcionarios la hago mayormente de manera imperativa, desde la terminal, los comando les pido información. Para facilitar la interacción tengo varios aliases y hago un uso exhaustivo de <code>fzf</code>. Algunos de los aliases que uso más seguidos son:</p>
+<p>Pedirle un reporte a funcionario sobre q fue lo último en lo que estuvo trabajando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>kogs <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ns=$(kubectl get ns -o jsonpath=&#39;{.items[*].metadata.name}&#39;|tr &#39; &#39; &#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;|fzf)&amp;&amp;pod=$(kubectl get pods -n </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">$ns</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> --field-selector=status.phase=Running -o jsonpath=&#39;{.items[*].metadata.name}&#39;|tr &#39; &#39; &#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;|fzf)&amp;&amp;kubectl logs -n </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">$ns</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">$pod</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> --all-containers=true -f&#34;</span>;
-</span></span></code></pre></div><p>Resetear todos los servicios</p>
+</span></span></code></pre></div><p>A falta de una buena analogía, resetear todos los servicios:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>krda <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;kubectl get deployments --all-namespaces | tail +2 | awk &#39;{ cmd=sprintf(</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">kubectl rollout restart deployment -n %s %s</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">, $1, $2) ; system(cmd) }&#39;&#34;</span>;
-</span></span></code></pre></div><p>O un servicio en particular</p>
+</span></span></code></pre></div><p>O un servicio en particular:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>krd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ns=$(kubectl get ns -o jsonpath=&#39;{.items[*].metadata.name}&#39; | tr &#39; &#39; &#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39; | fzf) &amp;&amp; </span><span style="color:#ae81ff">\ </span><span style="color:#e6db74">dep=$(kubectl get deployments -n </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">$ns</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> -o jsonpath=&#39;{.items[*].metadata.name}&#39; | tr &#39; &#39; &#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39; | fzf) &amp;&amp; </span><span style="color:#ae81ff">\ </span><span style="color:#e6db74">kubectl rollout restart deployment </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">$dep</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> -n </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">$ns</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">&#34;</span>;
-</span></span></code></pre></div><p>Cuando usaba <code>podman</code>, <code>kogs</code> era <code>pogs</code> y <code>cogs</code> cuando usaba <code>docker</code> y lo mismo aplica para el resto de los aliases, esa consistencia me deja dormir tranquilo. Siempre que me veo haciendo algo seguido, termina en un alias. La flexibilidad que te da que tus soluciones dependan de carpetas y archivos es un <em>trade-off</em> que no quiero resignar. Y para mí, la <code>cli</code> termina siendo la interfaz definitiva, como dijo Emperor Sh: <em><a href="https://sanctum.geek.nz/etc/emperor-sh-and-the-traveller.txt">&ldquo;Do it in shell&rdquo;</a></em>.</p>
+</span></span></code></pre></div><p>Cuando usaba <code>podman</code>, <code>kogs</code> era <code>pogs</code> y <code>cogs</code> cuando usaba <code>docker</code>. Lo mismo aplica para el resto de los aliases, esa consistencia me deja dormir tranquilo. Siempre que me veo haciendo algo seguido, termina en un alias. La flexibilidad que te da Linux que tus soluciones dependan de carpetas y archivos es un <em>trade-off</em> que no quiero resignar. Y para mí, la <code>cli</code> termina siendo la interfaz definitiva, como dijo Emperor Sh: <em><a href="https://sanctum.geek.nz/etc/emperor-sh-and-the-traveller.txt">&ldquo;Do it in shell&rdquo;</a></em>.</p>
 <table>
   <thead>
       <tr>
@@ -188,7 +187,7 @@ REDACTED1      REDACTED1-6cccd8684f-rrvlc                1/1     Running     0  
   <tbody>
   </tbody>
 </table>
-<p>Como dije en <a href="/es/posts/music_hoarding/">Jardín de Música</a>, creo que hay valor en coleccionar, clasificar y cuidar. Esto es simplemente otra expresión de eso, pero, en vez de canciones, con <em>scriptcitos</em> y <em>hacks</em> que terminan decorando tu entorno y, por sobre todo, haciéndolo más tuyo.</p>
+<p>A modo de cierre, si te estás preguntando para qué toda esta locura, te repito lo que dije en <a href="/es/posts/music_hoarding/">Jardín de Música</a>: &ldquo;Creo que hay valor en coleccionar, clasificar y cuidar&rdquo;. Esto es simplemente otra expresión de eso, pero, en vez de canciones o películas, con <em>scriptcitos</em> y <em>hacks</em> que terminan decorando tu entorno digital y, por sobre todo, haciéndolo más tuyo.</p>
 </div>
   </article>
   <script defer src="https://comentario.contre.io/comentario.js"></script>
