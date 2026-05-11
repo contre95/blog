@@ -109,7 +109,7 @@
     
     
   </strong>
-  <span> • 1767 words</span>
+  <span> • 1834 words</span>
   <span> • 9 minute read</span>
   
   
@@ -139,9 +139,12 @@ Primero que nada, tenés que ver si tu paquete existe. Esto lo hacés en <a href
 <p><img src="/images/posts/nix_gc07.jpg" alt="GC07"></p>
 <p>La foto de arriba es lo que yo denomino un <code>GC-07</code> y determina que existen, al menos, siete Gordos Compu que están en la misma que vos. Un <code>GC-XX</code> puede ocasionar un sinfín de emociones: desde una tristeza y desolación inconmensurables, si es un <code>GC-00</code>, hasta una mera indicación de que estás en el camino correcto, si es un <code>GC-N</code> con <code>N &gt; 100</code>. O puede, como en este caso, dar un pequeño ápice de esperanza de que lo que querés hacer, y como lo querés hacer, se puede; y alguien en este ciber-mundo ya lo intentó. Al tirar la <a href="https://github.com/search?q=lang%3Anix&#43;velocidrone&amp;type=code">query</a> encontré al menos 7 gordos con su repo público.</p>
 <h2 id="qué-el-gordo-sepa-que-el-gordo-puede">Qué el gordo sepa que el gordo puede</h2>
+<blockquote>
+<p><em>Lo que queda de esta entrada, son simplemente los detalles técnicos de lo que se tuvo que hacer para instalar Velocidrone. El post se pone un poco más técnico</em></p>
+</blockquote>
 <p>No totalmente desesperanzado terminé encontrando al gordo Ucraniano <a href="https://github.com/ivankovnatsky">ivankovnatsky</a> al cual le robé su <a href="https://github.com/ivankovnatsky/nix-config/blob/main/overlays/velocidrone/default.nix">velocidrone/default.nix</a> y lo hice propio. Analicemos un poco qué tuvo que hacer Ivan para instalar Velocidrone en NixOS.</p>
 <p><img src="/images/posts/gc07drone.gif" alt="GC07"></p>
-<p>Para instalar un programa en Nix, tenés que declarar un archivo cuyo contenido indica cómo es que este programa tiene que ser construido, qué dependencias va a usar, de dónde se obtiene el código fuente, qué pasos de compilación/instalación deben ejecutarse, entre otras cosas. Algo así, se puede llegar a ver un paquete declarado:</p>
+<p>Para instalar un programa en Nix, tenés que declarar un archivo cuyo contenido indica cómo es que este programa tiene que ser construido, qué dependencias va a usar, de dónde se obtiene el código fuente, qué pasos de compilación/instalación deben ejecutarse, entre otras cosas. Un paquete declarado puede verse algo así:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl"><span class="p">{</span> <span class="n">stdenv</span><span class="o">,</span> <span class="n">fetchFromGitHub</span> <span class="p">}:</span> <span class="c1"># Estas son tus dependencias</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">stdenv</span><span class="o">.</span><span class="n">mkDerivation</span> <span class="k">rec</span> <span class="p">{</span> <span class="c1"># Esto es el nodo dentro de árbol de dependencias</span>
@@ -162,26 +165,26 @@ Primero que nada, tenés que ver si tu paquete existe. Esto lo hacés en <a href
 </span></span></span><span class="line"><span class="cl"><span class="s1">    cp mi-programa $out/bin/
 </span></span></span><span class="line"><span class="cl"><span class="s1">  &#39;&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Veamos que hizo nuestro amigo Iván. Primero descarga el <code>.zip</code> de la página velocidrone:</p>
+</span></span></code></pre></div><p>Veamos qué hizo nuestro amigo Iván. Primero descarga el <code>.zip</code> de la página velocidrone:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl">  <span class="n">src</span> <span class="o">=</span> <span class="n">requireFile</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;production-launcher-debian.zip&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">url</span> <span class="o">=</span> <span class="s2">&#34;https://www.velocidrone.com/download/launcher?id=debian&amp;export=download&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">hash</span> <span class="o">=</span> <span class="s2">&#34;sha256-pVgQxuPkte5Apx05MuVGdh0MYaJ4Wxx+EhsUe79aiJU=&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">};</span>
-</span></span></code></pre></div><p>Este <code>hash</code> es el que vamos a tener que hacer coincidir con el hash de Github que querramos. Nombra al paquete como <code>velocidrone-launcher</code> y descomprime el resultado, que guarda el <code>src = </code>, el <code>.zip</code>:</p>
+</span></span></code></pre></div><p>Este <code>hash</code> es el que vamos a tener que hacer coincidir con el hash de Github que queramos. Nombra al paquete como <code>velocidrone-launcher</code> y descomprime el resultado, que guarda el <code>src = </code>, el <code>.zip</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl"> <span class="n">pname</span> <span class="o">=</span> <span class="s2">&#34;velocidrone-launcher&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">inherit</span> <span class="n">version</span> <span class="n">src</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">nativeBuildInputs</span> <span class="o">=</span> <span class="p">[</span> <span class="n">unzip</span> <span class="p">];</span>
 </span></span><span class="line"><span class="cl">    <span class="n">unpackPhase</span> <span class="o">=</span> <span class="s1">&#39;&#39;
 </span></span></span><span class="line"><span class="cl"><span class="s1">      unzip $src
 </span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;</span><span class="p">;</span>
-</span></span></code></pre></div><p>Lo instalá, qué es basicamente lo que hacía yo cuando tenía que correr Velocidrone antes de encontrar este package.</p>
+</span></span></code></pre></div><p>Lo instala, que es básicamente lo que hacía yo cuando tenía que correr Velocidrone antes de encontrar este package.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl">    <span class="n">installPhase</span> <span class="o">=</span> <span class="s1">&#39;&#39;
 </span></span></span><span class="line"><span class="cl"><span class="s1">      mkdir -p $out/share/velocidrone
 </span></span></span><span class="line"><span class="cl"><span class="s1">      cp Launcher launcher.dat $out/share/velocidrone/
 </span></span></span><span class="line"><span class="cl"><span class="s1">      chmod +x $out/share/velocidrone/Launcher
 </span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;</span><span class="p">;</span>
-</span></span></code></pre></div><p>Y declara el acceso directo qué va en el escritorio, launcher, etc.</p>
+</span></span></code></pre></div><p>Y declara el acceso directo que va en el escritorio, launcher, etc.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl"><span class="n">desktopItem</span> <span class="o">=</span> <span class="n">makeDesktopItem</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;velocidrone&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">desktopName</span> <span class="o">=</span> <span class="s2">&#34;VelociDrone&#34;</span><span class="p">;</span>
@@ -193,7 +196,7 @@ Primero que nada, tenés que ver si tu paquete existe. Esto lo hacés en <a href
 </span></span><span class="line"><span class="cl">      <span class="s2">&#34;Simulation&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">];</span>
 </span></span><span class="line"><span class="cl">  <span class="p">};</span>
-</span></span></code></pre></div><p>Para la mayoría de los programas, con eso sería suficiente, pero no para Velocidrone ya  tiene dependencias dinámicas y las espera un entorno de Linux normal con sus, un entorno FHS, como el que hablamos al principio. Esto, podría haberse evitado, si hubiesemos tenido un compilado estático, que a diferencia de un compilado dinámico, las dependencias se compilan conjunto al binario. En este caso, al no tener acceso al código fuente, compilar <code>Velocidrone</code> <em>per se</em> no es una opción, por eso descargamos Velocidrone compilado. Por ende, más que pasos de compilación, estamos programando un instalador. Lo podés ver como que NixOS <em>maxeo</em> la de facilitar escribir tu instaladores. Por eso es que Iván pudo definir un entorno FHS para el runtime de velocidrone con <code>buildFHSEnv</code> con las librerías que necesita Unity.</p>
+</span></span></code></pre></div><p>Para la mayoría de los programas, con eso sería suficiente, pero no para Velocidrone, ya que tiene dependencias dinámicas y las espera encontrar en un entorno FHS. Esto, podría haberse evitado, si hubiesemos tenido un compilado estático, que a diferencia de un compilado dinámico, las dependencias se compilan conjunto al binario. En este caso, al no tener acceso al código fuente, compilar <code>Velocidrone</code> <em>per se</em> no es una opción, por eso descargamos Velocidrone compilado. Por ende, más que pasos de compilación, estamos programando un instalador. Lo podés ver como que NixOS <em>maxeó</em> la de facilitar escribir tus instaladores. Por eso es que Iván pudo definir un entorno FHS para el runtime de velocidrone con <code>buildFHSEnv</code> con las librerías que necesita Unity.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl"><span class="n">buildFHSEnv</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="n">pname</span> <span class="o">=</span> <span class="s2">&#34;velocidrone&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="k">inherit</span> <span class="n">version</span><span class="p">;</span>
@@ -205,7 +208,7 @@ Primero que nada, tenés que ver si tu paquete existe. Esto lo hacés en <a href
 </span></span><span class="line"><span class="cl">    <span class="n">sqlite</span>
 </span></span><span class="line"><span class="cl">    <span class="n">stdenv</span><span class="o">.</span><span class="n">cc</span><span class="o">.</span><span class="n">cc</span><span class="o">.</span><span class="n">lib</span>
 </span></span><span class="line"><span class="cl">  <span class="p">];</span>
-</span></span></code></pre></div><p>Y luego , declara un script que va a usar de <em>wrapper</em> antes de llamar al binario, en este caso el <code>Launcher</code> :</p>
+</span></span></code></pre></div><p>Y luego, declara un script que va a usar de <em>wrapper</em> antes de llamar al binario, en este caso el <code>Launcher</code> :</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl"> <span class="n">runScript</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">getExe</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="n">stdenv</span><span class="o">.</span><span class="n">mkDerivation</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;velocidrone-wrapper&#34;</span><span class="p">;</span>
@@ -227,13 +230,20 @@ Primero que nada, tenés que ver si tu paquete existe. Esto lo hacés en <a href
 </span></span></span><span class="line"><span class="cl"><span class="s1">      &#39;&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">      <span class="n">meta</span><span class="o">.</span><span class="n">mainProgram</span> <span class="o">=</span> <span class="s2">&#34;velocidrone-wrapper&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span></code></pre></div><p>y después instala un icono custom con un <code>extraInstallCommands</code> y declara un poco de metadata con <code>meta=</code>. Una vez declarado el package, lo instala usando un Nix <a href="https://wiki.nixos.org/wiki/Overlays">overlay</a> que se ve basicamente así en tu código:</p>
+</span></span></code></pre></div><p>y después instala un icono custom con un <code>extraInstallCommands</code> y declara un poco de metadata con <code>meta=</code>. Una vez declarado el package, lo instala usando un Nix <a href="https://wiki.nixos.org/wiki/Overlays">overlay</a> que se ve algo así en tu código:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl"><span class="n">final</span><span class="p">:</span> <span class="n">prev</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="n">velocidrone</span> <span class="o">=</span> <span class="n">prev</span><span class="o">.</span><span class="n">callPackage</span> <span class="sr">./velocidrone.nix</span> <span class="p">{};</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>y te permite extender el conjunto de paquetes de tu nix, generalmente <code>nixpkgs.url = &quot;github:NixOS/nixpkgs/nixos-25.11</code></p>
-<p>Cierre:
-Igual&hellip; sobre el nicho que es Linux, en el que se encuentra NixOS, tenés que solaparle el nicho de <a href="https://en.wikipedia.org/wiki/Wayland_%28protocol%29">Wayland</a> y ahí dentro de ese el de <a href="https://hypr.land/">Hyprland</a>. Se te termina haciendo un diagrama de Venn en donde terminás parado vos y un par de gordos más, pero no importa.</p>
+</span></span></code></pre></div><p>y te permite extender el conjunto de paquetes de tu nix, generalmente <code>nixpkgs.url = &quot;github:NixOS/nixpkgs/nixos-25.11</code>. Pudiendo así instalar <code>velocidrone</code> como cualquier otro <code>pkgs</code> dentro de tu configuración. Después de crear los archivos pertinentes y un par de modificaciones al <code>installPhase</code>, un <code>nixos-rebuild switch</code> y salió andando.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/sh
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nb">export</span> <span class="nv">UNITY_DISABLE_PLUGINS</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SDL_VIDEO_FULLSCREEN_HEAD</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SDL_VIDEO_FULLSCREEN_DISPLAY</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SDL_VIDEODRIVER</span><span class="o">=</span>x11
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">QT_QPA_PLATFORM</span><span class="o">=</span>xcb
+</span></span><span class="line"><span class="cl"><span class="nv">dir</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.velocidrone&#34;</span>
+</span></span></code></pre></div><p>Encontrar gordos como Iván, es jodido. NixOS ya es un nicho dentro de Linux, al que le tenés que solapar el de <a href="https://en.wikipedia.org/wiki/Wayland_%28protocol%29">Wayland</a> y adentro el de <a href="https://hypr.land/">Hyprland</a>. Se te termina haciendo un diagrama de Venn en donde terminás parado vos, que llegaste hasta acá, un par de gordos más y yo, en la intersección de la locura.</p>
+<p>Gracias, <a href="https://github.com/ivankovnatsky">ivankovnatsky</a>.</p>
 </div>
   </article>
   <script defer src="https://comentario.contre.io/comentario.js"></script>
