@@ -71,6 +71,12 @@
         
       
         
+           | 
+          <a href="/en/pictures/"><b>📸</b></a>
+          
+        
+      
+        
       
     </span>
     <span class="nav-right">
@@ -123,13 +129,13 @@
 <p>This will be a small walk through on how to generate an authentication subkey on GPG and integrated with ssh. First of all bare in mind that will need a GPG key first in order to generate this subkey, if have not generated on yet refer to part 0 of these series.</p>
 <h3 id="authentication-key">Authentication Key</h3>
 <p>In order to generate an authentication key, as I mentioned before, you will need to have a key generated. Let&rsquo;s check that with</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ gpg -K                                                       
-</span></span><span style="display:flex;"><span>/home/&lt;USER&gt;/.gnupg/pubring.kbx
-</span></span><span style="display:flex;"><span>-------------------------------
-</span></span><span style="display:flex;"><span>sec   rsa4096 2019-12-19 <span style="color:#f92672">[</span>SC<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>      F0ASSDF32440E42342FDF25GHB8F9CF4EC8EFE1B
-</span></span><span style="display:flex;"><span>uid           <span style="color:#f92672">[</span>ultimate<span style="color:#f92672">]</span> Your Name <span style="color:#f92672">(</span>Comment<span style="color:#f92672">)</span> &lt;yourmail@yourdomain.com&gt;
-</span></span><span style="display:flex;"><span>ssb   rsa4096 2019-12-19 <span style="color:#f92672">[</span>E<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ gpg -K                                                       
+</span></span><span class="line"><span class="cl">/home/&lt;USER&gt;/.gnupg/pubring.kbx
+</span></span><span class="line"><span class="cl">-------------------------------
+</span></span><span class="line"><span class="cl">sec   rsa4096 2019-12-19 <span class="o">[</span>SC<span class="o">]</span>
+</span></span><span class="line"><span class="cl">      F0ASSDF32440E42342FDF25GHB8F9CF4EC8EFE1B
+</span></span><span class="line"><span class="cl">uid           <span class="o">[</span>ultimate<span class="o">]</span> Your Name <span class="o">(</span>Comment<span class="o">)</span> &lt;yourmail@yourdomain.com&gt;
+</span></span><span class="line"><span class="cl">ssb   rsa4096 2019-12-19 <span class="o">[</span>E<span class="o">]</span>
 </span></span></code></pre></div><p>Then we will edit our key using the key ID shown above with the command <code>gpg --expert --edit-key F0ASSDF32440E42342FDF25GHB8F9CF4EC8EFE1B</code>. We&rsquo;ll be prompt with a GPG tty where we will be able to add a new key with &ldquo;Authentication&rdquo; capabilities. By default, as we have seen in <code>part 0</code>, GnuPG creates new keys with Sign and Encryption capabilities so we need to make sure to remove those since we already have keys for that purpose.
 Now answer what you are prompted and you&rsquo;ll be good to go. I&rsquo;ll leave a set of steps taken from <a href="https://support.yubico.com/support/solutions/articles/15000006420-using-your-yubikey-with-openpgp">Yubico&rsquo;s website</a> I&rsquo;ve found very useful.</p>
 <ol>
@@ -145,33 +151,33 @@ Now answer what you are prompted and you&rsquo;ll be good to go. I&rsquo;ll leav
 <li>When prompted to save your changes, enter y (yes).</li>
 </ol>
 <p>Once you&rsquo;re done, run <code>gpg -K</code>. The output should look something like this.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$&gt; gpg -K                                                       
-</span></span><span style="display:flex;"><span>/home/&lt;USER&gt;/.gnupg/pubring.kbx
-</span></span><span style="display:flex;"><span>-------------------------------
-</span></span><span style="display:flex;"><span>sec   rsa4096 2019-12-19 <span style="color:#f92672">[</span>SC<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>      F0ASSDF32440E42342FDF25GHB8F9CF4EC8EFE1B
-</span></span><span style="display:flex;"><span>uid           <span style="color:#f92672">[</span>ultimate<span style="color:#f92672">]</span> Your Name <span style="color:#f92672">(</span>Comment<span style="color:#f92672">)</span> &lt;yourmail@yourdomain.com&gt;
-</span></span><span style="display:flex;"><span>ssb   rsa4096 2019-12-19 <span style="color:#f92672">[</span>E<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>ssb   rsa4096 2019-12-27 <span style="color:#f92672">[</span>A<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$&gt; gpg -K                                                       
+</span></span><span class="line"><span class="cl">/home/&lt;USER&gt;/.gnupg/pubring.kbx
+</span></span><span class="line"><span class="cl">-------------------------------
+</span></span><span class="line"><span class="cl">sec   rsa4096 2019-12-19 <span class="o">[</span>SC<span class="o">]</span>
+</span></span><span class="line"><span class="cl">      F0ASSDF32440E42342FDF25GHB8F9CF4EC8EFE1B
+</span></span><span class="line"><span class="cl">uid           <span class="o">[</span>ultimate<span class="o">]</span> Your Name <span class="o">(</span>Comment<span class="o">)</span> &lt;yourmail@yourdomain.com&gt;
+</span></span><span class="line"><span class="cl">ssb   rsa4096 2019-12-19 <span class="o">[</span>E<span class="o">]</span>
+</span></span><span class="line"><span class="cl">ssb   rsa4096 2019-12-27 <span class="o">[</span>A<span class="o">]</span>
 </span></span></code></pre></div><p><em>Note that now we have a new subkey with &quot; [A] &quot; capabilities.</em></p>
 <h3 id="integrating-ssh">Integrating SSH</h3>
 <p>First of all let me clarify that using GPG does not make your SSH connections more secure, it just change a bit the way you manage your ssh keys and sometimes is a bit more convenient.
 To make use of the new authentication subkey we&rsquo;ve just created, we need to tell the <code>gpg-agent</code> we want him to handles the ssh requests from SSH. For that we need to enable ssh support by running the following command.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; echo <span style="color:#e6db74">&#34;enable-ssh-support&#34;</span> &gt;&gt; ~/.gnupn/gpg-agent.conf
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$&gt; <span class="nb">echo</span> <span class="s2">&#34;enable-ssh-support&#34;</span> &gt;&gt; ~/.gnupn/gpg-agent.conf
 </span></span></code></pre></div><p>Additionally you might want to specify which subkey you want to use. We do this by adding the <code>keygrip</code> of our key to <code>~/.gnupg/sshcontrol</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shelL" data-lang="shelL"><span style="display:flex;"><span>$&gt; gpg -K --with-keygrip
-</span></span><span style="display:flex;"><span>/home/&lt;USER&gt;/.gnupg/pubring.kbx
-</span></span><span style="display:flex;"><span>-------------------------------
-</span></span><span style="display:flex;"><span>sec   rsa4096 2019-12-19 <span style="color:#f92672">[</span>SC<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>      F032E440E7B8F960B9A4D68BA32DDCF4EC8EFE1B
-</span></span><span style="display:flex;"><span>      Keygrip <span style="color:#f92672">=</span> 872C0BA0BB0EAB6600EE9A14146819B41DFF8B73
-</span></span><span style="display:flex;"><span>uid           <span style="color:#f92672">[</span>ultimate<span style="color:#f92672">]</span> Lucas Contre <span style="color:#f92672">(</span>Contre<span style="color:#f92672">)</span> &lt;lucascontre95@gmail.com&gt;
-</span></span><span style="display:flex;"><span>ssb   rsa4096 2019-12-19 <span style="color:#f92672">[</span>E<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>      Keygrip <span style="color:#f92672">=</span> 96FD0AD76EB01C5475122670A0F85961C7952A1E
-</span></span><span style="display:flex;"><span>ssb   rsa4096 2019-12-19 <span style="color:#f92672">[</span>A<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>      Keygrip <span style="color:#f92672">=</span> 037A6603BBDA3461BF672F8071037AK66ACACE34
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$ echo  037A6603BBDA3461BF672F8071037AK66ACACE34 &gt;&gt; ~/.gnupg/sshcontrol
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shelL" data-lang="shelL"><span class="line"><span class="cl">$&gt; gpg -K --with-keygrip
+</span></span><span class="line"><span class="cl">/home/&lt;USER&gt;/.gnupg/pubring.kbx
+</span></span><span class="line"><span class="cl">-------------------------------
+</span></span><span class="line"><span class="cl">sec   rsa4096 2019-12-19 <span class="o">[</span>SC<span class="o">]</span>
+</span></span><span class="line"><span class="cl">      F032E440E7B8F960B9A4D68BA32DDCF4EC8EFE1B
+</span></span><span class="line"><span class="cl">      <span class="nv">Keygrip</span> <span class="o">=</span> 872C0BA0BB0EAB6600EE9A14146819B41DFF8B73
+</span></span><span class="line"><span class="cl">uid           <span class="o">[</span>ultimate<span class="o">]</span> Lucas Contre <span class="o">(</span>Contre<span class="o">)</span> &lt;lucascontre95@gmail.com&gt;
+</span></span><span class="line"><span class="cl">ssb   rsa4096 2019-12-19 <span class="o">[</span>E<span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">Keygrip</span> <span class="o">=</span> 96FD0AD76EB01C5475122670A0F85961C7952A1E
+</span></span><span class="line"><span class="cl">ssb   rsa4096 2019-12-19 <span class="o">[</span>A<span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">Keygrip</span> <span class="o">=</span> 037A6603BBDA3461BF672F8071037AK66ACACE34
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span>  037A6603BBDA3461BF672F8071037AK66ACACE34 &gt;&gt; ~/.gnupg/sshcontrol
 </span></span></code></pre></div><p>Last but not least you need to tell the <code>ssh-agent</code> how to access these keys. This is done by changing the SSH_AUTH_SOCK env variable.
 To be sure this variable is well set, add these two lines to your <code>.bashrc</code>, <code>.zshrc</code> or whatever shell run commands file you use.</p>
 <pre tabindex="0"><code>export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)

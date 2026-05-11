@@ -6,7 +6,7 @@ tags:
     - Viajes
 ---
 
-![Fungi](/images/posts/fungi.jpg)
+![Fungi](/images/posts/germany_banner.jpg)
 
 
 Lo que en principio iban a ser 370km en bici, terminaron siendo menos de la mitad. Sin embargo no fue fácil y hasta un tanto peligroso. Nos acompañaban dos todo terreno Giant y Trek. Bien cargadas en ambos costados con ropa, comida y una carpa, supieron andar por tierra, montaña y ruta. Los trenes en Alemania fueron de gran ayuda, tanto para evitar bajadas catalogadas como "expert" en Komoot como para evadir 12mm de lluvia una noche. 

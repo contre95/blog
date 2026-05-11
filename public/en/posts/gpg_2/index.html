@@ -71,6 +71,12 @@
         
       
         
+           | 
+          <a href="/en/pictures/"><b>📸</b></a>
+          
+        
+      
+        
       
     </span>
     <span class="nav-right">
@@ -141,18 +147,18 @@ KMBBP60EgSDpp1eG+4z8M/0O9NV2TQ==
 </code></pre><p>Print that on paper and you&rsquo;ll be good to go. Now that you&rsquo;ve backed up your keys, let&rsquo;s see how can we export them and use them on different devices. There are several ways we can achieve this.</p>
 <p><strong>Having multiple copies of our private key</strong></p>
 <p>A simple and fast solution, if we don&rsquo;t mind having our keys in multiple devices, is simply export them with into a file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>gpg --armor --export-secret-key fula@fuladetal.xyz &gt; private.key
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">gpg --armor --export-secret-key fula@fuladetal.xyz &gt; private.key
 </span></span></code></pre></div><p>and then just import the gpg on the other machine with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>gpg --import private.key
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">gpg --import private.key
 </span></span></code></pre></div><p>This is far from the safest option but it lets us decrypt no matter on what device we are working on.</p>
 <p><strong>Store it on an USB stick</strong></p>
 <p>Another option is to simply store it on an USB stick. This way you can have your private key with you always and there&rsquo;s no need to store it on any machine we don&rsquo;t trust. I haven&rsquo;t tried this solution myself any further than a PoC to be sure it works.</p>
 <p>Basically, what you want to do first is copy the file on <code>~/.gnupg/private-keys-v1.d</code> on an USB stick.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mv ~/.gnupg/private-keys-v1.d/<span style="color:#f92672">{</span>KEYGRIP<span style="color:#f92672">}</span>.key /PATH/TO/USB
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mv ~/.gnupg/private-keys-v1.d/<span class="o">{</span>KEYGRIP<span class="o">}</span>.key /PATH/TO/USB
 </span></span></code></pre></div><p><em>Be aware that moving these files from your machine will require to have the USB stick plugged when you need to decrypt something.</em></p>
 <p>You will probably find more than one <code>{KEYGRIP}.key</code> file, each of them corresponding to a subkey. We can know which one belongs to which by simply listing your key this way: <code>gpg -k --with-keygrip</code></p>
 <p>Now that you&rsquo;ve copied the files into the USB stick you will need to create a symbolic link.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ln -s ~/.gnupg/private-keys-v1.d/<span style="color:#f92672">{</span>KEYGRIP<span style="color:#f92672">}</span>.key /path/to/usb/<span style="color:#f92672">{</span>KEYGRIP<span style="color:#f92672">}</span>.key
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ln -s ~/.gnupg/private-keys-v1.d/<span class="o">{</span>KEYGRIP<span class="o">}</span>.key /path/to/usb/<span class="o">{</span>KEYGRIP<span class="o">}</span>.key
 </span></span></code></pre></div><p>We will need to do this for every single subkey we want to export. Once you are done check you can access these key (with the USB stick plugged) running <code>gpg -K</code> . Bare in mind that you should always <code>mount</code> your device on the same path, otherwise the sym-links won&rsquo;t work.</p>
 <p><strong>Note:</strong> <em>You will need to import your public key as well if you want gpg to recognize your keys. They need to be part of the pubring.kbx database. <a href="https://gnupg-users.gnupg.narkive.com/fZ0hDcpy/how-restore-backuped-gnupg-private-keys-v1-d">Source</a></em>.</p>
 <p><strong>Yubikey or SmartCard</strong></p>

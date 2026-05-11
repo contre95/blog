@@ -71,6 +71,12 @@
         
       
         
+           | 
+          <a href="/en/pictures/"><b>📸</b></a>
+          
+        
+      
+        
       
     </span>
     <span class="nav-right">
@@ -150,7 +156,7 @@ $if($gt(%totaldiscs%,1),$if($gt(%totaldiscs%,9),$num(%discnumber%,2),%discnumber
 <p>As of today, the music archive has <code>6,446 folders</code> and <code>15,627 files</code>, including <code>.mp3</code>, <code>.flac</code>, and <code>.lrc</code> —plus the occasional album cover in <code>.jpg</code>. Not everything is in Beets, since the categorization process can be a bit tedious. The creator actually has an interesting take on that: <a href="https://beets.readthedocs.io/en/stable/guides/tagger.html#an-apology-and-a-brief-interlude">An Apology and a Brief Interlude</a>.</p>
 <p><img src="/images/posts/music_files.png" alt=""></p>
 <p>For backups, I use <code>rsync</code>, what else? Here&rsquo;s the one-liner if you are interested:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>rsync -avr --delete --ignore-existing --info<span style="color:#f92672">=</span>progress2 /mnt/HDD2/music/ media-bkp/music
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rsync -avr --delete --ignore-existing --info<span class="o">=</span>progress2 /mnt/HDD2/music/ media-bkp/music
 </span></span></code></pre></div><h3 id="off-line-is-the-new-luxury">Off-line is the new luxury</h3>
 <p>Tangent to the whole music storing and self-hosting thing (<a href="https://www.reddit.com/r/musichoarder">r/musichoarder</a>), there’s also the world of <a href="https://www.reddit.com/r/audiophile">r/audiophile</a>, and since a proper audio setup is not something I can even consider right now, I leaned toward buying a small <a href="https://www.reddit.com/r/DigitalAudioPlayer">r/DigitalAudioPlayer</a>. I’m not obsessed with quality, but I definitely relate to that deep satisfaction that comes from digging into a specific topic, especially when it’s niche and far from the mainstream. In the words of <a href="https://www.reddit.com/user/Brawntuhsaur/">Brawntuhsaur</a></p>
 <blockquote>
@@ -161,40 +167,40 @@ $if($gt(%totaldiscs%,1),$if($gt(%totaldiscs%,9),$num(%discnumber%,2),%discnumber
 <p>If you’re thinking about buying a DAP, let me just say there are way better options out there, with better sound quality and at lower prices. But most of them run Android, or some modded version of it.</p>
 <p><img src="/images/posts/ipod.png" alt=""></p>
 <p>To deal with how impractical it can be to manually load music onto it, I put together a sort of automation setup that I’ll share here. Basically, the solution involves two <code>Unit Files</code> (in Nix) that run consecutively after the iPod is connected to the server (where my music is stored). The device gets mounted automatically, and then a script runs that syncs both the music and the playlists.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>  systemd<span style="color:#f92672">.</span>services<span style="color:#f92672">.</span><span style="color:#e6db74">&#34;ipod&#34;</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sync files from iPod when mounted&#34;</span>;
-</span></span><span style="display:flex;"><span>    wantedBy <span style="color:#f92672">=</span> [ <span style="color:#e6db74">&#34;mnt-ipod.mount&#34;</span> ]; 
-</span></span><span style="display:flex;"><span>    after <span style="color:#f92672">=</span> [ <span style="color:#e6db74">&#34;mnt-ipod.mount&#34;</span> ];
-</span></span><span style="display:flex;"><span>    serviceConfig <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>      Type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;oneshot&#34;</span>;
-</span></span><span style="display:flex;"><span>      ExecStart <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;/home/canus/scripts/nixos/sync-ipod.sh&#39;&#39;</span>;
-</span></span><span style="display:flex;"><span>      User <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;contre&#34;</span>;
-</span></span><span style="display:flex;"><span>    };
-</span></span><span style="display:flex;"><span>  };
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Mount unit for the iPod</span>
-</span></span><span style="display:flex;"><span>  systemd<span style="color:#f92672">.</span>mounts <span style="color:#f92672">=</span> [
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      what <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/dev/disk/by-uuid/8734-1678&#34;</span>;
-</span></span><span style="display:flex;"><span>      where <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/mnt/ipod&#34;</span>;
-</span></span><span style="display:flex;"><span>      type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;vfat&#34;</span>;
-</span></span><span style="display:flex;"><span>      options <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;nofail,x-systemd.automount,uid=1000,gid=100&#34;</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  ];
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/run/current-system/sw/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e"># Capture rsync output (stdout + stderr) and preserve line breaks</span>
-</span></span><span style="display:flex;"><span>CONVERT<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Needed for special characters in FAT32 file systems </span>
-</span></span><span style="display:flex;"><span>  /home/contre/.nix-profile/bin/convmv -r -f utf-8 -t utf-8 --nfc --notest /mnt/HDD2/music/ 2&gt;&amp;<span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">)</span>
-</span></span><span style="display:flex;"><span>RSYNC<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>
-</span></span><span style="display:flex;"><span>  /home/contre/.nix-profile/bin/rsync -avr --ignore-existing --include<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*&#39;</span> --stats --exclude<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*.lrc&#39;</span> /mnt/HDD2/music/ /mnt/ipod/Music/ 2&gt;&amp;<span style="color:#ae81ff">1</span> |
-</span></span><span style="display:flex;"><span>  sed <span style="color:#e6db74">&#39;0,/^$/d&#39;</span> | grep -e <span style="color:#e6db74">&#34;Number of&#34;</span> -e <span style="color:#e6db74">&#34;File list size&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">)</span>
-</span></span><span style="display:flex;"><span>/home/contre/.nix-profile/bin/rsync -av --inplace --info<span style="color:#f92672">=</span>progress2 /mnt/SSD/config/emby/data/userplaylists/ /mnt/ipod/Playlists 2&gt;&amp;<span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Send via curl using --data-urlencode to preserve formatting</span>
-</span></span><span style="display:flex;"><span>/run/current-system/sw/bin/curl -s -X POST --data <span style="color:#e6db74">&#34;iPod Sync ✅ --- </span>$CONVERT<span style="color:#e6db74"> - </span>$RSYNC<span style="color:#e6db74">&#34;</span> https://ntfy.server.home/all
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl">  <span class="n">systemd</span><span class="o">.</span><span class="n">services</span><span class="o">.</span><span class="s2">&#34;ipod&#34;</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">description</span> <span class="o">=</span> <span class="s2">&#34;Sync files from iPod when mounted&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wantedBy</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&#34;mnt-ipod.mount&#34;</span> <span class="p">];</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">after</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&#34;mnt-ipod.mount&#34;</span> <span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">serviceConfig</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">Type</span> <span class="o">=</span> <span class="s2">&#34;oneshot&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">ExecStart</span> <span class="o">=</span> <span class="s1">&#39;&#39;/home/canus/scripts/nixos/sync-ipod.sh&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">User</span> <span class="o">=</span> <span class="s2">&#34;contre&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Mount unit for the iPod</span>
+</span></span><span class="line"><span class="cl">  <span class="n">systemd</span><span class="o">.</span><span class="n">mounts</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">what</span> <span class="o">=</span> <span class="s2">&#34;/dev/disk/by-uuid/8734-1678&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">where</span> <span class="o">=</span> <span class="s2">&#34;/mnt/ipod&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">type</span> <span class="o">=</span> <span class="s2">&#34;vfat&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">options</span> <span class="o">=</span> <span class="s2">&#34;nofail,x-systemd.automount,uid=1000,gid=100&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">];</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/run/current-system/sw/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># Capture rsync output (stdout + stderr) and preserve line breaks</span>
+</span></span><span class="line"><span class="cl"><span class="nv">CONVERT</span><span class="o">=</span><span class="k">$(</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Needed for special characters in FAT32 file systems </span>
+</span></span><span class="line"><span class="cl">  /home/contre/.nix-profile/bin/convmv -r -f utf-8 -t utf-8 --nfc --notest /mnt/HDD2/music/ 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">RSYNC</span><span class="o">=</span><span class="k">$(</span>
+</span></span><span class="line"><span class="cl">  /home/contre/.nix-profile/bin/rsync -avr --ignore-existing --include<span class="o">=</span><span class="s1">&#39;*&#39;</span> --stats --exclude<span class="o">=</span><span class="s1">&#39;*.lrc&#39;</span> /mnt/HDD2/music/ /mnt/ipod/Music/ 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span>
+</span></span><span class="line"><span class="cl">  sed <span class="s1">&#39;0,/^$/d&#39;</span> <span class="p">|</span> grep -e <span class="s2">&#34;Number of&#34;</span> -e <span class="s2">&#34;File list size&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">)</span>
+</span></span><span class="line"><span class="cl">/home/contre/.nix-profile/bin/rsync -av --inplace --info<span class="o">=</span>progress2 /mnt/SSD/config/emby/data/userplaylists/ /mnt/ipod/Playlists 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Send via curl using --data-urlencode to preserve formatting</span>
+</span></span><span class="line"><span class="cl">/run/current-system/sw/bin/curl -s -X POST --data <span class="s2">&#34;iPod Sync ✅ --- </span><span class="nv">$CONVERT</span><span class="s2"> - </span><span class="nv">$RSYNC</span><span class="s2">&#34;</span> https://ntfy.server.home/all
 </span></span></code></pre></div><p>Once the sync is done, I get a notification. It usually doesn’t take more than 5 seconds, depending on how much music was downloaded since last sync. For playlists, I build them in Symfonium and sync them with Emby. That way, when the script runs, it pulls the latest version of the playlists from there. So, I have playlists and music synced across Emby (Web and TV), iPod (Offline), and my phone (Symfonium). The common format they use is <code>.m3u</code>, which is basically just a list of file paths.</p>
 <p>Even if all this sounds a bit anachronistic, I don’t mean for it to come off as some rebellious act against mainstream music consumption. It&rsquo;s more about my belief that there’s value in collecting, organizing, and preserving. These are acts tied to personal and cognitive sovereignty, acts you can’t easily detach from if you intend to hold on to it. No matter the field, it’s a necessary and inevitable practice: a fight that, thanks to the work of many, you now get to choose—whether to take it on, or let it go. I have personally decided to fight it in an essential common field for all humans: music.</p>
 <h2 id="whats-next">What’s next?</h2>

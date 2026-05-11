@@ -5,7 +5,7 @@ tags:
     - Trip
     - Pictures
 ---
-![Fungi](/images/posts/fungi.jpg)
+![Fungi](/images/posts/germany_banner.jpg)
 
 What initially were supposed to be 370 km on the bike ended up being less than half. However, it wasn’t easy and was even somewhat dangerous. We were accompanied by two sturdy bikes, a Giant and a Trek, both loaded on either side with clothes, food, and a tent, and they managed to handle dirt, mountains, and roads. The trains in Germany were a great help, both to avoid descents rated as "expert" on Komoot and to dodge 12 mm of rain one night.
 

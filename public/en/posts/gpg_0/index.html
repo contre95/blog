@@ -71,6 +71,12 @@
         
       
         
+           | 
+          <a href="/en/pictures/"><b>📸</b></a>
+          
+        
+      
+        
       
     </span>
     <span class="nav-right">
@@ -124,26 +130,26 @@
 <h3 id="generating-a-new-gpg-key-pair">Generating a new GPG key pair</h3>
 <p>By default <strong>GnuPG</strong> generates one primary (also called master) key with the ability (also called flag) of signing and certifying <strong>[SC]</strong>.</p>
 <p><strong>Certification vs. signing</strong> - <em>Signing</em> is an action against arbitrary data (As I understand it testifying that the encrypted data is sent by who it&rsquo;s supposed to be sent). <em>Certification</em> is the signing of another key. Ironically, the act of certifying a key is universally called “key signing”.(As I understand it saying &ldquo;<em>Hey this is my public key</em> or <em>Hey,  I trust this key is from who It says it is</em>). Just embrace the contradiction.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --full-generate-key
-</span></span><span style="display:flex;"><span>Please <span style="color:#66d9ef">select</span> what kind of key you want:
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">(</span>1<span style="color:#f92672">)</span> RSA and RSA <span style="color:#f92672">(</span>default<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">(</span>2<span style="color:#f92672">)</span> DSA and Elgamal
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">(</span>3<span style="color:#f92672">)</span> DSA <span style="color:#f92672">(</span>sign only<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">(</span>4<span style="color:#f92672">)</span> RSA <span style="color:#f92672">(</span>sign only<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gpg --full-generate-key
+</span></span><span class="line"><span class="cl">Please <span class="k">select</span> what kind of key you want:
+</span></span><span class="line"><span class="cl">   <span class="o">(</span>1<span class="o">)</span> RSA and RSA <span class="o">(</span>default<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   <span class="o">(</span>2<span class="o">)</span> DSA and Elgamal
+</span></span><span class="line"><span class="cl">   <span class="o">(</span>3<span class="o">)</span> DSA <span class="o">(</span>sign only<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   <span class="o">(</span>4<span class="o">)</span> RSA <span class="o">(</span>sign only<span class="o">)</span>
 </span></span></code></pre></div><p>Let&rsquo;s go with the default option with indicates we are going to use the RSA algorithm and we are going to generate one primary key for <em>Signing</em> and <em>Certifying</em>  <strong>[SC]</strong> and other sub-key for <em>Encrypting</em> <strong>[E]</strong>. We will also specify a key size of <em><strong>4096</strong></em> bits and set the expiration date to 1 year from now. We will then be prompt with  interface and be asked for a passphrase.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Your selection? <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>RSA keys may be between <span style="color:#ae81ff">1024</span> and <span style="color:#ae81ff">4096</span> bits long.
-</span></span><span style="display:flex;"><span>What keysize <span style="color:#66d9ef">do</span> you want? <span style="color:#f92672">(</span>3072<span style="color:#f92672">)</span> <span style="color:#ae81ff">4096</span>
-</span></span><span style="display:flex;"><span>Requested keysize is <span style="color:#ae81ff">4096</span> bits
-</span></span><span style="display:flex;"><span>Please specify how long the key should be valid.
-</span></span><span style="display:flex;"><span>         0 <span style="color:#f92672">=</span> key does not expire
-</span></span><span style="display:flex;"><span>      &lt;n&gt;  <span style="color:#f92672">=</span> key expires in n days
-</span></span><span style="display:flex;"><span>      &lt;n&gt;w <span style="color:#f92672">=</span> key expires in n weeks
-</span></span><span style="display:flex;"><span>      &lt;n&gt;m <span style="color:#f92672">=</span> key expires in n months
-</span></span><span style="display:flex;"><span>      &lt;n&gt;y <span style="color:#f92672">=</span> key expires in n years
-</span></span><span style="display:flex;"><span>Key is valid <span style="color:#66d9ef">for</span>? <span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> 1y
-</span></span><span style="display:flex;"><span>Key expires at Mon Apr <span style="color:#ae81ff">12</span> 17:43:02 <span style="color:#ae81ff">2021</span> UTC
-</span></span><span style="display:flex;"><span>Is this correct? <span style="color:#f92672">(</span>y/N<span style="color:#f92672">)</span> y
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Your selection? <span class="m">1</span>
+</span></span><span class="line"><span class="cl">RSA keys may be between <span class="m">1024</span> and <span class="m">4096</span> bits long.
+</span></span><span class="line"><span class="cl">What keysize <span class="k">do</span> you want? <span class="o">(</span>3072<span class="o">)</span> <span class="m">4096</span>
+</span></span><span class="line"><span class="cl">Requested keysize is <span class="m">4096</span> bits
+</span></span><span class="line"><span class="cl">Please specify how long the key should be valid.
+</span></span><span class="line"><span class="cl">         <span class="nv">0</span> <span class="o">=</span> key does not expire
+</span></span><span class="line"><span class="cl">      &lt;n&gt;  <span class="o">=</span> key expires in n days
+</span></span><span class="line"><span class="cl">      &lt;n&gt;w <span class="o">=</span> key expires in n weeks
+</span></span><span class="line"><span class="cl">      &lt;n&gt;m <span class="o">=</span> key expires in n months
+</span></span><span class="line"><span class="cl">      &lt;n&gt;y <span class="o">=</span> key expires in n years
+</span></span><span class="line"><span class="cl">Key is valid <span class="k">for</span>? <span class="o">(</span>0<span class="o">)</span> 1y
+</span></span><span class="line"><span class="cl">Key expires at Mon Apr <span class="m">12</span> 17:43:02 <span class="m">2021</span> UTC
+</span></span><span class="line"><span class="cl">Is this correct? <span class="o">(</span>y/N<span class="o">)</span> y
 </span></span></code></pre></div><p>Once we specified this we will be asked some info to identify our User ID (UID). Which is basically the name and email of the user and it is stored in one or more UID entries under the Primary key.</p>
 <pre tabindex="0"><code>GnuPG needs to construct a user ID to identify your key.
 
@@ -169,7 +175,7 @@ uid                      Fulanito Detal (Fulanito&#39;s keypair) &lt;fula@fulade
 sub   rsa4096 2020-04-12 [E] [expires: 2021-04-12]
 </code></pre><p>Notice that a <strong>revocation certificate</strong>  has been created under <code>/root/.gnupg/openpgp-revocs.d/02A59{BlaBlaBla}60BH36.rev'</code> . If your GPG private key becomes compromised, you need to revoke it to warn others not to trust future signatures or encrypt data to your public key. However, by the time a key compromise happens, you might not have your GPG key available, such as if it resided on hardware stolen from you, or the attacker removed it after accessing it. A revocation certificate consists of a signed message, stating in machine-readable form that a key no longer has validity for future cryptographic operations. Anyone with this certificate can revoke your private key. I recommend printing it out and storing it in a secure location.</p>
 <p>Finally, now that you managed to create your own key pair you can start sharing you public key, decrypt and sign messages. In order to get use the <code>gpg</code> cli tool I suggest checking the following cheat sheet until you get used to it.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl cheat.sh/gpg
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ curl cheat.sh/gpg
 </span></span></code></pre></div><h3 id="bibliography-and-technology-used-in-this-project">Bibliography and technology used in this project</h3>
 <ul>
 <li><a href="https://tools.ietf.org/html/rfc4880">RFC 4880</a></li>

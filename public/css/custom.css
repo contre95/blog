@@ -99,20 +99,42 @@ p>code {
 pre {
   padding: 1px;
   border-radius: 8px;
-  background: linear-gradient(90deg, #5bf, #a78bfa), #1a1a1a;
+  background: #111;
+  border: 1px solid #2a2a2a;
 }
 
 pre code {
   display: block;
   overflow-x: auto;
   font-size: 10px;
-  padding: 15px;
-  color: lightgray;
+  padding: 2px;
   border-radius: 8px;
-  background: #1e1e1e;
   white-space: pre;
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
-  /* max-width: 100%; */
-  /* min-width: 100px; */
 }
+
+/* Chroma — minimal dark, derived from blog palette */
+.chroma { color:#888;background-color:#111;display:block;overflow-x:auto;font-size:10px;padding:15px;border-radius:8px; }
+/* comments — barely there */
+.chroma .c,.chroma .ch,.chroma .cm,.chroma .c1,.chroma .cs,.chroma .cp,.chroma .cpf { color:#454550 }
+/* keywords — muted violet (#a78bfa desaturated) */
+.chroma .k,.chroma .kd,.chroma .kn,.chroma .kp,.chroma .kr,.chroma .kc { color:#7a6898 }
+/* types/builtins — blue-gray */
+.chroma .kt,.chroma .nb,.chroma .bp,.chroma .nc { color:#607a9a }
+/* strings — muted teal (#3c96a3 darkened) */
+.chroma .s,.chroma .sa,.chroma .sb,.chroma .sc,.chroma .dl,.chroma .sd,.chroma .s2,.chroma .se,.chroma .sh,.chroma .si,.chroma .sx,.chroma .sr,.chroma .s1,.chroma .ss { color:#3d7880 }
+/* numbers — warm gray */
+.chroma .m,.chroma .mb,.chroma .mf,.chroma .mh,.chroma .mi,.chroma .il,.chroma .mo { color:#7a7a60 }
+/* functions — muted blue (#5bf darkened) */
+.chroma .nf,.chroma .fm { color:#3d6e8a }
+/* operators — subtle */
+.chroma .o,.chroma .ow { color:#555 }
+/* line highlight */
+.chroma .hl { background-color:#1c1c1c }
+/* line numbers */
+.chroma .lnt,.chroma .ln { color:#333;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em }
+.chroma .line { display:flex; }
+.chroma .lntd { vertical-align:top;padding:0;margin:0;border:0; }
+.chroma .lntable { border-spacing:0;padding:0;margin:0;border:0; }
+.chroma .lnlinks { outline:none;text-decoration:none;color:inherit }

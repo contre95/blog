@@ -6,7 +6,8 @@
       "Bash(hugo)",
       "Bash(hugo --verbose)",
       "Bash(hugo --quiet)",
-      "Bash(curl -sI https://memos.contre.io/explore)"
+      "Bash(curl -sI https://memos.contre.io/explore)",
+      "Bash(hugo gen *)"
     ]
   }
 }

@@ -71,6 +71,12 @@
         
       
         
+           | 
+          <a href="/es/pictures/"><b>📸</b></a>
+          
+        
+      
+        
       
     </span>
     <span class="nav-right">
@@ -172,7 +178,7 @@
 <h2 id="tablas-de-particiones-apm-mbr-y-por-qué-importan">Tablas de particiones: APM, MBR y por qué importan</h2>
 <p>Cuando una Mac restaura un iPod via iTunes/Finder escribe un <strong>Apple Partition Map (APM)</strong> — el formato de tabla de particiones legacy de Apple, anterior al MBR (usado en la mayoría de las PCs) y al GPT (usado en las Macs modernas). Restaurarlo e instalar el OS de stock fue muy fácil, lo conectás a una Mac, una MacBook Air de las nuevas en mi caso, y listo. Todos los iPod classic restaurados de esta forma vuelven a tener su APM. Y ahora vuelta a 0: a instalar el bootloader de Rockbox.</p>
 <p>Me vi tentado a instalar Rockbox en la Mac pero decidí volver a la linuxera, el problema en Linux es que el kernel no expone automáticamente las sub-particiones APM como dispositivos de bloque. Después de la restauración en Mac, el iPod aparecía como <code>/dev/sda</code> (954.8G) <strong>sin nodos de dispositivo de partición</strong> — sin <code>sda1</code>, <code>sda2</code>, etc. Herramientas como <code>parted</code> pueden ver las particiones, pero no se pueden montar directamente.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo parted /dev/sda print
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo parted /dev/sda print
 </span></span></code></pre></div><p>El output:</p>
 <ul>
 <li>Partition table type: <code>mac</code></li>
@@ -180,8 +186,8 @@
 <li>Partition 2: ~955 GiB — main data partition (HFS+, filesystem not auto-detected by Linux without kpartx)</li>
 </ul>
 <p>Para exponerlas como dispositivos de bloque, traté con <code>kpartx</code> que te crea los mapeos manualmente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo kpartx -av /dev/sda
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># crea /dev/mapper/sda1 y /dev/mapper/sda2</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo kpartx -av /dev/sda
+</span></span><span class="line"><span class="cl"><span class="c1"># crea /dev/mapper/sda1 y /dev/mapper/sda2</span>
 </span></span></code></pre></div><p>Lo hice con <code>kpartx</code> porque es lo que recomendó la IA, si no era <code>ipodpatcher</code> que en mi caso fue ejecutado internamente por Rockbox Utility porque <code>ipodpatcher</code> no estaba en NixOS. Esto convierte la tabla de particiones de <strong>APM → MBR</strong>, e imagino yo que ahí es donde hace su magia para bootear al OS de stock o a Rockbox con MENU+SELECT o SELECT+PLAY/PAUSE. Luego de instalar el bootloader el dispositivo ya aparece con sus particiones normales (<code>sdc1</code>, <code>sdc2</code>) sin necesitar <code>kpartx</code>.</p>
 <hr>
 <h2 id="hfs-y-el-journal-y-por-qué-no-importa">HFS+ y el journal y por qué no importa</h2>
@@ -189,10 +195,10 @@
 <p><img src="/images/posts/ipod_fix_headset.jpeg" alt="Ipod 7th Classic"></p>
 <p>Te estarás preguntando por qué hay una partición HFS+ y qué es HFS+? Te pego lo que me dice la IA : HFS+ (Hierarchical File System Plus). Es una versión mejorada del antiguo HFS y se usó durante muchos años en Macs, iPods y otros productos de Apple antes de que fuera reemplazado por APFS.</p>
 <p>Para obtener acceso de escritura, simplemente la tenés que montar forzada (la partición) y cagarte en el journal, a esta altura si explota algo, arrancamos de nuevo.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo mkdir -p /mnt/ipod
-</span></span><span style="display:flex;"><span>sudo mount -t hfsplus -o force,rw /dev/mapper/sda2 /mnt/ipod
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>nix-shell -p hfsprogs --run <span style="color:#e6db74">&#34;sudo fsck.hfsplus -J /dev/mapper/sda2&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo mkdir -p /mnt/ipod
+</span></span><span class="line"><span class="cl">sudo mount -t hfsplus -o force,rw /dev/mapper/sda2 /mnt/ipod
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">nix-shell -p hfsprogs --run <span class="s2">&#34;sudo fsck.hfsplus -J /dev/mapper/sda2&#34;</span>
 </span></span></code></pre></div><p><code>fsck.hfsplus -J</code> reprocesa el journal y lo marca como deshabilitado. Después de esto la partición se monta como read/write normalmente. Este paso solo es necesario si querés inspeccionar o modificar la partición HFS+ — Rockbox Utility reemplaza toda la tabla de particiones de todas formas.</p>
 <p>¿Por qué no importa? Porque esto solo lo necesitaba Rockbox Utility para detectar el device, y necesitaba poder escribir para instalar el bootloader en él porque ese es un check que tiene la GUI. Si no estás en NixOS, tal vez con el <code>ipodpatcher</code> no hacía falta. Si para este entonces ya tenés Rockbox, esta partición ya no la vas a ver.</p>
 <hr>
@@ -217,52 +223,52 @@
 <hr>
 <h2 id="fat32-y-la-restricción-de-sectores-de-4096-bytes">FAT32 y la restricción de sectores de 4096 bytes</h2>
 <p>El iFlash Solo reporta un <strong>native physical sector size of 4096 bytes</strong> (en lugar de los 512 bytes estándar). Esto se propaga al formateo FAT32 — <code>mkfs.vfat</code> va a ignorar cualquier intento de configurar sectores lógicos más pequeños:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo mkfs.vfat -F <span style="color:#ae81ff">32</span> -S <span style="color:#ae81ff">512</span> -s <span style="color:#ae81ff">8</span> /dev/sdc1
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Warning: sector size was set to 4096 (minimal for this device)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo mkfs.vfat -F <span class="m">32</span> -S <span class="m">512</span> -s <span class="m">8</span> /dev/sdc1
+</span></span><span class="line"><span class="cl"><span class="c1"># Warning: sector size was set to 4096 (minimal for this device)</span>
 </span></span></code></pre></div><p>No es un bug, es una restricción de hardware. La consecuencia es que Rockbox puede fallar al leer el sistema de archivos porque su driver FAT asume sectores de 512 bytes. Si Rockbox arranca pero muestra <code>No partition found</code> después de formatear e instalar el firmware, esta es la causa probable (acá la cagué).</p>
 <p>Así monté la partición formateada con permisos de escritura:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo mount -t vfat -o uid<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>id -u<span style="color:#66d9ef">)</span>,gid<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>id -g<span style="color:#66d9ef">)</span>,umask<span style="color:#f92672">=</span><span style="color:#ae81ff">022</span> /dev/sdc1 /mnt/ipod
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo mount -t vfat -o <span class="nv">uid</span><span class="o">=</span><span class="k">$(</span>id -u<span class="k">)</span>,gid<span class="o">=</span><span class="k">$(</span>id -g<span class="k">)</span>,umask<span class="o">=</span><span class="m">022</span> /dev/sdc1 /mnt/ipod
 </span></span></code></pre></div><hr>
 <h2 id="entorno-nix-shell-por-si-sos-un-gordito-nix-como-yo">Entorno Nix Shell por si sos un gordito Nix como yo</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>{ pkgs <span style="color:#f92672">?</span> <span style="color:#f92672">import</span> <span style="color:#e6db74">&lt;nixpkgs&gt;</span> {} }:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>pkgs<span style="color:#f92672">.</span>mkShell {
-</span></span><span style="display:flex;"><span>  packages <span style="color:#f92672">=</span> <span style="color:#66d9ef">with</span> pkgs; [
-</span></span><span style="display:flex;"><span>    sg3_utils       <span style="color:#75715e"># utilidades SCSI/ATA</span>
-</span></span><span style="display:flex;"><span>    xxd             <span style="color:#75715e"># hex dump</span>
-</span></span><span style="display:flex;"><span>    hdparm          <span style="color:#75715e"># parámetros de unidad ATA</span>
-</span></span><span style="display:flex;"><span>    hfsprogs        <span style="color:#75715e"># fsck.hfsplus para manipular el journal HFS+</span>
-</span></span><span style="display:flex;"><span>    parted          <span style="color:#75715e"># inspección de tabla de particiones</span>
-</span></span><span style="display:flex;"><span>    multipath-tools <span style="color:#75715e"># kpartx para mapeo de particiones APM</span>
-</span></span><span style="display:flex;"><span>  ];
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl"><span class="p">{</span> <span class="n">pkgs</span> <span class="o">?</span> <span class="kn">import</span> <span class="sr">&lt;nixpkgs&gt;</span> <span class="p">{}</span> <span class="p">}:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pkgs</span><span class="o">.</span><span class="n">mkShell</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">packages</span> <span class="o">=</span> <span class="k">with</span> <span class="n">pkgs</span><span class="p">;</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sg3_utils</span>       <span class="c1"># utilidades SCSI/ATA</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xxd</span>             <span class="c1"># hex dump</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hdparm</span>          <span class="c1"># parámetros de unidad ATA</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hfsprogs</span>        <span class="c1"># fsck.hfsplus para manipular el journal HFS+</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parted</span>          <span class="c1"># inspección de tabla de particiones</span>
+</span></span><span class="line"><span class="cl">    <span class="n">multipath-tools</span> <span class="c1"># kpartx para mapeo de particiones APM</span>
+</span></span><span class="line"><span class="cl">  <span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><hr>
 <h2 id="algunos-comandos-que-pueden-servir">Algunos comandos que pueden servir</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># Inspeccionar tabla de particiones</span>
-</span></span><span style="display:flex;"><span>sudo fdisk -l /dev/sdX
-</span></span><span style="display:flex;"><span>sudo parted /dev/sdX print
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Exponer particiones APM como dispositivos de bloque</span>
-</span></span><span style="display:flex;"><span>sudo kpartx -av /dev/sdX
-</span></span><span style="display:flex;"><span>sudo kpartx -dv /dev/sdX   <span style="color:#75715e"># eliminar mapeos</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Montar HFS+ (forzar rw, saltear journal)</span>
-</span></span><span style="display:flex;"><span>sudo mount -t hfsplus -o force,rw /dev/mapper/sdX2 /mnt/ipod
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Deshabilitar journal HFS+</span>
-</span></span><span style="display:flex;"><span>sudo fsck.hfsplus -J /dev/mapper/sdX2
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Formatear FAT32 (iFlash va a forzar sectores de 4096 bytes igual)</span>
-</span></span><span style="display:flex;"><span>sudo mkfs.vfat -F <span style="color:#ae81ff">32</span> /dev/sdX1
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Montar FAT32 con permisos de usuario</span>
-</span></span><span style="display:flex;"><span>sudo mount -t vfat -o uid<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>id -u<span style="color:#66d9ef">)</span>,gid<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>id -g<span style="color:#66d9ef">)</span>,umask<span style="color:#f92672">=</span><span style="color:#ae81ff">022</span> /dev/sdX1 /mnt/ipod
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Lanzar Rockbox Utility en NixOS</span>
-</span></span><span style="display:flex;"><span>nix-shell -p rockbox-utility --run <span style="color:#e6db74">&#34;RockboxUtility&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Desmontar de forma segura antes de desconectar</span>
-</span></span><span style="display:flex;"><span>sudo umount /mnt/ipod
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Inspeccionar tabla de particiones</span>
+</span></span><span class="line"><span class="cl">sudo fdisk -l /dev/sdX
+</span></span><span class="line"><span class="cl">sudo parted /dev/sdX print
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Exponer particiones APM como dispositivos de bloque</span>
+</span></span><span class="line"><span class="cl">sudo kpartx -av /dev/sdX
+</span></span><span class="line"><span class="cl">sudo kpartx -dv /dev/sdX   <span class="c1"># eliminar mapeos</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Montar HFS+ (forzar rw, saltear journal)</span>
+</span></span><span class="line"><span class="cl">sudo mount -t hfsplus -o force,rw /dev/mapper/sdX2 /mnt/ipod
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Deshabilitar journal HFS+</span>
+</span></span><span class="line"><span class="cl">sudo fsck.hfsplus -J /dev/mapper/sdX2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Formatear FAT32 (iFlash va a forzar sectores de 4096 bytes igual)</span>
+</span></span><span class="line"><span class="cl">sudo mkfs.vfat -F <span class="m">32</span> /dev/sdX1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Montar FAT32 con permisos de usuario</span>
+</span></span><span class="line"><span class="cl">sudo mount -t vfat -o <span class="nv">uid</span><span class="o">=</span><span class="k">$(</span>id -u<span class="k">)</span>,gid<span class="o">=</span><span class="k">$(</span>id -g<span class="k">)</span>,umask<span class="o">=</span><span class="m">022</span> /dev/sdX1 /mnt/ipod
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Lanzar Rockbox Utility en NixOS</span>
+</span></span><span class="line"><span class="cl">nix-shell -p rockbox-utility --run <span class="s2">&#34;RockboxUtility&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Desmontar de forma segura antes de desconectar</span>
+</span></span><span class="line"><span class="cl">sudo umount /mnt/ipod
 </span></span></code></pre></div></div>
   </article>
   <script defer src="https://comentario.contre.io/comentario.js"></script>

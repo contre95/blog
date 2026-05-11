@@ -27,6 +27,14 @@ languages:
           name: Memos
           url: /es/memos/
           weight: 3
+        # - identifier: about
+        #   name: Sobre mí
+        #   url: /es/about/
+        #   weight: 4
+        - identifier: pictures
+          name: 📸
+          url: /es/pictures/
+          weight: 5
         - identifier: rss-posts
           name: RSS Posts
           url: /es/posts/index.xml
@@ -54,10 +62,6 @@ languages:
           name: Home
           url: /en
           weight: 1
-        # - identifier: about
-        #   name: About
-        #   url: /about/
-        # weight: 2
         - identifier: posts
           name: Posts
           url: /en/posts/
@@ -66,6 +70,14 @@ languages:
           name: Memos
           url: /en/memos/
           weight: 3
+        # - identifier: about
+        #   name: About
+        #   url: /en/about/
+        #   weight: 4
+        - identifier: pictures
+          name: 📸
+          url: /en/pictures/
+          weight: 5
         - identifier: rss-posts
           name: RSS Posts
           url: /en/posts/index.xml
@@ -107,6 +119,11 @@ menu:
       name: RSS Memos
       url: https://memos.contre.io/u/contre/rss.xml
       weight: 5
+markup:
+  highlight:
+    noClasses: false
+    style: onedark
+
 taxonomies:
   tag: tags
   category: categories
