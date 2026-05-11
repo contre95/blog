@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
@@ -32,14 +32,14 @@
   <body>
     <header>
   <div id="brand">
-    <a class="icon-link" href="https://blog.contre.io/">
+    <a class="icon-link" href="http://localhost:1313/">
       <img
         class="icon"
         src="/images/img.svg"
       />
     </a>
     <div class="text">
-      <a href="https://blog.contre.io/"><h1>Contre</h1></a>
+      <a href="http://localhost:1313/"><h1>Contre</h1></a>
       <h3>|||||||||||</h3>
     </div>
   </div>
@@ -98,7 +98,7 @@
     
     
   </strong>
-  <span> • 1081 words</span>
+  <span> • 1105 words</span>
   <span> • 6 minute read</span>
   
   
@@ -124,9 +124,10 @@
 <p>Hace rato que estoy con ganas de comprarme un drone chiquito (mejor conocido como Tiny Whoop) para boludear en casa. Manejar estos bichos no es tarea fácil, por lo que primero hay que practicar arduamente con un simulador si no querés estrolarte contra la pared al día 1 de comprar tu drone. Spoiler: te vas a estrolar igual. Uno de los que me recomendaron fue <a href="https://www.velocidrone.com/">VelociDrone</a>. El simulador está hecho en Unity y soporta Windows, OSX (Intel, M1 y M2) y Linux (Redhat y Debian) pero, muy a mi pesar, no anda en NixOS. Eso no iba a detenerme a practicar, entonces les levanté un ticket a la gente de &ldquo;Bat Cave Games&rdquo; preguntando si podían dar soporte. A lo que ellos contestaron:</p>
 <p><img src="/images/posts/velocidrone_mail.jpg" alt="mail"></p>
 <p>Claramente, no iban a dar soporte. No pasa nada, loco, está todo bien. Pero ¿por qué no anda? ¿Realmente alcanza con instalar las dependencias de Unity en NixOS? ¿Cómo se instala un programa en NixOS?
-Primero que nada, tenés que ver si tu paquete existe. Esto lo hacés en [search.nixos.org/pacakges][https://search.nixos.org/packages], si no tenés suerte, toca codear un poquito en Nix. Pero antes, te recomiendo buscar si alguien no codeo Nix antes por vos, para eso te recomiendo, lamentablemente, Github. En Github podés buscar repositorios públicos, y como en Nix es todo declarativo hay mucha info que podés simplemente copiar y pegar. Para buscar el keyword <code>lang:nix</code> es clave. En este caso, mi <em>query</em> (<code>?q=</code>) fue <code>lang:nix velocidrone</code>.</p>
+Primero que nada, tenés que ver si tu paquete existe. Esto lo hacés en <a href="https://search.nixos.org/packages">search.nixos.org/pacakges</a>, si no tenés suerte, toca codear un poquito en Nix. Pero antes, te recomiendo buscar si alguien no codeo Nix antes por vos, para eso te recomiendo, lamentablemente, Github. En Github podés buscar repositorios públicos, y como en Nix es todo declarativo hay mucha info que podés simplemente copiar y pegar. Para buscar el keyword <code>lang:nix</code> es clave. En este caso, mi <em>query</em> (<code>?q=</code>) fue <code>lang:nix velocidrone</code>.</p>
 <p><img src="/images/posts/nix_gc07.jpg" alt="GC07"></p>
-<p>La foto de arriba es lo que yo denomino un <code>GC-07</code> y determina que existen, al menos, siete Gordos Compu que están en la misma que vos. Un <code>GC-XX</code> puede ocasionar un sinfín de emociones: desde una tristeza y desolación inconmensurables, si es un <code>GC-00</code>, hasta una mera indicación de que estás en el camino correcto, si es un <code>GC-N</code> con <code>N &gt; 100</code>. O puede, como en este caso, dar un pequeño ápice de esperanza de que lo que querés hacer, y como lo querés hacer, se puede; que alguien en este ciber-mundo ya lo intentó.</p>
+<p>La foto de arriba es lo que yo denomino un <code>GC-07</code> y determina que existen, al menos, siete Gordos Compu que están en la misma que vos. Un <code>GC-XX</code> puede ocasionar un sinfín de emociones: desde una tristeza y desolación inconmensurables, si es un <code>GC-00</code>, hasta una mera indicación de que estás en el camino correcto, si es un <code>GC-N</code> con <code>N &gt; 100</code>. O puede, como en este caso, dar un pequeño ápice de esperanza de que lo que querés hacer, y como lo querés hacer, se puede; y alguien en este ciber-mundo ya lo intentó. Al tirar la <a href="https://github.com/search?q=lang%3Anix&#43;velocidrone&amp;type=code">query</a> me encontré con este <code>overlay</code> que me dio un poquito de esperanza.</p>
+<h2 id="qué-el-gordo-sepa-que-el-gordo-puede">Qué el gordo sepa que el gordo puede</h2>
 </div>
   </article>
   <script defer src="https://comentario.contre.io/comentario.js"></script>
