@@ -10,9 +10,9 @@
     <atom:link href="https://blog.contre.io/es/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GC-07</title>
-      <link>https://blog.contre.io/es/posts/velocidrone/</link>
+      <link>https://blog.contre.io/es/posts/gc07/</link>
       <pubDate>Mon, 04 May 2026 23:21:08 +0200</pubDate>
-      <guid>https://blog.contre.io/es/posts/velocidrone/</guid>
+      <guid>https://blog.contre.io/es/posts/gc07/</guid>
       <description>&lt;h1 id=&#34;nix-os&#34;&gt;Nix OS&lt;/h1&gt;&#xA;&lt;p&gt;NixOS es la distro de Linux que uso hace aproximadamente unos 3 años, después de haber estado como 9 años con Arch. Cuando arranqué con NixOS, no existía la IA, o no al menos no era tan potente como lo es ahora. Configurarlo fue bastante tedioso, pero mi objetivo era claro, manejar la cantidad innecesaria de computadoras que siempre tengo bajo mi poder. Hoy, son solo tres: &lt;code&gt;desktop&lt;/code&gt;, &lt;code&gt;notebook&lt;/code&gt; y &lt;code&gt;server&lt;/code&gt;. Empecé con mi &lt;code&gt;desktop&lt;/code&gt;, siguió la &lt;code&gt;notebook&lt;/code&gt; y por último, tras descubrir que Michael Stepelberg &lt;a href=&#34;https://mastodon.online/@contre/114406315423731145&#34;&gt;siquiera lo consideró&lt;/a&gt; para su server opté por instalarlo en mi &lt;code&gt;server&lt;/code&gt; también.&lt;/p&gt;</description>
     </item>
     <item>
