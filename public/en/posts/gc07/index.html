@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
@@ -32,14 +32,14 @@
   <body>
     <header>
   <div id="brand">
-    <a class="icon-link" href="http://localhost:1313/">
+    <a class="icon-link" href="https://blog.contre.io/">
       <img
         class="icon"
         src="/images/img.svg"
       />
     </a>
     <div class="text">
-      <a href="http://localhost:1313/"><h1>Contre</h1></a>
+      <a href="https://blog.contre.io/"><h1>Contre</h1></a>
       <h3>|||||||||||</h3>
     </div>
   </div>
@@ -68,12 +68,6 @@
       
         
       
-        
-      
-        
-           | 
-          <a href="/en/pictures/"><b>📸</b></a>
-          
         
       
         
@@ -109,15 +103,17 @@
     
     
   </strong>
-  <span> • 1797 words</span>
+  <span> • 1789 words</span>
   <span> • 9 minute read</span>
   
   
 </div>
 
-    <div><h1 id="nixos">NixOS</h1>
+    <div><p><img src="/images/posts/gc07_banner.jpg" alt="tree"></p>
+<h1 id="nixos">NixOS</h1>
 <p>NixOS is the Linux distro I&rsquo;ve been running for about 3 years, after spending 9 years on Arch. When I started with NixOS, AI wasn&rsquo;t really a thing, or at least not as powerful as it is now. Setting it up was pretty tedious, but my goal was clear: manage the unnecessary amount of computers I own from a single place. Today there are only three: <code>desktop</code>, <code>notebook</code>, and <code>server</code>. I started with my <code>desktop</code>, moved on to the <code>notebook</code>, and finally, after discovering that Michael Stapelberg <a href="https://mastodon.online/@contre/114406315423731145">even considered</a> NixOS for his server, I ended up installing it on mine too.</p>
-<p>NixOS, unlike other Linux distributions configured through files scattered all over the system (<code>/etc</code>, <code>/usr</code>), is configured in <code>.nix</code> files. For example: to change the state of your Debian or Windows box, you&rsquo;d run something like <code>sudo apt-get install python</code> or click through <em>Next;Next;Next</em>, which creates behind the scenes a bunch of files and configs in places you never cared about, modifies environment variables you didn&rsquo;t know existed, among other things you were blissfully unaware of. When you uninstall that program, pray it leaves your system roughly how it found it. NixOS is different. Instead of doing that imperatively with a command, you edit a <code>.nix</code> file where you declare your package, and why not, its configuration, and after a <code>sudo nixos-rebuild switch</code> your program is installed. Nix reads that declaration, builds the new system deterministically, and activates it atomically. Atomically? Yes, <a href="https://youtu.be/WIr23sXx1AI?t=9"><em>&ldquo;A-tom-i-cal-ly&rdquo;</em></a>. It&rsquo;s a fancy way of saying the change either applies completely, or doesn&rsquo;t apply at all. No in-between. That <code>.nix</code> file is, literally, the source of truth of your operating system. The big quirk (and for many, the dealbreaker) is that to uphold certain guarantees, NixOS uses a peculiar filesystem: the Nix Store (<code>/nix/store</code>). Instead of installing programs in the traditional paths (<code>/usr/bin/</code>, <code>/bin/</code>, or <code>C:\Program Files</code>), Nix stores each program (or more precisely, each <em>output</em> of a <em>derivation</em>) in a folder with a unique <em>hash</em> that represents its exact contents (e.g. <code>realpath $(which nvim)</code> -&gt; <code>/nix/store/n1bm101nhgw33fv114ibkv10xvh8fgp1-neovim-0.11.7/bin/nvim</code>). That hash isn&rsquo;t always the same; like most <em>hashes</em>, it&rsquo;s used to denote uniqueness. If anything changes even slightly, the hash changes and a new folder is generated. These hashes aren&rsquo;t isolated either; they form a sort of Acyclic Merkle Tree. Basically a structure where:</p>
+<p><img src="/images/posts/gc07_nix.png" alt="icon"></p>
+<p>NixOS, unlike other Linux distributions configured through files scattered all over the system (<code>/etc</code>, <code>/usr</code>), is configured in <code>.nix</code> files. For example: to change the state of your Debian or Windows box, you&rsquo;d run something like <code>sudo apt-get install python</code> or click through <em>Next;Next;Next</em>, which creates behind the scenes a bunch of files and configs in places you never cared about, modifies environment variables you didn&rsquo;t know existed, among other things you were blissfully unaware of. When you uninstall that program, pray it leaves your system roughly how it found it. NixOS is different. Instead of doing that imperatively with a command, you edit a <code>.nix</code> file where you declare your package, and why not, its configuration, and after a <code>sudo nixos-rebuild switch</code> your program is installed. Nix reads that declaration, builds the new system deterministically, and activates it atomically, meaning the change either applies completely, or doesn&rsquo;t apply at all. No in-between. That <code>.nix</code> file is, literally, the source of truth of your operating system. The big quirk (and for many, the dealbreaker) is that to uphold certain guarantees, NixOS uses a peculiar filesystem: the Nix Store (<code>/nix/store</code>). Instead of installing programs in the traditional paths (<code>/usr/bin/</code>, <code>/bin/</code>, or <code>C:\Program Files</code>), Nix stores each program (or more precisely, each <em>output</em> of a <em>derivation</em>) in a folder with a unique <em>hash</em> that represents its exact contents (e.g. <code>realpath $(which nvim)</code> -&gt; <code>/nix/store/n1bm101nhgw33fv114ibkv10xvh8fgp1-neovim-0.11.7/bin/nvim</code>). That hash isn&rsquo;t always the same; like most <em>hashes</em>, it&rsquo;s used to denote uniqueness. If anything changes even slightly, the hash changes and a new folder is generated. These hashes aren&rsquo;t isolated either; they form a sort of Acyclic Merkle Tree. Basically a structure where:</p>
 <ol>
 <li>Leaves are data hashes.</li>
 <li>Each internal node is the hash of its children.</li>

@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Contre</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 May 2026 13:48:32 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 23:21:08 +0200</lastBuildDate>
     <atom:link href="https://blog.contre.io/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GC-07</title>
+      <link>https://blog.contre.io/en/posts/gc07/</link>
+      <pubDate>Mon, 04 May 2026 23:21:08 +0200</pubDate>
+      <guid>https://blog.contre.io/en/posts/gc07/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/gc07_banner.jpg&#34; alt=&#34;tree&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;nixos&#34;&gt;NixOS&lt;/h1&gt;&#xA;&lt;p&gt;NixOS is the Linux distro I&amp;rsquo;ve been running for about 3 years, after spending 9 years on Arch. When I started with NixOS, AI wasn&amp;rsquo;t really a thing, or at least not as powerful as it is now. Setting it up was pretty tedious, but my goal was clear: manage the unnecessary amount of computers I own from a single place. Today there are only three: &lt;code&gt;desktop&lt;/code&gt;, &lt;code&gt;notebook&lt;/code&gt;, and &lt;code&gt;server&lt;/code&gt;. I started with my &lt;code&gt;desktop&lt;/code&gt;, moved on to the &lt;code&gt;notebook&lt;/code&gt;, and finally, after discovering that Michael Stapelberg &lt;a href=&#34;https://mastodon.online/@contre/114406315423731145&#34;&gt;even considered&lt;/a&gt; NixOS for his server, I ended up installing it on mine too.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Shell Ops</title>
       <link>https://blog.contre.io/en/posts/shell_ops/</link>
