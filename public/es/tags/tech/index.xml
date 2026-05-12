@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on Contre</title>
+    <link>https://blog.contre.io/es/tags/tech/</link>
+    <description>Recent content in Tech on Contre</description>
+    <generator>Hugo</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Sun, 03 May 2026 13:48:32 +0200</lastBuildDate>
+    <atom:link href="https://blog.contre.io/es/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shell Ops</title>
+      <link>https://blog.contre.io/es/posts/shell_ops/</link>
+      <pubDate>Sun, 03 May 2026 13:48:32 +0200</pubDate>
+      <guid>https://blog.contre.io/es/posts/shell_ops/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/bash_banner.jpg&#34; alt=&#34;Dan Case v4.1&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Desde 2018 que empecé a hostear servicios en casa. Empecé con Plex y un &lt;code&gt;docker-compose.yml&lt;/code&gt;, migré a Podman con &lt;code&gt;podman play kube&lt;/code&gt; y ahora kubernetes con K3S. La evolución del server estuvo siempre determinada por mi interés o mis ganas de jugar con una u otra tecnología. Siempre le escapé a soluciones sofisticadas o enlatadas como Flux o Argo, nunca tuve un NAS (por ahora) y nunca tuve más de uno o dos nodos corriendo. A mis ojos, el server, es sinónimo de entretenimiento infinito, y estoy seguro que es el caso de &lt;a href=&#34;https://reddit.com/r/homelab&#34;&gt;muchos&lt;/a&gt; &lt;a href=&#34;https://www.reddit.com/r/selfhosted/&#34;&gt;otros&lt;/a&gt;. Puedo escribir horas de lo que tengo montado, hablar de NixOS, K3s, redes y filosofar al respecto, pero hoy no va a ser el caso. Hoy te voy a compartir un poco algunas soluciones &lt;em&gt;shellísticas&lt;/em&gt; que me hacen el día a día más fácil, en un mundo que uno elige hacerse difícil.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>X4 Xteink</title>
+      <link>https://blog.contre.io/es/posts/x4xteink/</link>
+      <pubDate>Fri, 01 May 2026 20:00:47 +0200</pubDate>
+      <guid>https://blog.contre.io/es/posts/x4xteink/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/x4_banner.jpg&#34; alt=&#34;X4 Screen&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Este post va a ser parecido al del &lt;a href=&#34;https://blog.contre.io/es/posts/ipod_fix/&#34;&gt;iPod&lt;/a&gt; pero sobre el Xteink X4, un poco más de hardware y enfocado a quien quiera arreglar su pantalla. El X4 es un poco menos conocido así que dejame contarte de qué va primero. &lt;a href=&#34;https://www.xteink.com/products/xteink-x4&#34;&gt;Xteink X4&lt;/a&gt; es un mini lector de tinta, como una Kindle pero que destaca por su tamaño, es chiquito. Pero el tamaño no es su única bondad, además es extremadamente barato. Lo podés conseguir en AliExpress por $65 pesos. Parte de porqué es tan barato, es porque es chino, que si te quedaste en la pre-historia, te cuento que esto no es sinónimo de malo, todo lo contrario. El X4 está hecho de un hardware muy sencillo, lo componen una ESP32-C3 Series, una batería de litio (1200 mAh) que dura semanas, WiFi, Bluetooth y una pantalla de tinta de 4.2 pulgadas (400x300) bastante común que podés conseguir por $18 pesitos, también en AliExpress.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arreglando el iPod</title>
+      <link>https://blog.contre.io/es/posts/ipod_fix/</link>
+      <pubDate>Fri, 24 Apr 2026 20:00:47 +0200</pubDate>
+      <guid>https://blog.contre.io/es/posts/ipod_fix/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/ipod_fix_banner.jpg&#34; alt=&#34;iPodFix&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;De alguna manera logré romper mi iPod con &lt;code&gt;dd&lt;/code&gt;. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo &lt;code&gt;No Partition found&lt;/code&gt;. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y arreglaba el iPod.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jardín de Música</title>
+      <link>https://blog.contre.io/es/posts/music_hoarding/</link>
+      <pubDate>Thu, 12 Jun 2025 00:18:54 +0000</pubDate>
+      <guid>https://blog.contre.io/es/posts/music_hoarding/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/music_banner.png&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Habrá sido en 2009 cuando le pregunté a mi prima más grande qué música escuchaba. Fue la primera vez que asocié de manera concreta la idea de &lt;em&gt;banda&lt;/em&gt; con &lt;em&gt;canción&lt;/em&gt;. Hasta entonces, mi vínculo con la música venía más por ósmosis que por elección propia. Más tarde iba a entrar en razón que lo que escuchaba hasta entonces era mucho rock anglosajón, algo de blues y algo de jazz, todo bastante internacional y descontextualizado. Principalmente escuchaba Aspen, una radio que mezclaba (y sigue mezclando) clásicos del soft rock con algunas baladas en inglés y algo de pop. Mi viejo era quien manejaba el dial, y eso definía buena parte de lo que entraba a casa, mucho Genesis, Phil Collins, Pink Floyd, Eric Clapton entre otras bandas más de buto como Norah Jones, Bossa Nova y demás, que hoy en día me cuesta más escuchar. Lo argentino llegaba más por Sumo, algo de La Bersuit y Serú Girán. Pero el rock nacional más contemporáneo me lo presentaron mis amigos, bandas como Árbol, Airbag y Ataque 77, sonaban alternando con cosas como la cumbia y el reggaeton del momento como Daddy Yankee, Wisin y Yandel y demás música puertorriqueña.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

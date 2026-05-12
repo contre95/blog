@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.152.2">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content=""
+  />
+  
+    
+      <title>Contre</title>
+    
+  
+  <link rel="stylesheet" href="/css/reset.css"/>
+  <link rel="stylesheet" href="/css/font.css"/>
+  <link rel="stylesheet" href="/css/smigle.css"/>
+  
+    <link rel="stylesheet" href="/css/custom.css"/>
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script defer src="https://umami.contre.io/script.js" data-website-id="fcb27a7a-d935-4321-b1ae-c8e057389847"></script>
+  <script defer src="https://umami.contre.io/recorder.js" data-website-id="fcb27a7a-d935-4321-b1ae-c8e057389847" data-sample-rate="0.15" data-mask-level="moderate" data-max-duration="300000"></script>
+</head>
+
+  <body>
+    <header>
+  <div id="brand">
+    <a class="icon-link" href="https://blog.contre.io/">
+      <img
+        class="icon"
+        src="/images/img.svg"
+      />
+    </a>
+    <div class="text">
+      <a href="https://blog.contre.io/"><h1>Contre</h1></a>
+      <h3>|||||||||||</h3>
+    </div>
+  </div>
+  <nav>
+    
+    <span class="nav-left">
+      
+      
+        
+          
+          <a href="/es"><b>Inicio</b></a>
+          
+        
+      
+        
+           | 
+          <a href="/es/posts/"><b>Publicaciones</b></a>
+          
+        
+      
+        
+           | 
+          <a href="/es/memos/"><b>Memos</b></a> <a href="https://memos.contre.io/explore" target="_blank" rel="noopener noreferrer" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;vertical-align:middle;"><path d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </span>
+    <span class="nav-right">
+      
+      
+      
+        
+        RSS<svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 30" fill="#E37417" style="vertical-align:middle;margin-right:2px"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>(<a href="/es/posts/index.xml" target="_blank"><b>Blog</b></a>|<a href="https://memos.contre.io/u/contre/rss.xml"><b>Memos</b></a>)
+      
+      
+      
+      
+      
+      
+        
+        
+      
+      | <a href="/es/"><b>ES</b></a> / <a href="/en/"><b>EN</b></a>
+    </span>
+  </nav>
+  <hr />
+</header>
+
+    <div id="content">
+      
+	<main>
+		
+		
+			<article>
+  <h1 class="summary-title"><a href="https://blog.contre.io/es/posts/shell_ops/">Shell Ops</a></h1>
+  <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2026-05-03</time>
+    
+    
+  </strong>
+  <span> • 1271 words</span>
+  <span> • 6 minute read</span>
+  
+    <div>
+      <span>Tags:</span>
+      
+        <a href="/es/tags/tech">Tech</a>, 
+        <a href="/es/tags/self-hosted">Self-hosted</a>
+    </div>
+  
+</div>
+
+  <div class="summary-body">
+    <p><p><img src="/images/posts/bash_banner.jpg" alt="Dan Case v4.1"></p>
+<p>Desde 2018 que empecé a hostear servicios en casa. Empecé con Plex y un <code>docker-compose.yml</code>, migré a Podman con <code>podman play kube</code> y ahora kubernetes con K3S. La evolución del server estuvo siempre determinada por mi interés o mis ganas de jugar con una u otra tecnología. Siempre le escapé a soluciones sofisticadas o enlatadas como Flux o Argo, nunca tuve un NAS (por ahora) y nunca tuve más de uno o dos nodos corriendo. A mis ojos, el server, es sinónimo de entretenimiento infinito, y estoy seguro que es el caso de <a href="https://reddit.com/r/homelab">muchos</a> <a href="https://www.reddit.com/r/selfhosted/">otros</a>. Puedo escribir horas de lo que tengo montado, hablar de NixOS, K3s, redes y filosofar al respecto, pero hoy no va a ser el caso. Hoy te voy a compartir un poco algunas soluciones <em>shellísticas</em> que me hacen el día a día más fácil, en un mundo que uno elige hacerse difícil.</p></p>
+    
+      <a href="https://blog.contre.io/es/posts/shell_ops/">Read more...</a>
+    
+  </div>
+</article>
+
+		
+			<article>
+  <h1 class="summary-title"><a href="https://blog.contre.io/es/posts/x4xteink/">X4 Xteink</a></h1>
+  <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2026-05-01</time>
+    
+    
+  </strong>
+  <span> • 1072 words</span>
+  <span> • 6 minute read</span>
+  
+    <div>
+      <span>Tags:</span>
+      
+        <a href="/es/tags/tech">Tech</a>
+    </div>
+  
+</div>
+
+  <div class="summary-body">
+    <p><p><img src="/images/posts/x4_banner.jpg" alt="X4 Screen"></p>
+<p>Este post va a ser parecido al del <a href="/es/posts/ipod_fix/">iPod</a> pero sobre el Xteink X4, un poco más de hardware y enfocado a quien quiera arreglar su pantalla. El X4 es un poco menos conocido así que dejame contarte de qué va primero. <a href="https://www.xteink.com/products/xteink-x4">Xteink X4</a> es un mini lector de tinta, como una Kindle pero que destaca por su tamaño, es chiquito. Pero el tamaño no es su única bondad, además es extremadamente barato. Lo podés conseguir en AliExpress por $65 pesos. Parte de porqué es tan barato, es porque es chino, que si te quedaste en la pre-historia, te cuento que esto no es sinónimo de malo, todo lo contrario. El X4 está hecho de un hardware muy sencillo, lo componen una ESP32-C3 Series, una batería de litio (1200 mAh) que dura semanas, WiFi, Bluetooth y una pantalla de tinta de 4.2 pulgadas (400x300) bastante común que podés conseguir por $18 pesitos, también en AliExpress.</p></p>
+    
+      <a href="https://blog.contre.io/es/posts/x4xteink/">Read more...</a>
+    
+  </div>
+</article>
+
+		
+			<article>
+  <h1 class="summary-title"><a href="https://blog.contre.io/es/posts/ipod_fix/">Arreglando el iPod</a></h1>
+  <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2026-04-24</time>
+    
+    
+  </strong>
+  <span> • 1512 words</span>
+  <span> • 8 minute read</span>
+  
+    <div>
+      <span>Tags:</span>
+      
+        <a href="/es/tags/rantdump">Rant&amp;Dump</a>, 
+        <a href="/es/tags/tech">Tech</a>, 
+        <a href="/es/tags/music">Music</a>
+    </div>
+  
+</div>
+
+  <div class="summary-body">
+    <p><p><img src="/images/posts/ipod_fix_banner.jpg" alt="iPodFix"></p>
+<p>De alguna manera logré romper mi iPod con <code>dd</code>. Arrancaba en modo USB/Disco con el bootloader de Rockbox diciendo <code>No Partition found</code>. Para recuperarlo tuve que restaurarlo desde iTunes/Finder en una Mac (APM), lo que borró el disco entero y escribió una nueva tabla de particiones Apple Partition Map con el firmware original de Apple. Después tuve que volver a instalar Rockbox — lo cual resultó más complicado de lo esperado por la placa iFlash Solo. Este post cubre los conceptos que importan al hacer esto, no solo los comandos. Es básicamente un dump de las cosas que valió la pena entender mientras debugueaba y arreglaba el iPod.</p></p>
+    
+      <a href="https://blog.contre.io/es/posts/ipod_fix/">Read more...</a>
+    
+  </div>
+</article>
+
+		
+			<article>
+  <h1 class="summary-title"><a href="https://blog.contre.io/es/posts/greece/">Grecia</a></h1>
+  <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2026-04-07</time>
+    
+    
+  </strong>
+  <span> • 1537 words</span>
+  <span> • 8 minute read</span>
+  
+    <div>
+      <span>Tags:</span>
+      
+        <a href="/es/tags/viajes">Viajes</a>, 
+        <a href="/es/tags/fotos">Fotos</a>
+    </div>
+  
+</div>
+
+  <div class="summary-body">
+    <p><p><img src="/images/posts/acro_greece.jpeg" alt="Acropolis"></p>
+<p>Hace poco estuve viajando por Grecia y te lo comparto. El viaje fue inicialmente planteado como un viaje &ldquo;Mitológico&rdquo;, donde íbamos a recorrer distintos puntos icónicos de la mitología griega. Si bien fue un viaje cargado de historia, religión y filosofía, no faltaron los paisajes ni las comidas.</p>
+<p>Tal y como pasó con <a href="https://blog.contre.io/es/posts/germany_trip/">Schwarzwald</a>, fue uno de esos viajes en los que no tenía mucha idea de qué se iba a hacer ni dónde se iba a ir. La organización fue impecable y totalmente dejada en manos de mis acompañantes.</p></p>
+    
+      <a href="https://blog.contre.io/es/posts/greece/">Read more...</a>
+    
+  </div>
+</article>
+
+		
+			<article>
+  <h1 class="summary-title"><a href="https://blog.contre.io/es/posts/music_hoarding/">Jardín de Música</a></h1>
+  <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2025-06-12</time>
+    
+    
+  </strong>
+  <span> • 1957 words</span>
+  <span> • 10 minute read</span>
+  
+    <div>
+      <span>Tags:</span>
+      
+        <a href="/es/tags/music">Music</a>, 
+        <a href="/es/tags/tech">Tech</a>, 
+        <a href="/es/tags/self-hosted">Self-Hosted</a>
+    </div>
+  
+</div>
+
+  <div class="summary-body">
+    <p><p><img src="/images/posts/music_banner.png" alt="Intro"></p>
+<p>Habrá sido en 2009 cuando le pregunté a mi prima más grande qué música escuchaba. Fue la primera vez que asocié de manera concreta la idea de <em>banda</em> con <em>canción</em>. Hasta entonces, mi vínculo con la música venía más por ósmosis que por elección propia. Más tarde iba a entrar en razón que lo que escuchaba hasta entonces era mucho rock anglosajón, algo de blues y algo de jazz, todo bastante internacional y descontextualizado. Principalmente escuchaba Aspen, una radio que mezclaba (y sigue mezclando) clásicos del soft rock con algunas baladas en inglés y algo de pop. Mi viejo era quien manejaba el dial, y eso definía buena parte de lo que entraba a casa, mucho Genesis, Phil Collins, Pink Floyd, Eric Clapton entre otras bandas más de buto como Norah Jones, Bossa Nova y demás, que hoy en día me cuesta más escuchar. Lo argentino llegaba más por Sumo, algo de La Bersuit y Serú Girán. Pero el rock nacional más contemporáneo me lo presentaron mis amigos, bandas como Árbol, Airbag y Ataque 77, sonaban alternando con cosas como la cumbia y el reggaeton del momento como Daddy Yankee, Wisin y Yandel y demás música puertorriqueña.</p></p>
+    
+      <a href="https://blog.contre.io/es/posts/music_hoarding/">Read more...</a>
+    
+  </div>
+</article>
+
+		
+			<article>
+  <h1 class="summary-title"><a href="https://blog.contre.io/es/posts/germany_trip/">Schwarzwald</a></h1>
+  <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2024-10-08</time>
+    
+    
+  </strong>
+  <span> • 827 words</span>
+  <span> • 4 minute read</span>
+  
+    <div>
+      <span>Tags:</span>
+      
+        <a href="/es/tags/fotos">Fotos</a>, 
+        <a href="/es/tags/viajes">Viajes</a>
+    </div>
+  
+</div>
+
+  <div class="summary-body">
+    <p><p><img src="/images/posts/germany_banner.jpg" alt="Fungi"></p>
+<p>Lo que en principio iban a ser 370km en bici, terminaron siendo menos de la mitad. Sin embargo no fue fácil y hasta un tanto peligroso. Nos acompañaban dos todo terreno Giant y Trek. Bien cargadas en ambos costados con ropa, comida y una carpa, supieron andar por tierra, montaña y ruta. Los trenes en Alemania fueron de gran ayuda, tanto para evitar bajadas catalogadas como &ldquo;expert&rdquo; en Komoot como para evadir 12mm de lluvia una noche.</p></p>
+    
+      <a href="https://blog.contre.io/es/posts/germany_trip/">Read more...</a>
+    
+  </div>
+</article>
+
+		
+		<div>
+  
+  1 of 1
+  
+</div>
+
+	</main>
+
+    </div>
+    <footer>
+  <hr />
+  
+</footer>
+
+  </body>
+</html>
