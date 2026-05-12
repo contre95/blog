@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
@@ -32,14 +32,14 @@
   <body>
     <header>
   <div id="brand">
-    <a class="icon-link" href="https://blog.contre.io/">
+    <a class="icon-link" href="http://localhost:1313/">
       <img
         class="icon"
         src="/images/img.svg"
       />
     </a>
     <div class="text">
-      <a href="https://blog.contre.io/"><h1>Contre</h1></a>
+      <a href="http://localhost:1313/"><h1>Contre</h1></a>
       <h3>|||||||||||</h3>
     </div>
   </div>
@@ -68,12 +68,6 @@
       
         
       
-        
-      
-        
-           | 
-          <a href="/es/pictures/"><b>📸</b></a>
-          
         
       
         
@@ -115,7 +109,8 @@
   
 </div>
 
-    <div><h1 id="nix-os">Nix OS</h1>
+    <div><p><img src="/images/posts/gc07_banner.jpg" alt="tree"></p>
+<h1 id="nix-os">Nix OS</h1>
 <p>NixOS es la distro de Linux que uso hace unos 3 años, después de haber estado como 9 años con Arch. Cuando arranqué con NixOS, no existía la IA, o al menos no era tan potente como lo es ahora. Configurarlo fue bastante tedioso, pero mi objetivo era claro, manejar la cantidad innecesaria de computadoras que tengo bajo mi poder desde un solo lugar. Hoy, son solo tres: <code>desktop</code>, <code>notebook</code> y <code>server</code>. Empecé con mi <code>desktop</code>, siguió la <code>notebook</code> y por último, tras descubrir que Michael Stapelberg <a href="https://mastodon.online/@contre/114406315423731145">siquiera consideró</a> NixOS para su server terminé por instalarlo en mi <code>server</code> también.</p>
 <p>NixOS, a diferencia de otras distribuciones de Linux que se configuran con archivos dispersos por todo el sistema (<code>/etc</code>, <code>/usr</code>), se configura en archivos <code>.nix</code>. Por ejemplo: Para alterar el estado de tu Debian o Windows, correrías algo como <code>sudo apt-get install python</code> o harías varios <em>clicks</em> y <em>Siguiente;Siguiente;Siguiente</em>, eso crearía por detrás una serie de archivos y configuraciones en lugares que nunca te interesaron, alteraría variables de entorno que no te importan ni sabés cuáles son, entre otras cosas que desconocés. Cuando borrás ese programa, rezá que deje tu sistema más o menos como lo encontró. En NixOS es distinto, si querés hacer lo mismo en Nix, en vez de hacerlo de manera imperativa con un comando, editás un archivo <code>.nix</code> donde declarás tu paquete y por qué no sus configuraciones, y seguido de un <code>sudo nixos-rebuild switch</code> tenés tu programa instalado. Nix lee esa declaración, construye el nuevo sistema de forma determinista y lo activa de forma atómica. Atómica? Sí, <a href="https://youtu.be/WIr23sXx1AI?t=9"><em>&ldquo;A-tó-mi-ca&rdquo;</em></a>, es una forma elegante de decir que el cambio o se aplica completamente, o no se aplica en absoluto, no hay grises. Ese archivo <code>.nix</code> es, literalmente, la fuente de verdad de tu sistema operativo, el estado de tu sistema operativo. La gran particularidad (y desventaja para muchos) es que para poder cumplir con ciertas garantías, NixOS usa un sistema de archivos peculiar, el Nix Store (<code>/nix/store</code>). En lugar de instalar los programas en las rutas tradicionales (<code>/usr/bin/</code>, <code>/bin/</code> o <code>C:\Archivos de programa</code>), Nix guarda cada programa (o más precisamente, para cada <em>output</em> de una <em>derivation</em>) en una carpeta con un <em>hash</em> único que representa su contenido exacto (e.g <code>realpath $(which nvim)</code> -&gt; <code>/nix/store/n1bm101nhgw33fv114ibkv10xvh8fgp1-neovim-0.11.7/bin/nvim</code>). Ese hash, no es siempre el mismo, sino que, como la mayoría de los <em>hashes</em>, se usa para denotar unicidad, individualidad, si algo cambia aunque sea mínimamente, el hash cambia y se genera una carpeta nueva. Estos hashes no están aislados, sino que entre ellos forman una suerte de Árbol de Merkle Acíclico. Básicamente una estructura donde:</p>
 <ol>
