@@ -31,10 +31,10 @@ languages:
         #   name: Sobre mí
         #   url: /es/about/
         #   weight: 4
-        - identifier: pictures
-          name: 📸
-          url: /es/pictures/
-          weight: 5
+        # - identifier: pictures
+        #   name: 📸
+        #   url: /es/pictures/
+          # weight: 5
         - identifier: rss-posts
           name: RSS Posts
           url: /es/posts/index.xml
@@ -74,10 +74,10 @@ languages:
         #   name: About
         #   url: /en/about/
         #   weight: 4
-        - identifier: pictures
-          name: 📸
-          url: /en/pictures/
-          weight: 5
+        # - identifier: pictures
+        #   name: 📸
+        #   url: /en/pictures/
+        #   weight: 5
         - identifier: rss-posts
           name: RSS Posts
           url: /en/posts/index.xml
