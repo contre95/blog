@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Contre</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sun, 03 May 2026 13:48:32 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 23:21:08 +0200</lastBuildDate>
     <atom:link href="https://blog.contre.io/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GC-07</title>
+      <link>https://blog.contre.io/es/posts/gc07/</link>
+      <pubDate>Tue, 12 May 2026 23:21:08 +0200</pubDate>
+      <guid>https://blog.contre.io/es/posts/gc07/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/gc07_banner.webp&#34; alt=&#34;velocidrone&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Como usuario de Linux, no suelo ser el mejor ejemplo para mis amigos &lt;code&gt;!IT&lt;/code&gt;. Si no se te ocurre qué puede ser &lt;code&gt;!IT&lt;/code&gt;, es porque probablemente, seas un &lt;code&gt;TI&lt;/code&gt; (&lt;code&gt;Tech Illiterate&lt;/code&gt;) y aunque pueda sonar agresivo, va con cariño. No soy el mejor ejemplo porque no soy usuario de un producto, sino usuario de la tecnología y lo que cualquier usuario necesita es un producto. De entrada, el término de Linux como OS, para cualquier &lt;code&gt;TI&lt;/code&gt;, ya es difusa, y para quien busca instalar Linux por primera, no saber siquiera por dónde empezar, alcanza para ni siquiera intentarlo para la mayoría. Dentro del mercado de posibilidades que ofrece Linux el &lt;em&gt;market share&lt;/em&gt; en el cual &lt;em&gt;tradeo&lt;/em&gt; es, más bien, chico. Esto tiene lo bueno y lo malo de todo mercado que aún no se ha masificado. Hoy te voy a contar una&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Shell Ops</title>
       <link>https://blog.contre.io/es/posts/shell_ops/</link>
