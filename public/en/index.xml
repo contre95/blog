@@ -6,15 +6,8 @@
     <description>Recent content on Contre</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 May 2026 23:21:08 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 13:48:32 +0200</lastBuildDate>
     <atom:link href="https://blog.contre.io/en/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>GC-07</title>
-      <link>https://blog.contre.io/en/posts/gc07/</link>
-      <pubDate>Tue, 12 May 2026 23:21:08 +0200</pubDate>
-      <guid>https://blog.contre.io/en/posts/gc07/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/gc07_banner.webp&#34; alt=&#34;velocidrone&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;As a Linux user, I&amp;rsquo;m not exactly the best example for my &lt;code&gt;!IT&lt;/code&gt; friends. If you don&amp;rsquo;t know what &lt;code&gt;!IT&lt;/code&gt; means, it&amp;rsquo;s because you&amp;rsquo;re probably a &lt;code&gt;TI&lt;/code&gt; (&lt;code&gt;Tech Illiterate&lt;/code&gt;) yourself, which sounds rough, but it comes with love. I&amp;rsquo;m not the best example because I don&amp;rsquo;t use Linux as a product; I use it as technology, and what any user actually needs is a product. Even framing Linux as an OS is already fuzzy for the average &lt;code&gt;TI&lt;/code&gt;, and for anyone trying to install it for the first time, not knowing where to even begin is usually reason enough to not bother. The &lt;em&gt;market share&lt;/em&gt; of the Linux possibilities space I &lt;em&gt;trade&lt;/em&gt; in is, honestly, pretty small. That comes with the good and the bad of any market that hasn&amp;rsquo;t gone mainstream.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Shell Ops</title>
       <link>https://blog.contre.io/en/posts/shell_ops/</link>
