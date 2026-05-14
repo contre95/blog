@@ -6,20 +6,27 @@
     <description>Recent content in Tags on Contre</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sun, 03 May 2026 13:48:32 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 23:21:08 +0200</lastBuildDate>
     <atom:link href="https://blog.contre.io/es/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Self-Hosted</title>
-      <link>https://blog.contre.io/es/tags/self-hosted/</link>
-      <pubDate>Sun, 03 May 2026 13:48:32 +0200</pubDate>
-      <guid>https://blog.contre.io/es/tags/self-hosted/</guid>
+      <title>Drone</title>
+      <link>https://blog.contre.io/es/tags/drone/</link>
+      <pubDate>Tue, 12 May 2026 23:21:08 +0200</pubDate>
+      <guid>https://blog.contre.io/es/tags/drone/</guid>
       <description></description>
     </item>
     <item>
       <title>Tech</title>
       <link>https://blog.contre.io/es/tags/tech/</link>
-      <pubDate>Sun, 03 May 2026 13:48:32 +0200</pubDate>
+      <pubDate>Tue, 12 May 2026 23:21:08 +0200</pubDate>
       <guid>https://blog.contre.io/es/tags/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-Hosted</title>
+      <link>https://blog.contre.io/es/tags/self-hosted/</link>
+      <pubDate>Sun, 03 May 2026 13:48:32 +0200</pubDate>
+      <guid>https://blog.contre.io/es/tags/self-hosted/</guid>
       <description></description>
     </item>
     <item>

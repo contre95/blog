@@ -6,8 +6,15 @@
     <description>Recent content on Contre</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 May 2026 13:48:32 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 23:21:08 +0200</lastBuildDate>
     <atom:link href="https://blog.contre.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GC-07</title>
+      <link>https://blog.contre.io/en/posts/gc07/</link>
+      <pubDate>Tue, 12 May 2026 23:21:08 +0200</pubDate>
+      <guid>https://blog.contre.io/en/posts/gc07/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/gc07_banner.webp&#34; alt=&#34;velocidrone&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;As a Linux user, I&amp;rsquo;m not exactly the best example for my &lt;code&gt;!IT&lt;/code&gt; friends. If you can&amp;rsquo;t think of what &lt;code&gt;!IT&lt;/code&gt; might be, it&amp;rsquo;s probably because you are one, a &lt;code&gt;TI&lt;/code&gt; (&lt;code&gt;Tech Illiterate&lt;/code&gt;). Which sounds rough, but it comes with love. I&amp;rsquo;m not the best example because I&amp;rsquo;m not a product user; I&amp;rsquo;m a technology user, and what the average user actually needs is a product, with its limits, its colors, and its little stars. On top of that, the concept of Linux as an OS is already fuzzy for any &lt;code&gt;TI&lt;/code&gt;, and for anyone trying to install Linux for the first time, not knowing where to go buy it or what brand it is is usually enough to never even try.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Shell Ops</title>
       <link>https://blog.contre.io/en/posts/shell_ops/</link>

@@ -3,7 +3,9 @@ title: Dealing with your private key
 date: 2020-04-25  00:15:55
 tags:
     - GnuPG
-    - Security
+    - Passwords
+    - Tech
+
 ---
 ![Intro](/images/posts/gpg_2_banner.jpg)
 

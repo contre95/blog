@@ -6,8 +6,15 @@
     <description>Recent content in Tech on Contre</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 May 2026 13:48:32 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 23:21:08 +0200</lastBuildDate>
     <atom:link href="https://blog.contre.io/en/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GC-07</title>
+      <link>https://blog.contre.io/en/posts/gc07/</link>
+      <pubDate>Tue, 12 May 2026 23:21:08 +0200</pubDate>
+      <guid>https://blog.contre.io/en/posts/gc07/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/gc07_banner.webp&#34; alt=&#34;velocidrone&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;As a Linux user, I&amp;rsquo;m not exactly the best example for my &lt;code&gt;!IT&lt;/code&gt; friends. If you can&amp;rsquo;t think of what &lt;code&gt;!IT&lt;/code&gt; might be, it&amp;rsquo;s probably because you are one, a &lt;code&gt;TI&lt;/code&gt; (&lt;code&gt;Tech Illiterate&lt;/code&gt;). Which sounds rough, but it comes with love. I&amp;rsquo;m not the best example because I&amp;rsquo;m not a product user; I&amp;rsquo;m a technology user, and what the average user actually needs is a product, with its limits, its colors, and its little stars. On top of that, the concept of Linux as an OS is already fuzzy for any &lt;code&gt;TI&lt;/code&gt;, and for anyone trying to install Linux for the first time, not knowing where to go buy it or what brand it is is usually enough to never even try.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Shell Ops</title>
       <link>https://blog.contre.io/en/posts/shell_ops/</link>
@@ -35,6 +42,27 @@
       <pubDate>Thu, 12 Jun 2025 00:18:54 +0000</pubDate>
       <guid>https://blog.contre.io/en/posts/music_hoarding/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/music_banner.en.jpg&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;It must have been around 2009 when I asked my older cousin what kind of music she listened to. That was the first time I clearly associated the idea of a &amp;ldquo;band&amp;rdquo; with &amp;ldquo;song&amp;rdquo;. Up until then, my relationship with music was more through osmosis than personal choice. Later on, I’d come to realize that what I had been listening to was mostly Anglo rock, some blues and some jazz —basically international stuff, kind of disconnected from any local context. I mostly listened to Aspen, a radio station that played (and still plays) soft rock classics from the 80s and 90s, along with a few English ballads and some pop. My dad was the one in charge of the dial, and that shaped a big part of what came into the house: lots of Genesis, Phil Collins, Pink Floyd, Eric Clapton, and other slightly soft-boy bands like Norah Jones, Bossa Nova, and so on, stuff I actually struggle to listen to nowadays. Argentine music came in more through Sumo, some La Bersuit, Soda Stereo and Serú Girán. But it was my friends who introduced me to more contemporary national rock—bands like Árbol, Airbag, and Ataque 77, which played alongside the cumbia and reggaeton hits of the time, like Daddy Yankee, Wisin &amp;amp; Yandel, and other Puerto Rican music.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GPG &#43; SSH ?</title>
+      <link>https://blog.contre.io/en/posts/gpg_1/</link>
+      <pubDate>Mon, 29 Jun 2020 13:15:55 +0000</pubDate>
+      <guid>https://blog.contre.io/en/posts/gpg_1/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/gpg_1_banner.jpg&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This will be a small walk through on how to generate an authentication subkey on GPG and integrated with ssh. First of all bare in mind that will need a GPG key first in order to generate this subkey, if have not generated on yet refer to part 0 of these series.&lt;/p&gt;&#xA;&lt;h3 id=&#34;authentication-key&#34;&gt;Authentication Key&lt;/h3&gt;&#xA;&lt;p&gt;In order to generate an authentication key, as I mentioned before, you will need to have a key generated. Let&amp;rsquo;s check that with&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dealing with your private key</title>
+      <link>https://blog.contre.io/en/posts/gpg_2/</link>
+      <pubDate>Sat, 25 Apr 2020 00:15:55 +0000</pubDate>
+      <guid>https://blog.contre.io/en/posts/gpg_2/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/gpg_2_banner.jpg&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Now that you&amp;rsquo;ve managed to create your own GPG key it&amp;rsquo;s time to understand a bit more about how GnuPG works.&lt;/p&gt;&#xA;&lt;p&gt;The first question we need to ask is where are our keys stored. The answer depends on which version of GnuPG you are running. From version 2.1 onwards the method of storing your keys &lt;a href=&#34;https://gnupg.org/faq/whats-new-in-2.1.html&#34;&gt;has change&lt;/a&gt;. On previous versions our keys were stored in two separate keyring under the &lt;code&gt;~/.gnupg&lt;/code&gt; directory. Prior version to 2.1 used to keep the public key pairs in two files: &lt;code&gt;pubring.gpg&lt;/code&gt; and &lt;code&gt;secring.gpg&lt;/code&gt;, you can imagine which stores which.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting started with GnuPG</title>
+      <link>https://blog.contre.io/en/posts/gpg_0/</link>
+      <pubDate>Wed, 15 Apr 2020 00:15:55 +0000</pubDate>
+      <guid>https://blog.contre.io/en/posts/gpg_0/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.contre.io/images/posts/gpg_0_banner.jpg&#34; alt=&#34;Intro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;GnuPG is a complete and free implementation of the OpenPGP standard and this is just &lt;strong&gt;part 0&lt;/strong&gt; of who knows how many series where I will explain my basic understanding of GPG and how useful is on my daily basis. If you wish to understand more in detail how GPG work please refer to the RFC or &lt;a href=&#34;https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/&#34;&gt;here&lt;/a&gt; is a great post that captures the essence of it quite deeply.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

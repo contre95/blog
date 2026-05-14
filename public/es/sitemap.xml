@@ -15,6 +15,32 @@
                 href="https://blog.contre.io/es/"
                 />
   </url><url>
+    <loc>https://blog.contre.io/es/tags/drone/</loc>
+    <lastmod>2026-05-12T23:21:08+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/drone/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/drone/"
+                />
+  </url><url>
+    <loc>https://blog.contre.io/es/posts/gc07/</loc>
+    <lastmod>2026-05-12T23:21:08+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/posts/gc07/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/posts/gc07/"
+                />
+  </url><url>
     <loc>https://blog.contre.io/es/posts/</loc>
     <lastmod>2026-05-12T23:21:08+02:00</lastmod>
     <xhtml:link
@@ -26,6 +52,32 @@
                 rel="alternate"
                 hreflang="es-ES"
                 href="https://blog.contre.io/es/posts/"
+                />
+  </url><url>
+    <loc>https://blog.contre.io/es/tags/</loc>
+    <lastmod>2026-05-12T23:21:08+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/"
+                />
+  </url><url>
+    <loc>https://blog.contre.io/es/tags/tech/</loc>
+    <lastmod>2026-05-12T23:21:08+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/tech/"
                 />
   </url><url>
     <loc>https://blog.contre.io/es/tags/self-hosted/</loc>
@@ -52,32 +104,6 @@
                 rel="alternate"
                 hreflang="es-ES"
                 href="https://blog.contre.io/es/posts/shell_ops/"
-                />
-  </url><url>
-    <loc>https://blog.contre.io/es/tags/</loc>
-    <lastmod>2026-05-03T13:48:32+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.contre.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/"
-                />
-  </url><url>
-    <loc>https://blog.contre.io/es/tags/tech/</loc>
-    <lastmod>2026-05-03T13:48:32+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.contre.io/en/tags/tech/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/tech/"
                 />
   </url><url>
     <loc>https://blog.contre.io/es/posts/x4xteink/</loc>

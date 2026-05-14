@@ -15,6 +15,32 @@
                 href="https://blog.contre.io/en/"
                 />
   </url><url>
+    <loc>https://blog.contre.io/en/tags/drone/</loc>
+    <lastmod>2026-05-12T23:21:08+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/drone/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/drone/"
+                />
+  </url><url>
+    <loc>https://blog.contre.io/en/posts/gc07/</loc>
+    <lastmod>2026-05-12T23:21:08+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/posts/gc07/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/posts/gc07/"
+                />
+  </url><url>
     <loc>https://blog.contre.io/en/posts/</loc>
     <lastmod>2026-05-12T23:21:08+02:00</lastmod>
     <xhtml:link
@@ -26,6 +52,32 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://blog.contre.io/en/posts/"
+                />
+  </url><url>
+    <loc>https://blog.contre.io/en/tags/</loc>
+    <lastmod>2026-05-12T23:21:08+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/"
+                />
+  </url><url>
+    <loc>https://blog.contre.io/en/tags/tech/</loc>
+    <lastmod>2026-05-12T23:21:08+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://blog.contre.io/es/tags/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.contre.io/en/tags/tech/"
                 />
   </url><url>
     <loc>https://blog.contre.io/en/tags/self-hosted/</loc>
@@ -52,32 +104,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://blog.contre.io/en/posts/shell_ops/"
-                />
-  </url><url>
-    <loc>https://blog.contre.io/en/tags/</loc>
-    <lastmod>2026-05-03T13:48:32+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.contre.io/en/tags/"
-                />
-  </url><url>
-    <loc>https://blog.contre.io/en/tags/tech/</loc>
-    <lastmod>2026-05-03T13:48:32+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://blog.contre.io/es/tags/tech/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.contre.io/en/tags/tech/"
                 />
   </url><url>
     <loc>https://blog.contre.io/en/posts/x4xteink/</loc>
@@ -195,19 +221,13 @@
     <loc>https://blog.contre.io/en/posts/gpg_1/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/tags/password-manager/</loc>
+    <loc>https://blog.contre.io/en/tags/passwords/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
     <loc>https://blog.contre.io/en/tags/ssh/</loc>
     <lastmod>2020-06-29T13:15:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.contre.io/en/tags/unix/</loc>
-    <lastmod>2020-06-29T13:15:55+00:00</lastmod>
-  </url><url>
     <loc>https://blog.contre.io/en/posts/gpg_2/</loc>
-    <lastmod>2020-04-25T00:15:55+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.contre.io/en/tags/security/</loc>
     <lastmod>2020-04-25T00:15:55+00:00</lastmod>
   </url><url>
     <loc>https://blog.contre.io/en/posts/gpg_0/</loc>

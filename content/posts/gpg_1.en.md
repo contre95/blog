@@ -4,8 +4,8 @@ date: 2020-06-29  13:15:55
 tags:
     - GnuPG
     - SSH
-    - Password Manager
-    - Unix
+    - Passwords
+    - Tech
     - English
 ---
 ![Intro](/images/posts/gpg_1_banner.jpg)

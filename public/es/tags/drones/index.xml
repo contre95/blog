@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drones on Contre</title>
+    <link>http://localhost:1313/es/tags/drones/</link>
+    <description>Recent content in Drones on Contre</description>
+    <generator>Hugo</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Tue, 12 May 2026 23:21:08 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/tags/drones/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GC-07</title>
+      <link>http://localhost:1313/es/posts/gc07/</link>
+      <pubDate>Tue, 12 May 2026 23:21:08 +0200</pubDate>
+      <guid>http://localhost:1313/es/posts/gc07/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/gc07_banner.webp&#34; alt=&#34;velocidrone&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Como usuario de Linux, no suelo ser el mejor ejemplo para mis amigos &lt;code&gt;!IT&lt;/code&gt;. Si no se te ocurre qué puede ser &lt;code&gt;!IT&lt;/code&gt;, es porque probablemente, seas un &lt;code&gt;TI&lt;/code&gt; (&lt;code&gt;Tech Illiterate&lt;/code&gt;) y aunque pueda sonar agresivo, va con cariño. No soy el mejor ejemplo porque no soy usuario de un producto, sino de un tecnología y el usuario necesita es un producto, con sus límites, colores y estrellitas. Por otra parte, el término de Linux como OS, para cualquier &lt;code&gt;TI&lt;/code&gt;, ya es difusa, y para quien busca instalar Linux por primera vez, no saber dónde ir a comprarlo, alcanza para ni siquiera intentarlo. Dentro del mercado de posibilidades que ofrece Linux el &lt;em&gt;market share&lt;/em&gt; en el cual &lt;em&gt;tradeo&lt;/em&gt; es, más bien, chico. Esto tiene lo bueno y lo malo de todo mercado que aún no se ha masificado. Hoy te voy a hablar de lo malo, pero primero dejame vender NixOS.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
